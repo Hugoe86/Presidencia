@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Alm_Com_Rep_Ajustes_Inventario_Stock" targetNamespace="http://tempuri.org/Ds_Alm_Com_Rep_Ajustes_Inventario_Stock.xsd" xmlns:mstns="http://tempuri.org/Ds_Alm_Com_Rep_Ajustes_Inventario_Stock.xsd" xmlns="http://tempuri.org/Ds_Alm_Com_Rep_Ajustes_Inventario_Stock.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Alm_Com_Rep_Ajustes_Inventario_Stock" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Alm_Com_Rep_Ajustes_Inventario_Stock" msprop:Generator_DataSetName="Ds_Alm_Com_Rep_Ajustes_Inventario_Stock">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Cabecera" msprop:Generator_UserTableName="Cabecera" msprop:Generator_RowDeletedName="CabeceraRowDeleted" msprop:Generator_RowChangedName="CabeceraRowChanged" msprop:Generator_RowClassName="CabeceraRow" msprop:Generator_RowChangingName="CabeceraRowChanging" msprop:Generator_RowEvArgName="CabeceraRowChangeEvent" msprop:Generator_RowEvHandlerName="CabeceraRowChangeEventHandler" msprop:Generator_TableClassName="CabeceraDataTable" msprop:Generator_TableVarName="tableCabecera" msprop:Generator_RowDeletingName="CabeceraRowDeleting" msprop:Generator_TablePropName="Cabecera">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NO_INVENTARIO" msprop:Generator_UserColumnName="NO_INVENTARIO" msprop:Generator_ColumnPropNameInRow="NO_INVENTARIO" msprop:Generator_ColumnVarNameInTable="columnNO_INVENTARIO" msprop:Generator_ColumnPropNameInTable="NO_INVENTARIOColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="USUARIO_CREO" msprop:Generator_UserColumnName="USUARIO_CREO" msprop:Generator_ColumnPropNameInRow="USUARIO_CREO" msprop:Generator_ColumnVarNameInTable="columnUSUARIO_CREO" msprop:Generator_ColumnPropNameInTable="USUARIO_CREOColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="FECHA_CREO" msprop:Generator_UserColumnName="FECHA_CREO" msprop:Generator_ColumnPropNameInRow="FECHA_CREO" msprop:Generator_ColumnVarNameInTable="columnFECHA_CREO" msprop:Generator_ColumnPropNameInTable="FECHA_CREOColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ESTATUS" msprop:Generator_UserColumnName="ESTATUS" msprop:Generator_ColumnPropNameInRow="ESTATUS" msprop:Generator_ColumnVarNameInTable="columnESTATUS" msprop:Generator_ColumnPropNameInTable="ESTATUSColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="PERSONA_GENERO" msprop:Generator_UserColumnName="PERSONA_GENERO" msprop:Generator_ColumnPropNameInRow="PERSONA_GENERO" msprop:Generator_ColumnVarNameInTable="columnPERSONA_GENERO" msprop:Generator_ColumnPropNameInTable="PERSONA_GENEROColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Detalles" msprop:Generator_UserTableName="Detalles" msprop:Generator_RowDeletedName="DetallesRowDeleted" msprop:Generator_RowChangedName="DetallesRowChanged" msprop:Generator_RowClassName="DetallesRow" msprop:Generator_RowChangingName="DetallesRowChanging" msprop:Generator_RowEvArgName="DetallesRowChangeEvent" msprop:Generator_RowEvHandlerName="DetallesRowChangeEventHandler" msprop:Generator_TableClassName="DetallesDataTable" msprop:Generator_TableVarName="tableDetalles" msprop:Generator_RowDeletingName="DetallesRowDeleting" msprop:Generator_TablePropName="Detalles">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NO_INVENTARIO" msprop:Generator_UserColumnName="NO_INVENTARIO" msprop:Generator_ColumnVarNameInTable="columnNO_INVENTARIO" msprop:Generator_ColumnPropNameInRow="columnNO_INVENTARIO" msprop:Generator_ColumnPropNameInTable="NO_INVENTARIOColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="TIPO_AJUSTE" msprop:Generator_UserColumnName="TIPO_AJUSTE" msprop:Generator_ColumnPropNameInRow="columnTIPO_AJUSTE" msprop:Generator_ColumnVarNameInTable="columnTIPO_AJUSTE" msprop:Generator_ColumnPropNameInTable="TIPO_AJUSTEColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="USUARIO_AJUSTO" msprop:Generator_UserColumnName="USUARIO_AJUSTO" msprop:Generator_ColumnPropNameInRow="columnUSUARIO_AJUSTO" msprop:Generator_ColumnVarNameInTable="columnUSUARIO_AJUSTO" msprop:Generator_ColumnPropNameInTable="USUARIO_AJUSTOColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="FECHA_AJUSTE" msprop:Generator_UserColumnName="FECHA_AJUSTE" msprop:Generator_ColumnPropNameInRow="columnFECHA_AJUSTE" msprop:Generator_ColumnVarNameInTable="columnFECHA_AJUSTE" msprop:Generator_ColumnPropNameInTable="FECHA_AJUSTEColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="JUSTIFICACION" msprop:Generator_UserColumnName="JUSTIFICACION" msprop:Generator_ColumnVarNameInTable="columnJUSTIFICACION" msprop:Generator_ColumnPropNameInRow="columnJUSTIFICACION" msprop:Generator_ColumnPropNameInTable="JUSTIFICACIONColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Cabecera_Detalles" msdata:parent="Cabecera" msdata:child="Detalles" msdata:parentkey="NO_INVENTARIO" msdata:childkey="NO_INVENTARIO" msprop:Generator_UserRelationName="Cabecera_Detalles" msprop:Generator_RelationVarName="relationCabecera_Detalles" msprop:Generator_UserChildTable="Detalles" msprop:Generator_UserParentTable="Cabecera" msprop:Generator_ParentPropName="CabeceraRow" msprop:Generator_ChildPropName="GetDetallesRows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_nom_Control_Deposito" targetNamespace="http://tempuri.org/Ds_Rpt_nom_Control_Deposito.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_nom_Control_Deposito.xsd" xmlns="http://tempuri.org/Ds_Rpt_nom_Control_Deposito.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_nom_Control_Deposito" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_nom_Control_Deposito" msprop:Generator_DataSetName="Ds_Rpt_nom_Control_Deposito">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Control_Deposito" msprop:Generator_UserTableName="Dt_Control_Deposito" msprop:Generator_RowDeletedName="Dt_Control_DepositoRowDeleted" msprop:Generator_RowChangedName="Dt_Control_DepositoRowChanged" msprop:Generator_RowClassName="Dt_Control_DepositoRow" msprop:Generator_RowChangingName="Dt_Control_DepositoRowChanging" msprop:Generator_RowEvArgName="Dt_Control_DepositoRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Control_DepositoRowChangeEventHandler" msprop:Generator_TableClassName="Dt_Control_DepositoDataTable" msprop:Generator_TableVarName="tableDt_Control_Deposito" msprop:Generator_RowDeletingName="Dt_Control_DepositoRowDeleting" msprop:Generator_TablePropName="Dt_Control_Deposito">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NO_EMPLEADO" msprop:Generator_UserColumnName="NO_EMPLEADO" msprop:Generator_ColumnPropNameInRow="NO_EMPLEADO" msprop:Generator_ColumnVarNameInTable="columnNO_EMPLEADO" msprop:Generator_ColumnPropNameInTable="NO_EMPLEADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA_FIN" msprop:Generator_UserColumnName="FECHA_FIN" msprop:Generator_ColumnPropNameInRow="FECHA_FIN" msprop:Generator_ColumnVarNameInTable="columnFECHA_FIN" msprop:Generator_ColumnPropNameInTable="FECHA_FINColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NOMBRE_EMPLEADO" msprop:Generator_UserColumnName="NOMBRE_EMPLEADO" msprop:Generator_ColumnPropNameInRow="NOMBRE_EMPLEADO" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_EMPLEADO" msprop:Generator_ColumnPropNameInTable="NOMBRE_EMPLEADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE_BANCO" msprop:Generator_UserColumnName="NOMBRE_BANCO" msprop:Generator_ColumnPropNameInRow="NOMBRE_BANCO" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_BANCO" msprop:Generator_ColumnPropNameInTable="NOMBRE_BANCOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_CUENTA_BANCARIA" msprop:Generator_UserColumnName="NO_CUENTA_BANCARIA" msprop:Generator_ColumnPropNameInRow="NO_CUENTA_BANCARIA" msprop:Generator_ColumnVarNameInTable="columnNO_CUENTA_BANCARIA" msprop:Generator_ColumnPropNameInTable="NO_CUENTA_BANCARIAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_TARJETA" msprop:Generator_UserColumnName="NO_TARJETA" msprop:Generator_ColumnPropNameInRow="NO_TARJETA" msprop:Generator_ColumnVarNameInTable="columnNO_TARJETA" msprop:Generator_ColumnPropNameInTable="NO_TARJETAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TOTAL_NOMINA" msprop:Generator_UserColumnName="TOTAL_NOMINA" msprop:Generator_ColumnPropNameInRow="TOTAL_NOMINA" msprop:Generator_ColumnVarNameInTable="columnTOTAL_NOMINA" msprop:Generator_ColumnPropNameInTable="TOTAL_NOMINAColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="TIPO_NOMINA_ID" msprop:Generator_UserColumnName="TIPO_NOMINA_ID" msprop:Generator_ColumnPropNameInRow="TIPO_NOMINA_ID" msprop:Generator_ColumnVarNameInTable="columnTIPO_NOMINA_ID" msprop:Generator_ColumnPropNameInTable="TIPO_NOMINA_IDColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="NOMINA" msprop:Generator_UserColumnName="NOMINA" msprop:Generator_ColumnPropNameInRow="NOMINA" msprop:Generator_ColumnVarNameInTable="columnNOMINA" msprop:Generator_ColumnPropNameInTable="NOMINAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BANCO_ID" msprop:Generator_UserColumnName="BANCO_ID" msprop:Generator_ColumnPropNameInRow="BANCO_ID" msprop:Generator_ColumnVarNameInTable="columnBANCO_ID" msprop:Generator_ColumnPropNameInTable="BANCO_IDColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dt_Parametros" msprop:Generator_UserTableName="Dt_Parametros" msprop:Generator_RowDeletedName="Dt_ParametrosRowDeleted" msprop:Generator_RowChangedName="Dt_ParametrosRowChanged" msprop:Generator_RowClassName="Dt_ParametrosRow" msprop:Generator_RowChangingName="Dt_ParametrosRowChanging" msprop:Generator_RowEvArgName="Dt_ParametrosRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_ParametrosRowChangeEventHandler" msprop:Generator_TableClassName="Dt_ParametrosDataTable" msprop:Generator_TableVarName="tableDt_Parametros" msprop:Generator_RowDeletingName="Dt_ParametrosRowDeleting" msprop:Generator_TablePropName="Dt_Parametros">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ELABORO" msdata:Caption="Elaboro" msprop:Generator_UserColumnName="ELABORO" msprop:Generator_ColumnVarNameInTable="columnELABORO" msprop:Generator_ColumnPropNameInRow="ELABORO" msprop:Generator_ColumnPropNameInTable="ELABOROColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA_INICIO" msdata:Caption="TITULO_REPORTE" msprop:Generator_UserColumnName="FECHA_INICIO" msprop:Generator_ColumnVarNameInTable="columnFECHA_INICIO" msprop:Generator_ColumnPropNameInRow="FECHA_INICIO" msprop:Generator_ColumnPropNameInTable="FECHA_INICIOColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHA_FIN_PARAMETRO" msprop:Generator_UserColumnName="FECHA_FIN_PARAMETRO" msprop:Generator_ColumnVarNameInTable="columnFECHA_FIN_PARAMETRO" msprop:Generator_ColumnPropNameInRow="FECHA_FIN_PARAMETRO" msprop:Generator_ColumnPropNameInTable="FECHA_FIN_PARAMETROColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

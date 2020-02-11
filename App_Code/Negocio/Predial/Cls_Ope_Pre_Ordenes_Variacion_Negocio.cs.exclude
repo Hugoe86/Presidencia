@@ -1,0 +1,315 @@
+﻿using System;
+using System.Data;
+using System.Configuration;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using Presidencia.Operacion_Ordenes_Variacion.Datos;
+
+/// <summary>
+/// Summary description for Cls_Ope_Pre_Ordenes_Variacion_Negocio
+/// </summary>
+
+namespace Presidencia.Operacion_Ordenes_Variacion.Negocio
+{
+    public class Cls_Ope_Pre_Ordenes_Variacion_Negocio
+    {
+        
+        #region Variables Internas
+
+            private String Orden_Variacion_ID;
+            private String Cuenta_Predial_ID;
+            private String Concepto_Predial_ID;
+            private String Caso_Especial_ID;
+            private String Multa_ID;
+            private String Cuenta_Predial;
+            private Int32 Efectos_Año;
+            private Int32 Efectos_Bimestre;
+            private Double Tasa;
+            private String Periodo_Corriente_Inicial;
+            private String Periodo_Corriente_Termina;
+            private Double Cuota_Anual;
+            private Double Cuota_Bimestral;
+            private Double Exencion;
+            private String Cuota_Fija;
+            private DateTime Fecha_Termina_Exencion;
+            private DateTime Fecha_Avaluo;
+            private String Periodo_Rezago;
+            private String Fecha_Periodo_Rezago_Inicia;
+            private String Fecha_Periodo_Rezago_Termina;
+            private String Domicilio_Foraneo;
+            private String Predio_Colindante;
+            private Double Base_Impuesto;
+            private Double Minimo_Elevado_Año;
+            private Double Tasa_Traslado_Dominio;
+            private String Constancia_No_Adeudo;
+            private Double Recargos;
+            private Double Total;
+            private String Tipo;
+            private String Usuario;
+            private String Campos_Dinamicos;
+            private String Filtros_Dinamicos;
+            private String Agrupar_Dinamico;
+            private String Ordenar_Dinamico;
+            private Boolean Incluir_Campos_Foraneos;
+            private DataTable Dt_Observaciones;
+            private DataTable Dt_Copropietarios;
+        
+        #endregion
+
+        #region Variables Publicas
+
+            public String P_Orden_Variacion_ID
+            {
+                get { return Orden_Variacion_ID; }
+                set { Orden_Variacion_ID = value; }
+            }
+
+            public String P_Cuenta_Predial_ID
+            {
+                get { return Cuenta_Predial_ID; }
+                set { Cuenta_Predial_ID = value; }
+            }
+
+            public String P_Concepto_Predial_ID
+            {
+                get { return Concepto_Predial_ID; }
+                set { Concepto_Predial_ID = value; }
+            }
+
+            public String P_Caso_Especial_ID
+            {
+                get { return Caso_Especial_ID; }
+                set { Caso_Especial_ID = value; }
+            }
+
+            public String P_Multa_ID
+            {
+                get { return Multa_ID; }
+                set { Multa_ID = value; }
+            }
+
+            public String P_Cuenta_Predial
+            {
+                get { return Cuenta_Predial; }
+                set { Cuenta_Predial = value; }
+            }
+
+            public Int32 P_Efectos_Año
+            {
+                get { return Efectos_Año; }
+                set { Efectos_Año = value; }
+            }
+
+            public Int32 P_Efectos_Bimestre
+            {
+                get { return Efectos_Bimestre; }
+                set { Efectos_Bimestre = value; }
+            }
+
+            public Double P_Tasa
+            {
+                get { return Tasa; }
+                set { Tasa = value; }
+            }
+
+            public String P_Periodo_Corriente_Inicial
+            {
+                get { return Periodo_Corriente_Inicial; }
+                set { Periodo_Corriente_Inicial = value; }
+            }
+
+            public String P_Periodo_Corriente_Termina
+            {
+                get { return Periodo_Corriente_Termina; }
+                set { Periodo_Corriente_Termina = value; }
+            }
+
+            public Double P_Cuota_Anual
+            {
+                get { return Cuota_Anual; }
+                set { Cuota_Anual = value; }
+            }
+
+            public Double P_Cuota_Bimestral
+            {
+                get { return Cuota_Bimestral; }
+                set { Cuota_Bimestral = value; }
+            }
+
+            public Double P_Exencion
+            {
+                get { return Exencion; }
+                set { Exencion = value; }
+            }
+
+            public String P_Cuota_Fija
+            {
+                get { return Cuota_Fija; }
+                set { Cuota_Fija = value; }
+            }
+
+            public DateTime P_Fecha_Termina_Exencion
+            {
+                get { return Fecha_Termina_Exencion; }
+                set { Fecha_Termina_Exencion = value; }
+            }
+
+            public DateTime P_Fecha_Avaluo
+            {
+                get { return Fecha_Avaluo; }
+                set { Fecha_Avaluo = value; }
+            }
+
+            public String P_Periodo_Rezago
+            {
+                get { return Periodo_Rezago; }
+                set { Periodo_Rezago = value; }
+            }
+
+            public String P_Fecha_Periodo_Rezago_Inicia
+            {
+                get { return Fecha_Periodo_Rezago_Inicia; }
+                set { Fecha_Periodo_Rezago_Inicia = value; }
+            }
+
+            public String P_Fecha_Periodo_Rezago_Termina
+            {
+                get { return Fecha_Periodo_Rezago_Termina; }
+                set { Fecha_Periodo_Rezago_Termina = value; }
+            }
+
+            public String P_Domicilio_Foraneo
+            {
+                get { return Domicilio_Foraneo; }
+                set { Domicilio_Foraneo = value; }
+            }
+
+            public String P_Predio_Colindante
+            {
+                get { return Predio_Colindante; }
+                set { Predio_Colindante = value; }
+            }
+
+            public Double P_Base_Impuesto
+            {
+                get { return Base_Impuesto; }
+                set { Base_Impuesto = value; }
+            }
+
+            public Double P_Minimo_Elevado_Año
+            {
+                get { return Minimo_Elevado_Año; }
+                set { Minimo_Elevado_Año = value; }
+            }
+
+            public Double P_Tasa_Traslado_Dominio
+            {
+                get { return Tasa_Traslado_Dominio; }
+                set { Tasa_Traslado_Dominio = value; }
+            }
+
+            public String P_Constancia_No_Adeudo
+            {
+                get { return Constancia_No_Adeudo; }
+                set { Constancia_No_Adeudo = value; }
+            }
+
+            public Double P_Recargos
+            {
+                get { return Recargos; }
+                set { Recargos = value; }
+            }
+
+            public Double P_Total
+            {
+                get { return Total; }
+                set { Total = value; }
+            }
+
+            public String P_Tipo
+            {
+                get { return Tipo; }
+                set { Tipo = value; }
+            }
+
+            public String P_Usuario
+            {
+                get { return Usuario; }
+                set { Usuario = value; }
+            }
+
+            public String P_Campos_Dinamicos
+            {
+                get { return Campos_Dinamicos; }
+                set { Campos_Dinamicos = value.Trim(); }
+            }
+
+            public String P_Filtros_Dinamicos
+            {
+                get { return Filtros_Dinamicos; }
+                set { Filtros_Dinamicos = value.Trim(); }
+            }
+
+            public String P_Agrupar_Dinamico
+            {
+                get { return Agrupar_Dinamico; }
+                set { Agrupar_Dinamico = value.Trim(); }
+            }
+
+            public String P_Ordenar_Dinamico
+            {
+                get { return Ordenar_Dinamico; }
+                set { Ordenar_Dinamico = value.Trim(); }
+            }
+
+            public Boolean P_Incluir_Campos_Foraneos
+            {
+                get { return Incluir_Campos_Foraneos; }
+                set { Incluir_Campos_Foraneos = value; }
+            }
+
+            public DataTable P_Dt_Observaciones
+            {
+                get { return Dt_Observaciones; }
+                set { Dt_Observaciones = value; }
+            }
+
+            public DataTable P_Dt_Copropietarios
+            {
+                get { return Dt_Copropietarios; }
+                set { Dt_Copropietarios = value; }
+            }
+
+        #endregion
+
+        #region Metodos
+
+            public Boolean Alta_Orden_Variacion()
+            {
+                return Cls_Ope_Pre_Ordenes_Variacion_Datos.Alta_Orden_Variacion(this);
+            }
+
+            public Boolean Modificar_Orden_Variacion()
+            {
+                return Cls_Ope_Pre_Ordenes_Variacion_Datos.Modificar_Orden_Variacion(this);
+            }
+
+            public DataTable Consultar_Orden_Variacion()
+            {
+                return Cls_Ope_Pre_Ordenes_Variacion_Datos.Consultar_Orden_Variacion(this);
+            }
+
+            public Boolean Eliminar_Orden_Variacion()
+            {
+                return Cls_Ope_Pre_Ordenes_Variacion_Datos.Eliminar_Orden_Variacion(this);
+            }
+        #endregion
+
+    }
+}

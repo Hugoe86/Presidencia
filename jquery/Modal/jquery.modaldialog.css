@@ -1,0 +1,93 @@
+#dialog 
+{
+    position:fixed; 
+    width:525px; 
+    padding:0px; 
+    z-index:200; 
+    background:transparent; 
+    font-family:Verdana, Arial, Helvetica; 
+    font-size:14px; 
+}
+#dialog-header 
+{
+    display:block; 
+    position:relative; 
+    padding:10px 3px 6px 10px; 
+    height:25px; 
+    font-size:15px; 
+    font-weight:bold;
+    color:Yellow;
+    }
+#dialog-title 
+{
+	background:url(Password/Password_000001.png) no-repeat;
+    float:left;
+}
+#dialog-close 
+{
+    float:right; 
+    cursor:pointer; 
+    margin:3px 3px 0 0; 
+    height:16px; 
+    width:16px; 
+    background:url(imagenes/close.png) no-repeat
+}
+#dialog-content 
+{
+    display:block; 
+    padding:6px; 
+    min-height:160px; 
+    color:#666666; 
+    font-size:14px;
+    font-weight:bold;
+    background:url(imagenes/Password_3.png) no-repeat;
+}
+#dialog-content-inner  
+{
+    min-height:243px; 
+}
+#dialog-mask 
+{
+    z-index:100;
+	background-color:Black;
+	width:3000px;
+	height:3000px; 
+	position:fixed;
+	top:0px;
+	left:0px;
+	filter:alpha(opacity=80);
+	-moz-opacity: 0.80;
+	opacity: 0.80;
+}
+#dialog-button-container  
+{
+    text-align:center; 
+    margin:2px 6px 6px 2px; 
+}
+#dialog-button  
+{
+    font-weight:bold; 
+    font-size:1.1em; 
+    font-family:Arial, sans-serif; 
+    padding:2px 5px 2px 5px; 
+}
+
+.prompt, .success
+{
+    background:#fff; 
+    border:1px solid #4f6d81; 
+    border-top:none
+}
+.promptheader, .successheader
+{
+    background:url(imagenes/HeaderChromeBlack.jpg) repeat-x; 
+    color:#355468; 
+    border:1px solid #4f6d81; 
+    border-bottom:none
+}
+.promptbutton, .successbutton 
+{
+    background-color:#4F6D81; 
+    border:1px solid #fff; 
+    color:#fff; 
+}

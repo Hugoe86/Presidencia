@@ -1,0 +1,38 @@
+/* SLIDER */
+
+#slider {
+	margin: 16px 0;
+	position: relative;
+	overflow: hidden;
+	border-radius: 20px;  
+	-ms-border-radius: 20px;  
+	-moz-border-radius: 20px;  
+	-webkit-border-radius: 20px;  
+	-khtml-border-radius: 20px;
+}
+
+#slider, #slider img, #slider ul{
+	width: 400px;
+	height: 180px;
+}
+
+#slider li,#slider ul{
+	padding: 0;
+	margin: 0;
+}
+
+#slider ul {
+   position: absolute;
+}
+
+#slider .slide {
+	float: left;
+	position: relative;
+	display: none;
+}
+
+/*For sane browsers..*/
+#slider .slide:first-child {
+	display: block;
+}
+

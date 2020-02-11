@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Ope_Cat_Cuentas_Asignadas" targetNamespace="http://tempuri.org/Ds_Ope_Cat_Cuentas_Asignadas.xsd" xmlns:mstns="http://tempuri.org/Ds_Ope_Cat_Cuentas_Asignadas.xsd" xmlns="http://tempuri.org/Ds_Ope_Cat_Cuentas_Asignadas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Ope_Cat_Cuentas_Asignadas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Ope_Cat_Cuentas_Asignadas" msprop:Generator_DataSetName="Ds_Ope_Cat_Cuentas_Asignadas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_CUENTAS_ASIGNADAS" msprop:Generator_UserTableName="DT_CUENTAS_ASIGNADAS" msprop:Generator_RowDeletedName="DT_CUENTAS_ASIGNADASRowDeleted" msprop:Generator_RowChangedName="DT_CUENTAS_ASIGNADASRowChanged" msprop:Generator_RowClassName="DT_CUENTAS_ASIGNADASRow" msprop:Generator_RowChangingName="DT_CUENTAS_ASIGNADASRowChanging" msprop:Generator_RowEvArgName="DT_CUENTAS_ASIGNADASRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_CUENTAS_ASIGNADASRowChangeEventHandler" msprop:Generator_TableClassName="DT_CUENTAS_ASIGNADASDataTable" msprop:Generator_TableVarName="tableDT_CUENTAS_ASIGNADAS" msprop:Generator_RowDeletingName="DT_CUENTAS_ASIGNADASRowDeleting" msprop:Generator_TablePropName="DT_CUENTAS_ASIGNADAS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CUENTA_PREDIAL" msprop:Generator_UserColumnName="CUENTA_PREDIAL" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="CUENTA_PREDIAL" msprop:Generator_ColumnPropNameInTable="CUENTA_PREDIALColumn" msprop:Generator_ColumnVarNameInTable="columnCUENTA_PREDIAL" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE_COLONIA" msprop:Generator_UserColumnName="NOMBRE_COLONIA" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="NOMBRE_COLONIA" msprop:Generator_ColumnPropNameInTable="NOMBRE_COLONIAColumn" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_COLONIA" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_EXTERIOR" msprop:Generator_UserColumnName="NO_EXTERIOR" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="NO_EXTERIOR" msprop:Generator_ColumnPropNameInTable="NO_EXTERIORColumn" msprop:Generator_ColumnVarNameInTable="columnNO_EXTERIOR" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_INTERIOR" msprop:Generator_UserColumnName="NO_INTERIOR" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="NO_INTERIOR" msprop:Generator_ColumnPropNameInTable="NO_INTERIORColumn" msprop:Generator_ColumnVarNameInTable="columnNO_INTERIOR" type="xs:string" minOccurs="0" />
+              <xs:element name="EFECTOS" msprop:Generator_UserColumnName="EFECTOS" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="EFECTOS" msprop:Generator_ColumnPropNameInTable="EFECTOSColumn" msprop:Generator_ColumnVarNameInTable="columnEFECTOS" type="xs:string" minOccurs="0" />
+              <xs:element name="SUPERFICIE_CONSTRUIDA" msprop:Generator_UserColumnName="SUPERFICIE_CONSTRUIDA" msprop:Generator_ColumnVarNameInTable="columnSUPERFICIE_CONSTRUIDA" msprop:Generator_ColumnPropNameInRow="SUPERFICIE_CONSTRUIDA" msprop:Generator_ColumnPropNameInTable="SUPERFICIE_CONSTRUIDAColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="SUPERFICIE_TOTAL" msprop:Generator_UserColumnName="SUPERFICIE_TOTAL" msprop:Generator_ColumnVarNameInTable="columnSUPERFICIE_TOTAL" msprop:Generator_ColumnPropNameInRow="SUPERFICIE_TOTAL" msprop:Generator_ColumnPropNameInTable="SUPERFICIE_TOTALColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="AGRUPACION" msprop:Generator_UserColumnName="AGRUPACION" msprop:Generator_ColumnVarNameInTable="columnAGRUPACION" msprop:Generator_ColumnPropNameInRow="AGRUPACION" msprop:Generator_ColumnPropNameInTable="AGRUPACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE_CALLE" msprop:Generator_UserColumnName="NOMBRE_CALLE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_CALLE" msprop:Generator_ColumnPropNameInRow="NOMBRE_CALLE" msprop:Generator_ColumnPropNameInTable="NOMBRE_CALLEColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_DATOS_PERITO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOMBRE_PERITO" msprop:nullValue="_empty" type="xs:string" minOccurs="0" />
+              <xs:element name="TOTAL_CUENTAS" msprop:nullValue="_throw" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

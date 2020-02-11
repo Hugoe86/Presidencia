@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Nom_Retardos_Faltas_Reloj_Checador" targetNamespace="http://tempuri.org/Ds_Rpt_Nom_Retardos_Faltas_Reloj_Checador.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Nom_Retardos_Faltas_Reloj_Checador.xsd" xmlns="http://tempuri.org/Ds_Rpt_Nom_Retardos_Faltas_Reloj_Checador.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Nom_Retardos_Faltas_Reloj_Checador" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Nom_Retardos_Faltas_Reloj_Checador" msprop:Generator_DataSetName="Ds_Rpt_Nom_Retardos_Faltas_Reloj_Checador">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Reporte" msprop:Generator_UserTableName="Dt_Reporte" msprop:Generator_RowDeletedName="Dt_ReporteRowDeleted" msprop:Generator_RowChangedName="Dt_ReporteRowChanged" msprop:Generator_RowClassName="Dt_ReporteRow" msprop:Generator_RowChangingName="Dt_ReporteRowChanging" msprop:Generator_RowEvArgName="Dt_ReporteRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_ReporteRowChangeEventHandler" msprop:Generator_TableClassName="Dt_ReporteDataTable" msprop:Generator_TableVarName="tableDt_Reporte" msprop:Generator_RowDeletingName="Dt_ReporteRowDeleting" msprop:Generator_TablePropName="Dt_Reporte">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DEPENDENCIA_ID" msprop:Generator_UserColumnName="DEPENDENCIA_ID" msprop:Generator_ColumnPropNameInRow="DEPENDENCIA_ID" msprop:Generator_ColumnVarNameInTable="columnDEPENDENCIA_ID" msprop:Generator_ColumnPropNameInTable="DEPENDENCIA_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="EMPLEADO_ID" msprop:Generator_UserColumnName="EMPLEADO_ID" msprop:Generator_ColumnPropNameInRow="EMPLEADO_ID" msprop:Generator_ColumnVarNameInTable="columnEMPLEADO_ID" msprop:Generator_ColumnPropNameInTable="EMPLEADO_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE_EMPLEADO" msprop:Generator_UserColumnName="NOMBRE_EMPLEADO" msprop:Generator_ColumnPropNameInRow="NOMBRE_EMPLEADO" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_EMPLEADO" msprop:Generator_ColumnPropNameInTable="NOMBRE_EMPLEADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE_DEPENDENCIA" msprop:Generator_UserColumnName="NOMBRE_DEPENDENCIA" msprop:Generator_ColumnPropNameInRow="NOMBRE_DEPENDENCIA" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_DEPENDENCIA" msprop:Generator_ColumnPropNameInTable="NOMBRE_DEPENDENCIAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TURNO_1" msprop:Generator_UserColumnName="TURNO_1" msprop:Generator_ColumnPropNameInRow="TURNO_1" msprop:Generator_ColumnVarNameInTable="columnTURNO_1" msprop:Generator_ColumnPropNameInTable="TURNO_1Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TURNO_2" msprop:Generator_UserColumnName="TURNO_2" msprop:Generator_ColumnPropNameInRow="TURNO_2" msprop:Generator_ColumnVarNameInTable="columnTURNO_2" msprop:Generator_ColumnPropNameInTable="TURNO_2Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHA" msprop:Generator_UserColumnName="FECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HORARIO_FALTA_1" msprop:Generator_UserColumnName="HORARIO_FALTA_1" msprop:Generator_ColumnPropNameInRow="HORARIO_FALTA_1" msprop:Generator_ColumnVarNameInTable="columnHORARIO_FALTA_1" msprop:Generator_ColumnPropNameInTable="HORARIO_FALTA_1Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HORARIO_FALTA_2" msprop:Generator_UserColumnName="HORARIO_FALTA_2" msprop:Generator_ColumnPropNameInRow="HORARIO_FALTA_2" msprop:Generator_ColumnVarNameInTable="columnHORARIO_FALTA_2" msprop:Generator_ColumnPropNameInTable="HORARIO_FALTA_2Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RELOJ_CHECADOR" msprop:Generator_UserColumnName="RELOJ_CHECADOR" msprop:Generator_ColumnPropNameInRow="RELOJ_CHECADOR" msprop:Generator_ColumnVarNameInTable="columnRELOJ_CHECADOR" msprop:Generator_ColumnPropNameInTable="RELOJ_CHECADORColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RETARDOR" msprop:Generator_UserColumnName="RETARDOR" msprop:Generator_ColumnPropNameInRow="RETARDOR" msprop:Generator_ColumnVarNameInTable="columnRETARDOR" msprop:Generator_ColumnPropNameInTable="RETARDORColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="FALTAS" msprop:Generator_UserColumnName="FALTAS" msprop:Generator_ColumnPropNameInRow="FALTAS" msprop:Generator_ColumnVarNameInTable="columnFALTAS" msprop:Generator_ColumnPropNameInTable="FALTASColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="SALARIO_DIARIO" msprop:Generator_UserColumnName="SALARIO_DIARIO" msprop:Generator_ColumnVarNameInTable="columnSALARIO_DIARIO" msprop:Generator_ColumnPropNameInRow="SALARIO_DIARIO" msprop:Generator_ColumnPropNameInTable="SALARIO_DIARIOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="TIPO_NOMINA" msprop:Generator_UserColumnName="TIPO_NOMINA" msprop:Generator_ColumnPropNameInRow="TIPO_NOMINA" msprop:Generator_ColumnVarNameInTable="columnTIPO_NOMINA" msprop:Generator_ColumnPropNameInTable="TIPO_NOMINAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PSM" msprop:Generator_UserColumnName="PSM" msprop:Generator_ColumnVarNameInTable="columnPSM" msprop:Generator_ColumnPropNameInRow="PSM" msprop:Generator_ColumnPropNameInTable="PSMColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dt_Periodo" msprop:Generator_UserTableName="Dt_Periodo" msprop:Generator_RowDeletedName="Dt_PeriodoRowDeleted" msprop:Generator_RowChangedName="Dt_PeriodoRowChanged" msprop:Generator_RowClassName="Dt_PeriodoRow" msprop:Generator_RowChangingName="Dt_PeriodoRowChanging" msprop:Generator_RowEvArgName="Dt_PeriodoRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_PeriodoRowChangeEventHandler" msprop:Generator_TableClassName="Dt_PeriodoDataTable" msprop:Generator_TableVarName="tableDt_Periodo" msprop:Generator_RowDeletingName="Dt_PeriodoRowDeleting" msprop:Generator_TablePropName="Dt_Periodo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FECHA_INICIO" msprop:Generator_UserColumnName="FECHA_INICIO" msprop:Generator_ColumnPropNameInRow="FECHA_INICIO" msprop:Generator_ColumnVarNameInTable="columnFECHA_INICIO" msprop:Generator_ColumnPropNameInTable="FECHA_INICIOColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHA_FINAL" msprop:Generator_UserColumnName="FECHA_FINAL" msprop:Generator_ColumnPropNameInRow="FECHA_FINAL" msprop:Generator_ColumnVarNameInTable="columnFECHA_FINAL" msprop:Generator_ColumnPropNameInTable="FECHA_FINALColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TIPO_NOMINA" msprop:Generator_UserColumnName="TIPO_NOMINA" msprop:Generator_ColumnPropNameInRow="TIPO_NOMINA" msprop:Generator_ColumnVarNameInTable="columnTIPO_NOMINA" msprop:Generator_ColumnPropNameInTable="TIPO_NOMINAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ELABORO" msprop:Generator_UserColumnName="ELABORO" msprop:Generator_ColumnVarNameInTable="columnELABORO" msprop:Generator_ColumnPropNameInRow="ELABORO" msprop:Generator_ColumnPropNameInTable="ELABOROColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TIPO_RETARDO" msprop:Generator_UserColumnName="TIPO_RETARDO" msprop:Generator_ColumnVarNameInTable="columnTIPO_RETARDO" msprop:Generator_ColumnPropNameInRow="TIPO_RETARDO" msprop:Generator_ColumnPropNameInTable="TIPO_RETARDOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TIPO_REPORTE" msprop:Generator_UserColumnName="TIPO_REPORTE" msprop:Generator_ColumnPropNameInRow="TIPO_REPORTE" msprop:Generator_ColumnVarNameInTable="columnTIPO_REPORTE" msprop:Generator_ColumnPropNameInTable="TIPO_REPORTEColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

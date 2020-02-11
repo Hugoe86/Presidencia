@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Alm_Com_Reporte_Productos" targetNamespace="http://tempuri.org/Ds_Alm_Com_Reporte_Productos.xsd" xmlns:mstns="http://tempuri.org/Ds_Alm_Com_Reporte_Productos.xsd" xmlns="http://tempuri.org/Ds_Alm_Com_Reporte_Productos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Alm_Com_Reporte_Productos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Alm_Com_Reporte_Productos" msprop:Generator_DataSetName="Ds_Alm_Com_Reporte_Productos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Detalles" msprop:Generator_UserTableName="Detalles" msprop:Generator_RowDeletedName="DetallesRowDeleted" msprop:Generator_RowChangedName="DetallesRowChanged" msprop:Generator_RowClassName="DetallesRow" msprop:Generator_RowChangingName="DetallesRowChanging" msprop:Generator_RowEvArgName="DetallesRowChangeEvent" msprop:Generator_RowEvHandlerName="DetallesRowChangeEventHandler" msprop:Generator_TableClassName="DetallesDataTable" msprop:Generator_TableVarName="tableDetalles" msprop:Generator_RowDeletingName="DetallesRowDeleting" msprop:Generator_TablePropName="Detalles">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CLAVE" msprop:Generator_UserColumnName="CLAVE" msprop:Generator_ColumnVarNameInTable="columnCLAVE" msprop:Generator_ColumnPropNameInRow="CLAVE" msprop:Generator_ColumnPropNameInTable="CLAVEColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="PRODUCTO" msprop:Generator_UserColumnName="PRODUCTO" msprop:Generator_ColumnVarNameInTable="columnPRODUCTO" msprop:Generator_ColumnPropNameInRow="PRODUCTO" msprop:Generator_ColumnPropNameInTable="PRODUCTOColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="ESTATUS" msprop:Generator_UserColumnName="ESTATUS" msprop:Generator_ColumnVarNameInTable="columnESTATUS" msprop:Generator_ColumnPropNameInRow="ESTATUS" msprop:Generator_ColumnPropNameInTable="ESTATUSColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="EXISTENCIA" msprop:Generator_UserColumnName="EXISTENCIA" msprop:Generator_ColumnVarNameInTable="columnEXISTENCIA" msprop:Generator_ColumnPropNameInRow="EXISTENCIA" msprop:Generator_ColumnPropNameInTable="EXISTENCIAColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="COMPROMETIDO" msprop:Generator_UserColumnName="COMPROMETIDO" msprop:Generator_ColumnVarNameInTable="columnCOMPROMETIDO" msprop:Generator_ColumnPropNameInRow="COMPROMETIDO" msprop:Generator_ColumnPropNameInTable="COMPROMETIDOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="DISPONIBLE" msprop:Generator_UserColumnName="DISPONIBLE" msprop:Generator_ColumnVarNameInTable="columnDISPONIBLE" msprop:Generator_ColumnPropNameInRow="DISPONIBLE" msprop:Generator_ColumnPropNameInTable="DISPONIBLEColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="STOCK" msprop:Generator_UserColumnName="STOCK" msprop:Generator_ColumnVarNameInTable="columnSTOCK" msprop:Generator_ColumnPropNameInRow="STOCK" msprop:Generator_ColumnPropNameInTable="STOCKColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="MODELO" msprop:Generator_UserColumnName="MODELO" msprop:Generator_ColumnVarNameInTable="columnMODELO" msprop:Generator_ColumnPropNameInRow="MODELO" msprop:Generator_ColumnPropNameInTable="MODELOColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="MARCA" msprop:Generator_UserColumnName="MARCA" msprop:Generator_ColumnVarNameInTable="columnMARCA" msprop:Generator_ColumnPropNameInRow="MARCA" msprop:Generator_ColumnPropNameInTable="MARCAColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="UNIDAD" msprop:Generator_UserColumnName="UNIDAD" msprop:Generator_ColumnVarNameInTable="columnUNIDAD" msprop:Generator_ColumnPropNameInRow="UNIDAD" msprop:Generator_ColumnPropNameInTable="UNIDADColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="PARTIDA_ESPECIFICA" msprop:Generator_UserColumnName="PARTIDA_ESPECIFICA" msprop:Generator_ColumnVarNameInTable="columnPARTIDA_ESPECIFICA" msprop:Generator_ColumnPropNameInRow="PARTIDA_ESPECIFICA" msprop:Generator_ColumnPropNameInTable="PARTIDA_ESPECIFICAColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="PERSONA_GENERO" msprop:Generator_UserColumnName="PERSONA_GENERO" msprop:Generator_ColumnPropNameInRow="PERSONA_GENERO" msprop:Generator_ColumnVarNameInTable="columnPERSONA_GENERO" msprop:Generator_ColumnPropNameInTable="PERSONA_GENEROColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PRODUCTOS_TOTALES" msprop:Generator_UserColumnName="PRODUCTOS_TOTALES" msprop:Generator_ColumnPropNameInRow="PRODUCTOS_TOTALES" msprop:Generator_ColumnVarNameInTable="columnPRODUCTOS_TOTALES" msprop:Generator_ColumnPropNameInTable="PRODUCTOS_TOTALESColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

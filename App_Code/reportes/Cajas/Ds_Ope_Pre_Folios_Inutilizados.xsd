@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Ope_Pre_Folios_Inutilizados" targetNamespace="http://tempuri.org/Ds_Ope_Pre_Folios_Inutilizados.xsd" xmlns:mstns="http://tempuri.org/Ds_Ope_Pre_Folios_Inutilizados.xsd" xmlns="http://tempuri.org/Ds_Ope_Pre_Folios_Inutilizados.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Ope_Pre_Folios_Inutilizados" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Ope_Pre_Folios_Inutilizados" msprop:Generator_DataSetName="Ds_Ope_Pre_Folios_Inutilizados">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Recibos_Inutilizados" msprop:Generator_UserTableName="Dt_Recibos_Inutilizados" msprop:Generator_RowDeletedName="Dt_Recibos_InutilizadosRowDeleted" msprop:Generator_RowChangedName="Dt_Recibos_InutilizadosRowChanged" msprop:Generator_RowClassName="Dt_Recibos_InutilizadosRow" msprop:Generator_RowChangingName="Dt_Recibos_InutilizadosRowChanging" msprop:Generator_RowEvArgName="Dt_Recibos_InutilizadosRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Recibos_InutilizadosRowChangeEventHandler" msprop:Generator_TableClassName="Dt_Recibos_InutilizadosDataTable" msprop:Generator_TableVarName="tableDt_Recibos_Inutilizados" msprop:Generator_RowDeletingName="Dt_Recibos_InutilizadosRowDeleting" msprop:Generator_TablePropName="Dt_Recibos_Inutilizados">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MODULO" msprop:Generator_UserColumnName="MODULO" msprop:Generator_ColumnPropNameInRow="MODULO" msprop:Generator_ColumnVarNameInTable="columnMODULO" msprop:Generator_ColumnPropNameInTable="MODULOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_CAJA" msdata:Caption="DataColumn1" msprop:Generator_UserColumnName="NO_CAJA" msprop:Generator_ColumnPropNameInRow="NO_CAJA" msprop:Generator_ColumnVarNameInTable="columnNO_CAJA" msprop:Generator_ColumnPropNameInTable="NO_CAJAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA" msdata:Caption="DataColumn1" msprop:Generator_UserColumnName="FECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NUM_RECIBO" msdata:Caption="DataColumn1" msprop:Generator_UserColumnName="NUM_RECIBO" msprop:Generator_ColumnPropNameInRow="NUM_RECIBO" msprop:Generator_ColumnVarNameInTable="columnNUM_RECIBO" msprop:Generator_ColumnPropNameInTable="NUM_RECIBOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MOTIVO" msdata:Caption="DataColumn1" msprop:Generator_UserColumnName="MOTIVO" msprop:Generator_ColumnPropNameInRow="MOTIVO" msprop:Generator_ColumnVarNameInTable="columnMOTIVO" msprop:Generator_ColumnPropNameInTable="MOTIVOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="OBSERVACIONES" msdata:Caption="DataColumn1" msprop:Generator_UserColumnName="OBSERVACIONES" msprop:Generator_ColumnPropNameInRow="OBSERVACIONES" msprop:Generator_ColumnVarNameInTable="columnOBSERVACIONES" msprop:Generator_ColumnPropNameInTable="OBSERVACIONESColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CAJERO" msprop:Generator_UserColumnName="CAJERO" msprop:Generator_ColumnPropNameInRow="CAJERO" msprop:Generator_ColumnVarNameInTable="columnCAJERO" msprop:Generator_ColumnPropNameInTable="CAJEROColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

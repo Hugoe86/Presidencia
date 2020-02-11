@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Ope_Cat_Predios_Estrategicos" targetNamespace="http://tempuri.org/Ds_Ope_Cat_Predios_Estrategicos.xsd" xmlns:mstns="http://tempuri.org/Ds_Ope_Cat_Predios_Estrategicos.xsd" xmlns="http://tempuri.org/Ds_Ope_Cat_Predios_Estrategicos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Ope_Cat_Predios_Estrategicos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Ope_Cat_Predios_Estrategicos" msprop:Generator_DataSetName="Ds_Ope_Cat_Predios_Estrategicos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Predios_Estrategicos" msprop:Generator_UserTableName="Dt_Predios_Estrategicos" msprop:Generator_RowDeletedName="Dt_Predios_EstrategicosRowDeleted" msprop:Generator_RowChangedName="Dt_Predios_EstrategicosRowChanged" msprop:Generator_RowClassName="Dt_Predios_EstrategicosRow" msprop:Generator_RowChangingName="Dt_Predios_EstrategicosRowChanging" msprop:Generator_RowEvArgName="Dt_Predios_EstrategicosRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Predios_EstrategicosRowChangeEventHandler" msprop:Generator_TableClassName="Dt_Predios_EstrategicosDataTable" msprop:Generator_TableVarName="tableDt_Predios_Estrategicos" msprop:Generator_RowDeletingName="Dt_Predios_EstrategicosRowDeleting" msprop:Generator_TablePropName="Dt_Predios_Estrategicos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="No" msprop:Generator_UserColumnName="No" msprop:Generator_ColumnVarNameInTable="columnNo" msprop:Generator_ColumnPropNameInRow="No" msprop:Generator_ColumnPropNameInTable="NoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Cuenta" msprop:Generator_UserColumnName="Cuenta" msprop:Generator_ColumnPropNameInRow="Cuenta" msprop:Generator_ColumnVarNameInTable="columnCuenta" msprop:Generator_ColumnPropNameInTable="CuentaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Tipo" msprop:Generator_UserColumnName="Tipo" msprop:Generator_ColumnPropNameInRow="Tipo" msprop:Generator_ColumnVarNameInTable="columnTipo" msprop:Generator_ColumnPropNameInTable="TipoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Terreno" msprop:Generator_UserColumnName="Terreno" msprop:Generator_ColumnPropNameInRow="Terreno" msprop:Generator_ColumnVarNameInTable="columnTerreno" msprop:Generator_ColumnPropNameInTable="TerrenoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Const" msprop:Generator_UserColumnName="Const" msprop:Generator_ColumnPropNameInRow="Const" msprop:Generator_ColumnVarNameInTable="columnConst" msprop:Generator_ColumnPropNameInTable="ConstColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Valor_Fiscal" msprop:Generator_UserColumnName="Valor_Fiscal" msprop:Generator_ColumnPropNameInRow="Valor_Fiscal" msprop:Generator_ColumnVarNameInTable="columnValor_Fiscal" msprop:Generator_ColumnPropNameInTable="Valor_FiscalColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Cuota_Anterior" msprop:Generator_UserColumnName="Cuota_Anterior" msprop:Generator_ColumnPropNameInRow="Cuota_Anterior" msprop:Generator_ColumnVarNameInTable="columnCuota_Anterior" msprop:Generator_ColumnPropNameInTable="Cuota_AnteriorColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Cuota_Nueva" msprop:Generator_UserColumnName="Cuota_Nueva" msprop:Generator_ColumnPropNameInRow="Cuota_Nueva" msprop:Generator_ColumnVarNameInTable="columnCuota_Nueva" msprop:Generator_ColumnPropNameInTable="Cuota_NuevaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Diferencia" msprop:Generator_UserColumnName="Diferencia" msprop:Generator_ColumnPropNameInRow="Diferencia" msprop:Generator_ColumnVarNameInTable="columnDiferencia" msprop:Generator_ColumnPropNameInTable="DiferenciaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Propietario" msprop:Generator_UserColumnName="Propietario" msprop:Generator_ColumnPropNameInRow="Propietario" msprop:Generator_ColumnVarNameInTable="columnPropietario" msprop:Generator_ColumnPropNameInTable="PropietarioColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Calle" msprop:Generator_UserColumnName="Calle" msprop:Generator_ColumnPropNameInRow="Calle" msprop:Generator_ColumnVarNameInTable="columnCalle" msprop:Generator_ColumnPropNameInTable="CalleColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Colonia" msprop:Generator_UserColumnName="Colonia" msprop:Generator_ColumnPropNameInRow="Colonia" msprop:Generator_ColumnVarNameInTable="columnColonia" msprop:Generator_ColumnPropNameInTable="ColoniaColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

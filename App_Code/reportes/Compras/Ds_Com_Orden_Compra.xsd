@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Com_Orden_Compra" targetNamespace="http://tempuri.org/Ds_Com_Orden_Compra.xsd" xmlns:mstns="http://tempuri.org/Ds_Com_Orden_Compra.xsd" xmlns="http://tempuri.org/Ds_Com_Orden_Compra.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Com_Orden_Compra" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Com_Orden_Compra" msprop:Generator_DataSetName="Ds_Com_Orden_Compra">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_TablePropName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FOLIO" msprop:Generator_UserColumnName="FOLIO" msprop:Generator_ColumnVarNameInTable="columnFOLIO" msprop:Generator_ColumnPropNameInRow="FOLIO" msprop:Generator_ColumnPropNameInTable="FOLIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ESTATUS" msprop:Generator_UserColumnName="ESTATUS" msprop:Generator_ColumnVarNameInTable="columnESTATUS" msprop:Generator_ColumnPropNameInRow="ESTATUS" msprop:Generator_ColumnPropNameInTable="ESTATUSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TIPO_PROCESO" msprop:Generator_UserColumnName="TIPO_PROCESO" msprop:Generator_ColumnVarNameInTable="columnTIPO_PROCESO" msprop:Generator_ColumnPropNameInRow="TIPO_PROCESO" msprop:Generator_ColumnPropNameInTable="TIPO_PROCESOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TIPO_ARTICULO" msprop:Generator_UserColumnName="TIPO_ARTICULO" msprop:Generator_ColumnVarNameInTable="columnTIPO_ARTICULO" msprop:Generator_ColumnPropNameInRow="TIPO_ARTICULO" msprop:Generator_ColumnPropNameInTable="TIPO_ARTICULOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE_PROVEEDOR" msprop:Generator_UserColumnName="NOMBRE_PROVEEDOR" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_PROVEEDOR" msprop:Generator_ColumnPropNameInRow="NOMBRE_PROVEEDOR" msprop:Generator_ColumnPropNameInTable="NOMBRE_PROVEEDORColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RESGUARDADA" msprop:Generator_UserColumnName="RESGUARDADA" msprop:Generator_ColumnVarNameInTable="columnRESGUARDADA" msprop:Generator_ColumnPropNameInRow="RESGUARDADA" msprop:Generator_ColumnPropNameInTable="RESGUARDADAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RECIBO_TRANSITORIO" msprop:Generator_UserColumnName="RECIBO_TRANSITORIO" msprop:Generator_ColumnVarNameInTable="columnRECIBO_TRANSITORIO" msprop:Generator_ColumnPropNameInRow="RECIBO_TRANSITORIO" msprop:Generator_ColumnPropNameInTable="RECIBO_TRANSITORIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_RESERVA" msprop:Generator_UserColumnName="NO_RESERVA" msprop:Generator_ColumnVarNameInTable="columnNO_RESERVA" msprop:Generator_ColumnPropNameInRow="NO_RESERVA" msprop:Generator_ColumnPropNameInTable="NO_RESERVAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FOLIO_TIPO_COMPRA" msprop:Generator_UserColumnName="FOLIO_TIPO_COMPRA" msprop:Generator_ColumnVarNameInTable="columnFOLIO_TIPO_COMPRA" msprop:Generator_ColumnPropNameInRow="FOLIO_TIPO_COMPRA" msprop:Generator_ColumnPropNameInTable="FOLIO_TIPO_COMPRAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FOLIO_REQUISICION" msprop:Generator_UserColumnName="FOLIO_REQUISICION" msprop:Generator_ColumnVarNameInTable="columnFOLIO_REQUISICION" msprop:Generator_ColumnPropNameInRow="FOLIO_REQUISICION" msprop:Generator_ColumnPropNameInTable="FOLIO_REQUISICIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE_PRODUCTO_SERVICIO" msprop:Generator_UserColumnName="NOMBRE_PRODUCTO_SERVICIO" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_PRODUCTO_SERVICIO" msprop:Generator_ColumnPropNameInRow="NOMBRE_PRODUCTO_SERVICIO" msprop:Generator_ColumnPropNameInTable="NOMBRE_PRODUCTO_SERVICIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CANTIDAD" msprop:Generator_UserColumnName="CANTIDAD" msprop:Generator_ColumnVarNameInTable="columnCANTIDAD" msprop:Generator_ColumnPropNameInRow="CANTIDAD" msprop:Generator_ColumnPropNameInTable="CANTIDADColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PRECIO_U_CON_IMP_COTIZADO" msprop:Generator_UserColumnName="PRECIO_U_CON_IMP_COTIZADO" msprop:Generator_ColumnVarNameInTable="columnPRECIO_U_CON_IMP_COTIZADO" msprop:Generator_ColumnPropNameInRow="PRECIO_U_CON_IMP_COTIZADO" msprop:Generator_ColumnPropNameInTable="PRECIO_U_CON_IMP_COTIZADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PRECIO_U_SIN_IMP_COTIZADO" msprop:Generator_UserColumnName="PRECIO_U_SIN_IMP_COTIZADO" msprop:Generator_ColumnVarNameInTable="columnPRECIO_U_SIN_IMP_COTIZADO" msprop:Generator_ColumnPropNameInRow="PRECIO_U_SIN_IMP_COTIZADO" msprop:Generator_ColumnPropNameInTable="PRECIO_U_SIN_IMP_COTIZADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TOTAL_COTIZADO" msprop:Generator_UserColumnName="TOTAL_COTIZADO" msprop:Generator_ColumnVarNameInTable="columnTOTAL_COTIZADO" msprop:Generator_ColumnPropNameInRow="TOTAL_COTIZADO" msprop:Generator_ColumnPropNameInTable="TOTAL_COTIZADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA_CREO" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA_ENTREGA" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

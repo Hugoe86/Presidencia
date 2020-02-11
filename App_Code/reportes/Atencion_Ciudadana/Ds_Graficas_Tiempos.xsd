@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Graficas_Tiempos" targetNamespace="http://tempuri.org/Ds_Graficas_Tiempos.xsd" xmlns:mstns="http://tempuri.org/Ds_Graficas_Tiempos.xsd" xmlns="http://tempuri.org/Ds_Graficas_Tiempos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Graficas_Tiempos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Graficas_Tiempos" msprop:Generator_DataSetName="Ds_Graficas_Tiempos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_TablePropName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Dependencia" msprop:Generator_UserColumnName="Dependencia" msprop:Generator_ColumnVarNameInTable="columnDependencia" msprop:Generator_ColumnPropNameInRow="Dependencia" msprop:Generator_ColumnPropNameInTable="DependenciaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Asunto" msprop:Generator_UserColumnName="Asunto" msprop:Generator_ColumnVarNameInTable="columnAsunto" msprop:Generator_ColumnPropNameInRow="Asunto" msprop:Generator_ColumnPropNameInTable="AsuntoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Dias" msprop:Generator_UserColumnName="Dias" msprop:Generator_ColumnVarNameInTable="columnDias" msprop:Generator_ColumnPropNameInRow="Dias" msprop:Generator_ColumnPropNameInTable="DiasColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dt_Generales" msprop:Generator_UserTableName="Dt_Generales" msprop:Generator_RowDeletedName="Dt_GeneralesRowDeleted" msprop:Generator_TableClassName="Dt_GeneralesDataTable" msprop:Generator_RowChangedName="Dt_GeneralesRowChanged" msprop:Generator_RowClassName="Dt_GeneralesRow" msprop:Generator_RowChangingName="Dt_GeneralesRowChanging" msprop:Generator_RowEvArgName="Dt_GeneralesRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_GeneralesRowChangeEventHandler" msprop:Generator_TablePropName="Dt_Generales" msprop:Generator_TableVarName="tableDt_Generales" msprop:Generator_RowDeletingName="Dt_GeneralesRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Titulo_Reporte" msprop:Generator_UserColumnName="Titulo_Reporte" msprop:Generator_ColumnPropNameInRow="Titulo_Reporte" msprop:Generator_ColumnVarNameInTable="columnTitulo_Reporte" msprop:Generator_ColumnPropNameInTable="Titulo_ReporteColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Filtros_Reporte" msprop:Generator_UserColumnName="Filtros_Reporte" msprop:Generator_ColumnPropNameInRow="Filtros_Reporte" msprop:Generator_ColumnVarNameInTable="columnFiltros_Reporte" msprop:Generator_ColumnPropNameInTable="Filtros_ReporteColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

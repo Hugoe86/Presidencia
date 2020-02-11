@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Ort_Solictud_Fecha_Entrega" targetNamespace="http://tempuri.org/Ds_Rpt_Ort_Solictud_Fecha_Entrega.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Ort_Solictud_Fecha_Entrega.xsd" xmlns="http://tempuri.org/Ds_Rpt_Ort_Solictud_Fecha_Entrega.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Ort_Solictud_Fecha_Entrega" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Ort_Solictud_Fecha_Entrega" msprop:Generator_DataSetName="Ds_Rpt_Ort_Solictud_Fecha_Entrega">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Solicitu_Por_Vencerse" msprop:Generator_UserTableName="Dt_Solicitu_Por_Vencerse" msprop:Generator_RowDeletedName="Dt_Solicitu_Por_VencerseRowDeleted" msprop:Generator_RowChangedName="Dt_Solicitu_Por_VencerseRowChanged" msprop:Generator_RowClassName="Dt_Solicitu_Por_VencerseRow" msprop:Generator_RowChangingName="Dt_Solicitu_Por_VencerseRowChanging" msprop:Generator_RowEvArgName="Dt_Solicitu_Por_VencerseRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Solicitu_Por_VencerseRowChangeEventHandler" msprop:Generator_TableClassName="Dt_Solicitu_Por_VencerseDataTable" msprop:Generator_TableVarName="tableDt_Solicitu_Por_Vencerse" msprop:Generator_RowDeletingName="Dt_Solicitu_Por_VencerseRowDeleting" msprop:Generator_TablePropName="Dt_Solicitu_Por_Vencerse">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CLAVE_SOLICITUD" msprop:Generator_UserColumnName="CLAVE_SOLICITUD" msprop:Generator_ColumnVarNameInTable="columnCLAVE_SOLICITUD" msprop:Generator_ColumnPropNameInRow="CLAVE_SOLICITUD" msprop:Generator_ColumnPropNameInTable="CLAVE_SOLICITUDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE_SOLICITANTE" msprop:Generator_UserColumnName="NOMBRE_SOLICITANTE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_SOLICITANTE" msprop:Generator_ColumnPropNameInRow="NOMBRE_SOLICITANTE" msprop:Generator_ColumnPropNameInTable="NOMBRE_SOLICITANTEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PORCENTAJE_AVANCE" msprop:Generator_UserColumnName="PORCENTAJE_AVANCE" msprop:Generator_ColumnVarNameInTable="columnPORCENTAJE_AVANCE" msprop:Generator_ColumnPropNameInRow="PORCENTAJE_AVANCE" msprop:Generator_ColumnPropNameInTable="PORCENTAJE_AVANCEColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="FECHA_ENTREGA" msprop:Generator_UserColumnName="FECHA_ENTREGA" msprop:Generator_ColumnVarNameInTable="columnFECHA_ENTREGA" msprop:Generator_ColumnPropNameInRow="FECHA_ENTREGA" msprop:Generator_ColumnPropNameInTable="FECHA_ENTREGAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ESTATUS" msprop:Generator_UserColumnName="ESTATUS" msprop:Generator_ColumnVarNameInTable="columnESTATUS" msprop:Generator_ColumnPropNameInRow="ESTATUS" msprop:Generator_ColumnPropNameInTable="ESTATUSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA_CREO" msprop:Generator_UserColumnName="FECHA_CREO" msprop:Generator_ColumnVarNameInTable="columnFECHA_CREO" msprop:Generator_ColumnPropNameInRow="FECHA_CREO" msprop:Generator_ColumnPropNameInTable="FECHA_CREOColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dt_Solicitud_Vencida" msprop:Generator_UserTableName="Dt_Solicitud_Vencida" msprop:Generator_RowDeletedName="Dt_Solicitud_VencidaRowDeleted" msprop:Generator_RowChangedName="Dt_Solicitud_VencidaRowChanged" msprop:Generator_RowClassName="Dt_Solicitud_VencidaRow" msprop:Generator_RowChangingName="Dt_Solicitud_VencidaRowChanging" msprop:Generator_RowEvArgName="Dt_Solicitud_VencidaRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Solicitud_VencidaRowChangeEventHandler" msprop:Generator_TableClassName="Dt_Solicitud_VencidaDataTable" msprop:Generator_TableVarName="tableDt_Solicitud_Vencida" msprop:Generator_RowDeletingName="Dt_Solicitud_VencidaRowDeleting" msprop:Generator_TablePropName="Dt_Solicitud_Vencida">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CLAVE_SOLICITUD" msprop:Generator_UserColumnName="CLAVE_SOLICITUD" msprop:Generator_ColumnVarNameInTable="columnCLAVE_SOLICITUD" msprop:Generator_ColumnPropNameInRow="CLAVE_SOLICITUD" msprop:Generator_ColumnPropNameInTable="CLAVE_SOLICITUDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE_SOLICITANTE" msprop:Generator_UserColumnName="NOMBRE_SOLICITANTE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_SOLICITANTE" msprop:Generator_ColumnPropNameInRow="NOMBRE_SOLICITANTE" msprop:Generator_ColumnPropNameInTable="NOMBRE_SOLICITANTEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PORCENTAJE_AVANCE" msprop:Generator_UserColumnName="PORCENTAJE_AVANCE" msprop:Generator_ColumnVarNameInTable="columnPORCENTAJE_AVANCE" msprop:Generator_ColumnPropNameInRow="PORCENTAJE_AVANCE" msprop:Generator_ColumnPropNameInTable="PORCENTAJE_AVANCEColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="FECHA_ENTREGA" msprop:Generator_UserColumnName="FECHA_ENTREGA" msprop:Generator_ColumnVarNameInTable="columnFECHA_ENTREGA" msprop:Generator_ColumnPropNameInRow="FECHA_ENTREGA" msprop:Generator_ColumnPropNameInTable="FECHA_ENTREGAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ESTATUS" msprop:Generator_UserColumnName="ESTATUS" msprop:Generator_ColumnVarNameInTable="columnESTATUS" msprop:Generator_ColumnPropNameInRow="ESTATUS" msprop:Generator_ColumnPropNameInTable="ESTATUSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA_CREO" msprop:Generator_UserColumnName="FECHA_CREO" msprop:Generator_ColumnVarNameInTable="columnFECHA_CREO" msprop:Generator_ColumnPropNameInRow="FECHA_CREO" msprop:Generator_ColumnPropNameInTable="FECHA_CREOColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dt_Solicitud_Sin_Vencerse" msprop:Generator_UserTableName="Dt_Solicitud_Sin_Vencerse" msprop:Generator_RowDeletedName="Dt_Solicitud_Sin_VencerseRowDeleted" msprop:Generator_RowChangedName="Dt_Solicitud_Sin_VencerseRowChanged" msprop:Generator_RowClassName="Dt_Solicitud_Sin_VencerseRow" msprop:Generator_RowChangingName="Dt_Solicitud_Sin_VencerseRowChanging" msprop:Generator_RowEvArgName="Dt_Solicitud_Sin_VencerseRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Solicitud_Sin_VencerseRowChangeEventHandler" msprop:Generator_TableClassName="Dt_Solicitud_Sin_VencerseDataTable" msprop:Generator_TableVarName="tableDt_Solicitud_Sin_Vencerse" msprop:Generator_RowDeletingName="Dt_Solicitud_Sin_VencerseRowDeleting" msprop:Generator_TablePropName="Dt_Solicitud_Sin_Vencerse">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CLAVE_SOLICITUD" msprop:Generator_UserColumnName="CLAVE_SOLICITUD" msprop:Generator_ColumnVarNameInTable="columnCLAVE_SOLICITUD" msprop:Generator_ColumnPropNameInRow="CLAVE_SOLICITUD" msprop:Generator_ColumnPropNameInTable="CLAVE_SOLICITUDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE_SOLICITANTE" msprop:Generator_UserColumnName="NOMBRE_SOLICITANTE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_SOLICITANTE" msprop:Generator_ColumnPropNameInRow="NOMBRE_SOLICITANTE" msprop:Generator_ColumnPropNameInTable="NOMBRE_SOLICITANTEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PORCENTAJE_AVANCE" msprop:Generator_UserColumnName="PORCENTAJE_AVANCE" msprop:Generator_ColumnVarNameInTable="columnPORCENTAJE_AVANCE" msprop:Generator_ColumnPropNameInRow="PORCENTAJE_AVANCE" msprop:Generator_ColumnPropNameInTable="PORCENTAJE_AVANCEColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="FECHA_ENTREGA" msprop:Generator_UserColumnName="FECHA_ENTREGA" msprop:Generator_ColumnVarNameInTable="columnFECHA_ENTREGA" msprop:Generator_ColumnPropNameInRow="FECHA_ENTREGA" msprop:Generator_ColumnPropNameInTable="FECHA_ENTREGAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ESTATUS" msprop:Generator_UserColumnName="ESTATUS" msprop:Generator_ColumnVarNameInTable="columnESTATUS" msprop:Generator_ColumnPropNameInRow="ESTATUS" msprop:Generator_ColumnPropNameInTable="ESTATUSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA_CREO" msprop:Generator_UserColumnName="FECHA_CREO" msprop:Generator_ColumnVarNameInTable="columnFECHA_CREO" msprop:Generator_ColumnPropNameInRow="FECHA_CREO" msprop:Generator_ColumnPropNameInTable="FECHA_CREOColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

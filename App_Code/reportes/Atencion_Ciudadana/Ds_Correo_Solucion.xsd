@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Correo_Solucion" targetNamespace="CrystalDecisions.Web" xmlns:mstns="CrystalDecisions.Web" xmlns="CrystalDecisions.Web" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Correo_Solucion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Correo_Solucion" msprop:Generator_DataSetName="Ds_Correo_Solucion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Correo" msprop:Generator_UserTableName="Correo" msprop:Generator_RowDeletedName="CorreoRowDeleted" msprop:Generator_RowChangedName="CorreoRowChanged" msprop:Generator_RowClassName="CorreoRow" msprop:Generator_RowChangingName="CorreoRowChanging" msprop:Generator_RowEvArgName="CorreoRowChangeEvent" msprop:Generator_RowEvHandlerName="CorreoRowChangeEventHandler" msprop:Generator_TableClassName="CorreoDataTable" msprop:Generator_TableVarName="tableCorreo" msprop:Generator_RowDeletingName="CorreoRowDeleting" msprop:Generator_TablePropName="Correo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nombre" msprop:Generator_UserColumnName="Nombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" type="xs:string" />              
+              <xs:element name="Folio" msprop:Generator_UserColumnName="Folio" msprop:Generator_ColumnPropNameInRow="Folio" msprop:Generator_ColumnVarNameInTable="columnFolio" msprop:Generator_ColumnPropNameInTable="FolioColumn" type="xs:string" />
+              <xs:element name="Calle_No" msprop:Generator_UserColumnName="Calle_No" msprop:Generator_ColumnPropNameInRow="Calle_No" msprop:Generator_ColumnVarNameInTable="columnCalle_No" msprop:Generator_ColumnPropNameInTable="Calle_NoColumn" type="xs:string" />
+              <xs:element name="Peticion" msprop:Generator_UserColumnName="Peticion" msprop:Generator_ColumnPropNameInRow="Peticion" msprop:Generator_ColumnVarNameInTable="columnPeticion" msprop:Generator_ColumnPropNameInTable="PeticionColumn" type="xs:string" />
+              <xs:element name="Descripcion_Solucion" msprop:Generator_UserColumnName="Descripcion_Solucion" msprop:Generator_ColumnPropNameInRow="Desripcion_Solucion" msprop:Generator_ColumnVarNameInTable="columnDescripcion_Solucion" msprop:Generator_ColumnPropNameInTable="Descripcion_SolucionColumn" type="xs:string" />
+              <xs:element name="Fecha_Peticion" msprop:Generator_UserColumnName="Fecha_Peticion" msprop:Generator_ColumnPropNameInRow="Fecha_Peticion" msprop:Generator_ColumnVarNameInTable="columnFecha_Peticion" msprop:Generator_ColumnPropNameInTable="Fecha_PeticionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Usuario_Modifico" msprop:Generator_UserColumnName="Usuario_Modifico" msprop:Generator_ColumnPropNameInRow="Usuario_Modifico" msprop:Generator_ColumnVarNameInTable="columnUsuario_Modifico" msprop:Generator_ColumnPropNameInTable="Usuario_ModificoColumn" type="xs:string" />
+              <xs:element name="Dependencia" msprop:Generator_UserColumnName="Dependencia" msprop:Generator_ColumnPropNameInRow="Dependencia" msprop:Generator_ColumnVarNameInTable="columnDependencia" msprop:Generator_ColumnPropNameInTable="DependenciaColumn" type="xs:string" />
+              <xs:element name="Asunto" msprop:Generator_UserColumnName="Asunto" msprop:Generator_ColumnPropNameInRow="Asunto" msprop:Generator_ColumnVarNameInTable="columnAsunto" msprop:Generator_ColumnPropNameInTable="AsuntoColumn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

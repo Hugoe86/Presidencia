@@ -1,0 +1,148 @@
+<%@ Master Language="C#" CodeFile="MasterPage_Proveedores.master.cs" Inherits="Paginas_Generales_paginas_MasterPage"%>
+<%@ Register src="wuc_menu.ascx" tagname="wuc_menu" tagprefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server" id="h">
+    <asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
+    <title><%=m_strTitulo%></title>    
+    <link href="/paginas/estilos/estilo_masterpage.css" rel="stylesheet" type="text/css" />
+    <link href="/paginas/estilos/estilo_paginas.css" rel="stylesheet" type="text/css" />
+    <link href="/paginas/estilos/estilo_ajax.css" rel="stylesheet" type="text/css" />
+    <link href="/paginas/estilos/TabContainer.css" rel="stylesheet" type="text/css" />
+    
+    <script src="/jquery/jquery-1.5.js" type="text/javascript"></script>
+   
+    <script src="/easyui/ddaccordion.js" type="text/javascript"></script>
+    <script src="/easyui/jquery-1.4.2.min.js" type="text/javascript"></script>
+    <script src="/easyui/jquery_jclock.js" type="text/javascript"></script>
+    
+
+    <script src="/easyui/jquery.formatCurrency-1.4.0.min.js" type="text/javascript"></script>
+    <script src="/easyui/jquery.formatCurrency.all.js" type="text/javascript"></script>    
+    
+    
+    <script type="text/javascript">
+        ddaccordion.init({
+            headerclass: "submenuheader", //Shared CSS class name of headers group
+            contentclass: "submenu", //Shared CSS class name of contents group
+            revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+            mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+            collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
+            defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+            onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+            animatedefault: false, //Should contents open by default be animated into view?
+            persiststate: true, //persist state of opened contents within browser session?
+            toggleclass: ["", ""], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+            togglehtml: ["prefix", "<img src='/paginas/imagenes/paginas/plus.gif' class='statusicon' />", "<img src='/paginas/imagenes/paginas/minus.gif' class='statusicon' />"], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+            animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+            oninit: function(headers, expandedindices) { //custom code to run when headers have initalized
+
+            },
+            onopenclose: function(header, index, state, isuseractivated) { //custom code to run whenever a header is opened or closed
+
+            }
+        })
+    </script>   
+
+    <script type="text/javascript">
+        $(function($) {
+            var options = {};
+            $('.jclock').jclock(options);
+        });
+    </script>     
+</head>
+<body > 
+    <form id="form1" runat="server">
+        <asp:Button ID="Btn_Comodin_Master" runat="server" style="background-color:Transparent;border-style:none;" OnClientClick="javascript:return false;"/>
+        
+    <div>
+        <div id="principal" runat="server">
+            <asp:Label ID="scroll" runat="server" Text=""></asp:Label>            
+            
+            <div id="menu_flotante" runat="server" visible="false" > 
+                <uc1:wuc_menu ID="wuc_menu" runat="server" />        
+            </div>
+            
+            <div id="programas" runat="server" visible="false">
+	        </div>
+            
+            <div id="encabezado" runat="server" visible="false">
+               <%-- <p align="right">--%>
+                    <br />
+                    <br />                    
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:Label ID="lblUsuario" class="label_sesion2" runat="server"></asp:Label>
+                                <br />
+                                <asp:Label ID="lblDireccion" class="label_sesion1" runat="server"></asp:Label>
+                            </td>
+                            <td>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                <%--</p>--%>
+            </div>
+            
+            <div id="encabezado_login" runat="server">
+            
+	        </div>
+            
+            <div id="barra" runat="server" visible="false">
+                <table id="tabla_barra" class="table_paginacion" style="background-image:url(<%= Page.ResolveUrl("~/paginas/imagenes/master/site_map.PNG")%>); width:100%;">
+                
+                    <tr>
+                        <td style="width:75%;" id ="Td_Bienvenido">
+                            &nbsp;&nbsp;&nbsp;<asp:Label ID="Lbl_Bienvenido" runat="server" Text="Bienvenido:" ></asp:Label>
+                                <asp:Label ID="Lbl_Usuario" runat="server" Text=""></asp:Label>
+                        </td>
+                        <td style="width:20%;" id ="Td_Fecha">
+                                <asp:Label ID="Lbl_Fecha" runat="server" style="font-family:Verdana, Times New Roman; font-size:11px; font-weight:normal;"></asp:Label>                                                                                                                                               
+                                <span class="jclock"></span>
+                        </td>
+                        
+                        <td style="width:5%;" id ="Td_Salir">
+                        <asp:ImageButton ID="btnSalir" runat="server" 
+                                ImageUrl="~/paginas/imagenes/paginas/sias_exit.png" ToolTip="Salir del sistema" 
+                                onclick="btnSalir_Click" />
+                        </td>
+                    </tr>
+                    <tr id ="Tr_Site">
+                        <td>
+                            &nbsp;&nbsp;&nbsp;Usted se encuentra aqu&iacute;:
+                            <asp:SiteMapPath ID="smpUbicacion" runat="server" Font-Names="Arial" 
+                            Font-Size="small" PathSeparator=" > ">
+                            <PathSeparatorStyle Font-Bold="True" ForeColor="#507CD1" />
+                            <CurrentNodeStyle ForeColor="#333333" />
+                            <NodeStyle Font-Bold="True" ForeColor="#284E98" />
+                            <RootNodeStyle Font-Bold="True" ForeColor="#507CD1" />
+                            </asp:SiteMapPath>                            
+                        </td>
+                        <td style="width:300px;">
+                                &nbsp;</td>
+                        
+                        <td style="width:30px;">
+                            &nbsp;</td>
+                    </tr>
+                </table>    
+            </div>
+                
+            <div id="contenido_fondo_login" runat="server">
+                <asp:ContentPlaceHolder id="Cph_Area_Trabajo2" runat="server">
+                </asp:ContentPlaceHolder>            
+            </div>
+            <div id="contenido_fondo" runat="server">
+                <asp:ContentPlaceHolder id="Cph_Area_Trabajo1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>            
+            <div id="pie_login" runat="server" ></div>                
+            <div id="pie" runat="server" visible="false"></div>            
+        </div> 
+    </div>
+    </form>
+</body>
+</html>

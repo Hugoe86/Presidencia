@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Ate_Correos_Enviados" targetNamespace="http://tempuri.org/Ds_Rpt_Ate_Correos_Enviados.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Ate_Correos_Enviados.xsd" xmlns="http://tempuri.org/Ds_Rpt_Ate_Correos_Enviados.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Ate_Correos_Enviados" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Ate_Correos_Enviados" msprop:Generator_DataSetName="Ds_Rpt_Ate_Correos_Enviados">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Correos_Enviados" msprop:Generator_UserTableName="Dt_Correos_Enviados" msprop:Generator_RowDeletedName="Dt_Correos_EnviadosRowDeleted" msprop:Generator_TableClassName="Dt_Correos_EnviadosDataTable" msprop:Generator_RowChangedName="Dt_Correos_EnviadosRowChanged" msprop:Generator_RowClassName="Dt_Correos_EnviadosRow" msprop:Generator_RowChangingName="Dt_Correos_EnviadosRowChanging" msprop:Generator_RowEvArgName="Dt_Correos_EnviadosRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Correos_EnviadosRowChangeEventHandler" msprop:Generator_TablePropName="Dt_Correos_Enviados" msprop:Generator_TableVarName="tableDt_Correos_Enviados" msprop:Generator_RowDeletingName="Dt_Correos_EnviadosRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DESTINATARIO" msprop:Generator_UserColumnName="DESTINATARIO" msprop:Generator_ColumnPropNameInRow="DESTINATARIO" msprop:Generator_ColumnVarNameInTable="columnDESTINATARIO" msprop:Generator_ColumnPropNameInTable="DESTINATARIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE_CIUDADANO" msprop:Generator_UserColumnName="NOMBRE_CIUDADANO" msprop:Generator_ColumnPropNameInRow="NOMBRE_CIUDADANO" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_CIUDADANO" msprop:Generator_ColumnPropNameInTable="NOMBRE_CIUDADANOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MOTIVO" msprop:Generator_UserColumnName="MOTIVO" msprop:Generator_ColumnPropNameInRow="MOTIVO" msprop:Generator_ColumnVarNameInTable="columnMOTIVO" msprop:Generator_ColumnPropNameInTable="MOTIVOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA_NOTIFICACION" msprop:Generator_UserColumnName="FECHA_NOTIFICACION" msprop:Generator_ColumnPropNameInRow="FECHA_NOTIFICACION" msprop:Generator_ColumnVarNameInTable="columnFECHA_NOTIFICACION" msprop:Generator_ColumnPropNameInTable="FECHA_NOTIFICACIONColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

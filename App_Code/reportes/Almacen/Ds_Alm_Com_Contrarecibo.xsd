@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Alm_Com_Contrarecibo" targetNamespace="http://tempuri.org/Ds_Alm_Com_Contrarecibo.xsd" xmlns:mstns="http://tempuri.org/Ds_Alm_Com_Contrarecibo.xsd" xmlns="http://tempuri.org/Ds_Alm_Com_Contrarecibo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Alm_Com_Contrarecibo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Alm_Com_Contrarecibo" msprop:Generator_DataSetName="Ds_Alm_Com_Contrarecibo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Cabecera" msprop:Generator_UserTableName="Cabecera" msprop:Generator_RowDeletedName="CabeceraRowDeleted" msprop:Generator_RowChangedName="CabeceraRowChanged" msprop:Generator_RowClassName="CabeceraRow" msprop:Generator_RowChangingName="CabeceraRowChanging" msprop:Generator_RowEvArgName="CabeceraRowChangeEvent" msprop:Generator_RowEvHandlerName="CabeceraRowChangeEventHandler" msprop:Generator_TableClassName="CabeceraDataTable" msprop:Generator_TableVarName="tableCabecera" msprop:Generator_RowDeletingName="CabeceraRowDeleting" msprop:Generator_TablePropName="Cabecera">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="No_Contrarecibo" msprop:Generator_UserColumnName="No_Contrarecibo" msprop:Generator_ColumnVarNameInTable="columnNo_Contrarecibo" msprop:Generator_ColumnPropNameInRow="No_Contrarecibo" msprop:Generator_ColumnPropNameInTable="No_ContrareciboColumn" type="xs:string" default="" />
+              <xs:element name="No_Proveedor" msprop:Generator_UserColumnName="No_Proveedor" msprop:Generator_ColumnVarNameInTable="columnNo_Proveedor" msprop:Generator_ColumnPropNameInRow="No_Proveedor" msprop:Generator_ColumnPropNameInTable="No_ProveedorColumn" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="Proveedor" msprop:Generator_UserColumnName="Proveedor" msprop:Generator_ColumnVarNameInTable="columnProveedor" msprop:Generator_ColumnPropNameInRow="Proveedor" msprop:Generator_ColumnPropNameInTable="ProveedorColumn" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="Fecha_Recepcion" msprop:Generator_UserColumnName="Fecha_Recepcion" msprop:Generator_ColumnVarNameInTable="columnFecha_Recepcion" msprop:Generator_ColumnPropNameInRow="Fecha_Recepcion" msprop:Generator_ColumnPropNameInTable="Fecha_RecepcionColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Fecha_Pago" msprop:Generator_UserColumnName="Fecha_Pago" msprop:Generator_ColumnVarNameInTable="columnFecha_Pago" msprop:Generator_ColumnPropNameInRow="Fecha_Pago" msprop:Generator_ColumnPropNameInTable="Fecha_PagoColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Empleado_Almacen" msprop:Generator_UserColumnName="Empleado_Almacen" msprop:Generator_ColumnVarNameInTable="columnEmpleado_Almacen" msprop:Generator_ColumnPropNameInRow="Empleado_Almacen" msprop:Generator_ColumnPropNameInTable="Empleado_AlmacenColumn" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="Observaciones" msprop:Generator_UserColumnName="Observaciones" msprop:Generator_ColumnVarNameInTable="columnObservaciones" msprop:Generator_ColumnPropNameInRow="Observaciones" msprop:Generator_ColumnPropNameInTable="ObservacionesColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="SubTotal" msprop:Generator_UserColumnName="SubTotal" msprop:Generator_ColumnVarNameInTable="columnSubTotal" msprop:Generator_ColumnPropNameInRow="SubTotal" msprop:Generator_ColumnPropNameInTable="SubTotalColumn" type="xs:double" default="0" minOccurs="0" />
+              <xs:element name="IVA" msprop:Generator_UserColumnName="IVA" msprop:Generator_ColumnVarNameInTable="columnIVA" msprop:Generator_ColumnPropNameInRow="IVA" msprop:Generator_ColumnPropNameInTable="IVAColumn" type="xs:double" default="0" minOccurs="0" />
+              <xs:element name="Importe" msprop:Generator_UserColumnName="Importe" msprop:Generator_ColumnVarNameInTable="columnImporte" msprop:Generator_ColumnPropNameInRow="Importe" msprop:Generator_ColumnPropNameInTable="ImporteColumn" type="xs:double" default="0" minOccurs="0" />
+              <xs:element name="Folio" msprop:Generator_UserColumnName="Folio" msprop:Generator_ColumnVarNameInTable="columnFolio" msprop:Generator_ColumnPropNameInRow="Folio" msprop:Generator_ColumnPropNameInTable="FolioColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Requisicion" msprop:Generator_UserColumnName="Requisicion" msprop:Generator_ColumnPropNameInRow="Requisicion" msprop:Generator_ColumnVarNameInTable="columnRequisicion" msprop:Generator_ColumnPropNameInTable="RequisicionColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Factura_Proveedores" msprop:Generator_UserTableName="Factura_Proveedores" msprop:Generator_RowDeletedName="Factura_ProveedoresRowDeleted" msprop:Generator_RowChangedName="Factura_ProveedoresRowChanged" msprop:Generator_RowClassName="Factura_ProveedoresRow" msprop:Generator_RowChangingName="Factura_ProveedoresRowChanging" msprop:Generator_RowEvArgName="Factura_ProveedoresRowChangeEvent" msprop:Generator_RowEvHandlerName="Factura_ProveedoresRowChangeEventHandler" msprop:Generator_TableClassName="Factura_ProveedoresDataTable" msprop:Generator_TableVarName="tableFactura_Proveedores" msprop:Generator_RowDeletingName="Factura_ProveedoresRowDeleting" msprop:Generator_TablePropName="Factura_Proveedores">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="No_Contrarecibo" msprop:Generator_UserColumnName="No_Contrarecibo" msprop:Generator_ColumnVarNameInTable="columnNo_Contrarecibo" msprop:Generator_ColumnPropNameInRow="No_Contrarecibo" msprop:Generator_ColumnPropNameInTable="No_ContrareciboColumn" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="No_Factura_Proveedor" msprop:Generator_UserColumnName="No_Factura_Proveedor" msprop:Generator_ColumnVarNameInTable="columnNo_Factura_Proveedor" msprop:Generator_ColumnPropNameInRow="No_Factura_Proveedor" msprop:Generator_ColumnPropNameInTable="No_Factura_ProveedorColumn" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="Fecha_Factura" msprop:Generator_UserColumnName="Fecha_Factura" msprop:Generator_ColumnVarNameInTable="columnFecha_Factura" msprop:Generator_ColumnPropNameInRow="Fecha_Factura" msprop:Generator_ColumnPropNameInTable="Fecha_FacturaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Importe" msprop:Generator_UserColumnName="Importe" msprop:Generator_ColumnVarNameInTable="columnImporte" msprop:Generator_ColumnPropNameInRow="Importe" msprop:Generator_ColumnPropNameInTable="ImporteColumn" type="xs:double" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Doc_Soporte" msprop:Generator_UserTableName="Doc_Soporte" msprop:Generator_RowDeletedName="Doc_SoporteRowDeleted" msprop:Generator_RowChangedName="Doc_SoporteRowChanged" msprop:Generator_RowClassName="Doc_SoporteRow" msprop:Generator_RowChangingName="Doc_SoporteRowChanging" msprop:Generator_RowEvArgName="Doc_SoporteRowChangeEvent" msprop:Generator_RowEvHandlerName="Doc_SoporteRowChangeEventHandler" msprop:Generator_TableClassName="Doc_SoporteDataTable" msprop:Generator_TableVarName="tableDoc_Soporte" msprop:Generator_RowDeletingName="Doc_SoporteRowDeleting" msprop:Generator_TablePropName="Doc_Soporte">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="No_Contrarecibo" msprop:Generator_UserColumnName="No_Contrarecibo" msprop:Generator_ColumnVarNameInTable="columnNo_Contrarecibo" msprop:Generator_ColumnPropNameInRow="No_Contrarecibo" msprop:Generator_ColumnPropNameInTable="No_ContrareciboColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" type="xs:string" default="" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="CabeceraKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Cabecera" />
+      <xs:field xpath="mstns:No_Contrarecibo" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Cabecera_Factura_Proveedores" msdata:parent="Cabecera" msdata:child="Factura_Proveedores" msdata:parentkey="No_Contrarecibo" msdata:childkey="No_Contrarecibo" msprop:Generator_UserRelationName="Cabecera_Factura_Proveedores" msprop:Generator_RelationVarName="relationCabecera_Factura_Proveedores" msprop:Generator_UserChildTable="Factura_Proveedores" msprop:Generator_UserParentTable="Cabecera" msprop:Generator_ParentPropName="CabeceraRow" msprop:Generator_ChildPropName="GetFactura_ProveedoresRows" />
+      <msdata:Relationship name="Cabecera_Doc_Soporte" msdata:parent="Cabecera" msdata:child="Doc_Soporte" msdata:parentkey="No_Contrarecibo" msdata:childkey="No_Contrarecibo" msprop:Generator_UserRelationName="Cabecera_Doc_Soporte" msprop:Generator_RelationVarName="relationCabecera_Doc_Soporte" msprop:Generator_UserChildTable="Doc_Soporte" msprop:Generator_UserParentTable="Cabecera" msprop:Generator_ParentPropName="CabeceraRow" msprop:Generator_ChildPropName="GetDoc_SoporteRows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

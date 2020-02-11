@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Ope_Caj_Recolecciones" targetNamespace="http://tempuri.org/Ds_Ope_Caj_Recolecciones.xsd" xmlns:mstns="http://tempuri.org/Ds_Ope_Caj_Recolecciones.xsd" xmlns="http://tempuri.org/Ds_Ope_Caj_Recolecciones.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Ope_Caj_Recolecciones" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Ope_Caj_Recolecciones" msprop:Generator_DataSetName="Ds_Ope_Caj_Recolecciones">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Recoleccion" msprop:Generator_UserTableName="Recoleccion" msprop:Generator_RowDeletedName="RecoleccionRowDeleted" msprop:Generator_RowChangedName="RecoleccionRowChanged" msprop:Generator_RowClassName="RecoleccionRow" msprop:Generator_RowChangingName="RecoleccionRowChanging" msprop:Generator_RowEvArgName="RecoleccionRowChangeEvent" msprop:Generator_RowEvHandlerName="RecoleccionRowChangeEventHandler" msprop:Generator_TableClassName="RecoleccionDataTable" msprop:Generator_TableVarName="tableRecoleccion" msprop:Generator_RowDeletingName="RecoleccionRowDeleting" msprop:Generator_TablePropName="Recoleccion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Caja" msprop:Generator_UserColumnName="Caja" msprop:Generator_ColumnVarNameInTable="columnCaja" msprop:Generator_ColumnPropNameInRow="Caja" msprop:Generator_ColumnPropNameInTable="CajaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Unidad_Responsable" msprop:Generator_UserColumnName="Unidad_Responsable" msprop:Generator_ColumnVarNameInTable="columnUnidad_Responsable" msprop:Generator_ColumnPropNameInRow="Unidad_Responsable" msprop:Generator_ColumnPropNameInTable="Unidad_ResponsableColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Cajero" msprop:Generator_UserColumnName="Cajero" msprop:Generator_ColumnVarNameInTable="columnCajero" msprop:Generator_ColumnPropNameInRow="Cajero" msprop:Generator_ColumnPropNameInTable="CajeroColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Hora" msprop:Generator_UserColumnName="Hora" msprop:Generator_ColumnVarNameInTable="columnHora" msprop:Generator_ColumnPropNameInRow="Hora" msprop:Generator_ColumnPropNameInTable="HoraColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="No_Recoleccion" msprop:Generator_UserColumnName="No_Recoleccion" msprop:Generator_ColumnVarNameInTable="columnNo_Recoleccion" msprop:Generator_ColumnPropNameInRow="No_Recoleccion" msprop:Generator_ColumnPropNameInTable="No_RecoleccionColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Monto" msprop:Generator_UserColumnName="Monto" msprop:Generator_ColumnVarNameInTable="columnMonto" msprop:Generator_ColumnPropNameInRow="Monto" msprop:Generator_ColumnPropNameInTable="MontoColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Recibio_Efectivo" msprop:Generator_UserColumnName="Recibio_Efectivo" msprop:Generator_ColumnVarNameInTable="columnRecibio_Efectivo" msprop:Generator_ColumnPropNameInRow="Recibio_Efectivo" msprop:Generator_ColumnPropNameInTable="Recibio_EfectivoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Modulo" msprop:Generator_UserColumnName="Modulo" msprop:Generator_ColumnPropNameInRow="Modulo" msprop:Generator_ColumnVarNameInTable="columnModulo" msprop:Generator_ColumnPropNameInTable="ModuloColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Monto_Tarjeta" msprop:Generator_UserColumnName="Monto_Tarjeta" msprop:Generator_ColumnPropNameInRow="Monto_Tarjeta" msprop:Generator_ColumnVarNameInTable="columnMonto_Tarjeta" msprop:Generator_ColumnPropNameInTable="Monto_TarjetaColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Monto_Cheques" msprop:Generator_UserColumnName="Monto_Cheques" msprop:Generator_ColumnPropNameInRow="Monto_Cheques" msprop:Generator_ColumnVarNameInTable="columnMonto_Cheques" msprop:Generator_ColumnPropNameInTable="Monto_ChequesColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Monto_Transferencias" msprop:Generator_UserColumnName="Monto_Transferencias" msprop:Generator_ColumnPropNameInRow="Monto_Transferencias" msprop:Generator_ColumnVarNameInTable="columnMonto_Transferencias" msprop:Generator_ColumnPropNameInTable="Monto_TransferenciasColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Conteo_Tarjeta" msprop:Generator_UserColumnName="Conteo_Tarjeta" msprop:Generator_ColumnPropNameInRow="Conteo_Tarjeta" msprop:Generator_ColumnVarNameInTable="columnConteo_Tarjeta" msprop:Generator_ColumnPropNameInTable="Conteo_TarjetaColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Conteo_Cheques" msprop:Generator_UserColumnName="Conteo_Cheques" msprop:Generator_ColumnPropNameInRow="Conteo_Cheques" msprop:Generator_ColumnVarNameInTable="columnConteo_Cheques" msprop:Generator_ColumnPropNameInTable="Conteo_ChequesColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Conteo_Transferencias" msprop:Generator_UserColumnName="Conteo_Transferencias" msprop:Generator_ColumnPropNameInRow="Conteo_Transferencias" msprop:Generator_ColumnVarNameInTable="columnConteo_Transferencias" msprop:Generator_ColumnPropNameInTable="Conteo_TransferenciasColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Denominaciones_Recoleccion" msprop:Generator_UserTableName="Denominaciones_Recoleccion" msprop:Generator_RowDeletedName="Denominaciones_RecoleccionRowDeleted" msprop:Generator_RowChangedName="Denominaciones_RecoleccionRowChanged" msprop:Generator_RowClassName="Denominaciones_RecoleccionRow" msprop:Generator_RowChangingName="Denominaciones_RecoleccionRowChanging" msprop:Generator_RowEvArgName="Denominaciones_RecoleccionRowChangeEvent" msprop:Generator_RowEvHandlerName="Denominaciones_RecoleccionRowChangeEventHandler" msprop:Generator_TableClassName="Denominaciones_RecoleccionDataTable" msprop:Generator_TableVarName="tableDenominaciones_Recoleccion" msprop:Generator_RowDeletingName="Denominaciones_RecoleccionRowDeleting" msprop:Generator_TablePropName="Denominaciones_Recoleccion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Denominacion" msprop:Generator_UserColumnName="Denominacion" msprop:Generator_ColumnVarNameInTable="columnDenominacion" msprop:Generator_ColumnPropNameInRow="Denominacion" msprop:Generator_ColumnPropNameInTable="DenominacionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Cantidad" msprop:Generator_UserColumnName="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Monto" msprop:Generator_UserColumnName="Monto" msprop:Generator_ColumnVarNameInTable="columnMonto" msprop:Generator_ColumnPropNameInRow="Monto" msprop:Generator_ColumnPropNameInTable="MontoColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

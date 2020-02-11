@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Ope_Pre_Cierre_Anual" targetNamespace="http://tempuri.org/Ds_Ope_Pre_Cierre_Anual.xsd" xmlns:mstns="http://tempuri.org/Ds_Ope_Pre_Cierre_Anual.xsd" xmlns="http://tempuri.org/Ds_Ope_Pre_Cierre_Anual.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Ope_Pre_Cierre_Anual" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Ope_Pre_Cierre_Anual" msprop:Generator_DataSetName="Ds_Ope_Pre_Cierre_Anual">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Datos_Generales" msprop:Generator_UserTableName="Dt_Datos_Generales" msprop:Generator_RowDeletedName="Dt_Datos_GeneralesRowDeleted" msprop:Generator_RowChangedName="Dt_Datos_GeneralesRowChanged" msprop:Generator_RowClassName="Dt_Datos_GeneralesRow" msprop:Generator_RowChangingName="Dt_Datos_GeneralesRowChanging" msprop:Generator_RowEvArgName="Dt_Datos_GeneralesRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Datos_GeneralesRowChangeEventHandler" msprop:Generator_TableClassName="Dt_Datos_GeneralesDataTable" msprop:Generator_TableVarName="tableDt_Datos_Generales" msprop:Generator_RowDeletingName="Dt_Datos_GeneralesRowDeleting" msprop:Generator_TablePropName="Dt_Datos_Generales">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Titulo" msprop:Generator_UserColumnName="Titulo" msprop:Generator_ColumnPropNameInRow="Titulo" msprop:Generator_ColumnVarNameInTable="columnTitulo" msprop:Generator_ColumnPropNameInTable="TituloColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Totales" msprop:Generator_UserColumnName="Totales" msprop:Generator_ColumnPropNameInRow="Totales" msprop:Generator_ColumnVarNameInTable="columnTotales" msprop:Generator_ColumnPropNameInTable="TotalesColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Errores" msprop:Generator_UserColumnName="Errores" msprop:Generator_ColumnPropNameInRow="Errores" msprop:Generator_ColumnVarNameInTable="columnErrores" msprop:Generator_ColumnPropNameInTable="ErroresColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Subtitulo" msprop:Generator_UserColumnName="Subtitulo" msprop:Generator_ColumnPropNameInRow="Subtitulo" msprop:Generator_ColumnVarNameInTable="columnSubtitulo" msprop:Generator_ColumnPropNameInTable="SubtituloColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Cuentas_Omitidas" msprop:Generator_UserColumnName="Cuentas_Omitidas" msprop:Generator_ColumnPropNameInRow="Cuentas_Omitidas" msprop:Generator_ColumnVarNameInTable="columnCuentas_Omitidas" msprop:Generator_ColumnPropNameInTable="Cuentas_OmitidasColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Adeudos_Generados" msprop:Generator_UserColumnName="Adeudos_Generados" msprop:Generator_ColumnPropNameInRow="Adeudos_Generados" msprop:Generator_ColumnVarNameInTable="columnAdeudos_Generados" msprop:Generator_ColumnPropNameInTable="Adeudos_GeneradosColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Ordenes_Generadas" msprop:Generator_UserColumnName="Ordenes_Generadas" msprop:Generator_ColumnPropNameInRow="Ordenes_Generadas" msprop:Generator_ColumnVarNameInTable="columnOrdenes_Generadas" msprop:Generator_ColumnPropNameInTable="Ordenes_GeneradasColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Total_Cuentas_Padron" msprop:Generator_UserColumnName="Total_Cuentas_Padron" msprop:Generator_ColumnPropNameInRow="Total_Cuentas_Padron" msprop:Generator_ColumnVarNameInTable="columnTotal_Cuentas_Padron" msprop:Generator_ColumnPropNameInTable="Total_Cuentas_PadronColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dt_Cuentas_Omitidas" msprop:Generator_UserTableName="Dt_Cuentas_Omitidas" msprop:Generator_RowDeletedName="Dt_Cuentas_OmitidasRowDeleted" msprop:Generator_RowChangedName="Dt_Cuentas_OmitidasRowChanged" msprop:Generator_RowClassName="Dt_Cuentas_OmitidasRow" msprop:Generator_RowChangingName="Dt_Cuentas_OmitidasRowChanging" msprop:Generator_RowEvArgName="Dt_Cuentas_OmitidasRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Cuentas_OmitidasRowChangeEventHandler" msprop:Generator_TableClassName="Dt_Cuentas_OmitidasDataTable" msprop:Generator_TableVarName="tableDt_Cuentas_Omitidas" msprop:Generator_RowDeletingName="Dt_Cuentas_OmitidasRowDeleting" msprop:Generator_TablePropName="Dt_Cuentas_Omitidas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cuenta_Omitida" msprop:Generator_UserColumnName="Cuenta_Omitida" msprop:Generator_ColumnPropNameInRow="Cuenta_Omitida" msprop:Generator_ColumnVarNameInTable="columnCuenta_Omitida" msprop:Generator_ColumnPropNameInTable="Cuenta_OmitidaColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dt_Adeudos_Generados" msprop:Generator_UserTableName="Dt_Adeudos_Generados" msprop:Generator_RowDeletedName="Dt_Adeudos_GeneradosRowDeleted" msprop:Generator_RowChangedName="Dt_Adeudos_GeneradosRowChanged" msprop:Generator_RowClassName="Dt_Adeudos_GeneradosRow" msprop:Generator_RowChangingName="Dt_Adeudos_GeneradosRowChanging" msprop:Generator_RowEvArgName="Dt_Adeudos_GeneradosRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Adeudos_GeneradosRowChangeEventHandler" msprop:Generator_TableClassName="Dt_Adeudos_GeneradosDataTable" msprop:Generator_TableVarName="tableDt_Adeudos_Generados" msprop:Generator_RowDeletingName="Dt_Adeudos_GeneradosRowDeleting" msprop:Generator_TablePropName="Dt_Adeudos_Generados">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Adeudo_Generado" msprop:Generator_UserColumnName="Adeudo_Generado" msprop:Generator_ColumnPropNameInRow="Adeudo_Generado" msprop:Generator_ColumnVarNameInTable="columnAdeudo_Generado" msprop:Generator_ColumnPropNameInTable="Adeudo_GeneradoColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dt_Total_Bimestres" msprop:Generator_UserTableName="Dt_Total_Bimestres" msprop:Generator_RowDeletedName="Dt_Total_BimestresRowDeleted" msprop:Generator_RowChangedName="Dt_Total_BimestresRowChanged" msprop:Generator_RowClassName="Dt_Total_BimestresRow" msprop:Generator_RowChangingName="Dt_Total_BimestresRowChanging" msprop:Generator_RowEvArgName="Dt_Total_BimestresRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Total_BimestresRowChangeEventHandler" msprop:Generator_TableClassName="Dt_Total_BimestresDataTable" msprop:Generator_TableVarName="tableDt_Total_Bimestres" msprop:Generator_RowDeletingName="Dt_Total_BimestresRowDeleting" msprop:Generator_TablePropName="Dt_Total_Bimestres">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CUOTA_ANUAL" msprop:Generator_UserColumnName="CUOTA_ANUAL" msprop:Generator_ColumnVarNameInTable="columnCUOTA_ANUAL" msprop:Generator_ColumnPropNameInRow="CUOTA_ANUAL" msprop:Generator_ColumnPropNameInTable="CUOTA_ANUALColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BIMESTRE_1" msprop:Generator_UserColumnName="BIMESTRE_1" msprop:Generator_ColumnVarNameInTable="columnBIMESTRE_1" msprop:Generator_ColumnPropNameInRow="BIMESTRE_1" msprop:Generator_ColumnPropNameInTable="BIMESTRE_1Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BIMESTRE_2" msprop:Generator_UserColumnName="BIMESTRE_2" msprop:Generator_ColumnVarNameInTable="columnBIMESTRE_2" msprop:Generator_ColumnPropNameInRow="BIMESTRE_2" msprop:Generator_ColumnPropNameInTable="BIMESTRE_2Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BIMESTRE_3" msprop:Generator_UserColumnName="BIMESTRE_3" msprop:Generator_ColumnVarNameInTable="columnBIMESTRE_3" msprop:Generator_ColumnPropNameInRow="BIMESTRE_3" msprop:Generator_ColumnPropNameInTable="BIMESTRE_3Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BIMESTRE_4" msprop:Generator_UserColumnName="BIMESTRE_4" msprop:Generator_ColumnVarNameInTable="columnBIMESTRE_4" msprop:Generator_ColumnPropNameInRow="BIMESTRE_4" msprop:Generator_ColumnPropNameInTable="BIMESTRE_4Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BIMESTRE_5" msprop:Generator_UserColumnName="BIMESTRE_5" msprop:Generator_ColumnVarNameInTable="columnBIMESTRE_5" msprop:Generator_ColumnPropNameInRow="BIMESTRE_5" msprop:Generator_ColumnPropNameInTable="BIMESTRE_5Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BIMESTRE_6" msprop:Generator_UserColumnName="BIMESTRE_6" msprop:Generator_ColumnVarNameInTable="columnBIMESTRE_6" msprop:Generator_ColumnPropNameInRow="BIMESTRE_6" msprop:Generator_ColumnPropNameInTable="BIMESTRE_6Column" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dt_Errores" msprop:Generator_UserTableName="Dt_Errores" msprop:Generator_RowDeletedName="Dt_ErroresRowDeleted" msprop:Generator_TableClassName="Dt_ErroresDataTable" msprop:Generator_RowChangedName="Dt_ErroresRowChanged" msprop:Generator_RowClassName="Dt_ErroresRow" msprop:Generator_RowChangingName="Dt_ErroresRowChanging" msprop:Generator_RowEvArgName="Dt_ErroresRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_ErroresRowChangeEventHandler" msprop:Generator_TablePropName="Dt_Errores" msprop:Generator_TableVarName="tableDt_Errores" msprop:Generator_RowDeletingName="Dt_ErroresRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cuenta_Predial" msprop:Generator_UserColumnName="Cuenta_Predial" msprop:Generator_ColumnPropNameInRow="Cuenta_Predial" msprop:Generator_ColumnVarNameInTable="columnCuenta_Predial" msprop:Generator_ColumnPropNameInTable="Cuenta_PredialColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Error" msprop:Generator_UserColumnName="Error" msprop:Generator_ColumnPropNameInRow="Error" msprop:Generator_ColumnVarNameInTable="columnError" msprop:Generator_ColumnPropNameInTable="ErrorColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

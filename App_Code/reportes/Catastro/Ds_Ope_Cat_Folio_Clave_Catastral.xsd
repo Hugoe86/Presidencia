@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Ope_Cat_Folio_Clave_Catastral" targetNamespace="http://tempuri.org/Ds_Ope_Cat_Folio_Clave_Catastral.xsd" xmlns:mstns="http://tempuri.org/Ds_Ope_Cat_Folio_Clave_Catastral.xsd" xmlns="http://tempuri.org/Ds_Ope_Cat_Folio_Clave_Catastral.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Ope_Cat_Folio_Clave_Catastral" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Ope_Cat_Folio_Clave_Catastral" msprop:Generator_DataSetName="Ds_Ope_Cat_Folio_Clave_Catastral">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Folio_Clave_Catastral" msprop:Generator_UserTableName="Folio_Clave_Catastral" msprop:Generator_RowDeletedName="Folio_Clave_CatastralRowDeleted" msprop:Generator_RowChangedName="Folio_Clave_CatastralRowChanged" msprop:Generator_RowClassName="Folio_Clave_CatastralRow" msprop:Generator_RowChangingName="Folio_Clave_CatastralRowChanging" msprop:Generator_RowEvArgName="Folio_Clave_CatastralRowChangeEvent" msprop:Generator_RowEvHandlerName="Folio_Clave_CatastralRowChangeEventHandler" msprop:Generator_TableClassName="Folio_Clave_CatastralDataTable" msprop:Generator_TableVarName="tableFolio_Clave_Catastral" msprop:Generator_RowDeletingName="Folio_Clave_CatastralRowDeleting" msprop:Generator_TablePropName="Folio_Clave_Catastral">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cuenta_Predial" msprop:Generator_UserColumnName="Cuenta_Predial" msprop:Generator_ColumnVarNameInTable="columnCuenta_Predial" msprop:Generator_ColumnPropNameInRow="Cuenta_Predial" msprop:Generator_ColumnPropNameInTable="Cuenta_PredialColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Folio" msprop:Generator_UserColumnName="Folio" msprop:Generator_ColumnVarNameInTable="columnFolio" msprop:Generator_ColumnPropNameInRow="Folio" msprop:Generator_ColumnPropNameInTable="FolioColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Propietario" msprop:Generator_UserColumnName="Propietario" msprop:Generator_ColumnVarNameInTable="columnPropietario" msprop:Generator_ColumnPropNameInRow="Propietario" msprop:Generator_ColumnPropNameInTable="PropietarioColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Domicilio" msprop:Generator_UserColumnName="Domicilio" msprop:Generator_ColumnVarNameInTable="columnDomicilio" msprop:Generator_ColumnPropNameInRow="Domicilio" msprop:Generator_ColumnPropNameInTable="DomicilioColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Importe" msprop:Generator_UserColumnName="Importe" msprop:Generator_ColumnVarNameInTable="columnImporte" msprop:Generator_ColumnPropNameInRow="Importe" msprop:Generator_ColumnPropNameInTable="ImporteColumn" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

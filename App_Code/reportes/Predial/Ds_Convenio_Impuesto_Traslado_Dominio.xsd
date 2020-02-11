@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Convenio_Impuesto_Traslado_Dominio" targetNamespace="http://tempuri.org/Ds_Convenio_Impuesto_Traslado_Dominio.xsd" xmlns:mstns="http://tempuri.org/Ds_Convenio_Impuesto_Traslado_Dominio.xsd" xmlns="http://tempuri.org/Ds_Convenio_Impuesto_Traslado_Dominio.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Convenio_Impuesto_Traslado_Dominio" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Convenio_Impuesto_Traslado_Dominio" msprop:Generator_DataSetName="Ds_Convenio_Impuesto_Traslado_Dominio">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Pre_Convenios_TD" msprop:Generator_UserTableName="Dt_Pre_Convenios_TD" msprop:Generator_RowDeletedName="Dt_Pre_Convenios_TDRowDeleted" msprop:Generator_TableClassName="Dt_Pre_Convenios_TDDataTable" msprop:Generator_RowChangedName="Dt_Pre_Convenios_TDRowChanged" msprop:Generator_RowDeletingName="Dt_Pre_Convenios_TDRowDeleting" msprop:Generator_RowChangingName="Dt_Pre_Convenios_TDRowChanging" msprop:Generator_RowEvArgName="Dt_Pre_Convenios_TDRowChangeEvent" msprop:Generator_RowClassName="Dt_Pre_Convenios_TDRow" msprop:Generator_RowEvHandlerName="Dt_Pre_Convenios_TDRowChangeEventHandler" msprop:Generator_TablePropName="Dt_Pre_Convenios_TD" msprop:Generator_TableVarName="tableDt_Pre_Convenios_TD">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NO_CONVENIO" msprop:Generator_UserColumnName="NO_CONVENIO" msprop:Generator_ColumnPropNameInRow="NO_CONVENIO" msprop:Generator_ColumnVarNameInTable="columnNO_CONVENIO" msprop:Generator_ColumnPropNameInTable="NO_CONVENIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="REALIZO" msprop:Generator_UserColumnName="REALIZO" msprop:Generator_ColumnPropNameInRow="REALIZO" msprop:Generator_ColumnVarNameInTable="columnREALIZO" msprop:Generator_ColumnPropNameInTable="REALIZOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SOLICITANTE" msprop:Generator_UserColumnName="SOLICITANTE" msprop:Generator_ColumnPropNameInRow="SOLICITANTE" msprop:Generator_ColumnVarNameInTable="columnSOLICITANTE" msprop:Generator_ColumnPropNameInTable="SOLICITANTEColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dt_Pre_Convenios_Det_TD" msprop:Generator_UserTableName="Dt_Pre_Convenios_Det_TD" msprop:Generator_RowDeletedName="Dt_Pre_Convenios_Det_TDRowDeleted" msprop:Generator_TableClassName="Dt_Pre_Convenios_Det_TDDataTable" msprop:Generator_RowChangedName="Dt_Pre_Convenios_Det_TDRowChanged" msprop:Generator_RowDeletingName="Dt_Pre_Convenios_Det_TDRowDeleting" msprop:Generator_RowChangingName="Dt_Pre_Convenios_Det_TDRowChanging" msprop:Generator_RowEvArgName="Dt_Pre_Convenios_Det_TDRowChangeEvent" msprop:Generator_RowClassName="Dt_Pre_Convenios_Det_TDRow" msprop:Generator_RowEvHandlerName="Dt_Pre_Convenios_Det_TDRowChangeEventHandler" msprop:Generator_TablePropName="Dt_Pre_Convenios_Det_TD" msprop:Generator_TableVarName="tableDt_Pre_Convenios_Det_TD">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NO_CONVENIO" msprop:Generator_UserColumnName="NO_CONVENIO" msprop:Generator_ColumnPropNameInRow="NO_CONVENIO" msprop:Generator_ColumnVarNameInTable="columnNO_CONVENIO" msprop:Generator_ColumnPropNameInTable="NO_CONVENIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_PAGO" msprop:Generator_UserColumnName="NO_PAGO" msprop:Generator_ColumnPropNameInRow="NO_PAGO" msprop:Generator_ColumnVarNameInTable="columnNO_PAGO" msprop:Generator_ColumnPropNameInTable="NO_PAGOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="MONTO_IMPUESTO" msprop:Generator_UserColumnName="MONTO_IMPUESTO" msprop:Generator_ColumnPropNameInRow="MONTO_IMPUESTO" msprop:Generator_ColumnVarNameInTable="columnMONTO_IMPUESTO" msprop:Generator_ColumnPropNameInTable="MONTO_IMPUESTOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="RECARGOS_ORDINARIOS" msprop:Generator_UserColumnName="RECARGOS_ORDINARIOS" msprop:Generator_ColumnPropNameInRow="RECARGOS_ORDINARIOS" msprop:Generator_ColumnVarNameInTable="columnRECARGOS_ORDINARIOS" msprop:Generator_ColumnPropNameInTable="RECARGOS_ORDINARIOSColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="RECARGOS_MORATORIOS" msprop:Generator_UserColumnName="RECARGOS_MORATORIOS" msprop:Generator_ColumnPropNameInRow="RECARGOS_MORATORIOS" msprop:Generator_ColumnVarNameInTable="columnRECARGOS_MORATORIOS" msprop:Generator_ColumnPropNameInTable="RECARGOS_MORATORIOSColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="MONTO_MULTAS" msprop:Generator_UserColumnName="MONTO_MULTAS" msprop:Generator_ColumnPropNameInRow="MONTO_MULTAS" msprop:Generator_ColumnVarNameInTable="columnMONTO_MULTAS" msprop:Generator_ColumnPropNameInTable="MONTO_MULTASColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="HONORARIOS" msprop:Generator_UserColumnName="HONORARIOS" msprop:Generator_ColumnPropNameInRow="HONORARIOS" msprop:Generator_ColumnVarNameInTable="columnHONORARIOS" msprop:Generator_ColumnPropNameInTable="HONORARIOSColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="MONTO_IMPORTE" msprop:Generator_UserColumnName="MONTO_IMPORTE" msprop:Generator_ColumnPropNameInRow="MONTO_IMPORTE" msprop:Generator_ColumnVarNameInTable="columnMONTO_IMPORTE" msprop:Generator_ColumnPropNameInTable="MONTO_IMPORTEColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="FECHA_PAGO" msprop:Generator_UserColumnName="FECHA_PAGO" msprop:Generator_ColumnPropNameInRow="FECHA_PAGO" msprop:Generator_ColumnVarNameInTable="columnFECHA_PAGO" msprop:Generator_ColumnPropNameInTable="FECHA_PAGOColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CONSTANCIA" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dt_Pre_Cuentas_Predial" msprop:Generator_UserTableName="Dt_Pre_Cuentas_Predial" msprop:Generator_RowDeletedName="Dt_Pre_Cuentas_PredialRowDeleted" msprop:Generator_TableClassName="Dt_Pre_Cuentas_PredialDataTable" msprop:Generator_RowChangedName="Dt_Pre_Cuentas_PredialRowChanged" msprop:Generator_RowDeletingName="Dt_Pre_Cuentas_PredialRowDeleting" msprop:Generator_RowChangingName="Dt_Pre_Cuentas_PredialRowChanging" msprop:Generator_RowEvArgName="Dt_Pre_Cuentas_PredialRowChangeEvent" msprop:Generator_RowClassName="Dt_Pre_Cuentas_PredialRow" msprop:Generator_RowEvHandlerName="Dt_Pre_Cuentas_PredialRowChangeEventHandler" msprop:Generator_TablePropName="Dt_Pre_Cuentas_Predial" msprop:Generator_TableVarName="tableDt_Pre_Cuentas_Predial">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CUENTA_PREDIAL" msprop:Generator_UserColumnName="CUENTA_PREDIAL" msprop:Generator_ColumnPropNameInRow="CUENTA_PREDIAL" msprop:Generator_ColumnVarNameInTable="columnCUENTA_PREDIAL" msprop:Generator_ColumnPropNameInTable="CUENTA_PREDIALColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DOMICILIO" msdata:Caption="NO_EXTERIOR" msprop:Generator_UserColumnName="DOMICILIO" msprop:Generator_ColumnPropNameInRow="DOMICILIO" msprop:Generator_ColumnVarNameInTable="columnDOMICILIO" msprop:Generator_ColumnPropNameInTable="DOMICILIOColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

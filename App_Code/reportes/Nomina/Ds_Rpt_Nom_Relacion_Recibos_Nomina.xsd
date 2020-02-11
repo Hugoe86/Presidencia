@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Nom_Relacion_Recibos_Nomina" targetNamespace="http://tempuri.org/Ds_Rpt_Nom_Relacion_Recibos_Nomina.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Nom_Relacion_Recibos_Nomina.xsd" xmlns="http://tempuri.org/Ds_Rpt_Nom_Relacion_Recibos_Nomina.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Nom_Relacion_Recibos_Nomina" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Nom_Relacion_Recibos_Nomina" msprop:Generator_DataSetName="Ds_Rpt_Nom_Relacion_Recibos_Nomina">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_DETALLES" msprop:Generator_UserTableName="DT_DETALLES" msprop:Generator_RowDeletedName="DT_DETALLESRowDeleted" msprop:Generator_RowChangedName="DT_DETALLESRowChanged" msprop:Generator_RowClassName="DT_DETALLESRow" msprop:Generator_RowChangingName="DT_DETALLESRowChanging" msprop:Generator_RowEvArgName="DT_DETALLESRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_DETALLESRowChangeEventHandler" msprop:Generator_TableClassName="DT_DETALLESDataTable" msprop:Generator_TableVarName="tableDT_DETALLES" msprop:Generator_RowDeletingName="DT_DETALLESRowDeleting" msprop:Generator_TablePropName="DT_DETALLES">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CATORCENA_INICIO" msprop:Generator_UserColumnName="CATORCENA_INICIO" msprop:Generator_ColumnPropNameInRow="CATORCENA_INICIO" msprop:Generator_ColumnVarNameInTable="columnCATORCENA_INICIO" msprop:Generator_ColumnPropNameInTable="CATORCENA_INICIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CATORCENA_FIN" msprop:Generator_UserColumnName="CATORCENA_FIN" msprop:Generator_ColumnPropNameInRow="CATORCENA_FIN" msprop:Generator_ColumnVarNameInTable="columnCATORCENA_FIN" msprop:Generator_ColumnPropNameInTable="CATORCENA_FINColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="UNIDAD_RESPONSABLE" msprop:Generator_UserColumnName="UNIDAD_RESPONSABLE" msprop:Generator_ColumnPropNameInRow="UNIDAD_RESPONSABLE" msprop:Generator_ColumnVarNameInTable="columnUNIDAD_RESPONSABLE" msprop:Generator_ColumnPropNameInTable="UNIDAD_RESPONSABLEColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_EMPLEADOS" msprop:Generator_UserTableName="DT_EMPLEADOS" msprop:Generator_RowDeletedName="DT_EMPLEADOSRowDeleted" msprop:Generator_RowChangedName="DT_EMPLEADOSRowChanged" msprop:Generator_RowClassName="DT_EMPLEADOSRow" msprop:Generator_RowChangingName="DT_EMPLEADOSRowChanging" msprop:Generator_RowEvArgName="DT_EMPLEADOSRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_EMPLEADOSRowChangeEventHandler" msprop:Generator_TableClassName="DT_EMPLEADOSDataTable" msprop:Generator_TableVarName="tableDT_EMPLEADOS" msprop:Generator_RowDeletingName="DT_EMPLEADOSRowDeleting" msprop:Generator_TablePropName="DT_EMPLEADOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NO_EMPLEADO" msprop:Generator_UserColumnName="NO_EMPLEADO" msprop:Generator_ColumnPropNameInRow="NO_EMPLEADO" msprop:Generator_ColumnVarNameInTable="columnNO_EMPLEADO" msprop:Generator_ColumnPropNameInTable="NO_EMPLEADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RFC" msprop:Generator_UserColumnName="RFC" msprop:Generator_ColumnPropNameInRow="RFC" msprop:Generator_ColumnVarNameInTable="columnRFC" msprop:Generator_ColumnPropNameInTable="RFCColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CODIGO_PROGRAMATICO" msprop:Generator_UserColumnName="CODIGO_PROGRAMATICO" msprop:Generator_ColumnPropNameInRow="CODIGO_PROGRAMATICO" msprop:Generator_ColumnVarNameInTable="columnCODIGO_PROGRAMATICO" msprop:Generator_ColumnPropNameInTable="CODIGO_PROGRAMATICOColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

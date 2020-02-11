@@ -1,0 +1,377 @@
+﻿/*el interlineado del texto debe de ser de 1.2 veces el tamaño del texto*/
+@media screen, print 
+{
+	body  
+	{
+		width:21.59cm;
+		height:13.97cm;
+		font-size:13pt;
+	    font-family:Arial;
+	    letter-spacing:1px;
+	    word-spacing:3px;
+	    line-height:13.6px;
+	}
+	.Div_Recibo_Oficial
+	{
+		padding:0 0 0 0;
+	}
+	.Proteccion
+	{
+		font-size:14pt;
+	}
+	.Div_Cancelacion
+	{
+		font-size:13pt;
+	}
+	.Div_Descripcion 
+	{
+		font-size:12pt;
+	}
+	.Pie_Pagina
+	{
+		font-size:12pt;
+	}
+	/*ESTILOS DEL CONTENIDO DE ENCABEZADO*/
+	.Encabezado
+	{
+		font-size:12pt;
+		position:static;
+		top:2cm;
+	}
+	.Encabezado .Fecha
+	{
+		height:1.5em;
+		text-align:right;
+		float:right;
+		font-weight:bold;
+	    font-size: 15pt!important;
+	}
+	.Encabezado .Titulo
+	{
+		height:1.5em;
+		text-align:center!important;
+		float:left;
+		width:10cm;
+	    font-size: 15pt!important;
+	}
+	.Encabezado .Folio
+	{
+		clear:both;
+		height:1.5em;
+		float:left;
+	}
+	.Encabezado .Cuenta
+	{
+		clear:both;
+		height:1em;
+		float:left;
+	    font-size: 15pt!important;
+	}
+	.Encabezado .Cuenta #Lbl_Cuenta
+	{
+		font-weight:bold;
+		text-align:left;
+		
+	}
+	.Encabezado .Cuenta #Lbl_Cuenta_Nombre
+	{
+		font-weight:bold;
+		text-align:left;
+	}
+	.Encabezado .Colonia
+	{
+		width:7.5cm;
+		clear:both;
+		height:1.3em;
+		float:right;
+		text-align:left!important;
+		letter-spacing: 1.5px;
+		word-spacing: 1.5px;
+	}
+	.Encabezado .Colonia #Lbl_Colonia
+	{
+		text-align:left!important;
+	}
+	.Encabezado .Ubicacion_interior
+	{
+		clear:both;
+	} 
+	.Encabezado .Ubicacion_interior #Div_Ubicacion
+	{
+		text-align:left!important;
+		float:left;
+	} 
+	.Encabezado .Ubicacion_interior #Div_Interior
+	{
+		text-align:left!important;
+		float:right;
+		width:7.5cm;
+	} 
+	.Encabezado .Exterior_Tasa
+	{
+		clear:both;
+	}
+	.Encabezado .Exterior_Tasa #Div_Exterior
+	{
+		text-align:left!important;
+		float:left;
+	} 
+	.Encabezado .Exterior_Tasa #Div_Tasa
+	{
+		text-align:left!important;
+		float:right;
+		width:7.5cm;
+	} 
+	.Encabezado .Cuota_Efectos
+	{
+		clear:both;
+	} 
+	.Encabezado .Cuota_Efectos #Div_cuota_Anual
+	{
+		text-align:left!important;
+		float:left;
+	} 
+	.Encabezado .Cuota_Efectos #Div_Efectos
+	{
+		text-align:left!important;
+		float:right;
+		width:7.5cm;
+	} 
+	.Encabezado .Valor_CuotaBi
+	{
+		clear:both;
+	} 
+	.Encabezado .Valor_CuotaBi #Div_Valor_Fiscal
+	{
+		text-align:left!important;
+		float:left;
+	} 
+	.Encabezado .Valor_CuotaBi #Div_cuota_bimestral
+	{
+		text-align:left!important;
+		float:right;
+		width:7.5cm;
+	} 
+	.Encabezado #Clave_Movimiento
+	{
+		clear:both;
+		float:right;
+		text-align:left!important;
+		width:7.5cm;
+	} 
+	.Encabezado .Contribuyente_RFC
+	{
+		clear:both;
+	} 
+	.Encabezado .Contribuyente_RFC #Contribuyente
+	{
+		width:13cm;
+		text-align:left;
+		float:left;
+	} 
+	.Encabezado .Contribuyente_RFC #Contribuyente #Lbl_Contribuyente_Nombre
+	{
+		font-weight:bold!important;
+	}
+	.Encabezado .Contribuyente_RFC #RFC
+	{
+		width:6.5cm;
+		text-align:left;
+		float:right;
+	} 
+	.Encabezado #Domicilio
+	{
+		clear:both;
+	}
+	.Encabezado #Ciudad
+	{
+		clear:both;
+	}
+	
+	/* ESTILOS DEL CONTENIDO DE DETALLES*/
+	.Detalles
+	{
+		clear:both;
+		font-size:12pt;
+	}
+	.Detalles #Div_Importe
+	{
+		font-weight:bold;
+		text-align:right;
+		width:10cm;
+		float:right;
+	}
+	.Detalles #Div_Importe #Lbl_Importes
+	{
+		text-align:right;
+		float:right;
+		clear:right;
+	}
+	.Detalles #Div_Importe .Lbl_Titulo_Periodo
+	{
+		font-weight:bold;
+		width:3cm;
+		text-align:right;
+		float:left;
+	}
+	.Div_Descripcion #Div_Nombre_Detalles
+	{
+		width:14.5cm;
+		float:left;
+		overflow:hidden;
+		clear:both;
+	}
+	.Div_Descripcion #Div_Nombre_Detalles .Lbl_Cantidad
+	{
+		width:1.5cm!important;
+		text-align:left;
+	}
+	.Div_Descripcion #Div_Nombre_Detalles .Div_Clave_Ingreso
+	{
+		text-align:left !important;
+		clear:left;
+	}
+	.Div_Descripcion #Div_Nombre_Detalles .Lbl_Periodo
+	{
+		text-align:left!important;
+		float:right!important;
+	}
+	.Div_Descripcion #Div_Nombre_Detalles .Div_Nom_Calculo
+	{
+		text-align:right !important;
+		float:right!important;
+		clear:both;
+	}
+	.Div_Descripcion #Div_Nombre_Detalles .Leyenta_Total
+	{
+		font-weight:bold;
+	    font-size: 14pt;
+	}
+	.Div_Descripcion #Div_Calculos
+	{
+		width:5.4cm;
+		float:right;
+	}
+	.Div_Descripcion #Div_Calculos #Div_Signo
+	{
+		width:0.5cm;
+		float:left;
+		text-align:right;
+		font-weight:bold;
+	}
+	.Div_Descripcion #Div_Calculos #Div_Monto
+	{
+		width:4.5cm;
+		float:right;
+		text-align:right;
+	}
+	.Div_Descripcion #Div_Calculos #Div_Monto .Monto_Total
+	{
+		font-weight:bold;
+	    font-size: 14pt;
+	}
+
+	/*ESTILOS DEL CONTENIDO DE PIE PAGINA*/
+	.Pie_Pagina
+	{
+		clear:both;
+	}
+	.Pie_Pagina #Div_Base_Impuesto
+	{
+		width:7.5cm;
+		float:left;
+		height:2.2em;
+		text-align:left;
+	}
+	.Pie_Pagina #Div_Base_Gravable
+	{
+		width:7.5cm;
+		float:right;
+		height:2.2em;
+		text-align:left;
+	}
+	.Pie_Pagina #Div_Cuota_Minima
+	{
+		width:13cm;
+		float:left;
+		height:1em;
+		font-size: 10pt !important;
+	}
+	
+
+	/*ESTILOS DEL CONTENIDO DE CONVENIO*/
+	.Div_Convenio
+	{
+		clear:both;
+	}
+	.Div_Convenio #Div_Datos_Convenio
+	{
+		text-align:left;
+	}
+	.Div_Convenio #Div_Pagos_Convenio
+	{
+		text-align:left;
+	}
+	.Div_Convenio #Div_Pagos_Convenio #Lbl_Pago_Descricion
+	{
+		font-weight:bold;
+	}
+	
+	/*ESTILOS DEL CONTENIDO DE LAS OBSERVACIONES*/
+	.Div_Observaciones
+	{
+		height:1cm;
+	}
+	
+	.Div_Observaciones_Pago
+	{
+		height:1.5cm;
+		width:20cm!important;
+		text-align:left!important;
+		font-weight:bold;
+	}
+	
+	/*ESTILOS DEL CONTENIDO DE LA PROTECCION*/
+	.Proteccion
+	{
+		height:1.5cm;
+		padding:0 0 0 .5cm;
+		position:absolute!important;
+		top:11.8cm!important;
+	    letter-spacing: 0;
+	}
+	.Proteccion #Lbl_Proteccion
+	{
+		text-align:left;
+		float:left;
+	}
+	.Div_Cancelacion
+	{
+		clear:both;
+		height:1.5cm;
+		padding:0 0 0 .5cm;
+		text-align:left;
+		position:absolute!important;
+		top:10.00cm!important;
+	    letter-spacing: 0;
+	}
+	.Proteccion_Negrita
+	{
+	    font-size: 15pt!important;
+	    font-weight: bold!important;
+	}
+	.Motivo_Cancelacion
+	{
+		display: block;
+	    font-size: 15pt!important;
+	    font-weight: bold!important;
+		text-align:center;
+	}
+	.espaciador
+	{
+		clear:both;
+		height:1.2em;	
+	}
+}
+
+

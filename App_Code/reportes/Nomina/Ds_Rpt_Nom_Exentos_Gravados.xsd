@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Nom_Exentos_Gravados" targetNamespace="http://tempuri.org/Ds_Rpt_Nom_Exentos_Gravados.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Nom_Exentos_Gravados.xsd" xmlns="http://tempuri.org/Ds_Rpt_Nom_Exentos_Gravados.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Nom_Exentos_Gravados" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Nom_Exentos_Gravados" msprop:Generator_DataSetName="Ds_Rpt_Nom_Exentos_Gravados">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Exentos_Gravados" msprop:Generator_UserTableName="Exentos_Gravados" msprop:Generator_RowDeletedName="Exentos_GravadosRowDeleted" msprop:Generator_TableClassName="Exentos_GravadosDataTable" msprop:Generator_RowChangedName="Exentos_GravadosRowChanged" msprop:Generator_RowClassName="Exentos_GravadosRow" msprop:Generator_RowChangingName="Exentos_GravadosRowChanging" msprop:Generator_RowEvArgName="Exentos_GravadosRowChangeEvent" msprop:Generator_RowEvHandlerName="Exentos_GravadosRowChangeEventHandler" msprop:Generator_TablePropName="Exentos_Gravados" msprop:Generator_TableVarName="tableExentos_Gravados" msprop:Generator_RowDeletingName="Exentos_GravadosRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NO_RECIBO" msprop:Generator_UserColumnName="NO_RECIBO" msprop:Generator_ColumnPropNameInRow="NO_RECIBO" msprop:Generator_ColumnVarNameInTable="columnNO_RECIBO" msprop:Generator_ColumnPropNameInTable="NO_RECIBOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_EMPLEADO" msprop:Generator_UserColumnName="NO_EMPLEADO" msprop:Generator_ColumnPropNameInRow="NO_EMPLEADO" msprop:Generator_ColumnVarNameInTable="columnNO_EMPLEADO" msprop:Generator_ColumnPropNameInTable="NO_EMPLEADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="EMPLEADO" msprop:Generator_UserColumnName="EMPLEADO" msprop:Generator_ColumnPropNameInRow="EMPLEADO" msprop:Generator_ColumnVarNameInTable="columnEMPLEADO" msprop:Generator_ColumnPropNameInTable="EMPLEADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TOTAL_NOMINA" msprop:Generator_UserColumnName="TOTAL_NOMINA" msprop:Generator_ColumnPropNameInRow="TOTAL_NOMINA" msprop:Generator_ColumnVarNameInTable="columnTOTAL_NOMINA" msprop:Generator_ColumnPropNameInTable="TOTAL_NOMINAColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="GRAVADO" msprop:Generator_UserColumnName="GRAVADO" msprop:Generator_ColumnPropNameInRow="GRAVADO" msprop:Generator_ColumnVarNameInTable="columnGRAVADO" msprop:Generator_ColumnPropNameInTable="GRAVADOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="EXENTO" msprop:Generator_UserColumnName="EXENTO" msprop:Generator_ColumnPropNameInRow="EXENTO" msprop:Generator_ColumnVarNameInTable="columnEXENTO" msprop:Generator_ColumnPropNameInTable="EXENTOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="NOMINA" msprop:Generator_UserColumnName="NOMINA" msprop:Generator_ColumnPropNameInRow="NOMINA" msprop:Generator_ColumnVarNameInTable="columnNOMINA" msprop:Generator_ColumnPropNameInTable="NOMINAColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="NO_NOMINA" msprop:Generator_UserColumnName="NO_NOMINA" msprop:Generator_ColumnPropNameInRow="NO_NOMINA" msprop:Generator_ColumnVarNameInTable="columnNO_NOMINA" msprop:Generator_ColumnPropNameInTable="NO_NOMINAColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

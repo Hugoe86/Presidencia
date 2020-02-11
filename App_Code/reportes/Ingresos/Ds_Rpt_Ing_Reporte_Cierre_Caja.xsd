@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Reporte_Cierre_Caja" targetNamespace="http://tempuri.org/Ds_Rpt_Reporte_Cierre_Caja.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Reporte_Cierre_Caja.xsd" xmlns="http://tempuri.org/Ds_Rpt_Reporte_Cierre_Caja.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Reporte_Cierre_Caja" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Reporte_Cierre_Caja" msprop:Generator_DataSetName="Ds_Rpt_Reporte_Cierre_Caja">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="INGRESO" msprop:Generator_UserTableName="INGRESO" msprop:Generator_RowDeletedName="INGRESORowDeleted" msprop:Generator_TableClassName="INGRESODataTable" msprop:Generator_RowChangedName="INGRESORowChanged" msprop:Generator_RowClassName="INGRESORow" msprop:Generator_RowChangingName="INGRESORowChanging" msprop:Generator_RowEvArgName="INGRESORowChangeEvent" msprop:Generator_RowEvHandlerName="INGRESORowChangeEventHandler" msprop:Generator_TablePropName="INGRESO" msprop:Generator_TableVarName="tableINGRESO" msprop:Generator_RowDeletingName="INGRESORowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DEPENDENCIA" msprop:Generator_UserColumnName="DEPENDENCIA" msprop:Generator_ColumnPropNameInRow="DEPENDENCIA" msprop:Generator_ColumnVarNameInTable="columnDEPENDENCIA" msprop:Generator_ColumnPropNameInTable="DEPENDENCIAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="INGRESO" msprop:Generator_UserColumnName="INGRESO" msprop:Generator_ColumnPropNameInRow="INGRESO" msprop:Generator_ColumnVarNameInTable="columnINGRESO" msprop:Generator_ColumnPropNameInTable="INGRESOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MONTO" msprop:Generator_UserColumnName="MONTO" msprop:Generator_ColumnPropNameInRow="MONTO" msprop:Generator_ColumnVarNameInTable="columnMONTO" msprop:Generator_ColumnPropNameInTable="MONTOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="FORMA_PAGO" msprop:Generator_UserColumnName="FORMA_PAGO" msprop:Generator_ColumnPropNameInRow="FORMA_PAGO" msprop:Generator_ColumnVarNameInTable="columnFORMA_PAGO" msprop:Generator_ColumnPropNameInTable="FORMA_PAGOColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="INGRESOS_AGRUPADOS_TIPO_PAGO" msprop:Generator_UserTableName="INGRESOS_AGRUPADOS_TIPO_PAGO" msprop:Generator_RowDeletedName="INGRESOS_AGRUPADOS_TIPO_PAGORowDeleted" msprop:Generator_TableClassName="INGRESOS_AGRUPADOS_TIPO_PAGODataTable" msprop:Generator_RowChangedName="INGRESOS_AGRUPADOS_TIPO_PAGORowChanged" msprop:Generator_RowClassName="INGRESOS_AGRUPADOS_TIPO_PAGORow" msprop:Generator_RowChangingName="INGRESOS_AGRUPADOS_TIPO_PAGORowChanging" msprop:Generator_RowEvArgName="INGRESOS_AGRUPADOS_TIPO_PAGORowChangeEvent" msprop:Generator_RowEvHandlerName="INGRESOS_AGRUPADOS_TIPO_PAGORowChangeEventHandler" msprop:Generator_TablePropName="INGRESOS_AGRUPADOS_TIPO_PAGO" msprop:Generator_TableVarName="tableINGRESOS_AGRUPADOS_TIPO_PAGO" msprop:Generator_RowDeletingName="INGRESOS_AGRUPADOS_TIPO_PAGORowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FORMA_PAGO" msprop:Generator_UserColumnName="FORMA_PAGO" msprop:Generator_ColumnPropNameInRow="FORMA_PAGO" msprop:Generator_ColumnVarNameInTable="columnFORMA_PAGO" msprop:Generator_ColumnPropNameInTable="FORMA_PAGOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MONTO" msprop:Generator_UserColumnName="MONTO" msprop:Generator_ColumnPropNameInRow="MONTO" msprop:Generator_ColumnVarNameInTable="columnMONTO" msprop:Generator_ColumnPropNameInTable="MONTOColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TOTAL" msprop:Generator_UserTableName="TOTAL" msprop:Generator_RowDeletedName="TOTALRowDeleted" msprop:Generator_TableClassName="TOTALDataTable" msprop:Generator_RowChangedName="TOTALRowChanged" msprop:Generator_RowClassName="TOTALRow" msprop:Generator_RowChangingName="TOTALRowChanging" msprop:Generator_RowEvArgName="TOTALRowChangeEvent" msprop:Generator_RowEvHandlerName="TOTALRowChangeEventHandler" msprop:Generator_TablePropName="TOTAL" msprop:Generator_TableVarName="tableTOTAL" msprop:Generator_RowDeletingName="TOTALRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TOTAL" msprop:Generator_UserColumnName="TOTAL" msprop:Generator_ColumnPropNameInRow="TOTAL" msprop:Generator_ColumnVarNameInTable="columnTOTAL" msprop:Generator_ColumnPropNameInTable="TOTALColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

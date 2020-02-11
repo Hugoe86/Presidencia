@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Ope_Caj_Analisis_Entrega_Dia" targetNamespace="http://tempuri.org/Ds_Ope_Caj_Analisis_Entrega_Dia.xsd" xmlns:mstns="http://tempuri.org/Ds_Ope_Caj_Analisis_Entrega_Dia.xsd" xmlns="http://tempuri.org/Ds_Ope_Caj_Analisis_Entrega_Dia.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Ope_Caj_Analisis_Entrega_Dia" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Ope_Caj_Analisis_Entrega_Dia" msprop:Generator_DataSetName="Ds_Ope_Caj_Analisis_Entrega_Dia">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Ope_Caj_Analisis_Entrega_Dia" msprop:Generator_UserTableName="Dt_Ope_Caj_Analisis_Entrega_Dia" msprop:Generator_RowDeletedName="Dt_Ope_Caj_Analisis_Entrega_DiaRowDeleted" msprop:Generator_TableClassName="Dt_Ope_Caj_Analisis_Entrega_DiaDataTable" msprop:Generator_RowChangedName="Dt_Ope_Caj_Analisis_Entrega_DiaRowChanged" msprop:Generator_RowClassName="Dt_Ope_Caj_Analisis_Entrega_DiaRow" msprop:Generator_RowChangingName="Dt_Ope_Caj_Analisis_Entrega_DiaRowChanging" msprop:Generator_RowEvArgName="Dt_Ope_Caj_Analisis_Entrega_DiaRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Ope_Caj_Analisis_Entrega_DiaRowChangeEventHandler" msprop:Generator_TablePropName="Dt_Ope_Caj_Analisis_Entrega_Dia" msprop:Generator_TableVarName="tableDt_Ope_Caj_Analisis_Entrega_Dia" msprop:Generator_RowDeletingName="Dt_Ope_Caj_Analisis_Entrega_DiaRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NO_CAJA" msprop:Generator_UserColumnName="NO_CAJA" msprop:Generator_ColumnPropNameInRow="NO_CAJA" msprop:Generator_ColumnVarNameInTable="columnNO_CAJA" msprop:Generator_ColumnPropNameInTable="NO_CAJAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="NOMBRE_CAJERO" msprop:Generator_UserColumnName="NOMBRE_CAJERO" msprop:Generator_ColumnPropNameInRow="NOMBRE_CAJERO" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_CAJERO" msprop:Generator_ColumnPropNameInTable="NOMBRE_CAJEROColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DEPENDENCIA" msprop:Generator_UserColumnName="DEPENDENCIA" msprop:Generator_ColumnPropNameInRow="DEPENDENCIA" msprop:Generator_ColumnVarNameInTable="columnDEPENDENCIA" msprop:Generator_ColumnPropNameInTable="DEPENDENCIAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="INGRESO_SEGUN_ANALITICO" msprop:Generator_UserColumnName="INGRESO_SEGUN_ANALITICO" msprop:Generator_ColumnPropNameInRow="INGRESO_SEGUN_ANALITICO" msprop:Generator_ColumnVarNameInTable="columnINGRESO_SEGUN_ANALITICO" msprop:Generator_ColumnPropNameInTable="INGRESO_SEGUN_ANALITICOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="INGRESO_FISICO" msprop:Generator_UserColumnName="INGRESO_FISICO" msprop:Generator_ColumnPropNameInRow="INGRESO_FISICO" msprop:Generator_ColumnVarNameInTable="columnINGRESO_FISICO" msprop:Generator_ColumnPropNameInTable="INGRESO_FISICOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="SOBRANTE" msprop:Generator_UserColumnName="SOBRANTE" msprop:Generator_ColumnPropNameInRow="SOBRANTE" msprop:Generator_ColumnVarNameInTable="columnSOBRANTE" msprop:Generator_ColumnPropNameInTable="SOBRANTEColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="FALTANTE" msprop:Generator_UserColumnName="FALTANTE" msprop:Generator_ColumnPropNameInRow="FALTANTE" msprop:Generator_ColumnVarNameInTable="columnFALTANTE" msprop:Generator_ColumnPropNameInTable="FALTANTEColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="TIPO" msprop:Generator_UserColumnName="TIPO" msprop:Generator_ColumnPropNameInRow="TIPO" msprop:Generator_ColumnVarNameInTable="columnTIPO" msprop:Generator_ColumnPropNameInTable="TIPOColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dt_Cabecera" msprop:Generator_UserTableName="Dt_Cabecera" msprop:Generator_RowDeletedName="Dt_CabeceraRowDeleted" msprop:Generator_TableClassName="Dt_CabeceraDataTable" msprop:Generator_RowChangedName="Dt_CabeceraRowChanged" msprop:Generator_RowClassName="Dt_CabeceraRow" msprop:Generator_RowChangingName="Dt_CabeceraRowChanging" msprop:Generator_RowEvArgName="Dt_CabeceraRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_CabeceraRowChangeEventHandler" msprop:Generator_TablePropName="Dt_Cabecera" msprop:Generator_TableVarName="tableDt_Cabecera" msprop:Generator_RowDeletingName="Dt_CabeceraRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FECHAS" msprop:Generator_UserColumnName="FECHAS" msprop:Generator_ColumnPropNameInRow="FECHAS" msprop:Generator_ColumnVarNameInTable="columnFECHAS" msprop:Generator_ColumnPropNameInTable="FECHASColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,26 @@
+.tabs { margin: 16px 0; width: 100%; }
+
+.tabs ul { list-style-type: none; padding: 0; margin: 0 0 0 8px; width: 100%; }
+
+.tabs li { display: inline; }
+
+.tabs li a {
+	border: 1px solid #000;
+	margin-bottom: 2px;
+	line-height: 1em;
+	padding: 4px 12px 2px 12px;
+	text-align: center;
+	width: auto;
+}
+
+*:first-child+html .tabs li a {  
+/* CSS-Hack IE7 */  
+	padding: 4px 8px 4px 12px;
+ 	line-height: 24px;
+	margin-right: 0;
+	position: relative;
+}
+
+.tab-content { border: 1px solid #000; padding: 4px 8px; width: auto; }
+
+.selected { background-color: #000; color: #fff; }

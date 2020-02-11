@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Alm_Com_Rep_Inventarios_Stock" targetNamespace="http://tempuri.org/Ds_Alm_Com_Rep_Inventarios_Stock.xsd" xmlns:mstns="http://tempuri.org/Ds_Alm_Com_Rep_Inventarios_Stock.xsd" xmlns="http://tempuri.org/Ds_Alm_Com_Rep_Inventarios_Stock.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Alm_Com_Rep_Inventarios_Stock" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Alm_Com_Rep_Inventarios_Stock" msprop:Generator_DataSetName="Ds_Alm_Com_Rep_Inventarios_Stock">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Detalles" msprop:Generator_UserTableName="Detalles" msprop:Generator_RowDeletedName="DetallesRowDeleted" msprop:Generator_RowChangedName="DetallesRowChanged" msprop:Generator_RowClassName="DetallesRow" msprop:Generator_RowChangingName="DetallesRowChanging" msprop:Generator_RowEvArgName="DetallesRowChangeEvent" msprop:Generator_RowEvHandlerName="DetallesRowChangeEventHandler" msprop:Generator_TableClassName="DetallesDataTable" msprop:Generator_TableVarName="tableDetalles" msprop:Generator_RowDeletingName="DetallesRowDeleting" msprop:Generator_TablePropName="Detalles">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NO_INVENTARIO" msprop:Generator_UserColumnName="NO_INVENTARIO" msprop:Generator_ColumnVarNameInTable="columnNO_INVENTARIO" msprop:Generator_ColumnPropNameInRow="NO_INVENTARIO" msprop:Generator_ColumnPropNameInTable="NO_INVENTARIOColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="USUARIO_CREO" msprop:Generator_UserColumnName="USUARIO_CREO" msprop:Generator_ColumnVarNameInTable="columnUSUARIO_CREO" msprop:Generator_ColumnPropNameInRow="USUARIO_CREO" msprop:Generator_ColumnPropNameInTable="USUARIO_CREOColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="FECHA_CREO" msprop:Generator_UserColumnName="FECHA_CREO" msprop:Generator_ColumnVarNameInTable="columnFECHA_CREO" msprop:Generator_ColumnPropNameInRow="FECHA_CREO" msprop:Generator_ColumnPropNameInTable="FECHA_CREOColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ESTATUS" msprop:Generator_UserColumnName="ESTATUS" msprop:Generator_ColumnVarNameInTable="columnESTATUS" msprop:Generator_ColumnPropNameInRow="ESTATUS" msprop:Generator_ColumnPropNameInTable="ESTATUSColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="FILTRO_SELECCIONADO" msprop:Generator_UserColumnName="FILTRO_SELECCIONADO" msprop:Generator_ColumnVarNameInTable="columnFILTRO_SELECCIONADO" msprop:Generator_ColumnPropNameInRow="FILTRO_SELECCIONADO" msprop:Generator_ColumnPropNameInTable="FILTRO_SELECCIONADOColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="OBSERVACIONES" msprop:Generator_UserColumnName="OBSERVACIONES" msprop:Generator_ColumnVarNameInTable="columnOBSERVACIONES" msprop:Generator_ColumnPropNameInRow="OBSERVACIONES" msprop:Generator_ColumnPropNameInTable="OBSERVACIONESColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="PERSONA_GENERO" msprop:Generator_UserColumnName="PERSONA_GENERO" msprop:Generator_ColumnPropNameInRow="PERSONA_GENERO" msprop:Generator_ColumnVarNameInTable="columnPERSONA_GENERO" msprop:Generator_ColumnPropNameInTable="PERSONA_GENEROColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

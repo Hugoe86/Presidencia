@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Nom_Reporte_Plazas" targetNamespace="http://tempuri.org/Ds_Rpt_Nom_Reporte_Plazas.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Nom_Reporte_Plazas.xsd" xmlns="http://tempuri.org/Ds_Rpt_Nom_Reporte_Plazas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Nom_Reporte_Plazas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Nom_Reporte_Plazas" msprop:Generator_DataSetName="Ds_Rpt_Nom_Reporte_Plazas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Plazas" msprop:Generator_UserTableName="Dt_Plazas" msprop:Generator_RowDeletedName="Dt_PlazasRowDeleted" msprop:Generator_RowChangedName="Dt_PlazasRowChanged" msprop:Generator_RowClassName="Dt_PlazasRow" msprop:Generator_RowChangingName="Dt_PlazasRowChanging" msprop:Generator_RowEvArgName="Dt_PlazasRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_PlazasRowChangeEventHandler" msprop:Generator_TableClassName="Dt_PlazasDataTable" msprop:Generator_TableVarName="tableDt_Plazas" msprop:Generator_RowDeletingName="Dt_PlazasRowDeleting" msprop:Generator_TablePropName="Dt_Plazas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tipo_PLaza" msprop:Generator_UserColumnName="Tipo_PLaza" msprop:Generator_ColumnVarNameInTable="columnTipo_PLaza" msprop:Generator_ColumnPropNameInRow="Tipo_PLaza" msprop:Generator_ColumnPropNameInTable="Tipo_PLazaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Direccion_General" msprop:Generator_UserColumnName="Direccion_General" msprop:Generator_ColumnVarNameInTable="columnDireccion_General" msprop:Generator_ColumnPropNameInRow="Direccion_General" msprop:Generator_ColumnPropNameInTable="Direccion_GeneralColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Codigo_Programatico" msprop:Generator_UserColumnName="Codigo_Programatico" msprop:Generator_ColumnVarNameInTable="columnCodigo_Programatico" msprop:Generator_ColumnPropNameInRow="Codigo_Programatico" msprop:Generator_ColumnPropNameInTable="Codigo_ProgramaticoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Plazas_Presupuestadas" msprop:Generator_UserColumnName="Plazas_Presupuestadas" msprop:Generator_ColumnVarNameInTable="columnPlazas_Presupuestadas" msprop:Generator_ColumnPropNameInRow="Plazas_Presupuestadas" msprop:Generator_ColumnPropNameInTable="Plazas_PresupuestadasColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Plazas_Ocupadas" msprop:Generator_UserColumnName="Plazas_Ocupadas" msprop:Generator_ColumnVarNameInTable="columnPlazas_Ocupadas" msprop:Generator_ColumnPropNameInRow="Plazas_Ocupadas" msprop:Generator_ColumnPropNameInTable="Plazas_OcupadasColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Plazas_Disponibles" msprop:Generator_UserColumnName="Plazas_Disponibles" msprop:Generator_ColumnVarNameInTable="columnPlazas_Disponibles" msprop:Generator_ColumnPropNameInRow="Plazas_Disponibles" msprop:Generator_ColumnPropNameInTable="Plazas_DisponiblesColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Nivel" msprop:Generator_UserColumnName="Nivel" msprop:Generator_ColumnVarNameInTable="columnNivel" msprop:Generator_ColumnPropNameInRow="Nivel" msprop:Generator_ColumnPropNameInTable="NivelColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Sueldo_Mensual" msprop:Generator_UserColumnName="Sueldo_Mensual" msprop:Generator_ColumnVarNameInTable="columnSueldo_Mensual" msprop:Generator_ColumnPropNameInRow="Sueldo_Mensual" msprop:Generator_ColumnPropNameInTable="Sueldo_MensualColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="PSM" msprop:Generator_UserColumnName="PSM" msprop:Generator_ColumnVarNameInTable="columnPSM" msprop:Generator_ColumnPropNameInRow="PSM" msprop:Generator_ColumnPropNameInTable="PSMColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="otro" msprop:Generator_UserColumnName="otro" msprop:Generator_ColumnVarNameInTable="columnotro" msprop:Generator_ColumnPropNameInRow="otro" msprop:Generator_ColumnPropNameInTable="otroColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

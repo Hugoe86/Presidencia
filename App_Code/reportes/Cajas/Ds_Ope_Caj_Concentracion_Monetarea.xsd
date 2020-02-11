@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Ope_Caj_Concentracion_Monetarea" targetNamespace="http://tempuri.org/Ds_Ope_Caj_Concentracion_Monetarea.xsd" xmlns:mstns="http://tempuri.org/Ds_Ope_Caj_Concentracion_Monetarea.xsd" xmlns="http://tempuri.org/Ds_Ope_Caj_Concentracion_Monetarea.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Ope_Caj_Concentracion_Monetarea" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Ope_Caj_Concentracion_Monetarea" msprop:Generator_DataSetName="Ds_Ope_Caj_Concentracion_Monetarea">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Pagos_Detalles" msprop:Generator_UserTableName="Dt_Pagos_Detalles" msprop:Generator_RowDeletedName="Dt_Pagos_DetallesRowDeleted" msprop:Generator_RowChangedName="Dt_Pagos_DetallesRowChanged" msprop:Generator_RowClassName="Dt_Pagos_DetallesRow" msprop:Generator_RowChangingName="Dt_Pagos_DetallesRowChanging" msprop:Generator_RowEvArgName="Dt_Pagos_DetallesRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Pagos_DetallesRowChangeEventHandler" msprop:Generator_TableClassName="Dt_Pagos_DetallesDataTable" msprop:Generator_TableVarName="tableDt_Pagos_Detalles" msprop:Generator_RowDeletingName="Dt_Pagos_DetallesRowDeleting" msprop:Generator_TablePropName="Dt_Pagos_Detalles">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="caja" msprop:Generator_UserColumnName="caja" msprop:Generator_ColumnVarNameInTable="columncaja" msprop:Generator_ColumnPropNameInRow="caja" msprop:Generator_ColumnPropNameInTable="cajaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="importe" msprop:Generator_UserColumnName="importe" msprop:Generator_ColumnVarNameInTable="columnimporte" msprop:Generator_ColumnPropNameInRow="importe" msprop:Generator_ColumnPropNameInTable="importeColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="fecha" msprop:Generator_UserColumnName="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Dia" msprop:Generator_UserColumnName="Dia" msprop:Generator_ColumnPropNameInRow="Dia" msprop:Generator_ColumnVarNameInTable="columnDia" msprop:Generator_ColumnPropNameInTable="DiaColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

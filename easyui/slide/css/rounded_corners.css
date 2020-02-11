@@ -1,0 +1,5 @@
+.roundedBox { background: #000000 url(images/tl.png) no-repeat 0% 0%; color: #fff; width: 400px; }
+.roundedBox p { padding: 0 9px; margin: 0; }
+.roundedBox-tr { height: 10px; background: url(images/tr.png) no-repeat top right; }
+.roundedBox-bl { height: 10px; background: url(images/bl.png) no-repeat bottom left; }
+.roundedBox-br { height: 10px; background: url(images/br.png) no-repeat bottom right; }

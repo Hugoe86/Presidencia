@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Con_Diario_General" targetNamespace="http://tempuri.org/Ds_Rpt_Con_Diario_General.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Con_Diario_General.xsd" xmlns="http://tempuri.org/Ds_Rpt_Con_Diario_General.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Con_Diario_General" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Con_Diario_General" msprop:Generator_DataSetName="Ds_Rpt_Con_Diario_General">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Diario_General" msprop:Generator_UserTableName="Diario_General" msprop:Generator_RowDeletedName="Diario_GeneralRowDeleted" msprop:Generator_RowChangedName="Diario_GeneralRowChanged" msprop:Generator_RowClassName="Diario_GeneralRow" msprop:Generator_RowChangingName="Diario_GeneralRowChanging" msprop:Generator_RowEvArgName="Diario_GeneralRowChangeEvent" msprop:Generator_RowEvHandlerName="Diario_GeneralRowChangeEventHandler" msprop:Generator_TableClassName="Diario_GeneralDataTable" msprop:Generator_TableVarName="tableDiario_General" msprop:Generator_RowDeletingName="Diario_GeneralRowDeleting" msprop:Generator_TablePropName="Diario_General">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="No_Poliza" msprop:Generator_UserColumnName="No_Poliza" msprop:Generator_ColumnVarNameInTable="columnNo_Poliza" msprop:Generator_ColumnPropNameInRow="No_Poliza" msprop:Generator_ColumnPropNameInTable="No_PolizaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Tipo_Poliza_ID" msprop:Generator_UserColumnName="Tipo_Poliza_ID" msprop:Generator_ColumnVarNameInTable="columnTipo_Poliza_ID" msprop:Generator_ColumnPropNameInRow="Tipo_Poliza_ID" msprop:Generator_ColumnPropNameInTable="Tipo_Poliza_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Mes_Anio" msprop:Generator_UserColumnName="Mes_Anio" msprop:Generator_ColumnVarNameInTable="columnMes_Anio" msprop:Generator_ColumnPropNameInRow="Mes_Anio" msprop:Generator_ColumnPropNameInTable="Mes_AnioColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Fecha_Poliza" msprop:Generator_UserColumnName="Fecha_Poliza" msprop:Generator_ColumnVarNameInTable="columnFecha_Poliza" msprop:Generator_ColumnPropNameInRow="Fecha_Poliza" msprop:Generator_ColumnPropNameInTable="Fecha_PolizaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Concepto" msprop:Generator_UserColumnName="Concepto" msprop:Generator_ColumnVarNameInTable="columnConcepto" msprop:Generator_ColumnPropNameInRow="Concepto" msprop:Generator_ColumnPropNameInTable="ConceptoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Tipo_Poliza" msprop:Generator_UserColumnName="Tipo_Poliza" msprop:Generator_ColumnVarNameInTable="columnTipo_Poliza" msprop:Generator_ColumnPropNameInRow="Tipo_Poliza" msprop:Generator_ColumnPropNameInTable="Tipo_PolizaColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Detalles_Diario_General" msprop:Generator_UserTableName="Detalles_Diario_General" msprop:Generator_RowDeletedName="Detalles_Diario_GeneralRowDeleted" msprop:Generator_RowChangedName="Detalles_Diario_GeneralRowChanged" msprop:Generator_RowClassName="Detalles_Diario_GeneralRow" msprop:Generator_RowChangingName="Detalles_Diario_GeneralRowChanging" msprop:Generator_RowEvArgName="Detalles_Diario_GeneralRowChangeEvent" msprop:Generator_RowEvHandlerName="Detalles_Diario_GeneralRowChangeEventHandler" msprop:Generator_TableClassName="Detalles_Diario_GeneralDataTable" msprop:Generator_TableVarName="tableDetalles_Diario_General" msprop:Generator_RowDeletingName="Detalles_Diario_GeneralRowDeleting" msprop:Generator_TablePropName="Detalles_Diario_General">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="No_Poliza" msprop:Generator_UserColumnName="No_Poliza" msprop:Generator_ColumnVarNameInTable="columnNo_Poliza" msprop:Generator_ColumnPropNameInRow="No_Poliza" msprop:Generator_ColumnPropNameInTable="No_PolizaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Tipo_Poliza_ID" msprop:Generator_UserColumnName="Tipo_Poliza_ID" msprop:Generator_ColumnVarNameInTable="columnTipo_Poliza_ID" msprop:Generator_ColumnPropNameInRow="Tipo_Poliza_ID" msprop:Generator_ColumnPropNameInTable="Tipo_Poliza_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Mes_Anio" msprop:Generator_UserColumnName="Mes_Anio" msprop:Generator_ColumnVarNameInTable="columnMes_Anio" msprop:Generator_ColumnPropNameInRow="Mes_Anio" msprop:Generator_ColumnPropNameInTable="Mes_AnioColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Cuenta" msprop:Generator_UserColumnName="Cuenta" msprop:Generator_ColumnVarNameInTable="columnCuenta" msprop:Generator_ColumnPropNameInRow="Cuenta" msprop:Generator_ColumnPropNameInTable="CuentaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Concepto" msprop:Generator_UserColumnName="Concepto" msprop:Generator_ColumnVarNameInTable="columnConcepto" msprop:Generator_ColumnPropNameInRow="Concepto" msprop:Generator_ColumnPropNameInTable="ConceptoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Debe" msprop:Generator_UserColumnName="Debe" msprop:Generator_ColumnVarNameInTable="columnDebe" msprop:Generator_ColumnPropNameInRow="Debe" msprop:Generator_ColumnPropNameInTable="DebeColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Haber" msprop:Generator_UserColumnName="Haber" msprop:Generator_ColumnVarNameInTable="columnHaber" msprop:Generator_ColumnPropNameInRow="Haber" msprop:Generator_ColumnPropNameInTable="HaberColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Avaluo_Perito" targetNamespace="http://tempuri.org/Ds_Avaluo_Perito.xsd" xmlns:mstns="http://tempuri.org/Ds_Avaluo_Perito.xsd" xmlns="http://tempuri.org/Ds_Avaluo_Perito.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Avaluo_Perito" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Avaluo_Perito" msprop:Generator_DataSetName="Ds_Avaluo_Perito">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Perito" msprop:Generator_UserTableName="Dt_Perito" msprop:Generator_RowDeletedName="Dt_PeritoRowDeleted" msprop:Generator_TableClassName="Dt_PeritoDataTable" msprop:Generator_RowChangedName="Dt_PeritoRowChanged" msprop:Generator_RowClassName="Dt_PeritoRow" msprop:Generator_RowChangingName="Dt_PeritoRowChanging" msprop:Generator_RowEvArgName="Dt_PeritoRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_PeritoRowChangeEventHandler" msprop:Generator_TablePropName="Dt_Perito" msprop:Generator_TableVarName="tableDt_Perito" msprop:Generator_RowDeletingName="Dt_PeritoRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Perito_Id" msprop:Generator_UserColumnName="Perito_Id" msprop:Generator_ColumnPropNameInRow="Perito_Id" msprop:Generator_ColumnVarNameInTable="columnPerito_Id" msprop:Generator_ColumnPropNameInTable="Perito_IdColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Nombre" msprop:Generator_UserColumnName="Nombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dt_Avaluos_Perito" msprop:Generator_UserTableName="Dt_Avaluos_Perito" msprop:Generator_RowDeletedName="Dt_Avaluos_PeritoRowDeleted" msprop:Generator_TableClassName="Dt_Avaluos_PeritoDataTable" msprop:Generator_RowChangedName="Dt_Avaluos_PeritoRowChanged" msprop:Generator_RowClassName="Dt_Avaluos_PeritoRow" msprop:Generator_RowChangingName="Dt_Avaluos_PeritoRowChanging" msprop:Generator_RowEvArgName="Dt_Avaluos_PeritoRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Avaluos_PeritoRowChangeEventHandler" msprop:Generator_TablePropName="Dt_Avaluos_Perito" msprop:Generator_TableVarName="tableDt_Avaluos_Perito" msprop:Generator_RowDeletingName="Dt_Avaluos_PeritoRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Perito_Id" msprop:Generator_UserColumnName="Perito_Id" msprop:Generator_ColumnPropNameInRow="Perito_Id" msprop:Generator_ColumnVarNameInTable="columnPerito_Id" msprop:Generator_ColumnPropNameInTable="Perito_IdColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Ubicacion" msprop:Generator_UserColumnName="Ubicacion" msprop:Generator_ColumnPropNameInRow="Ubicacion" msprop:Generator_ColumnVarNameInTable="columnUbicacion" msprop:Generator_ColumnPropNameInTable="UbicacionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Observaciones" msprop:Generator_UserColumnName="Observaciones" msprop:Generator_ColumnPropNameInRow="Observaciones" msprop:Generator_ColumnVarNameInTable="columnObservaciones" msprop:Generator_ColumnPropNameInTable="ObservacionesColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Datos_Exclusivos" msprop:Generator_UserColumnName="Datos_Exclusivos" msprop:Generator_ColumnPropNameInRow="Datos_Exclusivos" msprop:Generator_ColumnVarNameInTable="columnDatos_Exclusivos" msprop:Generator_ColumnPropNameInTable="Datos_ExclusivosColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

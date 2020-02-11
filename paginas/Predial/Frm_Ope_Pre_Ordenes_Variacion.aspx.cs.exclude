@@ -1,0 +1,1908 @@
+﻿using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using Presidencia.Operacion_Predial_Traslado.Negocio;
+using Presidencia.Catalogo_Movimientos.Negocio;
+using Presidencia.Catalogo_Conceptos.Negocio;
+using Presidencia.Catalogo_Tipos_Predio.Negocio;
+using Presidencia.Catalogo_Uso_Suelo.Negocio;
+using Presidencia.Catalogo_Estados_Predio.Negocio;
+using Presidencia.Catalogo_Contribuyentes.Negocio;
+using Presidencia.Catalogo_Casos_Especiales.Negocio;
+using Presidencia.Catalogo_Cuentas_Predial.Negocio;
+using Presidencia.Operacion_Ordenes_Variacion.Negocio;
+using Presidencia.Constantes;
+using Presidencia.Sessiones;
+using Presidencia.Colonias.Negocios;
+using Presidencia.Catalogo_Calles.Negocio;
+using System.IO;
+
+public partial class paginas_predial_Frm_Ope_Pre_Ordenes_Variacion : System.Web.UI.Page {
+
+    #region Page_Load
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Page_Load
+        ///DESCRIPCIÓN          : Método que se carga cada que ocurre un PostBack de la Página
+        ///PARAMETROS:     
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 29/Noviembre/2010 
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************  
+        protected void Page_Load(object sender, EventArgs e){
+            if (!IsPostBack) {
+                string Ventana_Modal;
+
+                Llenar_Combo_Notarios();
+                Llenar_Combo_Movimientos();
+                Llenar_Grid_Contrarecibos(0);
+                Llenar_Combo_Tipos_Predio();
+                Llenar_Combo_Usos_Predio();
+                Llenar_Combo_Estados_Predio();
+                Llenar_Combo_Años(Cmb_Orden_Variacion_Generales_Efectos_Año_Bimestre, DateTime.Now.Year - 10, DateTime.Now.Year + 10);
+                Llenar_Combo_Años(Cmb_Orden_Variacion_Diferencias_Año_Bimestre_Ini, DateTime.Now.Year - 10, DateTime.Now.Year + 10);
+                Llenar_Combo_Años(Cmb_Orden_Variacion_Diferencias_Año_Bimestre_Fin, DateTime.Now.Year - 10, DateTime.Now.Year + 10);
+                Limpiar_Campos();
+                Habilitar_Campos(false);
+                Tab_Contenedor_Pestañas.ActiveTabIndex = 0;
+                Tab_Contenedor_Pestañas_Contrarecibos.ActiveTabIndex = 0;
+                Tab_Contenedor_Pestañas.Tabs[1].Enabled = false;
+                Chk_Orden_Variacion_Propietario_Domicilio_Foraneo_CheckedChanged(null, null);
+                Btn_Orden_Variacion_Modificar.Visible = false;
+
+                //Scrip para mostrar Ventana Modal de Ubicaciones
+                Ventana_Modal = "Abrir_Ventana_Modal('Ventanas_Emergentes/Orden_Variacion/Frm_Menu_Pre_Colonias_Calles.aspx', 'center:yes;resizable:no;status:no;dialogWidth:680px;dialogHeight:400px;dialogHide:true;help:no;scroll:no');";
+                Btn_Orden_Variacion_Generales_Ubicaciones.Attributes.Add("onclick", Ventana_Modal);
+
+                ////Scrip para mostrar Ventana Modal de Ubicaciones
+                //Ventana_Modal = "Abrir_Ventana_Modal('Ventanas_Emergentes/Orden_Variacion/Frm_Menu_Pre_Localidades.aspx', 'center:yes;resizable:no;status:no;dialogWidth:680px;dialogHeight:400px;dialogHide:true;help:no;scroll:no');";
+                //Btn_Orden_Variacion_Generales_Ubicaciones.Attributes.Add("onclick", Ventana_Modal);
+
+                //Scrip para mostrar Ventana Modal de Contribuyentes para los Propietarios
+                Ventana_Modal = "Abrir_Ventana_Modal('Ventanas_Emergentes/Orden_Variacion/Frm_Menu_Pre_Propietarios.aspx', 'center:yes;resizable:no;status:no;dialogWidth:680px;dialogHeight:400px;dialogHide:true;help:no;scroll:no');";
+                Btn_Orden_Variacion_Propietario_Nombres.Attributes.Add("onclick", Ventana_Modal);
+
+                //Scrip para mostrar Ventana Modal de Casos Especiales
+                Ventana_Modal = "Abrir_Ventana_Modal('Ventanas_Emergentes/Orden_Variacion/Frm_Menu_Pre_Casos_Especiales.aspx', 'center:yes;resizable:no;status:no;dialogWidth:680px;dialogHeight:400px;dialogHide:true;help:no;scroll:no');";
+                Btn_Orden_Variacion_Impuestos_Casos_Especiales.Attributes.Add("onclick", Ventana_Modal);
+
+                //Scrip para mostrar Ventana Modal de Contribuyentes para los Co-Propietarios
+                Ventana_Modal = "Abrir_Ventana_Modal('Ventanas_Emergentes/Orden_Variacion/Frm_Menu_Pre_Propietarios.aspx', 'center:yes;resizable:no;status:no;dialogWidth:680px;dialogHeight:400px;dialogHide:true;help:no;scroll:no');";
+                Btn_Orden_Variacion_Copropietarios_Nombres.Attributes.Add("onclick", Ventana_Modal);
+
+                //Scrip para mostrar Ventana Modal de Tasas de los Impuesto de Predial para los Impuestos de la Orden de Variación
+                Ventana_Modal = "Abrir_Ventana_Modal('Ventanas_Emergentes/Orden_Variacion/Frm_Menu_Pre_Tasas.aspx', 'center:yes;resizable:no;status:no;dialogWidth:680px;dialogHeight:400px;dialogHide:true;help:no;scroll:no');";
+                Btn_Orden_Variacion_Impuestos_Tasa.Attributes.Add("onclick", Ventana_Modal);
+            }
+            Session["TIPO_CATALOGO"] = "TRASLADO";
+            Div_Contenedor_Msj_Error.Visible = false;
+        }
+
+    #endregion
+
+    #region Metodos
+    
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN: Llenar_Combo_Notarios
+        ///DESCRIPCIÓN: Llena el Combo de Notarios
+        ///PARAMETROS:     
+        ///CREO: Francisco Antonio Gallardo Castañeda.
+        ///FECHA_CREO: 10/Noviembre/2010 
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************
+        private void Llenar_Combo_Notarios() {
+            try{
+                Cls_Ope_Pre_Traslado_Negocio Traslado_Dominio = new Cls_Ope_Pre_Traslado_Negocio();
+                Traslado_Dominio.P_Tipo_DataTable = "LISTAR_NOTARIOS";
+                DataTable Notarios = Traslado_Dominio.Consultar_DataTable();
+                DataRow Fila_Notario = Notarios.NewRow();
+                Fila_Notario["NOTARIO_ID"] = HttpUtility.HtmlDecode("00000");
+                Fila_Notario["NOMBRE"] = HttpUtility.HtmlDecode("&lt;SELECCIONE&gt;");
+                Notarios.Rows.InsertAt(Fila_Notario, 0);
+                Cmb_Notarios.DataSource = Notarios;
+                Cmb_Notarios.DataValueField = "NOTARIO_ID";
+                Cmb_Notarios.DataTextField = "NOMBRE";
+                Cmb_Notarios.DataBind();
+            }catch(Exception Ex){
+                Lbl_Ecabezado_Mensaje.Text = Ex.Message;
+                Lbl_Mensaje_Error.Text = "";
+                Div_Contenedor_Msj_Error.Visible = true;                
+            }
+        }                    
+    
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Limpiar_Campos
+        ///DESCRIPCIÓN          : Limpia los campo de la forma
+        ///PARAMETROS:     
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 15/Diciembre/2010 
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************
+        private void Limpiar_Campos() {
+            Cmb_Orden_Variacion_Tipos_Movimientos.SelectedIndex = -1;
+
+            //GENERALES
+            Lbl_Orden_Variacion_Generales_Colonia.Text = "";
+            Lbl_Orden_Variacion_Generales_Cuenta_Predial.Text = "";
+            Lbl_Orden_Variacion_Generales_Estatus.Text = "";
+            Lbl_Orden_Variacion_Generales_Ubicacion.Text = "";
+            Lbl_Orden_Variacion_Generales_Ultimo_Movimiento.Text = "";
+
+            Txt_Orden_Variacion_Generales_Clave_Catastral.Text = "";
+            Txt_Orden_Variacion_Generales_Cuenta_Origen.Text = "";
+            Txt_Orden_Variacion_Generales_Exterior.Text = "";
+            Txt_Orden_Variacion_Generales_Interior.Text = "";
+            Txt_Orden_Variacion_Generales_Superficie_Construida_M2.Text = "";
+            Txt_Orden_Variacion_Generales_Superficie_Total_M2.Text = "";
+
+            Cmb_Orden_Variacion_Generales_Efectos_Año_Bimestre.SelectedValue = DateTime.Now.Year.ToString();
+            Cmb_Orden_Variacion_Generales_Efectos_Bimestre.SelectedValue = Convert.ToString(Math.Ceiling(Convert.ToDouble(DateTime.Now.Month) / 2));
+            Cmb_Orden_Variacion_Generales_Estados_Predio.SelectedIndex = 0;
+            Cmb_Orden_Variacion_Generales_Tipos_Predio.SelectedIndex = 0;
+            Cmb_Orden_Variacion_Generales_Usos_Predio.SelectedIndex = 0;
+
+            //PROPIETARIO
+            Lbl_Orden_Variacion_Propietario_Nombre.Text = "";
+            Lbl_Orden_Variacion_Propietario_RFC.Text = "";
+
+            Txt_Orden_Variacion_Propietario_Ciudad.Text = "";
+            Txt_Orden_Variacion_Propietario_Colonia.Text = "";
+            Txt_Orden_Variacion_Propietario_CP.Text = "";
+            Txt_Orden_Variacion_Propietario_Domicilio.Text = "";
+            Txt_Orden_Variacion_Propietario_Estado.Text = "";
+            Txt_Orden_Variacion_Propietario_Exterior.Text = "";
+            Txt_Orden_Variacion_Propietario_Interior.Text = "";
+
+            Chk_Orden_Variacion_Propietario_Domicilio_Foraneo.Checked = false;
+            
+            //IMPUESTOS
+            Lbl_Orden_Variacion_Impuestos_Articulo.Text = "";
+            Lbl_Orden_Variacion_Impuestos_Caso_Especial.Text = "";
+            Lbl_Orden_Variacion_Impuestos_Inciso.Text = "";
+            Lbl_Orden_Variacion_Impuestos_Periodo_Corriente.Text = "";
+            Lbl_Orden_Variacion_Impuestos_Tasa.Text = "";
+
+            Txt_Orden_Variacion_Impuestos_Cuota_Anual.Text = "";
+            Txt_Orden_Variacion_Impuestos_Cuota_Bimestral.Text = "";
+            Txt_Orden_Variacion_Impuestos_Detalles_Caso_Especial.Text = "";
+            Txt_Orden_Variacion_Impuestos_Fecha_Avaluo.Text = "";
+            Txt_Orden_Variacion_Impuestos_Porcentaje_Exencion.Text = "";
+            Txt_Orden_Variacion_Impuestos_Termino_Exencion.Text = "";
+            Txt_Orden_Variacion_Impuestos_Valor_Fiscal.Text = "";
+
+            Cmb_Orden_Variacion_Impuestos_Tipos_Predio.SelectedIndex = 0;
+
+            Chk_Orden_Variacion_Impuestos_Cuota_Fija.Checked = false;
+
+            //COPROPIETARIOS
+            Lst_Orden_Variacion_Copropietarios_Nombres.Items.Clear();
+
+            //DIFERENCIAS
+            Cmb_Orden_Variacion_Diferencias_Año_Bimestre_Ini.SelectedValue = DateTime.Now.Year.ToString();
+            Cmb_Orden_Variacion_Diferencias_Año_Bimestre_Fin.SelectedValue = DateTime.Now.Year.ToString();
+            Cmb_Orden_Variacion_Diferencias_Bimestre_Ini.SelectedValue = Convert.ToString(Math.Ceiling(Convert.ToDouble(DateTime.Now.Month) / 2));
+            Cmb_Orden_Variacion_Diferencias_Bimestre_Fin.SelectedValue = Convert.ToString(Math.Ceiling(Convert.ToDouble(DateTime.Now.Month) / 2));
+            Cmb_Orden_Variacion_Diferencias_Periodos.SelectedIndex = -1;
+
+            //OBSERVACIONES
+            Lbl_Orden_Variacion_Observaciones_Anterios.Text = "";
+
+            Txt_Orden_Variacion_Observaciones.Text = "";
+
+        }
+    
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Habilitar_Campos
+        ///DESCRIPCIÓN          : Habilita o dehabilita de acuerdo al valor del parámetro indicado
+        ///PARAMETROS           : Habilita: True/False
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 15/Diciembre/2010 
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************
+        private void Habilitar_Campos(Boolean Habilita) {
+            Cmb_Orden_Variacion_Tipos_Movimientos.Enabled = Habilita;
+
+            //GENERALES
+            Lbl_Orden_Variacion_Generales_Colonia.Enabled = Habilita;
+            Lbl_Orden_Variacion_Generales_Cuenta_Predial.Enabled = Habilita;
+            Lbl_Orden_Variacion_Generales_Estatus.Enabled = Habilita;
+            Lbl_Orden_Variacion_Generales_Ubicacion.Enabled = Habilita;
+            Lbl_Orden_Variacion_Generales_Ultimo_Movimiento.Enabled = Habilita;
+
+            Txt_Orden_Variacion_Generales_Clave_Catastral.Enabled = Habilita;
+            Txt_Orden_Variacion_Generales_Cuenta_Origen.Enabled = Habilita;
+            Txt_Orden_Variacion_Generales_Exterior.Enabled = Habilita;
+            Txt_Orden_Variacion_Generales_Interior.Enabled = Habilita;
+            Txt_Orden_Variacion_Generales_Superficie_Construida_M2.Enabled = Habilita;
+            Txt_Orden_Variacion_Generales_Superficie_Total_M2.Enabled = Habilita;
+
+            Cmb_Orden_Variacion_Generales_Efectos_Año_Bimestre.Enabled = Habilita;
+            Cmb_Orden_Variacion_Generales_Efectos_Bimestre.Enabled = Habilita;
+            Cmb_Orden_Variacion_Generales_Estados_Predio.Enabled = Habilita;
+            Cmb_Orden_Variacion_Generales_Tipos_Predio.Enabled = Habilita;
+            Cmb_Orden_Variacion_Generales_Usos_Predio.Enabled = Habilita;
+
+            Btn_Orden_Variacion_Generales_Ubicaciones.Enabled = Habilita;
+
+            //PROPIETARIO
+            Lbl_Orden_Variacion_Propietario_Nombre.Enabled = Habilita;
+            Lbl_Orden_Variacion_Propietario_RFC.Enabled = Habilita;
+
+            Txt_Orden_Variacion_Propietario_Ciudad.Enabled = Habilita;
+            Txt_Orden_Variacion_Propietario_Colonia.Enabled = Habilita;
+            Txt_Orden_Variacion_Propietario_CP.Enabled = Habilita;
+            Txt_Orden_Variacion_Propietario_Domicilio.Enabled = Habilita;
+            Txt_Orden_Variacion_Propietario_Estado.Enabled = Habilita;
+            Txt_Orden_Variacion_Propietario_Exterior.Enabled = Habilita;
+            Txt_Orden_Variacion_Propietario_Interior.Enabled = Habilita;
+
+            Chk_Orden_Variacion_Propietario_Domicilio_Foraneo.Enabled = Habilita;
+
+            Btn_Orden_Variacion_Propietario_Nombres.Enabled = Habilita;
+
+            //IMPUESTOS
+            Lbl_Orden_Variacion_Impuestos_Articulo.Enabled = Habilita;
+            Lbl_Orden_Variacion_Impuestos_Caso_Especial.Enabled = Habilita;
+            Lbl_Orden_Variacion_Impuestos_Inciso.Enabled = Habilita;
+            Lbl_Orden_Variacion_Impuestos_Periodo_Corriente.Enabled = Habilita;
+            Lbl_Orden_Variacion_Impuestos_Tasa.Enabled = Habilita;
+
+            Txt_Orden_Variacion_Impuestos_Cuota_Anual.Enabled = Habilita;
+            Txt_Orden_Variacion_Impuestos_Cuota_Bimestral.Enabled = Habilita;
+            Txt_Orden_Variacion_Impuestos_Detalles_Caso_Especial.Enabled = Habilita;
+            Txt_Orden_Variacion_Impuestos_Fecha_Avaluo.Enabled = Habilita;
+            Txt_Orden_Variacion_Impuestos_Porcentaje_Exencion.Enabled = Habilita;
+            Txt_Orden_Variacion_Impuestos_Termino_Exencion.Enabled = Habilita;
+            Txt_Orden_Variacion_Impuestos_Valor_Fiscal.Enabled = Habilita;
+
+            Cmb_Orden_Variacion_Impuestos_Tipos_Predio.Enabled = Habilita;
+
+            Chk_Orden_Variacion_Impuestos_Cuota_Fija.Enabled = Habilita;
+
+            Btn_Orden_Variacion_Impuestos_Tasa.Enabled = Habilita;
+            Btn_Orden_Variacion_Impuestos_Calcular_Cuota_Anual_Bimestral.Enabled = Habilita;
+            Btn_Orden_Variacion_Impuestos_Casos_Especiales.Enabled = Habilita;
+            Btn_Orden_Variacion_Impuestos_Fecha_Avaluo.Enabled = Habilita;
+            Btn_Orden_Variacion_Impuestos_Termino_Exencion.Enabled = Habilita;
+
+            Panel_Orden_Variacion_Impuestos_Casos_Especiales.Visible = Chk_Orden_Variacion_Impuestos_Cuota_Fija.Checked;
+
+            //COPROPIETARIOS
+            Lst_Orden_Variacion_Copropietarios_Nombres.Enabled = Habilita;
+
+            Btn_Orden_Variacion_Copropietarios_Nombres.Enabled = Habilita;
+            Btn_Orden_Variacion_Copropietarios_Quitar_Nombre.Enabled = Habilita;
+            if (Lst_Orden_Variacion_Copropietarios_Nombres.Items.Count > 0)
+            {
+                Btn_Orden_Variacion_Copropietarios_Quitar_Nombre.Visible = true;
+            }
+            else
+            {
+                Btn_Orden_Variacion_Copropietarios_Quitar_Nombre.Visible = false;
+            }
+
+            //DIFERENCIAS
+            Cmb_Orden_Variacion_Diferencias_Año_Bimestre_Ini.Enabled = Habilita;
+            Cmb_Orden_Variacion_Diferencias_Año_Bimestre_Fin.Enabled = Habilita;
+            Cmb_Orden_Variacion_Diferencias_Bimestre_Ini.Enabled = Habilita;
+            Cmb_Orden_Variacion_Diferencias_Bimestre_Fin.Enabled = Habilita;
+            Cmb_Orden_Variacion_Diferencias_Periodos.Enabled = Habilita;
+
+            //OBSERVACIONES
+            Lbl_Orden_Variacion_Observaciones_Anterios.Enabled = Habilita;
+
+            Txt_Orden_Variacion_Observaciones.Enabled = Habilita;
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Llenar_Combo_Movimientos
+        ///DESCRIPCIÓN          : Llena el Combo con los movimeintos vigentes
+        ///PARAMETROS:     
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 14/Diciembre/2010 
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************
+        private void Llenar_Combo_Movimientos()
+        {
+            try
+            {
+                Cls_Cat_Pre_Movimientos_Negocio Movimientos = new Cls_Cat_Pre_Movimientos_Negocio();
+                Movimientos.P_Campos_Dinamicos = Cat_Pre_Movimientos.Campo_Movimiento_ID + " AS MOVIMIENTO_ID, (" + Cat_Pre_Movimientos.Campo_Identificador + " || ' - ' || " + Cat_Pre_Movimientos.Campo_Descripcion + ") AS IDENTIFICADOR";
+                Movimientos.P_Filtros_Dinamicos = Cat_Pre_Movimientos.Campo_Estatus + " = 'VIGENTE'";
+                Movimientos.P_Ordenar_Dinamico = Cat_Pre_Movimientos.Campo_Identificador + " || ' - ' || " + Cat_Pre_Movimientos.Campo_Descripcion;
+                DataTable Dt_Movimientos = Movimientos.Consultar_Movimientos();
+                DataRow Dr_Movimientos = Dt_Movimientos.NewRow();
+                Dr_Movimientos["MOVIMIENTO_ID"] = HttpUtility.HtmlDecode("00000");
+                Dr_Movimientos["IDENTIFICADOR"] = HttpUtility.HtmlDecode("&lt;SELECCIONE&gt;");
+                Dt_Movimientos.Rows.InsertAt(Dr_Movimientos, 0);
+                Cmb_Orden_Variacion_Tipos_Movimientos.DataSource = Dt_Movimientos;
+                Cmb_Orden_Variacion_Tipos_Movimientos.DataValueField = "MOVIMIENTO_ID";
+                Cmb_Orden_Variacion_Tipos_Movimientos.DataTextField = "IDENTIFICADOR";
+                Cmb_Orden_Variacion_Tipos_Movimientos.DataBind();
+            }
+            catch (Exception Ex)
+            {
+                Lbl_Ecabezado_Mensaje.Text = Ex.Message;
+                Lbl_Mensaje_Error.Text = "";
+                Div_Contenedor_Msj_Error.Visible = true;
+            }
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Llenar_Combo_Tipos_Predios
+        ///DESCRIPCIÓN          : Llena el Combo con los Tipos de Predios existentes
+        ///PARAMETROS:     
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 17/Diciembre/2010 
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************
+        private void Llenar_Combo_Tipos_Predio()
+        {
+            try
+            {
+                Cls_Cat_Pre_Tipos_Predio_Negocio Tipos_Predio = new Cls_Cat_Pre_Tipos_Predio_Negocio();
+                Tipos_Predio.P_Campos_Dinamicos = Cat_Pre_Tipos_Predio.Campo_Tipo_Predio_ID + " AS TIPO_PREDIO_ID, " + Cat_Pre_Tipos_Predio.Campo_Descripcion + " AS DESCRIPCION";
+                Tipos_Predio.P_Ordenar_Dinamico = Cat_Pre_Tipos_Predio.Campo_Descripcion;
+                DataTable Dt_Tipos_Predio = Tipos_Predio.Consultar_Tipo_Predio();
+                DataRow Dr_Tipos_Predio = Dt_Tipos_Predio.NewRow();
+                Dr_Tipos_Predio["TIPO_PREDIO_ID"] = HttpUtility.HtmlDecode("00000");
+                Dr_Tipos_Predio["DESCRIPCION"] = HttpUtility.HtmlDecode("&lt;SELECCIONE&gt;");
+                Dt_Tipos_Predio.Rows.InsertAt(Dr_Tipos_Predio, 0);
+
+                Cmb_Orden_Variacion_Generales_Tipos_Predio.DataSource = Dt_Tipos_Predio;
+                Cmb_Orden_Variacion_Generales_Tipos_Predio.DataValueField = "TIPO_PREDIO_ID";
+                Cmb_Orden_Variacion_Generales_Tipos_Predio.DataTextField = "DESCRIPCION";
+                Cmb_Orden_Variacion_Generales_Tipos_Predio.DataBind();
+
+                Cmb_Orden_Variacion_Impuestos_Tipos_Predio.DataSource = Dt_Tipos_Predio;
+                Cmb_Orden_Variacion_Impuestos_Tipos_Predio.DataValueField = "TIPO_PREDIO_ID";
+                Cmb_Orden_Variacion_Impuestos_Tipos_Predio.DataTextField = "DESCRIPCION";
+                Cmb_Orden_Variacion_Impuestos_Tipos_Predio.DataBind();
+            }
+            catch (Exception Ex)
+            {
+                Lbl_Ecabezado_Mensaje.Text = Ex.Message;
+                Lbl_Mensaje_Error.Text = "";
+                Div_Contenedor_Msj_Error.Visible = true;
+            }
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Llenar_Combo_Usos_Predio
+        ///DESCRIPCIÓN          : Llena el Combo con los Tipos de Predios existentes
+        ///PARAMETROS:     
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 17/Diciembre/2010 
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************
+        private void Llenar_Combo_Usos_Predio()
+        {
+            try
+            {
+                Cls_Cat_Pre_Uso_Suelo_Negocio Usos_Predio = new Cls_Cat_Pre_Uso_Suelo_Negocio();
+                Usos_Predio.P_Campos_Dinamicos = Cat_Pre_Uso_Suelo.Campo_Uso_Suelo_ID + " AS USO_SUELO_ID, " + Cat_Pre_Uso_Suelo.Campo_Descripcion + " AS DESCRIPCION";
+                Usos_Predio.P_Ordenar_Dinamico = Cat_Pre_Uso_Suelo.Campo_Descripcion;
+                DataTable Dt_Usos_Predio = Usos_Predio.Consultar_Uso_Suelo();
+                DataRow Dr_Usos_Predio = Dt_Usos_Predio.NewRow();
+                Dr_Usos_Predio["USO_SUELO_ID"] = HttpUtility.HtmlDecode("00000");
+                Dr_Usos_Predio["DESCRIPCION"] = HttpUtility.HtmlDecode("&lt;SELECCIONE&gt;");
+                Dt_Usos_Predio.Rows.InsertAt(Dr_Usos_Predio, 0);
+
+                Cmb_Orden_Variacion_Generales_Usos_Predio.DataSource = Dt_Usos_Predio;
+                Cmb_Orden_Variacion_Generales_Usos_Predio.DataValueField = "USO_SUELO_ID";
+                Cmb_Orden_Variacion_Generales_Usos_Predio.DataTextField = "DESCRIPCION";
+                Cmb_Orden_Variacion_Generales_Usos_Predio.DataBind();
+            }
+            catch (Exception Ex)
+            {
+                Lbl_Ecabezado_Mensaje.Text = Ex.Message;
+                Lbl_Mensaje_Error.Text = "";
+                Div_Contenedor_Msj_Error.Visible = true;
+            }
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Llenar_Combo_Estados_Predio
+        ///DESCRIPCIÓN          : Llena el Combo con los Estados de Predios existentes
+        ///PARAMETROS:     
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 17/Diciembre/2010 
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************
+        private void Llenar_Combo_Estados_Predio()
+        {
+            try
+            {
+                Cls_Cat_Pre_Estados_Predio_Negocio Estados_Predio = new Cls_Cat_Pre_Estados_Predio_Negocio();
+                Estados_Predio.P_Campos_Dinamicos = Cat_Pre_Estados_Predio.Campo_Estado_Predio_ID + " AS ESTADO_PREDIO_ID, " + Cat_Pre_Estados_Predio.Campo_Descripcion + " AS DESCRIPCION";
+                Estados_Predio.P_Ordenar_Dinamico = Cat_Pre_Estados_Predio.Campo_Descripcion;
+                DataTable Dt_Estados_Predio = Estados_Predio.Consultar_Estado_Predio();
+                DataRow Dr_Estados_Predio = Dt_Estados_Predio.NewRow();
+                Dr_Estados_Predio["ESTADO_PREDIO_ID"] = HttpUtility.HtmlDecode("00000");
+                Dr_Estados_Predio["DESCRIPCION"] = HttpUtility.HtmlDecode("&lt;SELECCIONE&gt;");
+                Dt_Estados_Predio.Rows.InsertAt(Dr_Estados_Predio, 0);
+
+                Cmb_Orden_Variacion_Generales_Estados_Predio.DataSource = Dt_Estados_Predio;
+                Cmb_Orden_Variacion_Generales_Estados_Predio.DataValueField = "ESTADO_PREDIO_ID";
+                Cmb_Orden_Variacion_Generales_Estados_Predio.DataTextField = "DESCRIPCION";
+                Cmb_Orden_Variacion_Generales_Estados_Predio.DataBind();
+            }
+            catch (Exception Ex)
+            {
+                Lbl_Ecabezado_Mensaje.Text = Ex.Message;
+                Lbl_Mensaje_Error.Text = "";
+                Div_Contenedor_Msj_Error.Visible = true;
+            }
+        }
+
+        #region Grid
+    
+            ///*******************************************************************************
+            ///NOMBRE DE LA FUNCIÓN: Llenar_Grid_Contrarecibos
+            ///DESCRIPCIÓN: Llena el Grid de Contrarecibos
+            ///PARAMETROS:     
+            ///             1. Pagina.  Pagina en la cual se mostrará el Grid_View
+            ///CREO: Francisco Antonio Gallardo Castañeda.
+            ///FECHA_CREO: 10/Noviembre/2010 
+            ///MODIFICO:
+            ///FECHA_MODIFICO
+            ///CAUSA_MODIFICACIÓN
+            ///*******************************************************************************
+            private void Llenar_Grid_Contrarecibos(Int32 Pagina) {
+                try{
+                        Cls_Ope_Pre_Traslado_Negocio Traslado_Dominio = new Cls_Ope_Pre_Traslado_Negocio();
+                        Traslado_Dominio.P_Tipo_DataTable = "LISTAR_CONTRARECIBOS";
+                        if (Session["Tipo_Busqueda"] != null)
+                        {
+                            String Tipo_Busqueda = Session["Tipo_Busqueda"].ToString();
+                            if (Tipo_Busqueda.Trim().Equals("CONTRARECIBOS"))
+                            {
+                                Traslado_Dominio.P_Cuenta_Predial_ID = Txt_Cuenta_Predial.Text.Trim();
+                                Traslado_Dominio.P_No_Contrarecibo = Txt_No_Contrarecibo.Text.Trim();
+                                if (Txt_Fecha_Escritura.Text.Trim().Length > 0)
+                                {
+                                    Traslado_Dominio.P_Buscar_Fecha_Escritura = true;
+                                    Traslado_Dominio.P_Fecha_Escritura = Convert.ToDateTime(Txt_Fecha_Escritura.Text.Trim());
+                                }
+                                if (Txt_Fecha_Liberacion.Text.Trim().Length > 0)
+                                {
+                                    Traslado_Dominio.P_Buscar_Fecha_Liberacion = true;
+                                    Traslado_Dominio.P_Fecha_Liberacion = Convert.ToDateTime(Txt_Fecha_Liberacion.Text.Trim());
+                                }
+                            }
+                            else if (Tipo_Busqueda.Trim().Equals("LISTADOS"))
+                            {
+                                Traslado_Dominio.P_Listado_ID = Txt_No_Listado.Text.Trim();
+                                if (Txt_Fecha_Generacion.Text.Trim().Length > 0)
+                                {
+                                    Traslado_Dominio.P_Buscar_Fecha_Generacion = true;
+                                    Traslado_Dominio.P_Fecha_Generacion = Convert.ToDateTime(Txt_Fecha_Generacion.Text.Trim());
+                                }
+                                if (Cmb_Notarios.SelectedIndex > 0)
+                                {
+                                    Traslado_Dominio.P_Notario_ID = Cmb_Notarios.SelectedItem.Value;
+                                }
+                            }
+                        }
+                        Traslado_Dominio.P_Con_Cuenta_Predial = true;
+                        Grid_Contrarecibos.DataSource = Traslado_Dominio.Consultar_DataTable();
+                        Grid_Contrarecibos.PageIndex = Pagina;
+                        Grid_Contrarecibos.DataBind();
+                }catch(Exception Ex){
+                    Lbl_Ecabezado_Mensaje.Text = Ex.Message;
+                    Lbl_Mensaje_Error.Text = "";
+                    Div_Contenedor_Msj_Error.Visible = true;                
+                }
+            }            
+
+        #endregion
+    #endregion
+
+    #region Grids
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN: Grid_Contrarecibos_RowDataBound
+        ///DESCRIPCIÓN: Evento de RowDataBound del Grid de Contrarecibos
+        ///PARAMETROS:     
+        ///CREO: Francisco Antonio Gallardo Castañeda.
+        ///FECHA_CREO: 10/Noviembre/2010 
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************
+        protected void Grid_Contrarecibos_RowDataBound(object sender, GridViewRowEventArgs e) {
+            try{
+                if (e.Row.RowType == DataControlRowType.DataRow) {
+                    if (e.Row.Cells[2].Text == null || e.Row.Cells[2].Text.Trim().Equals("") || e.Row.Cells[2].Text.Trim().Equals("SIN REGISTRO")) {
+                        e.Row.Cells[0].Enabled = false;
+                    } else {
+                        e.Row.Cells[0].Enabled = true;
+                    }
+                    if (e.Row.Cells[7].Text.Trim().Equals("TRASLADO")) {
+                        e.Row.Cells[0].Enabled = false;
+                    }
+                }
+            }catch(Exception Ex){
+                Lbl_Ecabezado_Mensaje.Text = Ex.Message;
+                Lbl_Mensaje_Error.Text = "";
+                Div_Contenedor_Msj_Error.Visible = true;                
+            }
+        }
+
+    #endregion
+
+    #region Eventos
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN: Btn_Limpiar_Filtros_Buscar_Contrarecibos_Click
+        ///DESCRIPCIÓN: Maneja el Evento del Boton para realizar la Limpieza de los filtros
+        ///             para la busqueda por parte de los Contrarecibos.
+        ///PARAMETROS:     
+        ///CREO: Francisco Antonio Gallardo Castañeda.
+        ///FECHA_CREO: 10/Noviembre/2010 
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************    
+        protected void Btn_Limpiar_Filtros_Buscar_Contrarecibos_Click(object sender, ImageClickEventArgs e) {
+            Txt_Cuenta_Predial.Text = "";
+            Txt_No_Contrarecibo.Text = "";
+            Txt_Fecha_Escritura.Text = "";
+            Txt_Fecha_Liberacion.Text = "";
+        }
+    
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN: Btn_Buscar_Contrarecibos_Click
+        ///DESCRIPCIÓN: Maneja el Evento del Boton para realizar la Busqueda de los
+        ///             Contrarecibos
+        ///PARAMETROS:     
+        ///CREO: Francisco Antonio Gallardo Castañeda.
+        ///FECHA_CREO: 10/Noviembre/2010 
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************    
+        protected void Btn_Buscar_Contrarecibos_Click(object sender, ImageClickEventArgs e) {
+            Session["Tipo_Busqueda"] = "CONTRARECIBOS";
+            Llenar_Grid_Contrarecibos(0);
+            if (Grid_Contrarecibos.Rows.Count == 0 && (Txt_Cuenta_Predial.Text.Trim().Length > 0 || Txt_No_Contrarecibo.Text.Trim().Length > 0 || Txt_Fecha_Escritura.Text.Trim().Length > 0 || Txt_Fecha_Liberacion.Text.Trim().Length > 0)) {
+                Lbl_Ecabezado_Mensaje.Text = "No se encontraron Datos para los filtros establecidos";
+                Lbl_Mensaje_Error.Text = "";
+                Div_Contenedor_Msj_Error.Visible = true;
+                Txt_Cuenta_Predial.Text = "";
+                Txt_No_Contrarecibo.Text = "";
+                Txt_Fecha_Escritura.Text = "";
+                Txt_Fecha_Liberacion.Text = "";
+                Session.Remove("Tipo_Busqueda");
+                Llenar_Grid_Contrarecibos(0);                
+            }
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN: Btn_Buscar_Listado_Click
+        ///DESCRIPCIÓN: Maneja el Evento del Boton para realizar la Busqueda de los
+        ///             Listados
+        ///PARAMETROS:     
+        ///CREO: Francisco Antonio Gallardo Castañeda.
+        ///FECHA_CREO: 10/Noviembre/2010 
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************    
+        protected void Btn_Buscar_Listado_Click(object sender, ImageClickEventArgs e) {
+            Session["Tipo_Busqueda"] = "LISTADOS";
+            Llenar_Grid_Contrarecibos(0);
+            if (Grid_Contrarecibos.Rows.Count == 0 && (Txt_No_Listado.Text.Trim().Length > 0 || Txt_Fecha_Generacion.Text.Trim().Length > 0 || Cmb_Notarios.SelectedIndex > 0)) {
+                Lbl_Ecabezado_Mensaje.Text = "No se encontraron Datos para los filtros establecidos";
+                Lbl_Mensaje_Error.Text = "";
+                Div_Contenedor_Msj_Error.Visible = true;
+                Session.Remove("Tipo_Busqueda");
+            }
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN: Btn_Limpiar_Filtros_Buscar_Listado_Click
+        ///DESCRIPCIÓN: Maneja el Evento del Boton para realizar la Limpieza de los filtros
+        ///             para la busqueda por parte de los Listados.
+        ///PARAMETROS:     
+        ///CREO: Francisco Antonio Gallardo Castañeda.
+        ///FECHA_CREO: 09/Noviembre/2010 
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************  
+        protected void Btn_Limpiar_Filtros_Buscar_Listado_Click(object sender, ImageClickEventArgs e) {
+            Txt_No_Listado.Text = "";
+            Txt_Fecha_Generacion.Text = "";
+            Cmb_Notarios.SelectedIndex = 0;
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Grid_Contrarecibos_SelectedIndexChanged
+        ///DESCRIPCIÓN          : Evento SelectedIndexChange del Grid de Contrarecibos
+        ///PARAMETROS           : sender y e
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 29/Noviembre/2010
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************  
+        protected void Grid_Contrarecibos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Limpiar_Campos();
+            Habilitar_Campos(false);
+            Lbl_Orden_Variacion_Generales_Cuenta_Predial.Text = (HttpUtility.HtmlDecode(Grid_Contrarecibos.SelectedRow.Cells[2].Text)).ToString();
+            Cargar_Orden_Variacion();
+            Tab_Contenedor_Pestañas.Tabs[1].Enabled = true;
+            Tab_Contenedor_Pestañas.ActiveTabIndex = 1;
+            Btn_Orden_Variacion_Modificar.AlternateText = "Modificar";
+            Btn_Orden_Variacion_Modificar.Visible = true;
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Btn_Orden_Variacion_Modificar_Click
+        ///DESCRIPCIÓN          : Evento Click del botón Btn_Orden_Variacion_Modificar
+        ///PARAMETROS           : sender y e
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 29/Noviembre/2010
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************  
+        protected void Btn_Orden_Variacion_Modificar_Click(object sender, ImageClickEventArgs e)
+        {
+            Tab_Contenedor_Pestañas.ActiveTabIndex = 1;
+            if (Btn_Orden_Variacion_Modificar.AlternateText == "Modificar")
+            {
+                Btn_Orden_Variacion_Modificar.AlternateText = "Aceptar";
+                Btn_Orden_Variacion_Modificar.ImageUrl = "~/paginas/imagenes/paginas/icono_actualizar.png";
+                Btn_Orden_Variacion_Cancelar.AlternateText = "Cancelar";
+                Btn_Orden_Variacion_Cancelar.ImageUrl = "~/paginas/imagenes/paginas/icono_cancelar.png";
+                Habilitar_Campos(true);
+            }
+            else
+            {
+                if (Validar_Datos_Orden_Variacion())
+                {
+                    Cls_Cat_Pre_Cuentas_Predial_Negocio Cuentas_Predial = new Cls_Cat_Pre_Cuentas_Predial_Negocio();
+                    DataTable Dt_Cuenta_Predial;
+
+                    Cuentas_Predial.P_Campos_Dinamicos = Cat_Pre_Cuentas_Predial.Campo_Cuenta_Predial_ID + " AS CUENTA_PREDIAL_ID";
+                    Cuentas_Predial.P_Cuenta_Predial = Lbl_Orden_Variacion_Generales_Cuenta_Predial.Text.Trim();
+
+                    Dt_Cuenta_Predial = Cuentas_Predial.Consultar_Cuenta();
+
+                    Cuentas_Predial.P_Calle_ID = Hidden_Orden_Variacion_Generales_Calle_ID.Value.Trim();
+                    Cuentas_Predial.P_Propietario_ID = Hidden_Orden_Variacion_Propietario_ID.Value.Trim();
+                    Cuentas_Predial.P_Copropietario_ID = Hidden_Orden_Variacion_Copropietario_ID.Value.Trim();
+                    if (Cmb_Orden_Variacion_Generales_Estados_Predio.SelectedIndex > 0)
+                    {
+                        Cuentas_Predial.P_Estado_Predio_ID = Cmb_Orden_Variacion_Generales_Estados_Predio.SelectedValue;
+                    }
+                    if (Cmb_Orden_Variacion_Generales_Tipos_Predio.SelectedIndex > 0)
+                    {
+                        Cuentas_Predial.P_Tipo_Predio_ID = Cmb_Orden_Variacion_Generales_Tipos_Predio.SelectedValue;
+                    }
+                    if (Cmb_Orden_Variacion_Generales_Usos_Predio.SelectedIndex > 0)
+                    {
+                        Cuentas_Predial.P_Uso_Suelo_ID = Cmb_Orden_Variacion_Generales_Usos_Predio.SelectedValue;
+                    }
+                    Cuentas_Predial.P_Impuesto_ID_Predial = Hidden_Orden_Variacion_Impuestos_Tasa_ID.Value.Trim();
+                    Cuentas_Predial.P_Cuota_Minima_ID = "";
+                    Cuentas_Predial.P_Cuenta_Origen = Txt_Orden_Variacion_Generales_Cuenta_Origen.Text.Trim().ToUpper();
+                    Cuentas_Predial.P_Estatus = Lbl_Orden_Variacion_Generales_Estatus.Text.Trim().ToUpper();
+                    Cuentas_Predial.P_No_Exterior = Txt_Orden_Variacion_Generales_Exterior.Text.Trim();
+                    Cuentas_Predial.P_No_Interior = Txt_Orden_Variacion_Generales_Interior.Text.Trim();
+                    if (Txt_Orden_Variacion_Generales_Superficie_Construida_M2.Text.Trim() != "")
+                    {
+                        Cuentas_Predial.P_Superficie_Construida = Convert.ToDouble(Txt_Orden_Variacion_Generales_Superficie_Construida_M2.Text.Trim());
+                    }
+                    if (Txt_Orden_Variacion_Generales_Superficie_Total_M2.Text.Trim() != "")
+                    {
+                        Cuentas_Predial.P_Superficie_Total = Convert.ToDouble(Txt_Orden_Variacion_Generales_Superficie_Total_M2.Text.Trim());
+                    }
+                    Cuentas_Predial.P_Clave_Catastral = Txt_Orden_Variacion_Generales_Clave_Catastral.Text.Trim();
+                    if (Txt_Orden_Variacion_Impuestos_Valor_Fiscal.Text.Trim() != "")
+                    {
+                        Cuentas_Predial.P_Valor_Fiscal = Convert.ToDouble(Txt_Orden_Variacion_Impuestos_Valor_Fiscal.Text.Trim());
+                    }
+                    if (Cmb_Orden_Variacion_Generales_Efectos_Año_Bimestre.SelectedIndex > -1 && Cmb_Orden_Variacion_Generales_Efectos_Bimestre.SelectedIndex > -1)
+                    {
+                        Cuentas_Predial.P_Efectos = Cmb_Orden_Variacion_Generales_Efectos_Año_Bimestre.SelectedValue + "/" + Cmb_Orden_Variacion_Generales_Efectos_Bimestre.SelectedValue;
+                    }
+                    Cuentas_Predial.P_Periodo_Corriente = Lbl_Orden_Variacion_Impuestos_Periodo_Corriente.Text.Trim();
+                    if (Txt_Orden_Variacion_Impuestos_Cuota_Anual.Text.Trim() != "")
+                    {
+                        Cuentas_Predial.P_Cuota_Anual = Convert.ToDouble(Txt_Orden_Variacion_Impuestos_Cuota_Anual.Text.Trim());
+                    }
+                    if (Txt_Orden_Variacion_Impuestos_Porcentaje_Exencion.Text.Trim() != "")
+                    {
+                        Cuentas_Predial.P_Porcentaje_Exencion = Convert.ToDouble(Txt_Orden_Variacion_Impuestos_Porcentaje_Exencion.Text.Trim());
+                    }
+                    if (Chk_Orden_Variacion_Impuestos_Cuota_Fija.Checked)
+                    {
+                        Cuentas_Predial.P_Cuota_Fija = "S";
+                    }
+                    else
+                    {
+                        Cuentas_Predial.P_Cuota_Fija = "N";
+                    }
+                    if (CE_Orden_Variacion_Impuestos_Termino_Exencion.SelectedDate != null)
+                    {
+                        Cuentas_Predial.P_Termino_Exencion = CE_Orden_Variacion_Impuestos_Termino_Exencion.SelectedDate.Value;
+                    }
+                    if (CE_Orden_Variacion_Impuestos_Fecha_Avaluo.SelectedDate != null)
+                    {
+                        Cuentas_Predial.P_Fecha_Avaluo = CE_Orden_Variacion_Impuestos_Fecha_Avaluo.SelectedDate.Value;
+                    }
+                    Cuentas_Predial.P_Usuario = Cls_Sessiones.Nombre_Empleado;
+
+                    if (Dt_Cuenta_Predial.Rows.Count > 0)
+                    {
+                        if (Cuentas_Predial.Modifcar_Cuenta())
+                        {
+                            Habilitar_Campos(false);
+                            Btn_Orden_Variacion_Modificar.AlternateText = "Modificar";
+                            Btn_Orden_Variacion_Modificar.ImageUrl = "~/paginas/imagenes/paginas/icono_modificar.png";
+                            Btn_Orden_Variacion_Cancelar.AlternateText = "Salir";
+                            Btn_Orden_Variacion_Cancelar.ImageUrl = "~/paginas/imagenes/paginas/icono_salir.png";
+                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Orden de Variación", "alert('Orden de Variación modificada  ')", true);
+                        }
+                        else
+                        {
+                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Orden de Variación", "alert('La Orden de Variación no pudo ser modificada  ')", true);
+                        }
+                    }
+                    else
+                    {
+                        if (Cuentas_Predial.Alta_Cuenta())
+                        {
+                            Habilitar_Campos(false);
+                            Btn_Orden_Variacion_Modificar.AlternateText = "Modificar";
+                            Btn_Orden_Variacion_Modificar.ImageUrl = "~/paginas/imagenes/paginas/icono_modificar.png";
+                            Btn_Orden_Variacion_Cancelar.AlternateText = "Salir";
+                            Btn_Orden_Variacion_Cancelar.ImageUrl = "~/paginas/imagenes/paginas/icono_salir.png";
+                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Orden de Variación", "alert('Orden de Variación modificada  ')", true);
+                        }
+                        else
+                        {
+                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Orden de Variación", "alert('La Orden de Variación no pudo ser modificada  ')", true);
+                        }
+                    }
+
+                }
+            }
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Btn_Orden_Variacion_Cancelar_Click
+        ///DESCRIPCIÓN          : Evento Click del botón Btn_Orden_Variacion_Cancelar
+        ///PARAMETROS           : sender y e
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 29/Noviembre/2010
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************  
+        protected void Btn_Orden_Variacion_Cancelar_Click(object sender, ImageClickEventArgs e)
+        {
+            if (Btn_Orden_Variacion_Cancelar.AlternateText == "Salir" && Tab_Contenedor_Pestañas.ActiveTabIndex == 0)
+            {
+                Session["Dt_Fraccionamientos_Impuestos"] = null;
+                Response.Redirect("../Paginas_Generales/Frm_Apl_Principal.aspx");
+            }
+            else
+            {
+                Limpiar_Campos();
+                Cargar_Orden_Variacion();
+                Habilitar_Campos(false);
+                Chk_Orden_Variacion_Propietario_Domicilio_Foraneo_CheckedChanged(null, null);
+                if (Btn_Orden_Variacion_Modificar.AlternateText == "Modificar")
+                {
+                    Tab_Contenedor_Pestañas.ActiveTabIndex = 0;
+                    Tab_Contenedor_Pestañas.Tabs[1].Enabled = false;
+                    Btn_Orden_Variacion_Modificar.Visible = false;
+                }
+                else
+                {
+                    if (Btn_Orden_Variacion_Modificar.AlternateText == "Aceptar")
+                    {
+                        Lbl_Orden_Variacion_Generales_Cuenta_Predial.Text = (HttpUtility.HtmlDecode(Grid_Contrarecibos.SelectedRow.Cells[2].Text)).ToString();
+                        Tab_Contenedor_Pestañas.ActiveTabIndex = 1;
+                    }
+                }
+                Btn_Orden_Variacion_Modificar.AlternateText = "Modificar";
+                Btn_Orden_Variacion_Modificar.ImageUrl = "~/paginas/imagenes/paginas/icono_modificar.png";
+                Btn_Orden_Variacion_Cancelar.AlternateText = "Salir";
+                Btn_Orden_Variacion_Cancelar.ImageUrl = "~/paginas/imagenes/paginas/icono_salir.png";
+            }
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Cargar_Combo_Años
+        ///DESCRIPCIÓN          : Llena la lista del combo con los años indicados empezando desde Año_Inicial al Año_Final
+        ///PARAMETROS           : Combo, control de tipo DropDownList a ser llenado
+        ///                       Año_Inicial, Valor del Primer año a ser insertado
+        ///                       Año_Final, Valor del Último año a ser insertado
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 15/Diciembre/2010
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************  
+        private void Llenar_Combo_Años(DropDownList Combo, int Año_Inicial, int Año_Final)
+        {
+            int Cont_Años;
+            Combo.Items.Clear();
+            for (Cont_Años = Año_Inicial; Cont_Años <= Año_Final; Cont_Años++)
+            {
+                Combo.Items.Add(Convert.ToString(Cont_Años));
+            }
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Btn_Orden_Variacion_Generales_Ubicaciones_Click
+        ///DESCRIPCIÓN          : Evento Click del control ImageButton Btn_Orden_Variacion_Generales_Ubicaciones
+        ///PARAMETROS           : sender y e
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 16/Diciembre/2010
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************  
+        protected void Btn_Orden_Variacion_Generales_Ubicaciones_Click(object sender, ImageClickEventArgs e)
+        {
+            Boolean Busqueda_Ubicaciones;
+            String Calle_ID;
+            String Calle;
+            String Colonia_ID;
+            String Colonia;
+            Busqueda_Ubicaciones = Convert.ToBoolean(Session["BUSQUEDA_COLONIA_CALLE"]);
+            if (Busqueda_Ubicaciones)
+            {
+                if (Session["COLONIA_ID"] != null)
+                {
+                    Calle_ID = Convert.ToString(Session["COLONIA_ID"]);
+                    Hidden_Orden_Variacion_Generales_Calle_ID.Value = Calle_ID;
+                    Calle = Convert.ToString(Session["NOMBRE_COLONIA"]).ToUpper();
+                    Lbl_Orden_Variacion_Generales_Ubicacion.Text = Calle;
+                }
+                if (Session["CALLE_ID"] != null)
+                {
+                    Colonia_ID = Convert.ToString(Session["CALLE_ID"]);
+                    Hidden_Orden_Variacion_Generales_Colonia_ID.Value = Colonia_ID;
+                    Colonia = Convert.ToString(Session["NOMBRE_CALLE"]).ToUpper();
+                    Lbl_Orden_Variacion_Generales_Colonia.Text = Colonia;
+                }
+            }
+            Session.Remove("BUSQUEDA_LOCALIDAD");
+            Session.Remove("LOCALIDAD_ID");
+            Session.Remove("NOMBRE");
+
+
+            //MPE_Orden_Variacion_Generales_Ubicacion.Show();
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Chk_Orden_Variacion_Propietario_Domicilio_Foraneo_CheckedChanged
+        ///DESCRIPCIÓN          : Evento CheckedChanged del control CheckBox Chk_Orden_Variacion_Propietario_Domicilio_Foraneo
+        ///PARAMETROS           : sender y e
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 16/Diciembre/2010
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************  
+        protected void Chk_Orden_Variacion_Propietario_Domicilio_Foraneo_CheckedChanged(object sender, EventArgs e)
+        {
+            BorderStyle Border_Style;
+            if (Chk_Orden_Variacion_Propietario_Domicilio_Foraneo.Checked)
+            {
+                Border_Style = BorderStyle.NotSet;
+            }
+            else
+            {
+                Border_Style = BorderStyle.None;
+            }
+            Txt_Orden_Variacion_Propietario_Ciudad.BorderStyle = Border_Style;
+            Txt_Orden_Variacion_Propietario_Colonia.BorderStyle = Border_Style;
+            Txt_Orden_Variacion_Propietario_Colonia.BorderStyle = Border_Style;
+            Txt_Orden_Variacion_Propietario_CP.BorderStyle = Border_Style;
+            Txt_Orden_Variacion_Propietario_Domicilio.BorderStyle = Border_Style;
+            Txt_Orden_Variacion_Propietario_Estado.BorderStyle = Border_Style;
+            Txt_Orden_Variacion_Propietario_Exterior.BorderStyle = Border_Style;
+            Txt_Orden_Variacion_Propietario_Interior.BorderStyle = Border_Style;
+
+            Txt_Orden_Variacion_Propietario_Ciudad.ReadOnly = !Chk_Orden_Variacion_Propietario_Domicilio_Foraneo.Checked;
+            Txt_Orden_Variacion_Propietario_Colonia.ReadOnly = !Chk_Orden_Variacion_Propietario_Domicilio_Foraneo.Checked;
+            Txt_Orden_Variacion_Propietario_Colonia.ReadOnly = !Chk_Orden_Variacion_Propietario_Domicilio_Foraneo.Checked;
+            Txt_Orden_Variacion_Propietario_CP.ReadOnly = !Chk_Orden_Variacion_Propietario_Domicilio_Foraneo.Checked;
+            Txt_Orden_Variacion_Propietario_Domicilio.ReadOnly = !Chk_Orden_Variacion_Propietario_Domicilio_Foraneo.Checked;
+            Txt_Orden_Variacion_Propietario_Estado.ReadOnly = !Chk_Orden_Variacion_Propietario_Domicilio_Foraneo.Checked;
+            Txt_Orden_Variacion_Propietario_Exterior.ReadOnly = !Chk_Orden_Variacion_Propietario_Domicilio_Foraneo.Checked;
+            Txt_Orden_Variacion_Propietario_Interior.ReadOnly = !Chk_Orden_Variacion_Propietario_Domicilio_Foraneo.Checked;
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Btn_Orden_Variacion_Propietario_Nombres_Click
+        ///DESCRIPCIÓN          : Evento Click del control ImageButton Btn_Orden_Variacion_Propietario_Nombres
+        ///PARAMETROS           : sender y e
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 16/Diciembre/2010
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************  
+        protected void Btn_Orden_Variacion_Propietario_Nombres_Click(object sender, ImageClickEventArgs e)
+        {
+            Boolean Busqueda_Contribuyentes;
+            String Contribuyente_ID;
+            String Nombre;
+            String RFC;
+            String Domicilio;
+            String Interior;
+            String Exterior;
+            String CP;
+            String Ciudad;
+            String Colonia;
+            String Estado;
+
+            Busqueda_Contribuyentes = Convert.ToBoolean(Session["BUSQUEDA_CONTRIBUYENTE"]);
+            if (Busqueda_Contribuyentes)
+            {
+                if (Session["CONTRIBUYENTE_ID"] != null)
+                {
+                    Contribuyente_ID = Convert.ToString(Session["CONTRIBUYENTE_ID"]);
+                    Nombre = Convert.ToString(Session["NOMBRE"]).ToUpper();
+                    RFC = Convert.ToString(Session["RFC"]).ToUpper();
+                    Domicilio = Convert.ToString(Session["DOMICILIO"]).ToUpper();
+                    Interior = Convert.ToString(Session["INTERIOR"]);
+                    Exterior = Convert.ToString(Session["EXTERIOR"]);
+                    Colonia = Convert.ToString(Session["COLONIA"]).ToUpper();
+                    Ciudad = Convert.ToString(Session["CIUDAD"]).ToUpper();
+                    CP = Convert.ToString(Session["CODIGO_POSTAL"]);
+                    Estado = Convert.ToString(Session["ESTADO"]).ToUpper();
+
+                    Lbl_Orden_Variacion_Propietario_Nombre.Text = Nombre;
+                    Lbl_Orden_Variacion_Propietario_RFC.Text = RFC;
+
+                    Txt_Orden_Variacion_Propietario_Domicilio.Text = Domicilio;
+                    Txt_Orden_Variacion_Propietario_Exterior.Text = Exterior;
+                    Txt_Orden_Variacion_Propietario_Interior.Text = Interior;
+                    Txt_Orden_Variacion_Propietario_Colonia.Text = Colonia;
+                    Txt_Orden_Variacion_Propietario_Ciudad.Text = Ciudad;
+                    Txt_Orden_Variacion_Propietario_Estado.Text = Estado;
+                    Txt_Orden_Variacion_Propietario_CP.Text = CP;
+                }
+            }
+            Session.Remove("BUSQUEDA_CONTRIBUYENTE");
+            Session.Remove("CONTRIBUYENTE_ID");
+            Session.Remove("NOMBRE");
+            Session.Remove("RFC");
+            Session.Remove("DOMICILIO");
+            Session.Remove("INTERIOR");
+            Session.Remove("EXTERIOR");
+            Session.Remove("COLONIA");
+            Session.Remove("CIUDAD");
+            Session.Remove("CODIGO_POSTAL");
+            Session.Remove("ESTADO");
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Btn_Orden_Variacion_Impuestos_Casos_Especiales_Click
+        ///DESCRIPCIÓN          : Evento Click del control ImageButton Btn_Orden_Variacion_Impuestos_Casos_Especiales
+        ///PARAMETROS           : sender y e
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 17/Diciembre/2010
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************  
+        protected void Btn_Orden_Variacion_Impuestos_Casos_Especiales_Click(object sender, ImageClickEventArgs e)
+        {
+            Boolean Busqueda_Casos_Especiales;
+            String Caso_Especial_ID;
+            String Identificador;
+            String Descripcion;
+            String Articulo;
+            String Inciso;
+            String Aplica_Descuento;
+
+            Busqueda_Casos_Especiales = Convert.ToBoolean(Session["BUSQUEDA_CASO_ESPECIAL"]);
+            if (Busqueda_Casos_Especiales)
+            {
+                if (Session["CASO_ESPECIAL_ID"] != null)
+                {
+                    Caso_Especial_ID = Convert.ToString(Session["CASO_ESPECIAL_ID"]);
+                    Identificador = Convert.ToString(Session["IDENTIFICADOR"]).ToUpper();
+                    Descripcion = Convert.ToString(Session["DESCRIPCION"]).ToUpper();
+                    Articulo = Convert.ToString(Session["ARTICULO"]).ToUpper();
+                    Inciso = Convert.ToString(Session["INCISO"]).ToUpper();
+                    Aplica_Descuento = Convert.ToString(Session["APLICA_DESCUENTO"]).ToUpper();
+
+                    Lbl_Orden_Variacion_Impuestos_Articulo.Text = Articulo;
+                    Lbl_Orden_Variacion_Impuestos_Caso_Especial.Text = Descripcion;
+                    Lbl_Orden_Variacion_Impuestos_Inciso.Text = Inciso;
+                }
+            }
+            Session.Remove("BUSQUEDA_CASO_ESPECIAL");
+            Session.Remove("CASO_ESPECIAL_ID");
+            Session.Remove("IDENTIFICADOR");
+            Session.Remove("DESCRIPCION");
+            Session.Remove("ARTICULO");
+            Session.Remove("INCISO");
+            Session.Remove("APLICA_DESCUENTO");
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Btn_Orden_Variacion_Copropietarios_Nombres_Click
+        ///DESCRIPCIÓN          : Evento Click del control ImageButton Btn_Orden_Variacion_Copropietarios_Nombres
+        ///PARAMETROS           : sender y e
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 17/Diciembre/2010
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************  
+        protected void Btn_Orden_Variacion_Copropietarios_Nombres_Click(object sender, ImageClickEventArgs e)
+        {
+            Boolean Busqueda_Contribuyentes;
+            String Contribuyente_ID;
+            String Nombre;
+            String RFC;
+            String Domicilio;
+            String Interior;
+            String Exterior;
+            String CP;
+            String Ciudad;
+            String Colonia;
+            String Estado;
+
+            Busqueda_Contribuyentes = Convert.ToBoolean(Session["BUSQUEDA_CONTRIBUYENTE"]);
+            if (Busqueda_Contribuyentes)
+            {
+                if (Session["CONTRIBUYENTE_ID"] != null)
+                {
+                    Contribuyente_ID = Convert.ToString(Session["CONTRIBUYENTE_ID"]);
+                    Nombre = Convert.ToString(Session["NOMBRE"]).ToUpper();
+                    RFC = Convert.ToString(Session["RFC"]).ToUpper();
+                    Domicilio = Convert.ToString(Session["DOMICILIO"]).ToUpper();
+                    Interior = Convert.ToString(Session["INTERIOR"]);
+                    Exterior = Convert.ToString(Session["EXTERIOR"]);
+                    Colonia = Convert.ToString(Session["COLONIA"]).ToUpper();
+                    Ciudad = Convert.ToString(Session["CIUDAD"]).ToUpper();
+                    CP = Convert.ToString(Session["CODIGO_POSTAL"]);
+                    Estado = Convert.ToString(Session["ESTADO"]).ToUpper();
+
+                    if (Contribuyente_ID != "")
+                    {
+                        ListItem Item_Copropietario = new ListItem();
+                        Item_Copropietario.Value = Contribuyente_ID;
+                        Item_Copropietario.Text = Nombre;
+
+                        if (!Lst_Orden_Variacion_Copropietarios_Nombres.Items.Contains(Item_Copropietario))
+                        {
+                            Lst_Orden_Variacion_Copropietarios_Nombres.Items.Add(Item_Copropietario);
+                        }
+                        else
+                        {
+                            Lbl_Ecabezado_Mensaje.Text = "El Copropietario ya fue agregado.";
+                            Lbl_Mensaje_Error.Text = "";
+                            Div_Contenedor_Msj_Error.Visible = true;
+                        }
+                    }
+
+                    if (Lst_Orden_Variacion_Copropietarios_Nombres.Items.Count > 0)
+                    {
+                        Btn_Orden_Variacion_Copropietarios_Quitar_Nombre.Visible = true;
+                    }
+                    else
+                    {
+                        Btn_Orden_Variacion_Copropietarios_Quitar_Nombre.Visible = false;
+                    }
+                }
+            }
+            Session.Remove("BUSQUEDA_CONTRIBUYENTE");
+            Session.Remove("CONTRIBUYENTE_ID");
+            Session.Remove("NOMBRE");
+            Session.Remove("RFC");
+            Session.Remove("DOMICILIO");
+            Session.Remove("INTERIOR");
+            Session.Remove("EXTERIOR");
+            Session.Remove("COLONIA");
+            Session.Remove("CIUDAD");
+            Session.Remove("CODIGO_POSTAL");
+            Session.Remove("ESTADO");
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Validar_Datos_Orden_Variacion
+        ///DESCRIPCIÓN          : Método para validar los campos requeridos en la orden de variación
+        ///PARAMETROS: 
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 20/Diciembre/2010
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************  
+        private Boolean Validar_Datos_Orden_Variacion()
+        {
+            Boolean Datos_Validados = false;
+
+            if (Lbl_Orden_Variacion_Generales_Cuenta_Predial.Text.Trim() != "")
+            {
+                if (Cmb_Orden_Variacion_Tipos_Movimientos.SelectedIndex > 0)
+                {
+                    if (Cmb_Orden_Variacion_Generales_Tipos_Predio.SelectedIndex > 0)
+                    {
+                        if (Cmb_Orden_Variacion_Generales_Usos_Predio.SelectedIndex > 0)
+                        {
+                            if (Lbl_Orden_Variacion_Generales_Ubicacion.Text.Trim() != "")
+                            {
+                                if (Cmb_Orden_Variacion_Generales_Estados_Predio.SelectedIndex > 0)
+                                {
+                                    if (Lbl_Orden_Variacion_Propietario_Nombre.Text.Trim() != "")
+                                    {
+                                        if (Cmb_Orden_Variacion_Impuestos_Tipos_Predio.SelectedIndex > 0)
+                                        {
+                                            Datos_Validados = true;
+                                        }
+                                        else
+                                        {
+                                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Orden de Variación", "alert('Debe seleccionar un Tipo de Predio  ')", true);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Orden de Variación", "alert('Debe seleccionar un Propietario  ')", true);
+                                    }
+                                }
+                                else
+                                {
+                                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Orden de Variación", "alert('Debe seleccionar un Estado de Predio  ')", true);
+                                }
+                            }
+                            else
+                            {
+                                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Orden de Variación", "alert('Debe seleccionar una Ubicación  ')", true);
+                            }
+                        }
+                        else
+                        {
+                            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Orden de Variación", "alert('Debe seleccionar un Uso de Suelo  ')", true);
+                        }
+                    }
+                    else
+                    {
+                        ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Orden de Variación", "alert('Debe seleccionar un Tipo de Predio  ')", true);
+                    }
+                }
+                else
+                {
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Orden de Variación", "alert('Debe seleccionar un Tipo de Movimiento  ')", true);
+                }
+            }
+            else
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Orden de Variación", "alert('Debe estár seleccionada una Orden de variación para continuar  ')", true);
+            }
+
+            return Datos_Validados;
+        }
+
+        /////*******************************************************************************
+        /////NOMBRE DE LA FUNCIÓN : Actualizar_Orden_Variacion
+        /////DESCRIPCIÓN          : Método para ejecutar la actualización del registro en la base de datos
+        /////PARAMETROS: 
+        /////CREO                 : Antonio Salvador Benavides Guardado
+        /////FECHA_CREO           : 20/Diciembre/2010
+        /////MODIFICO:
+        /////FECHA_MODIFICO
+        /////CAUSA_MODIFICACIÓN
+        /////*******************************************************************************  
+        //private void Insertar_Orden_Variacion()
+        //{
+        //    try
+        //    {
+        //        Cls_Cat_Pre_Cuentas_Predial_Negocio Cuentas_Predial = new Cls_Cat_Pre_Cuentas_Predial_Negocio();
+
+        //        Cuentas_Predial.P_Calle_ID = Hide_Orden_Variacion_Generales_Calle_ID.Value.Trim();
+        //        Cuentas_Predial.P_Propietario_ID = Hide_Orden_Variacion_Propietario_ID.Value.Trim();
+        //        Cuentas_Predial.P_Copropietario_ID = Hide_Orden_Variacion_Copropietario_ID.Value.Trim();
+        //        if (Cmb_Orden_Variacion_Generales_Estados_Predio.SelectedIndex > 0)
+        //        {
+        //            Cuentas_Predial.P_Estado_Predio_ID = Cmb_Orden_Variacion_Generales_Estados_Predio.SelectedValue;
+        //        }
+        //        if (Cmb_Orden_Variacion_Generales_Tipos_Predio.SelectedIndex > 0)
+        //        {
+        //            Cuentas_Predial.P_Tipo_Predio_ID = Cmb_Orden_Variacion_Generales_Tipos_Predio.SelectedValue;
+        //        }
+        //        if (Cmb_Orden_Variacion_Generales_Usos_Predio.SelectedIndex > 0)
+        //        {
+        //            Cuentas_Predial.P_Uso_Suelo_ID = Cmb_Orden_Variacion_Generales_Usos_Predio.SelectedValue;
+        //        }
+        //        Cuentas_Predial.P_Impuesto_ID_Predial = Hide_Orden_Variacion_Impuestos_Tasa_ID.Value.Trim();
+        //        Cuentas_Predial.P_Cuota_Minima_ID = "";
+        //        Cuentas_Predial.P_Cuenta_Origen = Txt_Orden_Variacion_Generales_Cuenta_Origen.Text.Trim();
+        //        Cuentas_Predial.P_Estatus = Lbl_Orden_Variacion_Generales_Estatus.Text.Trim();
+        //        Cuentas_Predial.P_No_Exterior = Txt_Orden_Variacion_Generales_Exterior.Text.Trim();
+        //        Cuentas_Predial.P_No_Interior = Txt_Orden_Variacion_Generales_Interior.Text.Trim();
+        //        if (Txt_Orden_Variacion_Generales_Superficie_Construida_M2.Text.Trim() != "")
+        //        {
+        //            Cuentas_Predial.P_Superficie_Construida = Convert.ToDouble(Txt_Orden_Variacion_Generales_Superficie_Construida_M2.Text.Trim());
+        //        }
+        //        if (Txt_Orden_Variacion_Generales_Superficie_Total_M2.Text.Trim() != "")
+        //        {
+        //            Cuentas_Predial.P_Superficie_Total = Convert.ToDouble(Txt_Orden_Variacion_Generales_Superficie_Total_M2.Text.Trim());
+        //        }
+        //        Cuentas_Predial.P_Clave_Catastral = Txt_Orden_Variacion_Generales_Clave_Catastral.Text.Trim();
+        //        if (Txt_Orden_Variacion_Impuestos_Valor_Fiscal.Text.Trim() != "")
+        //        {
+        //            Cuentas_Predial.P_Valor_Fiscal = Convert.ToDouble(Txt_Orden_Variacion_Impuestos_Valor_Fiscal.Text.Trim());
+        //        }
+        //        if (Cmb_Orden_Variacion_Generales_Efectos_Año_Bimestre.SelectedIndex > -1 && Cmb_Orden_Variacion_Generales_Efectos_Bimestre.SelectedIndex > -1)
+        //        {
+        //            Cuentas_Predial.P_Efectos = Cmb_Orden_Variacion_Generales_Efectos_Año_Bimestre.SelectedValue + "/" + Cmb_Orden_Variacion_Generales_Efectos_Bimestre.SelectedValue;
+        //        }
+        //        Cuentas_Predial.P_Periodo_Corriente = Lbl_Orden_Variacion_Impuestos_Periodo_Corriente.Text.Trim();
+        //        if (Txt_Orden_Variacion_Impuestos_Cuota_Anual.Text.Trim() != "")
+        //        {
+        //            Cuentas_Predial.P_Cuota_Anual = Convert.ToDouble(Txt_Orden_Variacion_Impuestos_Cuota_Anual.Text.Trim());
+        //        }
+        //        if (Txt_Orden_Variacion_Impuestos_Porcentaje_Exencion.Text.Trim() != "")
+        //        {
+        //            Cuentas_Predial.P_Porcentaje_Exencion = Convert.ToDouble(Txt_Orden_Variacion_Impuestos_Porcentaje_Exencion.Text.Trim());
+        //        }
+        //        if (Chk_Orden_Variacion_Impuestos_Cuota_Fija.Checked)
+        //        {
+        //            Cuentas_Predial.P_Cuota_Fija = "S";
+        //        }
+        //        else
+        //        {
+        //            Cuentas_Predial.P_Cuota_Fija = "N";
+        //        }
+        //        if (CE_Orden_Variacion_Impuestos_Termino_Exencion.SelectedDate != null)
+        //        {
+        //            Cuentas_Predial.P_Termino_Exencion = CE_Orden_Variacion_Impuestos_Termino_Exencion.SelectedDate.Value;
+        //        }
+        //        if (CE_Orden_Variacion_Impuestos_Fecha_Avaluo.SelectedDate != null)
+        //        {
+        //            Cuentas_Predial.P_Fecha_Avaluo = CE_Orden_Variacion_Impuestos_Fecha_Avaluo.SelectedDate.Value;
+        //        }
+        //        Cuentas_Predial.P_Usuario = Cls_Sessiones.Nombre_Empleado;
+
+        //        if (Cuentas_Predial.Alta_Cuenta())
+        //        {
+        //            Habilitar_Campos(false);
+        //            Btn_Orden_Variacion_Modificar.Text = "Modificar";
+        //        }
+        //        else
+        //        {
+        //            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Orden de Variación", "alert('La Orden de Variación no pudo ser dada de alta  ')", true);
+        //        }
+        //    }
+        //    catch (Exception Ex)
+        //    {
+        //        Lbl_Ecabezado_Mensaje.Text = Ex.Message;
+        //        Lbl_Mensaje_Error.Text = "";
+        //        Div_Contenedor_Msj_Error.Visible = true;
+        //    }
+        //}
+
+        /////*******************************************************************************
+        /////NOMBRE DE LA FUNCIÓN : Actualizar_Orden_Variacion
+        /////DESCRIPCIÓN          : Método para ejecutar la actualización del registro en la base de datos
+        /////PARAMETROS: 
+        /////CREO                 : Antonio Salvador Benavides Guardado
+        /////FECHA_CREO           : 20/Diciembre/2010
+        /////MODIFICO:
+        /////FECHA_MODIFICO
+        /////CAUSA_MODIFICACIÓN
+        /////*******************************************************************************  
+        //private void Actualizar_Orden_Variacion()
+        //{
+        //    try
+        //    {
+        //        Cls_Cat_Pre_Cuentas_Predial_Negocio Cuentas_Predial = new Cls_Cat_Pre_Cuentas_Predial_Negocio();
+
+        //        Cuentas_Predial.P_Cuenta_Predial = Lbl_Orden_Variacion_Generales_Cuenta_Predial.Text.Trim();
+        //        Cuentas_Predial.P_Calle_ID = Hide_Orden_Variacion_Generales_Calle_ID.Value.Trim();
+        //        Cuentas_Predial.P_Propietario_ID = Hide_Orden_Variacion_Propietario_ID.Value.Trim();
+        //        Cuentas_Predial.P_Copropietario_ID = Hide_Orden_Variacion_Copropietario_ID.Value.Trim();
+        //        if (Cmb_Orden_Variacion_Generales_Estados_Predio.SelectedIndex > 0)
+        //        {
+        //            Cuentas_Predial.P_Estado_Predio_ID = Cmb_Orden_Variacion_Generales_Estados_Predio.SelectedValue;
+        //        }
+        //        if (Cmb_Orden_Variacion_Generales_Tipos_Predio.SelectedIndex > 0)
+        //        {
+        //            Cuentas_Predial.P_Tipo_Predio_ID = Cmb_Orden_Variacion_Generales_Tipos_Predio.SelectedValue;
+        //        }
+        //        if (Cmb_Orden_Variacion_Generales_Usos_Predio.SelectedIndex > 0)
+        //        {
+        //            Cuentas_Predial.P_Uso_Suelo_ID = Cmb_Orden_Variacion_Generales_Usos_Predio.SelectedValue;
+        //        }
+        //        Cuentas_Predial.P_Impuesto_ID_Predial = Hide_Orden_Variacion_Impuestos_Tasa_ID.Value.Trim();
+        //        Cuentas_Predial.P_Cuota_Minima_ID = "";
+        //        Cuentas_Predial.P_Cuenta_Origen = Txt_Orden_Variacion_Generales_Cuenta_Origen.Text.Trim();
+        //        Cuentas_Predial.P_Estatus = Lbl_Orden_Variacion_Generales_Estatus.Text.Trim();
+        //        Cuentas_Predial.P_No_Exterior = Txt_Orden_Variacion_Generales_Exterior.Text.Trim();
+        //        Cuentas_Predial.P_No_Interior = Txt_Orden_Variacion_Generales_Interior.Text.Trim();
+        //        if (Txt_Orden_Variacion_Generales_Superficie_Construida_M2.Text.Trim() != "")
+        //        {
+        //            Cuentas_Predial.P_Superficie_Construida = Convert.ToDouble(Txt_Orden_Variacion_Generales_Superficie_Construida_M2.Text.Trim());
+        //        }
+        //        if (Txt_Orden_Variacion_Generales_Superficie_Total_M2.Text.Trim() != "")
+        //        {
+        //            Cuentas_Predial.P_Superficie_Total = Convert.ToDouble(Txt_Orden_Variacion_Generales_Superficie_Total_M2.Text.Trim());
+        //        }
+        //        Cuentas_Predial.P_Clave_Catastral = Txt_Orden_Variacion_Generales_Clave_Catastral.Text.Trim();
+        //        if (Txt_Orden_Variacion_Impuestos_Valor_Fiscal.Text.Trim() != "")
+        //        {
+        //            Cuentas_Predial.P_Valor_Fiscal = Convert.ToDouble(Txt_Orden_Variacion_Impuestos_Valor_Fiscal.Text.Trim());
+        //        }
+        //        if (Cmb_Orden_Variacion_Generales_Efectos_Año_Bimestre.SelectedIndex > -1 && Cmb_Orden_Variacion_Generales_Efectos_Bimestre.SelectedIndex > -1)
+        //        {
+        //            Cuentas_Predial.P_Efectos = Cmb_Orden_Variacion_Generales_Efectos_Año_Bimestre.SelectedValue + "/" + Cmb_Orden_Variacion_Generales_Efectos_Bimestre.SelectedValue;
+        //        }
+        //        Cuentas_Predial.P_Periodo_Corriente = Lbl_Orden_Variacion_Impuestos_Periodo_Corriente.Text.Trim();
+        //        if (Txt_Orden_Variacion_Impuestos_Cuota_Anual.Text.Trim() != "")
+        //        {
+        //            Cuentas_Predial.P_Cuota_Anual = Convert.ToDouble(Txt_Orden_Variacion_Impuestos_Cuota_Anual.Text.Trim());
+        //        }
+        //        if (Txt_Orden_Variacion_Impuestos_Porcentaje_Exencion.Text.Trim() != "")
+        //        {
+        //            Cuentas_Predial.P_Porcentaje_Exencion = Convert.ToDouble(Txt_Orden_Variacion_Impuestos_Porcentaje_Exencion.Text.Trim());
+        //        }
+        //        if (Chk_Orden_Variacion_Impuestos_Cuota_Fija.Checked)
+        //        {
+        //            Cuentas_Predial.P_Cuota_Fija = "S";
+        //        }
+        //        else
+        //        {
+        //            Cuentas_Predial.P_Cuota_Fija = "N";
+        //        }
+        //        if (CE_Orden_Variacion_Impuestos_Termino_Exencion.SelectedDate != null)
+        //        {
+        //            Cuentas_Predial.P_Termino_Exencion = CE_Orden_Variacion_Impuestos_Termino_Exencion.SelectedDate.Value;
+        //        }
+        //        if (CE_Orden_Variacion_Impuestos_Fecha_Avaluo.SelectedDate != null)
+        //        {
+        //            Cuentas_Predial.P_Fecha_Avaluo = CE_Orden_Variacion_Impuestos_Fecha_Avaluo.SelectedDate.Value;
+        //        }
+        //        Cuentas_Predial.P_Usuario = Cls_Sessiones.Nombre_Empleado;
+
+        //        if (Cuentas_Predial.Modifcar_Cuenta())
+        //        {
+        //            Habilitar_Campos(false);
+        //            Btn_Orden_Variacion_Modificar.Text = "Modificar";
+        //        }
+        //        else
+        //        {
+        //            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Orden de Variación", "alert('La Orden de Variación no pudo ser modificada  ')", true);
+        //        }
+        //    }
+        //    catch (Exception Ex)
+        //    {
+        //        Lbl_Ecabezado_Mensaje.Text = Ex.Message;
+        //        Lbl_Mensaje_Error.Text = "";
+        //        Div_Contenedor_Msj_Error.Visible = true;
+        //    }
+        //}
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Cargar_Orden_Variacion
+        ///DESCRIPCIÓN          : Método que consulta los datos de la Orden de Variación
+        ///PARAMETROS: 
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 21/Diciembre/2010
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************  
+        private void Cargar_Orden_Variacion()
+        {
+            //CONSULTA Y CARGA DATOS DE OPE_PRE_ORDENES_VARIACION
+            Cls_Ope_Pre_Ordenes_Variacion_Negocio Ordenes_Variacion = new Cls_Ope_Pre_Ordenes_Variacion_Negocio();
+            DataTable Dt_Orden_Variacion;
+            Boolean Domicilio_Foraneo = false;
+
+            Ordenes_Variacion.P_Cuenta_Predial = Grid_Contrarecibos.Rows[Grid_Contrarecibos.SelectedIndex].Cells[2].Text;
+            Dt_Orden_Variacion = Ordenes_Variacion.Consultar_Orden_Variacion();
+            if (Dt_Orden_Variacion.Rows.Count > 0)
+            {
+                Cmb_Orden_Variacion_Generales_Efectos_Año_Bimestre.SelectedValue = Dt_Orden_Variacion.Rows[0][Ope_Pre_Ordenes_Variacion.Campo_Efectos_Año].ToString();
+                Cmb_Orden_Variacion_Generales_Efectos_Bimestre.SelectedValue = Dt_Orden_Variacion.Rows[0][Ope_Pre_Ordenes_Variacion.Campo_Efectos_Bimestre].ToString();
+                if (Dt_Orden_Variacion.Rows[0][Ope_Pre_Ordenes_Variacion.Campo_Domicilio_Foraneo].ToString() == "SI")
+                {
+                    Chk_Orden_Variacion_Propietario_Domicilio_Foraneo.Checked = true;
+                    Domicilio_Foraneo = true;
+                }
+                else
+                {
+                    Chk_Orden_Variacion_Propietario_Domicilio_Foraneo.Checked = false;
+                    Domicilio_Foraneo = false;
+                }
+                Lbl_Orden_Variacion_Impuestos_Periodo_Corriente.Text = Dt_Orden_Variacion.Rows[0][Ope_Pre_Ordenes_Variacion.Campo_Periodo_Corriente_Inicia] + "-" + Dt_Orden_Variacion.Rows[0][Ope_Pre_Ordenes_Variacion.Campo_Periodo_Corriente_Termina];
+                Txt_Orden_Variacion_Impuestos_Cuota_Anual.Text = Dt_Orden_Variacion.Rows[0][Ope_Pre_Ordenes_Variacion.Campo_Cuota_Anual].ToString();
+                Txt_Orden_Variacion_Impuestos_Cuota_Bimestral.Text = Dt_Orden_Variacion.Rows[0][Ope_Pre_Ordenes_Variacion.Campo_Cuota_Bimestral].ToString();
+                Txt_Orden_Variacion_Impuestos_Porcentaje_Exencion.Text = Dt_Orden_Variacion.Rows[0][Ope_Pre_Ordenes_Variacion.Campo_Exencion].ToString();
+                CE_Orden_Variacion_Impuestos_Termino_Exencion.SelectedDate = Convert.ToDateTime(Dt_Orden_Variacion.Rows[0][Ope_Pre_Ordenes_Variacion.Campo_Fecha_Termina_Exencion]);
+                if (Dt_Orden_Variacion.Rows[0][Ope_Pre_Ordenes_Variacion.Campo_Cuota_Fija].ToString() == "S")
+                {
+                    Chk_Orden_Variacion_Impuestos_Cuota_Fija.Checked = true;
+                }
+                else
+                {
+                    Chk_Orden_Variacion_Impuestos_Cuota_Fija.Checked = false;
+                }
+                CE_Orden_Variacion_Impuestos_Fecha_Avaluo.SelectedDate = Convert.ToDateTime(Dt_Orden_Variacion.Rows[0][Ope_Pre_Ordenes_Variacion.Campo_Fecha_Avaluo]);
+
+                Cls_Cat_Pre_Casos_Especiales_Negocio Casos_Especiales = new Cls_Cat_Pre_Casos_Especiales_Negocio();
+                DataTable Dt_Caso_Especial;
+
+                Casos_Especiales.P_Caso_Especial_ID = Dt_Orden_Variacion.Rows[0][Cat_Pre_Casos_Especiales.Campo_Caso_Especial_ID].ToString();
+                Dt_Caso_Especial = Casos_Especiales.Consultar_Casos_Especiales();
+                if (Dt_Caso_Especial.Rows.Count > 0)
+                {
+                    Lbl_Orden_Variacion_Impuestos_Caso_Especial.Text = Dt_Caso_Especial.Rows[0]["CASO_ESPECIAL"].ToString();
+                    Lbl_Orden_Variacion_Impuestos_Articulo.Text = Dt_Caso_Especial.Rows[0][Cat_Pre_Casos_Especiales.Campo_Articulo].ToString();
+                    Lbl_Orden_Variacion_Impuestos_Inciso.Text = Dt_Caso_Especial.Rows[0][Cat_Pre_Casos_Especiales.Campo_Inciso].ToString();
+                }
+
+                String Periodo_Rezago_Inicial = Dt_Orden_Variacion.Rows[0][Ope_Pre_Ordenes_Variacion.Campo_Fecha_Periodo_Rezago_Inicia].ToString();
+                String Periodo_Rezago_Termina = Dt_Orden_Variacion.Rows[0][Ope_Pre_Ordenes_Variacion.Campo_Fecha_Periodo_Rezago_Termina].ToString();
+
+                Cmb_Orden_Variacion_Diferencias_Bimestre_Ini.SelectedValue = Periodo_Rezago_Inicial.Split('/').ElementAt(0);
+                Cmb_Orden_Variacion_Diferencias_Año_Bimestre_Ini.SelectedValue = Periodo_Rezago_Inicial.Split('/').ElementAt(1);
+                Cmb_Orden_Variacion_Diferencias_Bimestre_Fin.SelectedValue = Periodo_Rezago_Termina.Split('/').ElementAt(0);
+                Cmb_Orden_Variacion_Diferencias_Año_Bimestre_Fin.SelectedValue = Periodo_Rezago_Termina.Split('/').ElementAt(1);
+                if (Ordenes_Variacion.P_Dt_Observaciones != null)
+                {
+                    if (Ordenes_Variacion.P_Dt_Observaciones.Rows.Count > 0)
+                    {
+                        System.Text.StringBuilder Observaciones = new System.Text.StringBuilder();
+
+                        foreach (DataRow Fila in Ordenes_Variacion.P_Dt_Observaciones.Rows)
+                        {
+                            Observaciones.AppendLine(Fila[Ope_Pre_Observaciones.Campo_Descripcion].ToString());
+                        }
+                        Lbl_Orden_Variacion_Observaciones_Anterios.Text = Observaciones.ToString();
+                    }
+                }
+                if (Ordenes_Variacion.P_Dt_Copropietarios != null)
+                {
+                    if (Ordenes_Variacion.P_Dt_Copropietarios.Rows.Count > 0)
+                    {
+                        ListItem Item_Copropietario = new ListItem();
+
+                        foreach (DataRow Fila in Ordenes_Variacion.P_Dt_Observaciones.Rows)
+                        {
+                            Item_Copropietario.Value = Fila[Ope_Pre_Copropietarios_Orde_Variacion.Campo_Copropietario_ID].ToString();
+                            Item_Copropietario.Text = Fila["COPROPIETARIO"].ToString();
+                            Lst_Orden_Variacion_Copropietarios_Nombres.Items.Add(Item_Copropietario);
+                        }
+                    }
+                }
+            }
+            
+            //CONSULTA Y CARGA DATOS DE CAT_PRE_CUENTAS_PREDIAL
+            Cls_Cat_Pre_Cuentas_Predial_Negocio Cuentas_Predial = new Cls_Cat_Pre_Cuentas_Predial_Negocio();
+            DataTable Dt_Cuenta_Predial;
+
+            Cuentas_Predial.P_Incluir_Campos_Foraneos = true;
+            Cuentas_Predial.P_Cuenta_Predial = Grid_Contrarecibos.Rows[Grid_Contrarecibos.SelectedIndex].Cells[2].Text;
+            Dt_Cuenta_Predial = Cuentas_Predial.Consultar_Cuenta();
+            if (Dt_Cuenta_Predial.Rows.Count > 0)
+            {
+                Txt_Orden_Variacion_Generales_Cuenta_Origen.Text = Dt_Cuenta_Predial.Rows[0][Cat_Pre_Cuentas_Predial.Campo_Cuenta_Origen].ToString();
+                Cmb_Orden_Variacion_Generales_Tipos_Predio.Items.FindByValue(Dt_Cuenta_Predial.Rows[0][Cat_Pre_Cuentas_Predial.Campo_Tipo_Predio_ID].ToString());
+                Cmb_Orden_Variacion_Generales_Usos_Predio.Items.FindByValue(Dt_Cuenta_Predial.Rows[0][Cat_Pre_Cuentas_Predial.Campo_Uso_Suelo_ID].ToString());
+                Cmb_Orden_Variacion_Generales_Estados_Predio.Items.FindByValue(Dt_Cuenta_Predial.Rows[0][Cat_Pre_Cuentas_Predial.Campo_Estado_Predio_ID].ToString());
+                Lbl_Orden_Variacion_Generales_Estatus.Text = Dt_Cuenta_Predial.Rows[0][Cat_Pre_Cuentas_Predial.Campo_Estatus].ToString().ToUpper();
+                Txt_Orden_Variacion_Generales_Superficie_Construida_M2.Text = Dt_Cuenta_Predial.Rows[0][Cat_Pre_Cuentas_Predial.Campo_Superficie_Construida].ToString();
+                Txt_Orden_Variacion_Generales_Superficie_Total_M2.Text = Dt_Cuenta_Predial.Rows[0][Cat_Pre_Cuentas_Predial.Campo_Superficie_Total].ToString();
+                Lbl_Orden_Variacion_Generales_Ubicacion.Text = Dt_Cuenta_Predial.Rows[0]["NOMBRE_CALLE"].ToString().ToUpper();
+                Lbl_Orden_Variacion_Generales_Colonia.Text = Dt_Cuenta_Predial.Rows[0]["NOMBRE_COLONIA"].ToString().ToUpper();
+                Txt_Orden_Variacion_Generales_Exterior.Text = Dt_Cuenta_Predial.Rows[0][Cat_Pre_Cuentas_Predial.Campo_No_Exterior].ToString();
+                Txt_Orden_Variacion_Generales_Interior.Text = Dt_Cuenta_Predial.Rows[0][Cat_Pre_Cuentas_Predial.Campo_No_Interior].ToString();
+                Txt_Orden_Variacion_Generales_Clave_Catastral.Text = Dt_Cuenta_Predial.Rows[0][Cat_Pre_Cuentas_Predial.Campo_Clave_Catastral].ToString().ToUpper();
+
+                Cls_Cat_Pre_Contribuyentes_Negocio Contribuyentes = new Cls_Cat_Pre_Contribuyentes_Negocio();
+                DataTable Dt_Contribuyente;
+
+                Contribuyentes.P_Campos_Dinamicos = "*";
+                Contribuyentes.P_Contribuyente_ID = Dt_Cuenta_Predial.Rows[0][Cat_Pre_Cuentas_Predial.Campo_Propietario_ID].ToString();
+                Dt_Contribuyente = Contribuyentes.Consultar_Contribuyentes();
+                if (Dt_Contribuyente.Rows.Count > 0)
+                {
+                    Lbl_Orden_Variacion_Propietario_Nombre.Text = Dt_Cuenta_Predial.Rows[0]["NOMBRE_PROPIETARIO"].ToString().ToUpper();
+                    Lbl_Orden_Variacion_Propietario_RFC.Text = Dt_Contribuyente.Rows[0][Cat_Pre_Contribuyentes.Campo_RFC].ToString().ToUpper();
+                    if (Domicilio_Foraneo)
+                    {
+                        Txt_Orden_Variacion_Propietario_Domicilio.Text = Dt_Contribuyente.Rows[0][Cat_Pre_Contribuyentes.Campo_Domicilio_Foraneo].ToString().ToUpper();
+                        Txt_Orden_Variacion_Propietario_Exterior.Text = Dt_Contribuyente.Rows[0][Cat_Pre_Contribuyentes.Campo_Exterior_Foraneo].ToString().ToUpper();
+                        Txt_Orden_Variacion_Propietario_Interior.Text = Dt_Contribuyente.Rows[0][Cat_Pre_Contribuyentes.Campo_Interior_Foraneo].ToString().ToUpper();
+                        Txt_Orden_Variacion_Propietario_Colonia.Text = Dt_Contribuyente.Rows[0][Cat_Pre_Contribuyentes.Campo_Colonia_Foraneo].ToString().ToUpper();
+                        Txt_Orden_Variacion_Propietario_Ciudad.Text = Dt_Contribuyente.Rows[0][Cat_Pre_Contribuyentes.Campo_Ciudad_Foraneo].ToString().ToUpper();
+                        Txt_Orden_Variacion_Propietario_Estado.Text = Dt_Contribuyente.Rows[0][Cat_Pre_Contribuyentes.Campo_Estado_Foraneo].ToString().ToUpper();
+                        Txt_Orden_Variacion_Propietario_CP.Text = Dt_Contribuyente.Rows[0][Cat_Pre_Contribuyentes.Campo_Codigo_Postal_Foraneo].ToString();
+                    }
+                    else
+                    {
+                        Txt_Orden_Variacion_Propietario_Domicilio.Text = Dt_Contribuyente.Rows[0][Cat_Pre_Contribuyentes.Campo_Domicilio].ToString().ToUpper();
+                        Txt_Orden_Variacion_Propietario_Exterior.Text = Dt_Contribuyente.Rows[0][Cat_Pre_Contribuyentes.Campo_Exterior].ToString().ToUpper();
+                        Txt_Orden_Variacion_Propietario_Interior.Text = Dt_Contribuyente.Rows[0][Cat_Pre_Contribuyentes.Campo_Interior].ToString().ToUpper();
+                        Txt_Orden_Variacion_Propietario_Colonia.Text = Dt_Contribuyente.Rows[0][Cat_Pre_Contribuyentes.Campo_Colonia].ToString().ToUpper();
+                        Txt_Orden_Variacion_Propietario_Ciudad.Text = Dt_Contribuyente.Rows[0][Cat_Pre_Contribuyentes.Campo_Ciudad].ToString().ToUpper();
+                        Txt_Orden_Variacion_Propietario_Estado.Text = Dt_Contribuyente.Rows[0][Cat_Pre_Contribuyentes.Campo_Estado].ToString().ToUpper();
+                        Txt_Orden_Variacion_Propietario_CP.Text = Dt_Contribuyente.Rows[0][Cat_Pre_Contribuyentes.Campo_Codigo_Postal].ToString();
+                    }
+                }
+
+                Txt_Orden_Variacion_Impuestos_Valor_Fiscal.Text = Dt_Cuenta_Predial.Rows[0][Cat_Pre_Cuentas_Predial.Campo_Valor_Fiscal].ToString();
+                Cmb_Orden_Variacion_Impuestos_Tipos_Predio.Items.FindByValue(Dt_Cuenta_Predial.Rows[0][Cat_Pre_Cuentas_Predial.Campo_Tipo_Predio_ID].ToString());
+                //////Lst_Orden_Variacion_Copropietarios_Nombres.Text = Dt_Cuenta_Predial.Rows[0]["NOMBRE_COPROPIETARIO"].ToString();
+            }
+       }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Calcular_Cuota_Anual_Bimestral
+        ///DESCRIPCIÓN          : Método que calcula la Cuota Anual en base al Valor Fiscal y calcula la Cuota Bimestral en base a la Cuota Anual y los 6 bimestres
+        ///PARAMETROS: 
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 24/Diciembre/2010
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************  
+        private void Calcular_Cuota_Anual_Bimestral()
+        {
+            Double Valor_Fiscal = 0;
+            Double Tasa = 0;
+            Double Cuota_Anual;
+            Double Cuota_Bimestral;
+
+            if (Txt_Orden_Variacion_Impuestos_Valor_Fiscal.Text.Trim() != "")
+            {
+                Valor_Fiscal = Convert.ToDouble(Txt_Orden_Variacion_Impuestos_Valor_Fiscal.Text.Trim());
+            }
+            if (Lbl_Orden_Variacion_Impuestos_Tasa.Text.Trim() != "")
+            {
+                Tasa = Convert.ToDouble(Lbl_Orden_Variacion_Impuestos_Tasa.Text.Trim());
+            }
+
+            Cuota_Anual = Valor_Fiscal * Tasa;
+            Txt_Orden_Variacion_Impuestos_Cuota_Anual.Text = Cuota_Anual.ToString("###.00");
+
+            Cuota_Bimestral = Cuota_Anual / 6;
+            Txt_Orden_Variacion_Impuestos_Cuota_Bimestral.Text = Cuota_Bimestral.ToString("###.00");
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Txt_Orden_Variacion_Impuestos_Valor_Fiscal_TextChanged
+        ///DESCRIPCIÓN          : Evento TextChanged del control TextBox Txt_Orden_Variacion_Impuestos_Valor_Fiscal
+        ///PARAMETROS           : sender y e
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 24/Diciembre/2010
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************  
+        protected void Txt_Orden_Variacion_Impuestos_Valor_Fiscal_TextChanged(object sender, EventArgs e)
+        {
+            Calcular_Cuota_Anual_Bimestral();
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Txt_Orden_Variacion_Impuestos_Cuota_Anual_TextChanged
+        ///DESCRIPCIÓN          : Evento TextChanged del control TextBox Txt_Orden_Variacion_Impuestos_Cuota_Anual
+        ///PARAMETROS           : sender y e
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 24/Diciembre/2010
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************  
+        protected void Txt_Orden_Variacion_Impuestos_Cuota_Anual_TextChanged(object sender, EventArgs e)
+        {
+            Calcular_Cuota_Anual_Bimestral();
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Txt_Orden_Variacion_Impuestos_Cuota_Bimestral_TextChanged
+        ///DESCRIPCIÓN          : Evento TextChanged del control TextBox Txt_Orden_Variacion_Impuestos_Cuota_Bimestral
+        ///PARAMETROS           : sender y e
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 24/Diciembre/2010
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************  
+        protected void Txt_Orden_Variacion_Impuestos_Cuota_Bimestral_TextChanged(object sender, EventArgs e)
+        {
+            Calcular_Cuota_Anual_Bimestral();
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Btn_Calcular_Click
+        ///DESCRIPCIÓN          : Evento Click del control ImageButton Btn_Calcular
+        ///PARAMETROS           : sender y e
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 24/Diciembre/2010
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************  
+        protected void Btn_Orden_Variacion_Impuestos_Calcular_Cuota_Anual_Bimestral_Click(object sender, ImageClickEventArgs e)
+        {
+            Calcular_Cuota_Anual_Bimestral();
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Chk_Orden_Variacion_Impuestos_Cuota_Fija_CheckedChanged
+        ///DESCRIPCIÓN          : Evento CheckedChanged del control CheckBox Chk_Orden_Variacion_Impuestos_Cuota_Fija
+        ///PARAMETROS           : sender y e
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 24/Diciembre/2010
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************  
+        protected void Chk_Orden_Variacion_Impuestos_Cuota_Fija_CheckedChanged(object sender, EventArgs e)
+        {
+            Panel_Orden_Variacion_Impuestos_Casos_Especiales.Visible = Chk_Orden_Variacion_Impuestos_Cuota_Fija.Checked;
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Btn_Orden_Variacion_Impuestos_Tasa_Click
+        ///DESCRIPCIÓN          : Evento Click del control ImageButton Btn_Orden_Variacion_Impuestos_Tasa
+        ///PARAMETROS           : sender y e
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 24/Diciembre/2010
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************  
+        protected void Btn_Orden_Variacion_Impuestos_Tasa_Click(object sender, ImageClickEventArgs e)
+        {
+            Boolean Busqueda_Tasa_Traslado_Dominio;
+            //string Deducible_Normal;
+            string Tasa;
+
+            Busqueda_Tasa_Traslado_Dominio = Convert.ToBoolean(Session["BUSQUEDA_TASA_TRASLADO_DOMINIO"]);
+            if (Busqueda_Tasa_Traslado_Dominio)
+            {
+                //if (Session["DEDUCIBLE"] != null)
+                //{
+                //    Deducible_Normal = Convert.ToString(Session["DEDUCIBLE"]);
+                //    Txt_Calculo_Impuesto_Minimo_Elevado_Año.Text = Deducible_Normal;
+                //}
+                if (Session["TASA"] != null)
+                {
+                    Tasa = Convert.ToString(Session["TASA"]).ToUpper();
+                    Lbl_Orden_Variacion_Impuestos_Tasa.Text = Tasa;
+                }
+            }
+            Session.Remove("BUSQUEDA_TASA_TRASLADO_DOMINIO");
+            Session.Remove("CONCEPTO_PREDIAL_ID");
+            Session.Remove("IMPUESTO_ID_TRASLACION");
+            Session.Remove("DEDUCIBLE");
+            Session.Remove("TASA");
+
+            Calcular_Cuota_Anual_Bimestral();
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Btn_Orden_Variacion_Copropietarios_Quitar_Nombre_Click
+        ///DESCRIPCIÓN          : Evento Click del control ImageButton Btn_Orden_Variacion_Copropietarios_Quitar_Nombre
+        ///PARAMETROS           : sender y e
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 24/Diciembre/2010
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************  
+        protected void Btn_Orden_Variacion_Copropietarios_Quitar_Nombre_Click(object sender, ImageClickEventArgs e)
+        {
+            if (Lst_Orden_Variacion_Copropietarios_Nombres.Items.Count > 0 
+            && Lst_Orden_Variacion_Copropietarios_Nombres.SelectedIndex > -1)
+            {
+                Lst_Orden_Variacion_Copropietarios_Nombres.Items.RemoveAt(Lst_Orden_Variacion_Copropietarios_Nombres.SelectedIndex);
+            }
+        }
+    #endregion
+
+    #region Colonias_Calles
+
+        /////////////*******************************************************************************
+        /////////////NOMBRE DE LA FUNCIÓN : Cargar_Colonias
+        /////////////DESCRIPCIÓN          : Método que carga los datos de las Colonias existentes en el catálogo de Cat_Ate_Colonias
+        /////////////PARAMETROS: 
+        /////////////CREO                 : Antonio Salvador Benavides Guardado
+        /////////////FECHA_CREO           : 16/Diciembre/2010 
+        /////////////MODIFICO:
+        /////////////FECHA_MODIFICO
+        /////////////CAUSA_MODIFICACIÓN
+        /////////////*******************************************************************************  
+        //////////private Boolean Cargar_Colonias(int Page_Index)
+        //////////{
+        //////////    Boolean Colonias_Cargadas = false;
+        //////////    try
+        //////////    {
+        //////////        Cls_Cat_Ate_Colonias_Negocio Colonias = new Cls_Cat_Ate_Colonias_Negocio();
+
+        //////////        Colonias.P_Filtros_Dinamicos = "";
+        //////////        Grid_Colonias.DataSource = Colonias.Consultar_Colonias();
+        //////////        Grid_Colonias.PageIndex = Page_Index;
+        //////////        Grid_Colonias.DataBind();
+        //////////        Colonias_Cargadas = true;
+        //////////    }
+        //////////    catch (Exception Ex)
+        //////////    {
+        //////////        Lbl_Ecabezado_Mensaje.Text = Ex.Message;
+        //////////        Lbl_Mensaje_Error.Text = "";
+        //////////        Div_Contenedor_Msj_Error.Visible = true;
+        //////////    }
+        //////////    return Colonias_Cargadas;
+        //////////}
+
+        /////////////*******************************************************************************
+        /////////////NOMBRE DE LA FUNCIÓN : Cargar_Calles
+        /////////////DESCRIPCIÓN          : Método que carga los datos de las Calles existentes en el catálogo de Cat_Pre_Calles
+        /////////////PARAMETROS: 
+        /////////////CREO                 : Antonio Salvador Benavides Guardado
+        /////////////FECHA_CREO           : 16/Diciembre/2010 
+        /////////////MODIFICO:
+        /////////////FECHA_MODIFICO
+        /////////////CAUSA_MODIFICACIÓN
+        /////////////*******************************************************************************  
+        //////////private Boolean Cargar_Calles(int Page_Index)
+        //////////{
+        //////////    Boolean Calles_Cargadas = false;
+        //////////    try
+        //////////    {
+        //////////        Cls_Cat_Pre_Calles_Negocio Calles = new Cls_Cat_Pre_Calles_Negocio();
+
+        //////////        Calles.P_Filtros_Dinamicos = Cat_Pre_Calles.Campo_Calle_ID + " IN (SELECT " + Cat_Pre_Calles_Colonias.Campo_Calle_ID + " FROM " + Cat_Pre_Calles_Colonias.Tabla_Cat_Pre_Calles_Colonias + " WHERE " + Cat_Pre_Calles_Colonias.Campo_Colonia_ID + " = '" + Grid_Colonias.Rows[Grid_Colonias.SelectedIndex].Cells[1].Text + "')";
+        //////////        Grid_Calles.DataSource = Calles.Consultar_Calles();
+        //////////        Grid_Calles.PageIndex = Page_Index;
+        //////////        Grid_Calles.DataBind();
+        //////////        Calles_Cargadas = true;
+        //////////    }
+        //////////    catch (Exception Ex)
+        //////////    {
+        //////////        Lbl_Ecabezado_Mensaje.Text = Ex.Message;
+        //////////        Lbl_Mensaje_Error.Text = "";
+        //////////        Div_Contenedor_Msj_Error.Visible = true;
+        //////////    }
+        //////////    return Calles_Cargadas;
+        //////////}
+
+        /////////////*******************************************************************************
+        /////////////NOMBRE DE LA FUNCIÓN : Btn_Regresar_Click
+        /////////////DESCRIPCIÓN          : Evento Click del control Button Regresar
+        /////////////PARAMETROS           : sender y e
+        /////////////CREO                 : Antonio Salvador Benavides Guardado
+        /////////////FECHA_CREO           : 02/Diciembre/2010 
+        /////////////MODIFICO:
+        /////////////FECHA_MODIFICO
+        /////////////CAUSA_MODIFICACIÓN
+        /////////////*******************************************************************************  
+        //////////protected void Btn_Regresar_Click(object sender, EventArgs e)
+        //////////{
+        //////////    Session["BUSQUEDA_COLONIA_CALLE"] = false;
+        //////////    Session.Remove("COLONIA_ID");
+        //////////    Session.Remove("NOMBRE_COLONIA");
+        //////////    Session.Remove("CALLE_ID");
+        //////////    Session.Remove("NOMBRE_CALLE");
+        //////////    //Cierra la ventana
+        //////////    string Pagina = "<script language='JavaScript'>";
+        //////////    Pagina += "window.close();";
+        //////////    Pagina += "</script>";
+        //////////    //Page.RegisterStartupScript("Cerrar_Script", Pagina);
+        //////////    ClientScript.RegisterStartupScript(this.GetType(), "Cerrar_Script", Pagina);
+
+        //////////    //MPE_Orden_Variacion_Generales_Ubicacion.Hide();
+        //////////}
+
+        /////////////*******************************************************************************
+        /////////////NOMBRE DE LA FUNCIÓN : Btn_Aceptar_Click
+        /////////////DESCRIPCIÓN          : Evento Click del control Button Aceptar
+        /////////////PARAMETROS           : sender y e
+        /////////////CREO                 : Antonio Salvador Benavides Guardado
+        /////////////FECHA_CREO           : 02/Diciembre/2010 
+        /////////////MODIFICO:
+        /////////////FECHA_MODIFICO
+        /////////////CAUSA_MODIFICACIÓN
+        /////////////*******************************************************************************  
+        //////////protected void Btn_Aceptar_Click(object sender, EventArgs e)
+        //////////{
+        //////////    Session["BUSQUEDA_COLONIA_CALLE"] = true;
+        //////////    //Cierra la ventana
+        //////////    string Pagina = "<script language='JavaScript'>";
+        //////////    Pagina += "window.close();";
+        //////////    Pagina += "</script>";
+        //////////    //Page.RegisterStartupScript("Cerrar_Script", Pagina);
+        //////////    ClientScript.RegisterStartupScript(this.GetType(), "Cerrar_Script", Pagina);
+
+        //////////    //MPE_Orden_Variacion_Generales_Ubicacion.Hide();
+        //////////}
+
+        /////////////*******************************************************************************
+        /////////////NOMBRE DE LA FUNCIÓN : Grid_Colonias_PageIndexChanging
+        /////////////DESCRIPCIÓN          : Evento PageIndexChanging del control Grid_Colonias
+        /////////////PARAMETROS           : sender y e
+        /////////////CREO                 : Antonio Salvador Benavides Guardado
+        /////////////FECHA_CREO           : 16/Diciembre/2010 
+        /////////////MODIFICO:
+        /////////////FECHA_MODIFICO
+        /////////////CAUSA_MODIFICACIÓN
+        /////////////*******************************************************************************  
+        //////////protected void Grid_Colonias_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        //////////{
+        //////////    Cargar_Colonias(e.NewPageIndex);
+        //////////    Grid_Colonias.SelectedIndex = (-1);
+
+        //////////}
+
+        /////////////*******************************************************************************
+        /////////////NOMBRE DE LA FUNCIÓN : Grid_Colonias_SelectedIndexChanged
+        /////////////DESCRIPCIÓN          : Evento SelectedIndexChanged del control Grid_Colonias
+        /////////////PARAMETROS           : sender y e
+        /////////////CREO                 : Antonio Salvador Benavides Guardado
+        /////////////FECHA_CREO           : 16/Diciembre/2010 
+        /////////////MODIFICO:
+        /////////////FECHA_MODIFICO
+        /////////////CAUSA_MODIFICACIÓN
+        /////////////*******************************************************************************  
+        //////////protected void Grid_Colonias_SelectedIndexChanged(object sender, EventArgs e)
+        //////////{
+        //////////    Cargar_Calles(0);
+        //////////    Grid_Calles.SelectedIndex = (-1);
+
+        //////////    Session["COLONIA_ID"] = Grid_Colonias.Rows[Grid_Colonias.SelectedIndex].Cells[1].Text;
+        //////////    Session["NOMBRE_COLONIA"] = Grid_Colonias.Rows[Grid_Colonias.SelectedIndex].Cells[2].Text;
+        //////////}
+
+        /////////////*******************************************************************************
+        /////////////NOMBRE DE LA FUNCIÓN : Grid_Calles_SelectedIndexChanged
+        /////////////DESCRIPCIÓN          : Evento SelectedIndexChanged del control Grid_Calles
+        /////////////PARAMETROS           : sender y e
+        /////////////CREO                 : Antonio Salvador Benavides Guardado
+        /////////////FECHA_CREO           : 16/Diciembre/2010 
+        /////////////MODIFICO:
+        /////////////FECHA_MODIFICO
+        /////////////CAUSA_MODIFICACIÓN
+        /////////////*******************************************************************************  
+        //////////protected void Grid_Calles_SelectedIndexChanged(object sender, EventArgs e)
+        //////////{
+        //////////    Session["CALLE_ID"] = Grid_Calles.Rows[Grid_Calles.SelectedIndex].Cells[1].Text;
+        //////////    Session["NOMBRE_CALLE"] = Grid_Calles.Rows[Grid_Calles.SelectedIndex].Cells[2].Text;
+        //////////}
+    #endregion
+}

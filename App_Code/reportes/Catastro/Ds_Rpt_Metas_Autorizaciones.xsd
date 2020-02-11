@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Metas_Autorizaciones" targetNamespace="http://tempuri.org/Ds_Rpt_Metas_Autorizaciones.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Metas_Autorizaciones.xsd" xmlns="http://tempuri.org/Ds_Rpt_Metas_Autorizaciones.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Metas_Autorizaciones" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Metas_Autorizaciones" msprop:Generator_DataSetName="Ds_Rpt_Metas_Autorizaciones">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_METAS_AUTORIZACIONES" msprop:Generator_UserTableName="DT_METAS_AUTORIZACIONES" msprop:Generator_RowDeletedName="DT_METAS_AUTORIZACIONESRowDeleted" msprop:Generator_TableClassName="DT_METAS_AUTORIZACIONESDataTable" msprop:Generator_RowChangedName="DT_METAS_AUTORIZACIONESRowChanged" msprop:Generator_RowClassName="DT_METAS_AUTORIZACIONESRow" msprop:Generator_RowChangingName="DT_METAS_AUTORIZACIONESRowChanging" msprop:Generator_RowEvArgName="DT_METAS_AUTORIZACIONESRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_METAS_AUTORIZACIONESRowChangeEventHandler" msprop:Generator_TablePropName="DT_METAS_AUTORIZACIONES" msprop:Generator_TableVarName="tableDT_METAS_AUTORIZACIONES" msprop:Generator_RowDeletingName="DT_METAS_AUTORIZACIONESRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MES" msprop:Generator_UserColumnName="MES" msprop:Generator_ColumnPropNameInRow="MES" msprop:Generator_ColumnVarNameInTable="columnMES" msprop:Generator_ColumnPropNameInTable="MESColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AUTORIZADOS" msprop:Generator_UserColumnName="AUTORIZADOS" msprop:Generator_ColumnPropNameInRow="AUTORIZADOS" msprop:Generator_ColumnVarNameInTable="columnAUTORIZADOS" msprop:Generator_ColumnPropNameInTable="AUTORIZADOSColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="CORRECCIONES" msprop:Generator_UserColumnName="CORRECCIONES" msprop:Generator_ColumnPropNameInRow="CORRECCIONES" msprop:Generator_ColumnVarNameInTable="columnCORRECCIONES" msprop:Generator_ColumnPropNameInTable="CORRECCIONESColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="TOTAL" msprop:Generator_UserColumnName="TOTAL" msprop:Generator_ColumnPropNameInRow="TOTAL" msprop:Generator_ColumnVarNameInTable="columnTOTAL" msprop:Generator_ColumnPropNameInTable="TOTALColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="HONORARIOS" msprop:Generator_UserColumnName="HONORARIOS" msprop:Generator_ColumnPropNameInRow="HONORARIOS" msprop:Generator_ColumnVarNameInTable="columnHONORARIOS" msprop:Generator_ColumnPropNameInTable="HONORARIOSColumn" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

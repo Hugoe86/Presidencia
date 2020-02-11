@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Nom_Faltas_Empleados_Manuales" targetNamespace="http://tempuri.org/Ds_Rpt_Nom_Faltas_Empleados_Manuales.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Nom_Faltas_Empleados_Manuales.xsd" xmlns="http://tempuri.org/Ds_Rpt_Nom_Faltas_Empleados_Manuales.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Nom_Faltas_Empleados_Manuales" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Nom_Faltas_Empleados_Manuales" msprop:Generator_DataSetName="Ds_Rpt_Nom_Faltas_Empleados_Manuales">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Faltas" msprop:Generator_UserTableName="Faltas" msprop:Generator_RowDeletedName="FaltasRowDeleted" msprop:Generator_RowChangedName="FaltasRowChanged" msprop:Generator_RowClassName="FaltasRow" msprop:Generator_RowChangingName="FaltasRowChanging" msprop:Generator_RowEvArgName="FaltasRowChangeEvent" msprop:Generator_RowEvHandlerName="FaltasRowChangeEventHandler" msprop:Generator_TableClassName="FaltasDataTable" msprop:Generator_TableVarName="tableFaltas" msprop:Generator_RowDeletingName="FaltasRowDeleting" msprop:Generator_TablePropName="Faltas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NO_EMPLEADO" msprop:Generator_UserColumnName="NO_EMPLEADO" msprop:Generator_ColumnVarNameInTable="columnNO_EMPLEADO" msprop:Generator_ColumnPropNameInRow="NO_EMPLEADO" msprop:Generator_ColumnPropNameInTable="NO_EMPLEADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RFC" msprop:Generator_UserColumnName="RFC" msprop:Generator_ColumnVarNameInTable="columnRFC" msprop:Generator_ColumnPropNameInRow="RFC" msprop:Generator_ColumnPropNameInTable="RFCColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="EMPLEADO" msprop:Generator_UserColumnName="EMPLEADO" msprop:Generator_ColumnVarNameInTable="columnEMPLEADO" msprop:Generator_ColumnPropNameInRow="EMPLEADO" msprop:Generator_ColumnPropNameInTable="EMPLEADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PUESTO" msprop:Generator_UserColumnName="PUESTO" msprop:Generator_ColumnVarNameInTable="columnPUESTO" msprop:Generator_ColumnPropNameInRow="PUESTO" msprop:Generator_ColumnPropNameInTable="PUESTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DEPENDENCIA" msprop:Generator_UserColumnName="DEPENDENCIA" msprop:Generator_ColumnVarNameInTable="columnDEPENDENCIA" msprop:Generator_ColumnPropNameInRow="DEPENDENCIA" msprop:Generator_ColumnPropNameInTable="DEPENDENCIAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMINA" msprop:Generator_UserColumnName="NOMINA" msprop:Generator_ColumnVarNameInTable="columnNOMINA" msprop:Generator_ColumnPropNameInRow="NOMINA" msprop:Generator_ColumnPropNameInTable="NOMINAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA" msprop:Generator_UserColumnName="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

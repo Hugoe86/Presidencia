@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Pat_Ficha_Tecnica_Bienes_Inmuebles" targetNamespace="http://tempuri.org/Ds_Rpt_Pat_Ficha_Tecnica_Bienes_Inmuebles.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Pat_Ficha_Tecnica_Bienes_Inmuebles.xsd" xmlns="http://tempuri.org/Ds_Rpt_Pat_Ficha_Tecnica_Bienes_Inmuebles.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Pat_Ficha_Tecnica_Bienes_Inmuebles" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Pat_Ficha_Tecnica_Bienes_Inmuebles" msprop:Generator_DataSetName="Ds_Rpt_Pat_Ficha_Tecnica_Bienes_Inmuebles">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_MEDIAS_COLINDANCIAS" msprop:Generator_UserTableName="DT_MEDIAS_COLINDANCIAS" msprop:Generator_RowDeletedName="DT_MEDIAS_COLINDANCIASRowDeleted" msprop:Generator_RowChangedName="DT_MEDIAS_COLINDANCIASRowChanged" msprop:Generator_RowClassName="DT_MEDIAS_COLINDANCIASRow" msprop:Generator_RowChangingName="DT_MEDIAS_COLINDANCIASRowChanging" msprop:Generator_RowEvArgName="DT_MEDIAS_COLINDANCIASRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_MEDIAS_COLINDANCIASRowChangeEventHandler" msprop:Generator_TableClassName="DT_MEDIAS_COLINDANCIASDataTable" msprop:Generator_TableVarName="tableDT_MEDIAS_COLINDANCIAS" msprop:Generator_RowDeletingName="DT_MEDIAS_COLINDANCIASRowDeleting" msprop:Generator_TablePropName="DT_MEDIAS_COLINDANCIAS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BIEN_INMUEBLE_ID" msprop:Generator_UserColumnName="BIEN_INMUEBLE_ID" msprop:Generator_ColumnPropNameInRow="BIEN_INMUEBLE_ID" msprop:Generator_ColumnVarNameInTable="columnBIEN_INMUEBLE_ID" msprop:Generator_ColumnPropNameInTable="BIEN_INMUEBLE_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ORIENTACION" msprop:Generator_UserColumnName="ORIENTACION" msprop:Generator_ColumnPropNameInRow="ORIENTACION" msprop:Generator_ColumnVarNameInTable="columnORIENTACION" msprop:Generator_ColumnPropNameInTable="ORIENTACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MEDIDA" msprop:Generator_UserColumnName="MEDIDA" msprop:Generator_ColumnPropNameInRow="MEDIDA" msprop:Generator_ColumnVarNameInTable="columnMEDIDA" msprop:Generator_ColumnPropNameInTable="MEDIDAColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="COLINDANCIA" msprop:Generator_UserColumnName="COLINDANCIA" msprop:Generator_ColumnPropNameInRow="COLINDANCIA" msprop:Generator_ColumnVarNameInTable="columnCOLINDANCIA" msprop:Generator_ColumnPropNameInTable="COLINDANCIAColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_GENERALES" msprop:Generator_UserTableName="DT_GENERALES" msprop:Generator_RowDeletedName="DT_GENERALESRowDeleted" msprop:Generator_RowChangedName="DT_GENERALESRowChanged" msprop:Generator_RowClassName="DT_GENERALESRow" msprop:Generator_RowChangingName="DT_GENERALESRowChanging" msprop:Generator_RowEvArgName="DT_GENERALESRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_GENERALESRowChangeEventHandler" msprop:Generator_TableClassName="DT_GENERALESDataTable" msprop:Generator_TableVarName="tableDT_GENERALES" msprop:Generator_RowDeletingName="DT_GENERALESRowDeleting" msprop:Generator_TablePropName="DT_GENERALES">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BIEN_INMUEBLE_ID" msprop:Generator_UserColumnName="BIEN_INMUEBLE_ID" msprop:Generator_ColumnPropNameInRow="BIEN_INMUEBLE_ID" msprop:Generator_ColumnVarNameInTable="columnBIEN_INMUEBLE_ID" msprop:Generator_ColumnPropNameInTable="BIEN_INMUEBLE_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SECTOR" msprop:Generator_UserColumnName="SECTOR" msprop:Generator_ColumnPropNameInRow="SECTOR" msprop:Generator_ColumnVarNameInTable="columnSECTOR" msprop:Generator_ColumnPropNameInTable="SECTORColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="COLONIA" msprop:Generator_UserColumnName="COLONIA" msprop:Generator_ColumnPropNameInRow="COLONIA" msprop:Generator_ColumnVarNameInTable="columnCOLONIA" msprop:Generator_ColumnPropNameInTable="COLONIAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PROPIETARIO" msprop:Generator_UserColumnName="PROPIETARIO" msprop:Generator_ColumnPropNameInRow="PROPIETARIO" msprop:Generator_ColumnVarNameInTable="columnPROPIETARIO" msprop:Generator_ColumnPropNameInTable="PROPIETARIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CUENTA_PREDIAL" msprop:Generator_UserColumnName="CUENTA_PREDIAL" msprop:Generator_ColumnPropNameInRow="CUENTA_PREDIAL" msprop:Generator_ColumnVarNameInTable="columnCUENTA_PREDIAL" msprop:Generator_ColumnPropNameInTable="CUENTA_PREDIALColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESTINO" msprop:Generator_UserColumnName="DESTINO" msprop:Generator_ColumnPropNameInRow="DESTINO" msprop:Generator_ColumnVarNameInTable="columnDESTINO" msprop:Generator_ColumnPropNameInTable="DESTINOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SUPERFICIE" msprop:Generator_UserColumnName="SUPERFICIE" msprop:Generator_ColumnPropNameInRow="SUPERFICIE" msprop:Generator_ColumnVarNameInTable="columnSUPERFICIE" msprop:Generator_ColumnPropNameInTable="SUPERFICIEColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="MANZANA" msprop:Generator_UserColumnName="MANZANA" msprop:Generator_ColumnPropNameInRow="MANZANA" msprop:Generator_ColumnVarNameInTable="columnMANZANA" msprop:Generator_ColumnPropNameInTable="MANZANAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LOTE" msprop:Generator_UserColumnName="LOTE" msprop:Generator_ColumnPropNameInRow="LOTE" msprop:Generator_ColumnVarNameInTable="columnLOTE" msprop:Generator_ColumnPropNameInTable="LOTEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DENSIDAD_CONSTRUCCION" msprop:Generator_UserColumnName="DENSIDAD_CONSTRUCCION" msprop:Generator_ColumnPropNameInRow="DENSIDAD_CONSTRUCCION" msprop:Generator_ColumnVarNameInTable="columnDENSIDAD_CONSTRUCCION" msprop:Generator_ColumnPropNameInTable="DENSIDAD_CONSTRUCCIONColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="TIPO_PREDIO" msprop:Generator_UserColumnName="TIPO_PREDIO" msprop:Generator_ColumnPropNameInRow="TIPO_PREDIO" msprop:Generator_ColumnVarNameInTable="columnTIPO_PREDIO" msprop:Generator_ColumnPropNameInTable="TIPO_PREDIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="EFECTOS_FISCALES" msprop:Generator_UserColumnName="EFECTOS_FISCALES" msprop:Generator_ColumnPropNameInRow="EFECTOS_FISCALES" msprop:Generator_ColumnVarNameInTable="columnEFECTOS_FISCALES" msprop:Generator_ColumnPropNameInTable="EFECTOS_FISCALESColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="USO" msprop:Generator_UserColumnName="USO" msprop:Generator_ColumnPropNameInRow="USO" msprop:Generator_ColumnVarNameInTable="columnUSO" msprop:Generator_ColumnPropNameInTable="USOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CONSTRUCCION" msprop:Generator_UserColumnName="CONSTRUCCION" msprop:Generator_ColumnPropNameInRow="CONSTRUCCION" msprop:Generator_ColumnVarNameInTable="columnCONSTRUCCION" msprop:Generator_ColumnPropNameInTable="CONSTRUCCIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PORCENTAJE_OCUPACION" msprop:Generator_UserColumnName="PORCENTAJE_OCUPACION" msprop:Generator_ColumnPropNameInRow="PORCENTAJE_OCUPACION" msprop:Generator_ColumnVarNameInTable="columnPORCENTAJE_OCUPACION" msprop:Generator_ColumnPropNameInTable="PORCENTAJE_OCUPACIONColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="CLASIFICACION_ZONA" msprop:Generator_UserColumnName="CLASIFICACION_ZONA" msprop:Generator_ColumnPropNameInRow="CLASIFICACION_ZONA" msprop:Generator_ColumnVarNameInTable="columnCLASIFICACION_ZONA" msprop:Generator_ColumnPropNameInTable="CLASIFICACION_ZONAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="VIAS_ACCESO" msprop:Generator_UserColumnName="VIAS_ACCESO" msprop:Generator_ColumnPropNameInRow="VIAS_ACCESO" msprop:Generator_ColumnVarNameInTable="columnVIAS_ACCESO" msprop:Generator_ColumnPropNameInTable="VIAS_ACCESOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CALLE" msprop:Generator_UserColumnName="CALLE" msprop:Generator_ColumnPropNameInRow="CALLE" msprop:Generator_ColumnVarNameInTable="columnCALLE" msprop:Generator_ColumnPropNameInTable="CALLEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ACREDITACION_PROPIEDAD" msprop:Generator_UserColumnName="ACREDITACION_PROPIEDAD" msprop:Generator_ColumnPropNameInRow="ACREDITACION_PROPIEDAD" msprop:Generator_ColumnVarNameInTable="columnACREDITACION_PROPIEDAD" msprop:Generator_ColumnPropNameInTable="ACREDITACION_PROPIEDADColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CONSTANCIA_REGISTRAL" msprop:Generator_UserColumnName="CONSTANCIA_REGISTRAL" msprop:Generator_ColumnPropNameInRow="CONSTANCIA_REGISTRAL" msprop:Generator_ColumnVarNameInTable="columnCONSTANCIA_REGISTRAL" msprop:Generator_ColumnPropNameInTable="CONSTANCIA_REGISTRALColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FOLIO_REAL" msprop:Generator_UserColumnName="FOLIO_REAL" msprop:Generator_ColumnPropNameInRow="FOLIO_REAL" msprop:Generator_ColumnVarNameInTable="columnFOLIO_REAL" msprop:Generator_ColumnPropNameInTable="FOLIO_REALColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CERTIFICADO_GRAVAMEN" msprop:Generator_UserColumnName="CERTIFICADO_GRAVAMEN" msprop:Generator_ColumnPropNameInRow="CERTIFICADO_GRAVAMEN" msprop:Generator_ColumnVarNameInTable="columnCERTIFICADO_GRAVAMEN" msprop:Generator_ColumnPropNameInTable="CERTIFICADO_GRAVAMENColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PROVEEDOR" msprop:Generator_UserColumnName="PROVEEDOR" msprop:Generator_ColumnPropNameInRow="PROVEEDOR" msprop:Generator_ColumnVarNameInTable="columnPROVEEDOR" msprop:Generator_ColumnPropNameInTable="PROVEEDORColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FOTO" msprop:Generator_UserColumnName="FOTO" msprop:Generator_ColumnPropNameInRow="FOTO" msprop:Generator_ColumnVarNameInTable="columnFOTO" msprop:Generator_ColumnPropNameInTable="FOTOColumn" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="MAPA" msprop:Generator_UserColumnName="MAPA" msprop:Generator_ColumnPropNameInRow="MAPA" msprop:Generator_ColumnVarNameInTable="columnMAPA" msprop:Generator_ColumnPropNameInTable="MAPAColumn" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="COMPLEMENTOS" msprop:Generator_UserColumnName="COMPLEMENTOS" msprop:Generator_ColumnVarNameInTable="columnCOMPLEMENTOS" msprop:Generator_ColumnPropNameInRow="COMPLEMENTOS" msprop:Generator_ColumnPropNameInTable="COMPLEMENTOSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LEVANTAMIENTO_TOPOGRAFICO" msprop:Generator_UserColumnName="LEVANTAMIENTO_TOPOGRAFICO" msprop:Generator_ColumnPropNameInRow="LEVANTAMIENTO_TOPOGRAFICO" msprop:Generator_ColumnVarNameInTable="columnLEVANTAMIENTO_TOPOGRAFICO" msprop:Generator_ColumnPropNameInTable="LEVANTAMIENTO_TOPOGRAFICOColumn" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="DT_GENERALES_DT_MEDIAS_COLINDANCIAS" msdata:parent="DT_GENERALES" msdata:child="DT_MEDIAS_COLINDANCIAS" msdata:parentkey="BIEN_INMUEBLE_ID" msdata:childkey="BIEN_INMUEBLE_ID" msprop:Generator_UserRelationName="DT_GENERALES_DT_MEDIAS_COLINDANCIAS" msprop:Generator_RelationVarName="relationDT_GENERALES_DT_MEDIAS_COLINDANCIAS" msprop:Generator_UserChildTable="DT_MEDIAS_COLINDANCIAS" msprop:Generator_UserParentTable="DT_GENERALES" msprop:Generator_ParentPropName="DT_GENERALESRow" msprop:Generator_ChildPropName="GetDT_MEDIAS_COLINDANCIASRows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

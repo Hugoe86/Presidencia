@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Ope_Caj_Detalle_Pagos_Tarjeta" targetNamespace="http://tempuri.org/Ds_Ope_Caj_Detalle_Pagos_Tarjeta.xsd" xmlns:mstns="http://tempuri.org/Ds_Ope_Caj_Detalle_Pagos_Tarjeta.xsd" xmlns="http://tempuri.org/Ds_Ope_Caj_Detalle_Pagos_Tarjeta.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Ope_Caj_Detalle_Pagos_Tarjeta" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Ope_Caj_Detalle_Pagos_Tarjeta" msprop:Generator_DataSetName="Ds_Ope_Caj_Detalle_Pagos_Tarjeta">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Detalles" msprop:Generator_UserTableName="Dt_Detalles" msprop:Generator_RowDeletedName="Dt_DetallesRowDeleted" msprop:Generator_RowChangedName="Dt_DetallesRowChanged" msprop:Generator_RowClassName="Dt_DetallesRow" msprop:Generator_RowChangingName="Dt_DetallesRowChanging" msprop:Generator_RowEvArgName="Dt_DetallesRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_DetallesRowChangeEventHandler" msprop:Generator_TableClassName="Dt_DetallesDataTable" msprop:Generator_TableVarName="tableDt_Detalles" msprop:Generator_RowDeletingName="Dt_DetallesRowDeleting" msprop:Generator_TablePropName="Dt_Detalles">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Banco" msprop:Generator_UserColumnName="Banco" msprop:Generator_ColumnVarNameInTable="columnBanco" msprop:Generator_ColumnPropNameInRow="Banco" msprop:Generator_ColumnPropNameInTable="BancoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="No_Recibo" msprop:Generator_UserColumnName="No_Recibo" msprop:Generator_ColumnVarNameInTable="columnNo_Recibo" msprop:Generator_ColumnPropNameInRow="No_Recibo" msprop:Generator_ColumnPropNameInTable="No_ReciboColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="No_Tarjeta_Bancaria" msprop:Generator_UserColumnName="No_Tarjeta_Bancaria" msprop:Generator_ColumnVarNameInTable="columnNo_Tarjeta_Bancaria" msprop:Generator_ColumnPropNameInRow="No_Tarjeta_Bancaria" msprop:Generator_ColumnPropNameInTable="No_Tarjeta_BancariaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="No_Autorizacion" msprop:Generator_UserColumnName="No_Autorizacion" msprop:Generator_ColumnVarNameInTable="columnNo_Autorizacion" msprop:Generator_ColumnPropNameInRow="No_Autorizacion" msprop:Generator_ColumnPropNameInTable="No_AutorizacionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Plan_Pago" msprop:Generator_UserColumnName="Plan_Pago" msprop:Generator_ColumnVarNameInTable="columnPlan_Pago" msprop:Generator_ColumnPropNameInRow="Plan_Pago" msprop:Generator_ColumnPropNameInTable="Plan_PagoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Meses" msprop:Generator_UserColumnName="Meses" msprop:Generator_ColumnVarNameInTable="columnMeses" msprop:Generator_ColumnPropNameInRow="Meses" msprop:Generator_ColumnPropNameInTable="MesesColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="Monto" msprop:Generator_UserColumnName="Monto" msprop:Generator_ColumnVarNameInTable="columnMonto" msprop:Generator_ColumnPropNameInRow="Monto" msprop:Generator_ColumnPropNameInTable="MontoColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Modulo" msprop:Generator_UserColumnName="Modulo" msprop:Generator_ColumnVarNameInTable="columnModulo" msprop:Generator_ColumnPropNameInRow="Modulo" msprop:Generator_ColumnPropNameInTable="ModuloColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Caja" msprop:Generator_UserColumnName="Caja" msprop:Generator_ColumnVarNameInTable="columnCaja" msprop:Generator_ColumnPropNameInRow="Caja" msprop:Generator_ColumnPropNameInTable="CajaColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

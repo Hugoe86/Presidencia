@@ -1,0 +1,567 @@
+﻿using System;
+using System.Data;
+using System.Configuration;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using SharpContent.ApplicationBlocks.Data;
+using System.Data.OracleClient;
+using Presidencia.Constantes;
+using Presidencia.Operacion_Ordenes_Variacion.Negocio;
+
+/// <summary>
+/// Summary description for Cls_Ope_Pre_Ordenes_Variacion_Datos
+/// </summary>
+namespace Presidencia.Operacion_Ordenes_Variacion.Datos
+{
+    public class Cls_Ope_Pre_Ordenes_Variacion_Datos
+    {
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Alta_Orden_Variacion
+        ///DESCRIPCIÓN          : Da de alta en la Base de Datos una nueva orden variación
+        ///PARAMETROS           : Orden_Variacion, instancia de Cls_Ope_Pre_Ordenes_Variacion_Negocio
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 20/Diciembre/2010 
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************
+        public static Boolean Alta_Orden_Variacion(Cls_Ope_Pre_Ordenes_Variacion_Negocio Orden_Variacion) {
+            String Mensaje = "";
+            OracleConnection Cn = new OracleConnection();
+            OracleCommand Cmd = new OracleCommand();
+            OracleTransaction Trans;
+            Boolean Alta;
+
+            Alta = false;
+            Cn.ConnectionString = Presidencia.Constantes.Cls_Constantes.Str_Conexion;
+            Cn.Open();
+            Trans = Cn.BeginTransaction();
+            Cmd.Connection = Cn;
+            Cmd.Transaction = Trans;
+            try{
+                String Cuenta_ID = Obtener_ID_Consecutivo(Ope_Pre_Ordenes_Variacion.Tabla_Ope_Pre_Ordenes_Variacion, Ope_Pre_Ordenes_Variacion.Campo_Orden_Variacion_ID, 10);
+                String Mi_SQL = "INSERT INTO " + Ope_Pre_Ordenes_Variacion.Tabla_Ope_Pre_Ordenes_Variacion + " (";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Orden_Variacion_ID + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Cuenta_Predial_ID + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Concepto_Predial_ID + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Caso_Especial_ID + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Multa_ID + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Efectos_Año + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Efectos_Bimestre + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Tasa + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Periodo_Corriente_Inicia + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Periodo_Corriente_Termina + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Cuota_Anual + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Cuota_Bimestral + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Exencion + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Fecha_Termina_Exencion + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Cuota_Fija + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Fecha_Avaluo + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Periodo_Rezago + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Fecha_Periodo_Rezago_Inicia + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Fecha_Periodo_Rezago_Termina + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Domicilio_Foraneo + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Predio_Colindante + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Base_Impuesto + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Minimo_Elevado_Año + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Tasa_Traslado_Dominio + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Constancia_No_Adeudo + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Recargos + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Total + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Tipo + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Usuario_Creo + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Fecha_Creo + ")";
+                Mi_SQL = Mi_SQL + " VALUES ('";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Cuenta_Predial_ID + "', '";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Concepto_Predial_ID + "', '";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Caso_Especial_ID + "', '";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Multa_ID + "', ";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Efectos_Año + ", ";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Efectos_Bimestre + ", ";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Tasa + ", '";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Periodo_Corriente_Inicial + "', '";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Periodo_Corriente_Termina + "', ";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Cuota_Anual + ", ";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Cuota_Bimestral + ", ";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Exencion + ", '";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Fecha_Termina_Exencion + "', '";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Cuota_Fija + "', '";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Fecha_Avaluo + "', '";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Periodo_Rezago + "', '";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Fecha_Periodo_Rezago_Inicia + "', '";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Fecha_Periodo_Rezago_Termina + "', '";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Domicilio_Foraneo + "', '";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Predio_Colindante + "', ";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Base_Impuesto + ", ";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Minimo_Elevado_Año + ", ";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Tasa_Traslado_Dominio + ", '";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Constancia_No_Adeudo + "', ";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Recargos + ", ";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Total + ", '";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Tipo + "', '";
+                Mi_SQL = Mi_SQL + Orden_Variacion.P_Usuario + "', SYSDATE)";
+                Cmd.CommandText = Mi_SQL;
+                Cmd.ExecuteNonQuery();
+
+                //Inserta las Observaciones
+                if (Orden_Variacion.P_Dt_Observaciones != null)
+                {
+                    if (Orden_Variacion.P_Dt_Observaciones.Rows.Count > 0)
+                    {
+                        String Observaciones_ID = Obtener_ID_Consecutivo(Ope_Pre_Observaciones.Tabla_Ope_Pre_Observaciones, Ope_Pre_Observaciones.Campo_Observaciones_ID, 10);
+                        for (Int32 Cont_Filas = 0; Cont_Filas < Orden_Variacion.P_Dt_Observaciones.Rows.Count; Cont_Filas++)
+                        {
+                            Mi_SQL = "INSERT INTO " + Ope_Pre_Observaciones.Tabla_Ope_Pre_Observaciones + " (";
+                            Mi_SQL += Ope_Pre_Observaciones.Campo_Observaciones_ID + ", ";
+                            Mi_SQL += Ope_Pre_Observaciones.Campo_Orden_Variacion_ID + ", ";
+                            Mi_SQL += Ope_Pre_Observaciones.Campo_Descripcion + ", ";
+                            Mi_SQL += Ope_Pre_Observaciones.Campo_Usuario_Creo + ", ";
+                            Mi_SQL += Ope_Pre_Observaciones.Campo_Fecha_Creo + ")";
+                            Mi_SQL += " VALUE ('";
+                            Mi_SQL += Orden_Variacion.P_Dt_Observaciones.Rows[Cont_Filas][Ope_Pre_Observaciones.Campo_Observaciones_ID] + "', '";
+                            Mi_SQL += Orden_Variacion.P_Dt_Observaciones.Rows[Cont_Filas][Ope_Pre_Observaciones.Campo_Orden_Variacion_ID] + "', '";
+                            Mi_SQL += Orden_Variacion.P_Dt_Observaciones.Rows[Cont_Filas][Ope_Pre_Observaciones.Campo_Descripcion] + "', '";
+                            Mi_SQL += Orden_Variacion.P_Usuario + "', SYSDATE)";
+                        }
+                    }
+                }
+
+                //Inserta los Copropietario
+                if (Orden_Variacion.P_Dt_Copropietarios != null)
+                {
+                    if (Orden_Variacion.P_Dt_Copropietarios.Rows.Count > 0)
+                    {
+                        String Copropietario_Orden_Variacion_ID = Obtener_ID_Consecutivo(Ope_Pre_Copropietarios_Orde_Variacion.Tabla_Ope_Pre_Copropietarios_Orden_Variacion, Ope_Pre_Copropietarios_Orde_Variacion.Campo_Copropietario_Orden_Variacion_ID, 5);
+                        for (Int32 Cont_Filas = 0; Cont_Filas < Orden_Variacion.P_Dt_Copropietarios.Rows.Count; Cont_Filas++)
+                        {
+                            Mi_SQL = "INSERT INTO " + Ope_Pre_Copropietarios_Orde_Variacion.Tabla_Ope_Pre_Copropietarios_Orden_Variacion + " (";
+                            Mi_SQL += Ope_Pre_Copropietarios_Orde_Variacion.Campo_Copropietario_Orden_Variacion_ID + ", ";
+                            Mi_SQL += Ope_Pre_Copropietarios_Orde_Variacion.Campo_Orden_Variacion_ID + ", ";
+                            Mi_SQL += Ope_Pre_Copropietarios_Orde_Variacion.Campo_Copropietario_ID + ", ";
+                            Mi_SQL += Ope_Pre_Copropietarios_Orde_Variacion.Campo_Usuario_Creo + ", ";
+                            Mi_SQL += Ope_Pre_Copropietarios_Orde_Variacion.Campo_Fecha_Creo + ")";
+                            Mi_SQL += " VALUE ('";
+                            Mi_SQL += Orden_Variacion.P_Dt_Copropietarios.Rows[Cont_Filas][Ope_Pre_Copropietarios_Orde_Variacion.Campo_Copropietario_Orden_Variacion_ID] + "', '";
+                            Mi_SQL += Orden_Variacion.P_Dt_Copropietarios.Rows[Cont_Filas][Ope_Pre_Copropietarios_Orde_Variacion.Campo_Orden_Variacion_ID] + "', '";
+                            Mi_SQL += Orden_Variacion.P_Dt_Copropietarios.Rows[Cont_Filas][Ope_Pre_Copropietarios_Orde_Variacion.Campo_Copropietario_ID] + "', '";
+                            Mi_SQL += Orden_Variacion.P_Usuario + "', SYSDATE)";
+                        }
+                    }
+                }
+                Trans.Commit();
+                Alta = true;
+            }catch(OracleException Ex){
+                Trans.Rollback();
+                //variable para el mensaje 
+                //configuracion del mensaje de acuerdo al numero de error devuelto por la MRDB 
+                if (Ex.Code == 8152) {
+                    Mensaje = "Existen datos demasiados extensos, corrija el problema y vuelva a intentar. Error: [" + Ex.Message + "]";
+                } else if (Ex.Code == 2627) {
+                    if (Ex.Message.IndexOf("PRIMARY") != -1) {
+                        Mensaje = "Error por intentar grabar valores duplicados en campos clave, corrija el problema y vuelva a intentar. Error: [" + Ex.Message + "]";
+                    } else if (Ex.Message.IndexOf("UNIQUE") != -1) {
+                        Mensaje = "Esta intentando grabar un registro que ya existe, verifiquelo por favor. Error: [" + Ex.Message + "]";
+                    } else {
+                        Mensaje = "Error general en la base de datos. Error: [" + Ex.Message + "]";
+                    }
+                } else if (Ex.Code == 547) {
+                    Mensaje = "Esta intentando introducir algún dato que no existe y que esta relacionado con otra tabla. Error: [" + Ex.Message + "]";
+                } else if (Ex.Code == 515) {
+                    Mensaje = "Algunos datos no han sido ingresados y son necesarios para completar la operación, corrija el problema y vuelva a intentar. Error: [" + Ex.Message + "]";
+                } else {
+                    Mensaje = "Error al intentar dar de Alta la Orden de Variación. Error: [" + Ex.Message + "]"; //"Error general en la base de datos"
+                }
+                //Indicamos el mensaje 
+                throw new Exception(Mensaje);
+            } finally {
+                if (Cn.State == ConnectionState.Open) {
+                    Cn.Close();
+                }
+            }
+            return Alta;
+        }
+        
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Modificar_Orden_Variacion
+        ///DESCRIPCIÓN          : Actualiza en la Base de Datos una Orden_Variacion de acuerdo a los parámetros indicados en la interfaz
+        ///PARAMETROS           : Orden_Variacion, instancia de Cls_Ope_Pre_Ordenes_Variacion_Negocio
+        ///CREO                 : Antonio Salvador Benavides Guarddado
+        ///FECHA_CREO           : 21/Diciembre/2010 
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************
+        public static Boolean Modificar_Orden_Variacion(Cls_Ope_Pre_Ordenes_Variacion_Negocio Orden_Variacion)
+        {
+            String Mensaje = "";
+            OracleConnection Cn = new OracleConnection();
+            OracleCommand Cmd = new OracleCommand();
+            OracleTransaction Trans;
+            Boolean Modificar;
+
+            Cn.ConnectionString = Presidencia.Constantes.Cls_Constantes.Str_Conexion;
+            Cn.Open();
+            Trans = Cn.BeginTransaction();
+            Cmd.Connection = Cn;
+            Cmd.Transaction = Trans;
+            Modificar = false;
+            try{   
+                String Mi_SQL = "UPDATE " + Ope_Pre_Ordenes_Variacion.Tabla_Ope_Pre_Ordenes_Variacion;
+                Mi_SQL = Mi_SQL + " SET " + Ope_Pre_Ordenes_Variacion.Campo_Orden_Variacion_ID + " = '" + Orden_Variacion.P_Orden_Variacion_ID + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Cuenta_Predial_ID + " = '" + Orden_Variacion.P_Cuenta_Predial_ID + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Concepto_Predial_ID + " = '" + Orden_Variacion.P_Concepto_Predial_ID + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Caso_Especial_ID + " = '" + Orden_Variacion.P_Caso_Especial_ID + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Multa_ID + " = '" + Orden_Variacion.P_Multa_ID + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Efectos_Año + " = '" + Orden_Variacion.P_Efectos_Año + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Efectos_Bimestre + " = '" + Orden_Variacion.P_Efectos_Bimestre + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Tasa + " = '" + Orden_Variacion.P_Tasa + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Periodo_Corriente_Inicia + " = '" + Orden_Variacion.P_Periodo_Corriente_Inicial + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Periodo_Corriente_Termina + " = '" + Orden_Variacion.P_Periodo_Corriente_Termina + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Cuota_Anual + " = '" + Orden_Variacion.P_Cuota_Anual + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Cuota_Bimestral + " = '" + Orden_Variacion.P_Cuota_Bimestral + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Exencion + " = '" + Orden_Variacion.P_Exencion + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Fecha_Termina_Exencion + " = '" + Orden_Variacion.P_Fecha_Termina_Exencion + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Cuota_Fija + " = " + Orden_Variacion.P_Cuota_Fija + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Fecha_Avaluo + " = " + Orden_Variacion.P_Fecha_Avaluo + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Periodo_Rezago + " = '" + Orden_Variacion.P_Periodo_Rezago + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Fecha_Periodo_Rezago_Inicia + " = " + Orden_Variacion.P_Fecha_Periodo_Rezago_Inicia + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Fecha_Periodo_Rezago_Termina + " = '" + Orden_Variacion.P_Fecha_Periodo_Rezago_Termina + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Domicilio_Foraneo + " = '" + Orden_Variacion.P_Domicilio_Foraneo + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Predio_Colindante + " = " + Orden_Variacion.P_Predio_Colindante + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Base_Impuesto + " = " + Orden_Variacion.P_Base_Impuesto + ", ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Minimo_Elevado_Año + " = '" + Orden_Variacion.P_Minimo_Elevado_Año + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Tasa_Traslado_Dominio + " = '" + Orden_Variacion.P_Tasa_Traslado_Dominio + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Constancia_No_Adeudo + " = '" + Orden_Variacion.P_Constancia_No_Adeudo + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Recargos + " = '" + Orden_Variacion.P_Recargos + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Total + " = '" + Orden_Variacion.P_Total + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Tipo + " = '" + Orden_Variacion.P_Tipo + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Usuario_Modifico + " = '" + Orden_Variacion.P_Usuario + "', ";
+                Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Fecha_Modifico + " = SYSDATE";
+                Mi_SQL = Mi_SQL + " WHERE " + Ope_Pre_Ordenes_Variacion.Campo_Orden_Variacion_ID + " = '" + Orden_Variacion.P_Orden_Variacion_ID + "'";
+                Cmd.CommandText = Mi_SQL;
+                Cmd.ExecuteNonQuery();
+
+                //Actualiza las Observaciones
+                if (Orden_Variacion.P_Dt_Observaciones != null)
+                {
+                    if (Orden_Variacion.P_Dt_Observaciones.Rows.Count > 0)
+                    {
+                        Mi_SQL = "DELETE FROM " + Ope_Pre_Observaciones.Tabla_Ope_Pre_Observaciones;
+                        Mi_SQL += " WHERE " + Ope_Pre_Observaciones.Campo_Orden_Variacion_ID + " = '" + Orden_Variacion.P_Orden_Variacion_ID + "'";
+                        Cmd.CommandText = Mi_SQL;
+                        Cmd.ExecuteNonQuery();
+
+                        String Observaciones_ID = Obtener_ID_Consecutivo(Ope_Pre_Observaciones.Tabla_Ope_Pre_Observaciones, Ope_Pre_Observaciones.Campo_Observaciones_ID, 10);
+                        for (Int32 Cont_Filas = 0; Cont_Filas < Orden_Variacion.P_Dt_Observaciones.Rows.Count; Cont_Filas++)
+                        {
+                            Mi_SQL = "INSERT INTO " + Ope_Pre_Observaciones.Tabla_Ope_Pre_Observaciones + " (";
+                            Mi_SQL += Ope_Pre_Observaciones.Campo_Observaciones_ID + ", ";
+                            Mi_SQL += Ope_Pre_Observaciones.Campo_Orden_Variacion_ID + ", ";
+                            Mi_SQL += Ope_Pre_Observaciones.Campo_Descripcion + ", ";
+                            Mi_SQL += Ope_Pre_Observaciones.Campo_Usuario_Creo + ", ";
+                            Mi_SQL += Ope_Pre_Observaciones.Campo_Fecha_Creo + ")";
+                            Mi_SQL += " VALUE ('";
+                            Mi_SQL += Orden_Variacion.P_Dt_Observaciones.Rows[Cont_Filas][Ope_Pre_Observaciones.Campo_Observaciones_ID] + "', '";
+                            Mi_SQL += Orden_Variacion.P_Dt_Observaciones.Rows[Cont_Filas][Ope_Pre_Observaciones.Campo_Orden_Variacion_ID] + "', '";
+                            Mi_SQL += Orden_Variacion.P_Dt_Observaciones.Rows[Cont_Filas][Ope_Pre_Observaciones.Campo_Descripcion] + "', '";
+                            Mi_SQL += Orden_Variacion.P_Usuario + "', SYSDATE)";
+                        }
+                    }
+                }
+
+                //Actualiza los Copropietario
+                if (Orden_Variacion.P_Dt_Copropietarios != null)
+                {
+                    if (Orden_Variacion.P_Dt_Copropietarios.Rows.Count > 0)
+                    {
+                        Mi_SQL = "DELETE FROM " + Ope_Pre_Copropietarios_Orde_Variacion.Tabla_Ope_Pre_Copropietarios_Orden_Variacion;
+                        Mi_SQL += " WHERE " + Ope_Pre_Copropietarios_Orde_Variacion.Campo_Orden_Variacion_ID + " = '" + Orden_Variacion.P_Orden_Variacion_ID + "'";
+                        Cmd.CommandText = Mi_SQL;
+                        Cmd.ExecuteNonQuery();
+
+                        String Copropietario_Orden_Variacion_ID = Obtener_ID_Consecutivo(Ope_Pre_Copropietarios_Orde_Variacion.Tabla_Ope_Pre_Copropietarios_Orden_Variacion, Ope_Pre_Copropietarios_Orde_Variacion.Campo_Copropietario_Orden_Variacion_ID, 5);
+                        for (Int32 Cont_Filas = 0; Cont_Filas < Orden_Variacion.P_Dt_Copropietarios.Rows.Count; Cont_Filas++)
+                        {
+                            Mi_SQL = "INSERT INTO " + Ope_Pre_Copropietarios_Orde_Variacion.Tabla_Ope_Pre_Copropietarios_Orden_Variacion + " (";
+                            Mi_SQL += Ope_Pre_Copropietarios_Orde_Variacion.Campo_Copropietario_Orden_Variacion_ID + ", ";
+                            Mi_SQL += Ope_Pre_Copropietarios_Orde_Variacion.Campo_Orden_Variacion_ID + ", ";
+                            Mi_SQL += Ope_Pre_Copropietarios_Orde_Variacion.Campo_Copropietario_ID + ", ";
+                            Mi_SQL += Ope_Pre_Copropietarios_Orde_Variacion.Campo_Usuario_Creo + ", ";
+                            Mi_SQL += Ope_Pre_Copropietarios_Orde_Variacion.Campo_Fecha_Creo + ")";
+                            Mi_SQL += " VALUE ('";
+                            Mi_SQL += Orden_Variacion.P_Dt_Copropietarios.Rows[Cont_Filas][Ope_Pre_Copropietarios_Orde_Variacion.Campo_Copropietario_Orden_Variacion_ID] + "', '";
+                            Mi_SQL += Orden_Variacion.P_Dt_Copropietarios.Rows[Cont_Filas][Ope_Pre_Copropietarios_Orde_Variacion.Campo_Orden_Variacion_ID] + "', '";
+                            Mi_SQL += Orden_Variacion.P_Dt_Copropietarios.Rows[Cont_Filas][Ope_Pre_Copropietarios_Orde_Variacion.Campo_Copropietario_ID] + "', '";
+                            Mi_SQL += Orden_Variacion.P_Usuario + "', SYSDATE)";
+                        }
+                    }
+                }
+                Trans.Commit();
+                Modificar = true;
+             } catch (OracleException Ex) {
+                Trans.Rollback();
+                //variable para el mensaje 
+                //configuracion del mensaje de acuerdo al numero de error devuelto por la MRDB 
+                if (Ex.Code == 8152) {
+                    Mensaje = "Existen datos demasiados extensos, corrija el problema y vuelva a intentar. Error: [" + Ex.Message + "]";
+                } else if (Ex.Code == 2627) {
+                    if (Ex.Message.IndexOf("PRIMARY") != -1) {
+                        Mensaje = "Error por intentar grabar valores duplicados en campos clave, corrija el problema y vuelva a intentar. Error: [" + Ex.Message + "]";
+                    } else if (Ex.Message.IndexOf("UNIQUE") != -1) {
+                        Mensaje = "Esta intentando grabar un registro que ya existe, verifiquelo por favor. Error: [" + Ex.Message + "]";
+                    } else {
+                        Mensaje = "Error general en la base de datos. Error: [" + Ex.Message + "]";
+                    }
+                } else if (Ex.Code == 547) {
+                    Mensaje = "Esta intentando introducir algún dato que no existe y que esta relacionado con otra tabla. Error: [" + Ex.Message + "]";
+                } else if (Ex.Code == 515) {
+                    Mensaje = "Algunos datos no han sido ingresados y son necesarios para completar la operación, corrija el problema y vuelva a intentar. Error: [" + Ex.Message + "]";
+                } else {
+                    Mensaje = "Error al intentar modificar la Orden de Variacion. Error: [" + Ex.Message + "]"; //"Error general en la base de datos"
+                }
+                //Indicamos el mensaje 
+                throw new Exception(Mensaje);
+            } finally {
+                Cn.Close();
+            }
+            return Modificar;
+        }
+        
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Consultar_Orden_Variacion
+        ///DESCRIPCIÓN          : Obtiene las Órdenes de Variación de acuerdo a los filtros establecidos en la interfaz
+        ///PARAMETROS           : Orden_Variacion, instancia de Cls_Ope_Pre_Ordenes_Variacion_Negocio
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 21/Diciembre/2010 
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************
+        public static DataTable Consultar_Orden_Variacion(Cls_Ope_Pre_Ordenes_Variacion_Negocio Orden_Variacion)
+        {
+            DataTable Tabla = new DataTable();
+            String Mi_SQL;
+            String Mi_SQL_Campos_Foraneos = "";
+            try{
+                if (Orden_Variacion.P_Incluir_Campos_Foraneos)
+                {
+                    Mi_SQL_Campos_Foraneos = Mi_SQL_Campos_Foraneos + "(SELECT " + Cat_Pre_Cuentas_Predial.Campo_Cuenta_Predial + " FROM " + Cat_Pre_Cuentas_Predial.Tabla_Cat_Pre_Cuentas + " WHERE " + Cat_Pre_Cuentas_Predial.Campo_Cuenta_Predial_ID + " = " + Ope_Pre_Ordenes_Variacion.Tabla_Ope_Pre_Ordenes_Variacion + "." + Ope_Pre_Ordenes_Variacion.Campo_Cuenta_Predial_ID + ") AS CUENTA_PREDIAL, ";
+                    Mi_SQL_Campos_Foraneos = Mi_SQL_Campos_Foraneos + "(SELECT " + Cat_Pre_Conceptos.Campo_Descripcion + " FROM " + Cat_Pre_Conceptos.Tabla_Cat_Pre_Conceptos + " WHERE " + Cat_Pre_Conceptos.Campo_Concepto_Predial_ID + " = " + Ope_Pre_Ordenes_Variacion.Tabla_Ope_Pre_Ordenes_Variacion + "." + Ope_Pre_Ordenes_Variacion.Campo_Concepto_Predial_ID + ") AS CONCEPTO_PREDIAL, ";
+                    Mi_SQL_Campos_Foraneos = Mi_SQL_Campos_Foraneos + "(SELECT " + Cat_Pre_Casos_Especiales.Campo_Descripcion + " FROM " + Cat_Pre_Casos_Especiales.Tabla_Cat_Pre_Casos_Especiales + " WHERE " + Cat_Pre_Casos_Especiales.Campo_Caso_Especial_ID + " = " + Ope_Pre_Ordenes_Variacion.Tabla_Ope_Pre_Ordenes_Variacion + "." + Ope_Pre_Ordenes_Variacion.Campo_Caso_Especial_ID + ") AS CASO_ESPECIAL, ";
+                    Mi_SQL_Campos_Foraneos = Mi_SQL_Campos_Foraneos + "(SELECT " + Cat_Pre_Multas.Campo_Descripcion + " FROM " + Cat_Pre_Multas.Tabla_Cat_Pre_Multas + " WHERE " + Cat_Pre_Multas.Campo_Multa_ID + " = " + Ope_Pre_Ordenes_Variacion.Tabla_Ope_Pre_Ordenes_Variacion + "." + Ope_Pre_Ordenes_Variacion.Campo_Multa_ID + ") AS MULTA, ";
+                }
+                if (Orden_Variacion.P_Campos_Dinamicos != null && Orden_Variacion.P_Campos_Dinamicos != "")
+                {
+                    Mi_SQL = "SELECT " + Mi_SQL_Campos_Foraneos + Orden_Variacion.P_Campos_Dinamicos;
+                }
+                else
+                {
+                    Mi_SQL = "SELECT " + Mi_SQL_Campos_Foraneos;
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Orden_Variacion_ID + " AS ORDEN_VARIACION_ID, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Cuenta_Predial_ID + " AS CUENTA_PREDIAL_ID, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Concepto_Predial_ID + " AS CONCEPTO_PREDIAL_ID, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Caso_Especial_ID + " AS CASO_ESPECIAL_ID, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Multa_ID + " AS MULTA_ID, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Efectos_Año + " AS EFECTOS_AÑO, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Efectos_Bimestre + " AS EFECTOS_BIMESTRE, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Tasa + " AS TASA, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Periodo_Corriente_Inicia + " AS PERIODO_CORRIENTE_INICIA, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Periodo_Corriente_Termina + " AS PERIODO_CORRIENTE_TERMINA, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Cuota_Anual + " AS CUOTA_ANUAL, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Cuota_Bimestral + " AS CUOTA_BIMESTRAL, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Exencion + " AS EXCENCION, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Fecha_Termina_Exencion + " AS FECHA_TERMINA_EXCENCION, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Cuota_Fija + " AS CUOTA_FIJA, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Fecha_Avaluo + " AS FECHA_AVALUO, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Periodo_Rezago + " AS PERIODO_REZAGO, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Fecha_Periodo_Rezago_Inicia + " AS FECHA_PERIODO_REZAGO_INICIA, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Fecha_Periodo_Rezago_Termina + " AS FECHA_PERIODO_REZAGO_TERMINA, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Domicilio_Foraneo + " AS DOMICILIIO_FORANEO, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Predio_Colindante + " AS PREDIO_COLINDANTE, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Base_Impuesto + " AS BASE_IMPUESTO, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Minimo_Elevado_Año + " AS MINIMO_ELEVADO_AÑO, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Tasa_Traslado_Dominio + " AS TASA_TRASLADO_DOMINIO, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Constancia_No_Adeudo + " AS CONSTANCIA_NO_ADEUDO, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Recargos + " AS RECARGOS, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Total + " AS TOTAL, ";
+                    Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Tipo + " AS TIPO";
+                }
+                Mi_SQL = Mi_SQL + " FROM " + Ope_Pre_Ordenes_Variacion.Tabla_Ope_Pre_Ordenes_Variacion;
+                if (Orden_Variacion.P_Filtros_Dinamicos != null && Orden_Variacion.P_Filtros_Dinamicos != "")
+                {
+                    Mi_SQL = Mi_SQL + " WHERE " + Orden_Variacion.P_Filtros_Dinamicos;
+                }
+                else
+                {
+                    Mi_SQL = Mi_SQL + " WHERE ";
+                    if (Orden_Variacion.P_Orden_Variacion_ID != null && Orden_Variacion.P_Orden_Variacion_ID != "")
+                    {
+                        Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Orden_Variacion_ID + " = '" + Orden_Variacion.P_Orden_Variacion_ID + "' AND ";
+                    }
+                    if (Orden_Variacion.P_Cuenta_Predial_ID != null && Orden_Variacion.P_Cuenta_Predial_ID != "")
+                    {
+                        Mi_SQL = Mi_SQL + Ope_Pre_Ordenes_Variacion.Campo_Cuenta_Predial_ID + " = '" + Orden_Variacion.P_Cuenta_Predial_ID + "' AND ";
+                    }
+                    if (Orden_Variacion.P_Cuenta_Predial != null && Orden_Variacion.P_Cuenta_Predial != "")
+                    {
+                        Mi_SQL = Mi_SQL + "(SELECT " + Cat_Pre_Cuentas_Predial.Campo_Cuenta_Predial + " FROM " + Cat_Pre_Cuentas_Predial.Tabla_Cat_Pre_Cuentas + " WHERE " + Cat_Pre_Cuentas_Predial.Campo_Cuenta_Predial_ID + " = " + Ope_Pre_Ordenes_Variacion.Tabla_Ope_Pre_Ordenes_Variacion + "." + Ope_Pre_Ordenes_Variacion.Campo_Cuenta_Predial_ID + ") = '" + Orden_Variacion.P_Cuenta_Predial + "' AND ";
+                    }
+                    if (Mi_SQL.EndsWith(" AND "))
+                    {
+                        Mi_SQL = Mi_SQL.Substring(0, Mi_SQL.Length - 5);
+                    }
+                    if (Mi_SQL.EndsWith(" WHERE "))
+                    {
+                        Mi_SQL = Mi_SQL.Substring(0, Mi_SQL.Length - 7);
+                    }
+                }
+                if (Orden_Variacion.P_Agrupar_Dinamico != null && Orden_Variacion.P_Agrupar_Dinamico != "")
+                {
+                    Mi_SQL = Mi_SQL + " GROUP BY " + Orden_Variacion.P_Agrupar_Dinamico;
+                }
+                if (Orden_Variacion.P_Ordenar_Dinamico != null && Orden_Variacion.P_Ordenar_Dinamico != "")
+                {
+                    Mi_SQL = Mi_SQL + " ORDER BY " + Orden_Variacion.P_Ordenar_Dinamico;
+                }
+                DataSet dataSet = OracleHelper.ExecuteDataset(Cls_Constantes.Str_Conexion, CommandType.Text, Mi_SQL);
+                if (dataSet != null){
+                    Tabla = dataSet.Tables[0];
+
+                    if (Tabla.Rows.Count > 0)
+                    {
+                        dataSet = null;
+                        Mi_SQL = "SELECT " + Ope_Pre_Observaciones.Campo_Observaciones_ID + " AS OBSERVACIONES_ID, ";
+                        Mi_SQL = Mi_SQL + Ope_Pre_Observaciones.Campo_Orden_Variacion_ID + " AS ORDEN_VARIACION_ID, ";
+                        Mi_SQL = Mi_SQL + Ope_Pre_Observaciones.Campo_Descripcion + " AS DESCRIPCION, ";
+                        Mi_SQL = Mi_SQL + " FROM " + Ope_Pre_Observaciones.Tabla_Ope_Pre_Observaciones;
+                        Mi_SQL = Mi_SQL + " WHERE " + Ope_Pre_Observaciones.Campo_Orden_Variacion_ID + " = '" + Tabla.Rows[0][Ope_Pre_Ordenes_Variacion.Campo_Orden_Variacion_ID] + "'";
+
+                        dataSet = OracleHelper.ExecuteDataset(Cls_Constantes.Str_Conexion, CommandType.Text, Mi_SQL);
+                        if (dataSet != null)
+                        {
+                            Orden_Variacion.P_Dt_Observaciones = dataSet.Tables[0];
+                        }
+
+                        dataSet = null;
+                        Mi_SQL = "SELECT " + Ope_Pre_Copropietarios_Orde_Variacion.Campo_Copropietario_Orden_Variacion_ID + " AS COPROPIETARIO_ORDEN_VARIACION_ID, ";
+                        Mi_SQL = Mi_SQL + Ope_Pre_Copropietarios_Orde_Variacion.Campo_Orden_Variacion_ID + " AS ORDEN_VARIACION_ID, ";
+                        Mi_SQL = Mi_SQL + Ope_Pre_Copropietarios_Orde_Variacion.Campo_Copropietario_ID + " AS COPROPIETARIO_ID, ";
+                        Mi_SQL = Mi_SQL + " FROM " + Ope_Pre_Copropietarios_Orde_Variacion.Tabla_Ope_Pre_Copropietarios_Orden_Variacion;
+                        Mi_SQL = Mi_SQL + " WHERE " + Ope_Pre_Copropietarios_Orde_Variacion.Campo_Orden_Variacion_ID + " = '" + Tabla.Rows[0][Ope_Pre_Ordenes_Variacion.Campo_Orden_Variacion_ID] + "'";
+
+                        dataSet = OracleHelper.ExecuteDataset(Cls_Constantes.Str_Conexion, CommandType.Text, Mi_SQL);
+                        if (dataSet != null)
+                        {
+                            Orden_Variacion.P_Dt_Copropietarios = dataSet.Tables[0];
+                        }
+                    }
+                }
+            }catch(Exception Ex){
+                String Mensaje = "Error al intentar consultar los registros de la Orden de Variación. Error: [" + Ex.Message + "]"; //"Error general en la base de datos"
+                throw new Exception(Mensaje);
+            }
+            return Tabla;    
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN : Eliminar_Orden_Variacion
+        ///DESCRIPCIÓN          : Elimina una Orden_Variacion según el id indicado
+        ///PARAMETROS           : Orden_Variacion, instancia de Cls_Ope_Pre_Ordenes_Variacion_Negocio
+        ///CREO                 : Antonio Salvador Benavides Guardado
+        ///FECHA_CREO           : 21/Diciembre/2010 
+        ///MODIFICO:
+        ///FECHA_MODIFICO
+        ///CAUSA_MODIFICACIÓN
+        ///*******************************************************************************
+        public static Boolean Eliminar_Orden_Variacion(Cls_Ope_Pre_Ordenes_Variacion_Negocio Orden_Variacion)
+        {
+            String Mensaje = "";
+            OracleConnection Cn = new OracleConnection();
+            OracleCommand Cmd = new OracleCommand();
+            OracleTransaction Trans;
+            Boolean Eliminar;
+
+            Eliminar = false;
+            Cn.ConnectionString = Presidencia.Constantes.Cls_Constantes.Str_Conexion;
+            Cn.Open();
+            Trans = Cn.BeginTransaction();
+            Cmd.Connection = Cn;
+            Cmd.Transaction = Trans;
+            try {   
+                String Mi_SQL = "DELETE FROM " + Ope_Pre_Ordenes_Variacion.Tabla_Ope_Pre_Ordenes_Variacion;
+                Mi_SQL = Mi_SQL + " WHERE " + Ope_Pre_Ordenes_Variacion.Campo_Orden_Variacion_ID + " = '" + Orden_Variacion.P_Orden_Variacion_ID + "'";
+                Cmd.CommandText = Mi_SQL;
+                Cmd.ExecuteNonQuery();
+                Trans.Commit();
+                Eliminar = true;
+            } catch (OracleException Ex){
+                Trans.Rollback();
+                if (Ex.Code == 547) {
+                    Mensaje = "No se puede eliminar el registro, ya que está relacionado con datos";
+                } else {
+                    Mensaje = "Error al intentar eliminar la Orden de Variacion. Error: [" + Ex.Message + "]"; //"Error general en la base de datos"
+                }
+                throw new Exception(Mensaje);
+            } catch (Exception Ex) {
+                Mensaje = "Error al intentar eliminar la Orden de Variacion. Error: [" + Ex.Message + "]"; //"Error general en la base de datos" //"Error general en la base de datos"
+                throw new Exception(Mensaje);
+            } finally {
+                Cn.Close();
+            }
+            return Eliminar;
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN: Obtener_ID_Consecutivo
+        ///DESCRIPCIÓN: Obtiene el ID Cosnecutivo disponible para dar de alta un Registro en la Tabla
+        ///PARÁMETROS:     
+        ///CREO: Francisco Antonio Gallardo Castañeda.
+        ///FECHA_CREO: 10/Marzo/2010 
+        ///MODIFICO             : 
+        ///FECHA_MODIFICO       : 
+        ///CAUSA_MODIFICACIÓN   : 
+        ///*******************************************************************************
+        public static String Obtener_ID_Consecutivo(String Tabla, String Campo, Int32 Longitud_ID) {
+            String Id = Convertir_A_Formato_ID(1, Longitud_ID); ;
+            try {
+                String Mi_SQL = "SELECT MAX(" + Campo + ") FROM " + Tabla;
+                Object Obj_Temp = OracleHelper.ExecuteScalar(Cls_Constantes.Str_Conexion, CommandType.Text, Mi_SQL);
+                if (!(Obj_Temp is Nullable) && !Obj_Temp.ToString().Equals("")) {
+                    Id = Convertir_A_Formato_ID((Convert.ToInt32(Obj_Temp) + 1), Longitud_ID);
+                }
+            } catch (OracleException Ex) {
+                new Exception(Ex.Message);
+            }
+            return Id;
+        }
+
+        ///*******************************************************************************
+        ///NOMBRE DE LA FUNCIÓN: Convertir_A_Formato_ID
+        ///DESCRIPCIÓN: Pasa un numero entero a Formato de ID.
+        ///PARÁMETROS:     
+        ///             1. Dato_ID. Dato que se desea pasar al Formato de ID.
+        ///             2. Longitud_ID. Longitud que tendra el ID. 
+        ///CREO: Francisco Antonio Gallardo Castañeda.
+        ///FECHA_CREO: 10/Marzo/2010 
+        ///MODIFICO             : 
+        ///FECHA_MODIFICO       : 
+        ///CAUSA_MODIFICACIÓN   : 
+        ///*******************************************************************************
+        private static String Convertir_A_Formato_ID(Int32 Dato_ID, Int32 Longitud_ID) {
+            String Retornar = "";
+            String Dato = "" + Dato_ID;
+            for (int Cont_Temp = Dato.Length; Cont_Temp < Longitud_ID; Cont_Temp++) {
+                Retornar = Retornar + "0";
+            }
+            Retornar = Retornar + Dato;
+            return Retornar;
+        }
+    }
+}

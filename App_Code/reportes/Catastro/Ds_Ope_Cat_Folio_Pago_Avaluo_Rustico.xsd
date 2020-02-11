@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Ope_Cat_Folio_Pago_Avaluo_Rustico" targetNamespace="http://tempuri.org/Ds_Ope_Cat_Folio_Pago_Avaluo_Rustico.xsd" xmlns:mstns="http://tempuri.org/Ds_Ope_Cat_Folio_Pago_Avaluo_Rustico.xsd" xmlns="http://tempuri.org/Ds_Ope_Cat_Folio_Pago_Avaluo_Rustico.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Ope_Cat_Folio_Pago_Avaluo_Rustico" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Ope_Cat_Folio_Pago_Avaluo_Rustico" msprop:Generator_DataSetName="Ds_Ope_Cat_Folio_Pago_Avaluo_Rustico">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Folio" msprop:Generator_UserTableName="Dt_Folio" msprop:Generator_RowDeletedName="Dt_FolioRowDeleted" msprop:Generator_RowChangedName="Dt_FolioRowChanged" msprop:Generator_RowClassName="Dt_FolioRow" msprop:Generator_RowChangingName="Dt_FolioRowChanging" msprop:Generator_RowEvArgName="Dt_FolioRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_FolioRowChangeEventHandler" msprop:Generator_TableClassName="Dt_FolioDataTable" msprop:Generator_TableVarName="tableDt_Folio" msprop:Generator_RowDeletingName="Dt_FolioRowDeleting" msprop:Generator_TablePropName="Dt_Folio">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RFC" msprop:Generator_UserColumnName="RFC" msprop:Generator_ColumnVarNameInTable="columnRFC" msprop:Generator_ColumnPropNameInRow="RFC" msprop:Generator_ColumnPropNameInTable="RFCColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PERITO_EXTERNO_ID" msprop:Generator_UserColumnName="PERITO_EXTERNO_ID" msprop:Generator_ColumnVarNameInTable="columnPERITO_EXTERNO_ID" msprop:Generator_ColumnPropNameInRow="PERITO_EXTERNO_ID" msprop:Generator_ColumnPropNameInTable="PERITO_EXTERNO_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CANTIDAD" msprop:Generator_UserColumnName="CANTIDAD" msprop:Generator_ColumnVarNameInTable="columnCANTIDAD" msprop:Generator_ColumnPropNameInRow="CANTIDAD" msprop:Generator_ColumnPropNameInTable="CANTIDADColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="CANTIDAD_LETRAS" msprop:Generator_UserColumnName="CANTIDAD_LETRAS" msprop:Generator_ColumnVarNameInTable="columnCANTIDAD_LETRAS" msprop:Generator_ColumnPropNameInRow="CANTIDAD_LETRAS" msprop:Generator_ColumnPropNameInTable="CANTIDAD_LETRASColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="UBICACION" msprop:Generator_UserColumnName="UBICACION" msprop:Generator_ColumnVarNameInTable="columnUBICACION" msprop:Generator_ColumnPropNameInRow="UBICACION" msprop:Generator_ColumnPropNameInTable="UBICACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CUENTA_PREDIAL" msprop:Generator_UserColumnName="CUENTA_PREDIAL" msprop:Generator_ColumnVarNameInTable="columnCUENTA_PREDIAL" msprop:Generator_ColumnPropNameInRow="CUENTA_PREDIAL" msprop:Generator_ColumnPropNameInTable="CUENTA_PREDIALColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="VALOR_PREDIO" msprop:Generator_UserColumnName="VALOR_PREDIO" msprop:Generator_ColumnVarNameInTable="columnVALOR_PREDIO" msprop:Generator_ColumnPropNameInRow="VALOR_PREDIO" msprop:Generator_ColumnPropNameInTable="VALOR_PREDIOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="FOLIO" msprop:Generator_UserColumnName="FOLIO" msprop:Generator_ColumnVarNameInTable="columnFOLIO" msprop:Generator_ColumnPropNameInRow="FOLIO" msprop:Generator_ColumnPropNameInTable="FOLIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DIA" msprop:Generator_UserColumnName="DIA" msprop:Generator_ColumnPropNameInRow="DIA" msprop:Generator_ColumnVarNameInTable="columnDIA" msprop:Generator_ColumnPropNameInTable="DIAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MES" msprop:Generator_UserColumnName="MES" msprop:Generator_ColumnPropNameInRow="MES" msprop:Generator_ColumnVarNameInTable="columnMES" msprop:Generator_ColumnPropNameInTable="MESColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ANIO" msprop:Generator_UserColumnName="ANIO" msprop:Generator_ColumnPropNameInRow="ANIO" msprop:Generator_ColumnVarNameInTable="columnANIO" msprop:Generator_ColumnPropNameInTable="ANIOColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

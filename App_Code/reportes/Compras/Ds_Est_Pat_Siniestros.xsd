@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Est_Pat_Siniestros" targetNamespace="http://tempuri.org/Ds_Est_Pat_Siniestros.xsd" xmlns:mstns="http://tempuri.org/Ds_Est_Pat_Siniestros.xsd" xmlns="http://tempuri.org/Ds_Est_Pat_Siniestros.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Est_Pat_Siniestros" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Est_Pat_Siniestros" msprop:Generator_DataSetName="Ds_Est_Pat_Siniestros">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_POR_TIPO_SINIESTRO" msprop:Generator_UserTableName="DT_POR_TIPO_SINIESTRO" msprop:Generator_RowDeletedName="DT_POR_TIPO_SINIESTRORowDeleted" msprop:Generator_TableClassName="DT_POR_TIPO_SINIESTRODataTable" msprop:Generator_RowChangedName="DT_POR_TIPO_SINIESTRORowChanged" msprop:Generator_RowClassName="DT_POR_TIPO_SINIESTRORow" msprop:Generator_RowChangingName="DT_POR_TIPO_SINIESTRORowChanging" msprop:Generator_RowEvArgName="DT_POR_TIPO_SINIESTRORowChangeEvent" msprop:Generator_RowEvHandlerName="DT_POR_TIPO_SINIESTRORowChangeEventHandler" msprop:Generator_TablePropName="DT_POR_TIPO_SINIESTRO" msprop:Generator_TableVarName="tableDT_POR_TIPO_SINIESTRO" msprop:Generator_RowDeletingName="DT_POR_TIPO_SINIESTRORowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DATO" msprop:Generator_UserColumnName="DATO" msprop:Generator_ColumnPropNameInRow="DATO" msprop:Generator_ColumnVarNameInTable="columnDATO" msprop:Generator_ColumnPropNameInTable="DATOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_COINCIDENCIAS" msprop:Generator_UserColumnName="NO_COINCIDENCIAS" msprop:Generator_ColumnPropNameInRow="NO_COINCIDENCIAS" msprop:Generator_ColumnVarNameInTable="columnNO_COINCIDENCIAS" msprop:Generator_ColumnPropNameInTable="NO_COINCIDENCIASColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="VALOR_PORCENTUAL" msprop:Generator_UserColumnName="VALOR_PORCENTUAL" msprop:Generator_ColumnPropNameInRow="VALOR_PORCENTUAL" msprop:Generator_ColumnVarNameInTable="columnVALOR_PORCENTUAL" msprop:Generator_ColumnPropNameInTable="VALOR_PORCENTUALColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_POR_UNIDAD_RESPONSABLE" msprop:Generator_UserTableName="DT_POR_UNIDAD_RESPONSABLE" msprop:Generator_RowDeletedName="DT_POR_UNIDAD_RESPONSABLERowDeleted" msprop:Generator_TableClassName="DT_POR_UNIDAD_RESPONSABLEDataTable" msprop:Generator_RowChangedName="DT_POR_UNIDAD_RESPONSABLERowChanged" msprop:Generator_RowClassName="DT_POR_UNIDAD_RESPONSABLERow" msprop:Generator_RowChangingName="DT_POR_UNIDAD_RESPONSABLERowChanging" msprop:Generator_RowEvArgName="DT_POR_UNIDAD_RESPONSABLERowChangeEvent" msprop:Generator_RowEvHandlerName="DT_POR_UNIDAD_RESPONSABLERowChangeEventHandler" msprop:Generator_TablePropName="DT_POR_UNIDAD_RESPONSABLE" msprop:Generator_TableVarName="tableDT_POR_UNIDAD_RESPONSABLE" msprop:Generator_RowDeletingName="DT_POR_UNIDAD_RESPONSABLERowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DATO" msprop:Generator_UserColumnName="DATO" msprop:Generator_ColumnPropNameInRow="DATO" msprop:Generator_ColumnVarNameInTable="columnDATO" msprop:Generator_ColumnPropNameInTable="DATOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_COINCIDENCIAS" msprop:Generator_UserColumnName="NO_COINCIDENCIAS" msprop:Generator_ColumnPropNameInRow="NO_COINCIDENCIAS" msprop:Generator_ColumnVarNameInTable="columnNO_COINCIDENCIAS" msprop:Generator_ColumnPropNameInTable="NO_COINCIDENCIASColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="VALOR_PORCENTUAL" msprop:Generator_UserColumnName="VALOR_PORCENTUAL" msprop:Generator_ColumnPropNameInRow="VALOR_PORCENTUAL" msprop:Generator_ColumnVarNameInTable="columnVALOR_PORCENTUAL" msprop:Generator_ColumnPropNameInTable="VALOR_PORCENTUALColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_POR_RESPONSABILIDAD" msprop:Generator_UserTableName="DT_POR_RESPONSABILIDAD" msprop:Generator_RowDeletedName="DT_POR_RESPONSABILIDADRowDeleted" msprop:Generator_TableClassName="DT_POR_RESPONSABILIDADDataTable" msprop:Generator_RowChangedName="DT_POR_RESPONSABILIDADRowChanged" msprop:Generator_RowClassName="DT_POR_RESPONSABILIDADRow" msprop:Generator_RowChangingName="DT_POR_RESPONSABILIDADRowChanging" msprop:Generator_RowEvArgName="DT_POR_RESPONSABILIDADRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_POR_RESPONSABILIDADRowChangeEventHandler" msprop:Generator_TablePropName="DT_POR_RESPONSABILIDAD" msprop:Generator_TableVarName="tableDT_POR_RESPONSABILIDAD" msprop:Generator_RowDeletingName="DT_POR_RESPONSABILIDADRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DATO" msprop:Generator_UserColumnName="DATO" msprop:Generator_ColumnPropNameInRow="DATO" msprop:Generator_ColumnVarNameInTable="columnDATO" msprop:Generator_ColumnPropNameInTable="DATOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_COINCIDENCIAS" msprop:Generator_UserColumnName="NO_COINCIDENCIAS" msprop:Generator_ColumnPropNameInRow="NO_COINCIDENCIAS" msprop:Generator_ColumnVarNameInTable="columnNO_COINCIDENCIAS" msprop:Generator_ColumnPropNameInTable="NO_COINCIDENCIASColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="VALOR_PORCENTUAL" msprop:Generator_UserColumnName="VALOR_PORCENTUAL" msprop:Generator_ColumnPropNameInRow="VALOR_PORCENTUAL" msprop:Generator_ColumnVarNameInTable="columnVALOR_PORCENTUAL" msprop:Generator_ColumnPropNameInTable="VALOR_PORCENTUALColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

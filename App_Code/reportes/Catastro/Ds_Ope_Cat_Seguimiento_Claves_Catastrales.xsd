@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Ope_Cat_Seguimiento_Claves_Catastrales" targetNamespace="http://tempuri.org/Ds_Ope_Cat_Seguimiento_Claves_Catastrales.xsd" xmlns:mstns="http://tempuri.org/Ds_Ope_Cat_Seguimiento_Claves_Catastrales.xsd" xmlns="http://tempuri.org/Ds_Ope_Cat_Seguimiento_Claves_Catastrales.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Ope_Cat_Seguimiento_Claves_Catastrales" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Ope_Cat_Seguimiento_Claves_Catastrales" msprop:Generator_DataSetName="Ds_Ope_Cat_Seguimiento_Claves_Catastrales">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_SEGUIMIENTO_SOLICITUD_CLAVES_CATASTRALES" msprop:Generator_UserTableName="DT_SEGUIMIENTO_SOLICITUD_CLAVES_CATASTRALES" msprop:Generator_RowDeletedName="DT_SEGUIMIENTO_SOLICITUD_CLAVES_CATASTRALESRowDeleted" msprop:Generator_RowChangedName="DT_SEGUIMIENTO_SOLICITUD_CLAVES_CATASTRALESRowChanged" msprop:Generator_RowClassName="DT_SEGUIMIENTO_SOLICITUD_CLAVES_CATASTRALESRow" msprop:Generator_RowChangingName="DT_SEGUIMIENTO_SOLICITUD_CLAVES_CATASTRALESRowChanging" msprop:Generator_RowEvArgName="DT_SEGUIMIENTO_SOLICITUD_CLAVES_CATASTRALESRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_SEGUIMIENTO_SOLICITUD_CLAVES_CATASTRALESRowChangeEventHandler" msprop:Generator_TableClassName="DT_SEGUIMIENTO_SOLICITUD_CLAVES_CATASTRALESDataTable" msprop:Generator_TableVarName="tableDT_SEGUIMIENTO_SOLICITUD_CLAVES_CATASTRALES" msprop:Generator_RowDeletingName="DT_SEGUIMIENTO_SOLICITUD_CLAVES_CATASTRALESRowDeleting" msprop:Generator_TablePropName="DT_SEGUIMIENTO_SOLICITUD_CLAVES_CATASTRALES">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IMPORTE" msprop:Generator_UserColumnName="IMPORTE" msprop:Generator_ColumnPropNameInRow="IMPORTE" msprop:Generator_ColumnVarNameInTable="columnIMPORTE" msprop:Generator_ColumnPropNameInTable="IMPORTEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FOLIO" msprop:Generator_UserColumnName="FOLIO" msprop:Generator_ColumnPropNameInRow="FOLIO" msprop:Generator_ColumnVarNameInTable="columnFOLIO" msprop:Generator_ColumnPropNameInTable="FOLIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IMPORTE_LETRA" msprop:Generator_UserColumnName="IMPORTE_LETRA" msprop:Generator_ColumnPropNameInRow="IMPORTE_LETRA" msprop:Generator_ColumnVarNameInTable="columnIMPORTE_LETRA" msprop:Generator_ColumnPropNameInTable="IMPORTE_LETRAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="UBICACION" msprop:Generator_UserColumnName="UBICACION" msprop:Generator_ColumnPropNameInRow="UBICACION" msprop:Generator_ColumnVarNameInTable="columnUBICACION" msprop:Generator_ColumnPropNameInTable="UBICACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CUENTA_PREDIAL" msprop:Generator_UserColumnName="CUENTA_PREDIAL" msprop:Generator_ColumnVarNameInTable="columnCUENTA_PREDIAL" msprop:Generator_ColumnPropNameInRow="CUENTA_PREDIAL" msprop:Generator_ColumnPropNameInTable="CUENTA_PREDIALColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MEMORIAS_DESCRIPTIVAS" msprop:Generator_UserColumnName="MEMORIAS_DESCRIPTIVAS" msprop:Generator_ColumnVarNameInTable="columnMEMORIAS_DESCRIPTIVAS" msprop:Generator_ColumnPropNameInRow="MEMORIAS_DESCRIPTIVAS" msprop:Generator_ColumnPropNameInTable="MEMORIAS_DESCRIPTIVASColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FRACCIONAMIENTO" msprop:Generator_UserColumnName="FRACCIONAMIENTO" msprop:Generator_ColumnVarNameInTable="columnFRACCIONAMIENTO" msprop:Generator_ColumnPropNameInRow="FRACCIONAMIENTO" msprop:Generator_ColumnPropNameInTable="FRACCIONAMIENTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ORIENTACION" msprop:Generator_UserColumnName="ORIENTACION" msprop:Generator_ColumnVarNameInTable="columnORIENTACION" msprop:Generator_ColumnPropNameInRow="ORIENTACION" msprop:Generator_ColumnPropNameInTable="ORIENTACIONColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

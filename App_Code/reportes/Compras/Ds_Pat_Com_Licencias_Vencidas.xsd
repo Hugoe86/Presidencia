@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Pat_Com_Licencias_Vencidas" targetNamespace="http://tempuri.org/Ds_Pat_Com_Reporte_Licencias_Vencidas.xsd" xmlns:mstns="http://tempuri.org/Ds_Pat_Com_Reporte_Licencias_Vencidas.xsd" xmlns="http://tempuri.org/Ds_Pat_Com_Reporte_Licencias_Vencidas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Pat_Com_Licencias_Vencidas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Pat_Com_Licencias_Vencidas" msprop:Generator_DataSetName="Ds_Pat_Com_Licencias_Vencidas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_EMPLEADOS" msprop:Generator_UserTableName="DT_EMPLEADOS" msprop:Generator_RowDeletedName="DT_EMPLEADOSRowDeleted" msprop:Generator_RowChangedName="DT_EMPLEADOSRowChanged" msprop:Generator_RowClassName="DT_EMPLEADOSRow" msprop:Generator_RowChangingName="DT_EMPLEADOSRowChanging" msprop:Generator_RowEvArgName="DT_EMPLEADOSRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_EMPLEADOSRowChangeEventHandler" msprop:Generator_TableClassName="DT_EMPLEADOSDataTable" msprop:Generator_TableVarName="tableDT_EMPLEADOS" msprop:Generator_RowDeletingName="DT_EMPLEADOSRowDeleting" msprop:Generator_TablePropName="DT_EMPLEADOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NO_EMPLEADO" msprop:Generator_UserColumnName="NO_EMPLEADO" msprop:Generator_ColumnPropNameInRow="NO_EMPLEADO" msprop:Generator_ColumnVarNameInTable="columnNO_EMPLEADO" msprop:Generator_ColumnPropNameInTable="NO_EMPLEADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE_COMPLETO" msprop:Generator_UserColumnName="NOMBRE_COMPLETO" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_COMPLETO" msprop:Generator_ColumnPropNameInRow="NOMBRE_COMPLETO" msprop:Generator_ColumnPropNameInTable="NOMBRE_COMPLETOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RFC" msprop:Generator_UserColumnName="RFC" msprop:Generator_ColumnVarNameInTable="columnRFC" msprop:Generator_ColumnPropNameInRow="RFC" msprop:Generator_ColumnPropNameInTable="RFCColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_LICENCIA_MANEJO" msprop:Generator_UserColumnName="NO_LICENCIA_MANEJO" msprop:Generator_ColumnVarNameInTable="columnNO_LICENCIA_MANEJO" msprop:Generator_ColumnPropNameInRow="NO_LICENCIA_MANEJO" msprop:Generator_ColumnPropNameInTable="NO_LICENCIA_MANEJOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA_VENCIMIENTO_LICENCIA" msprop:Generator_UserColumnName="FECHA_VENCIMIENTO_LICENCIA" msprop:Generator_ColumnVarNameInTable="columnFECHA_VENCIMIENTO_LICENCIA" msprop:Generator_ColumnPropNameInRow="FECHA_VENCIMIENTO_LICENCIA" msprop:Generator_ColumnPropNameInTable="FECHA_VENCIMIENTO_LICENCIAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TIPO_LICENCIA" msprop:Generator_UserColumnName="TIPO_LICENCIA" msprop:Generator_ColumnPropNameInRow="TIPO_LICENCIA" msprop:Generator_ColumnVarNameInTable="columnTIPO_LICENCIA" msprop:Generator_ColumnPropNameInTable="TIPO_LICENCIAColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

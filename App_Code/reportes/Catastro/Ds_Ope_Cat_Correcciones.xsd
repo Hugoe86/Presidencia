@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Ope_Cat_Correcciones" targetNamespace="http://tempuri.org/Ds_Ope_Cat_Correcciones.xsd" xmlns:mstns="http://tempuri.org/Ds_Ope_Cat_Correcciones.xsd" xmlns="http://tempuri.org/Ds_Ope_Cat_Correcciones.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Ope_Cat_Correcciones" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Ope_Cat_Correcciones" msprop:Generator_DataSetName="Ds_Ope_Cat_Correcciones">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_1_ENTREGA" msprop:Generator_UserTableName="DT_1_ENTREGA" msprop:Generator_RowDeletedName="DT_1_ENTREGARowDeleted" msprop:Generator_RowChangedName="DT_1_ENTREGARowChanged" msprop:Generator_RowClassName="DT_1_ENTREGARow" msprop:Generator_RowChangingName="DT_1_ENTREGARowChanging" msprop:Generator_RowEvArgName="DT_1_ENTREGARowChangeEvent" msprop:Generator_RowEvHandlerName="DT_1_ENTREGARowChangeEventHandler" msprop:Generator_TableClassName="DT_1_ENTREGADataTable" msprop:Generator_TableVarName="tableDT_1_ENTREGA" msprop:Generator_RowDeletingName="DT_1_ENTREGARowDeleting" msprop:Generator_TablePropName="DT_1_ENTREGA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="VECES_RECHAZO" msprop:Generator_UserColumnName="VECES_RECHAZO" msprop:Generator_ColumnVarNameInTable="columnVECES_RECHAZO" msprop:Generator_ColumnPropNameInRow="VECES_RECHAZO" msprop:Generator_ColumnPropNameInTable="VECES_RECHAZOColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_NOMBRE" msprop:Generator_UserTableName="DT_NOMBRE" msprop:Generator_RowDeletedName="DT_NOMBRERowDeleted" msprop:Generator_RowChangedName="DT_NOMBRERowChanged" msprop:Generator_RowClassName="DT_NOMBRERow" msprop:Generator_RowChangingName="DT_NOMBRERowChanging" msprop:Generator_RowEvArgName="DT_NOMBRERowChangeEvent" msprop:Generator_RowEvHandlerName="DT_NOMBRERowChangeEventHandler" msprop:Generator_TableClassName="DT_NOMBREDataTable" msprop:Generator_TableVarName="tableDT_NOMBRE" msprop:Generator_RowDeletingName="DT_NOMBRERowDeleting" msprop:Generator_TablePropName="DT_NOMBRE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_2_ENTREGA" msprop:Generator_UserTableName="DT_2_ENTREGA" msprop:Generator_RowDeletedName="DT_2_ENTREGARowDeleted" msprop:Generator_RowChangedName="DT_2_ENTREGARowChanged" msprop:Generator_RowClassName="DT_2_ENTREGARow" msprop:Generator_RowChangingName="DT_2_ENTREGARowChanging" msprop:Generator_RowEvArgName="DT_2_ENTREGARowChangeEvent" msprop:Generator_RowEvHandlerName="DT_2_ENTREGARowChangeEventHandler" msprop:Generator_TableClassName="DT_2_ENTREGADataTable" msprop:Generator_TableVarName="tableDT_2_ENTREGA" msprop:Generator_RowDeletingName="DT_2_ENTREGARowDeleting" msprop:Generator_TablePropName="DT_2_ENTREGA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="VECES_RECHAZO" msprop:Generator_UserColumnName="VECES_RECHAZO" msprop:Generator_ColumnVarNameInTable="columnVECES_RECHAZO" msprop:Generator_ColumnPropNameInRow="VECES_RECHAZO" msprop:Generator_ColumnPropNameInTable="VECES_RECHAZOColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_3_ENTREGA" msprop:Generator_UserTableName="DT_3_ENTREGA" msprop:Generator_RowDeletedName="DT_3_ENTREGARowDeleted" msprop:Generator_RowChangedName="DT_3_ENTREGARowChanged" msprop:Generator_RowClassName="DT_3_ENTREGARow" msprop:Generator_RowChangingName="DT_3_ENTREGARowChanging" msprop:Generator_RowEvArgName="DT_3_ENTREGARowChangeEvent" msprop:Generator_RowEvHandlerName="DT_3_ENTREGARowChangeEventHandler" msprop:Generator_TableClassName="DT_3_ENTREGADataTable" msprop:Generator_TableVarName="tableDT_3_ENTREGA" msprop:Generator_RowDeletingName="DT_3_ENTREGARowDeleting" msprop:Generator_TablePropName="DT_3_ENTREGA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="VECES_RECHAZO" msprop:Generator_UserColumnName="VECES_RECHAZO" msprop:Generator_ColumnVarNameInTable="columnVECES_RECHAZO" msprop:Generator_ColumnPropNameInRow="VECES_RECHAZO" msprop:Generator_ColumnPropNameInTable="VECES_RECHAZOColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_4_ENTREGA" msprop:Generator_UserTableName="DT_4_ENTREGA" msprop:Generator_RowDeletedName="DT_4_ENTREGARowDeleted" msprop:Generator_RowChangedName="DT_4_ENTREGARowChanged" msprop:Generator_RowClassName="DT_4_ENTREGARow" msprop:Generator_RowChangingName="DT_4_ENTREGARowChanging" msprop:Generator_RowEvArgName="DT_4_ENTREGARowChangeEvent" msprop:Generator_RowEvHandlerName="DT_4_ENTREGARowChangeEventHandler" msprop:Generator_TableClassName="DT_4_ENTREGADataTable" msprop:Generator_TableVarName="tableDT_4_ENTREGA" msprop:Generator_RowDeletingName="DT_4_ENTREGARowDeleting" msprop:Generator_TablePropName="DT_4_ENTREGA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="VECES_RECHAZO" msprop:Generator_UserColumnName="VECES_RECHAZO" msprop:Generator_ColumnVarNameInTable="columnVECES_RECHAZO" msprop:Generator_ColumnPropNameInRow="VECES_RECHAZO" msprop:Generator_ColumnPropNameInTable="VECES_RECHAZOColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_5_ENTREGA" msprop:Generator_UserTableName="DT_5_ENTREGA" msprop:Generator_RowDeletedName="DT_5_ENTREGARowDeleted" msprop:Generator_RowChangedName="DT_5_ENTREGARowChanged" msprop:Generator_RowClassName="DT_5_ENTREGARow" msprop:Generator_RowChangingName="DT_5_ENTREGARowChanging" msprop:Generator_RowEvArgName="DT_5_ENTREGARowChangeEvent" msprop:Generator_RowEvHandlerName="DT_5_ENTREGARowChangeEventHandler" msprop:Generator_TableClassName="DT_5_ENTREGADataTable" msprop:Generator_TableVarName="tableDT_5_ENTREGA" msprop:Generator_RowDeletingName="DT_5_ENTREGARowDeleting" msprop:Generator_TablePropName="DT_5_ENTREGA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="VECES_RECHAZO" msprop:Generator_UserColumnName="VECES_RECHAZO" msprop:Generator_ColumnVarNameInTable="columnVECES_RECHAZO" msprop:Generator_ColumnPropNameInRow="VECES_RECHAZO" msprop:Generator_ColumnPropNameInTable="VECES_RECHAZOColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_6_ENTREGA" msprop:Generator_UserTableName="DT_6_ENTREGA" msprop:Generator_RowDeletedName="DT_6_ENTREGARowDeleted" msprop:Generator_RowChangedName="DT_6_ENTREGARowChanged" msprop:Generator_RowClassName="DT_6_ENTREGARow" msprop:Generator_RowChangingName="DT_6_ENTREGARowChanging" msprop:Generator_RowEvArgName="DT_6_ENTREGARowChangeEvent" msprop:Generator_RowEvHandlerName="DT_6_ENTREGARowChangeEventHandler" msprop:Generator_TableClassName="DT_6_ENTREGADataTable" msprop:Generator_TableVarName="tableDT_6_ENTREGA" msprop:Generator_RowDeletingName="DT_6_ENTREGARowDeleting" msprop:Generator_TablePropName="DT_6_ENTREGA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="VECES_RECHAZO" msprop:Generator_UserColumnName="VECES_RECHAZO" msprop:Generator_ColumnVarNameInTable="columnVECES_RECHAZO" msprop:Generator_ColumnPropNameInRow="VECES_RECHAZO" msprop:Generator_ColumnPropNameInTable="VECES_RECHAZOColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_7_ENTREGA" msprop:Generator_UserTableName="DT_7_ENTREGA" msprop:Generator_RowDeletedName="DT_7_ENTREGARowDeleted" msprop:Generator_RowChangedName="DT_7_ENTREGARowChanged" msprop:Generator_RowClassName="DT_7_ENTREGARow" msprop:Generator_RowChangingName="DT_7_ENTREGARowChanging" msprop:Generator_RowEvArgName="DT_7_ENTREGARowChangeEvent" msprop:Generator_RowEvHandlerName="DT_7_ENTREGARowChangeEventHandler" msprop:Generator_TableClassName="DT_7_ENTREGADataTable" msprop:Generator_TableVarName="tableDT_7_ENTREGA" msprop:Generator_RowDeletingName="DT_7_ENTREGARowDeleting" msprop:Generator_TablePropName="DT_7_ENTREGA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="VECES_RECHAZO" msprop:Generator_UserColumnName="VECES_RECHAZO" msprop:Generator_ColumnVarNameInTable="columnVECES_RECHAZO" msprop:Generator_ColumnPropNameInRow="VECES_RECHAZO" msprop:Generator_ColumnPropNameInTable="VECES_RECHAZOColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

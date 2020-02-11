@@ -1,0 +1,466 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/paginas/Paginas_Generales/MasterPage.master" AutoEventWireup="true" CodeFile="Frm_Ope_Pre_Ordenes_Variacion.aspx.cs" Inherits="paginas_predial_Frm_Ope_Pre_Ordenes_Variacion" Title="Operación - Calculo de Impuesto" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+        .style1
+        {
+            text-align: right;
+        }
+        </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="Cph_Area_Trabajo2" Runat="Server">
+ <script type="text/javascript" language="javascript">
+        function calendarShown(sender, args){
+            sender._popupBehavior._element.style.zIndex = 10000005;
+        }
+
+		function getCookie(c_name)
+		{
+			if (document.cookie.length>0)
+			{
+			c_start=document.cookie.indexOf(c_name + "=");
+			if (c_start!=-1)
+				{
+				c_start=c_start + c_name.length+1;
+				c_end=document.cookie.indexOf(";",c_start);
+				if (c_end==-1) c_end=document.cookie.length;
+				return unescape(document.cookie.substring(c_start,c_end));
+				}
+			}
+			return "";
+		}
+
+		function setCookie(c_name,value,expiredays)
+		{
+			var exdate=new Date();
+			exdate.setDate(exdate.getDate()+expiredays);
+			document.cookie=c_name+ "=" +escape(value)+
+			((expiredays==null) ? "" : ";expires="+exdate.toUTCString());
+		}
+		//Abrir una ventana modal
+		function Abrir_Ventana_Modal(Url, Propiedades)
+		{
+			window.showModalDialog(Url, null, Propiedades);
+		}
+		function Mostrar_Tasas_Traslado_Dominio()
+		{
+			Abrir_Ventana_Modal('Ventanas_Emergentes/Frm_Menu_Tasas_Traslado_Dominio.aspx', 'center:yes;resizable:no;status:no;dialogWidth:580px;dialogHeight:400px;dialogHide:true;help:no;scroll:no');
+		}
+ </script>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="Cph_Area_Trabajo1" Runat="Server">
+    <asp:ScriptManager ID="ScptM_Calculo_Impuesto" runat="server" EnableScriptGlobalization = "true" EnableScriptLocalization = "True"/>
+    <asp:UpdatePanel ID="Upd_Panel" runat="server">
+        <ContentTemplate>
+<%--            <asp:UpdateProgress ID="Uprg_Reporte" runat="server" AssociatedUpdatePanelID="Upd_Panel" DisplayAfter="0">
+                    <ProgressTemplate>
+                        <div id="progressBackgroundFilter" class="progressBackgroundFilter"></div>
+                        <div  class="processMessage" id="div_progress"> <img alt="" src="../imagenes/paginas/Updating.gif" /></div>
+                    </ProgressTemplate>                     
+            </asp:UpdateProgress>
+--%>            <div id="Div_Requisitos" style="background-color:#ffffff; width:100%; height:100%;">
+                <table width="98%"  border="0" cellspacing="0" class="estilo_fuente">
+                    <tr align="center">
+                        <td class="label_titulo">Orden de Variación</td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div id="Div_Contenedor_Msj_Error" style="width:98%;" runat="server" visible="false">
+                            <table style="width:100%;">
+                              <tr>
+                                <td colspan="2" align="left">
+                                  <asp:ImageButton ID="IBtn_Imagen_Error" runat="server" ImageUrl="../imagenes/paginas/sias_warning.png" 
+                                    Width="24px" Height="24px"/>
+                                    <asp:Label ID="Lbl_Ecabezado_Mensaje" runat="server" Text="" CssClass="estilo_fuente_mensaje_error" />
+                                </td>            
+                              </tr>
+                              <tr>
+                                <td style="width:10%;">              
+                                </td>          
+                                <td style="width:90%;text-align:left;" valign="top" >
+                                  <asp:Label ID="Lbl_Mensaje_Error" runat="server" Text=""  CssClass="estilo_fuente_mensaje_error" />
+                                </td>
+                              </tr>          
+                            </table>                   
+                          </div>                          
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>                        
+                    </tr>
+                    <tr class="barra_busqueda" align="right">
+                        <td>
+                            <asp:ImageButton ID="Btn_Orden_Variacion_Modificar" runat="server" 
+                                AlternateText="Modificar" CssClass="Img_Button" 
+                                ImageUrl="~/paginas/imagenes/paginas/icono_modificar.png" 
+                                onclick="Btn_Orden_Variacion_Modificar_Click" Width="24px" />
+                            <asp:ImageButton ID="Btn_Orden_Variacion_Cancelar" runat="server" 
+                                AlternateText="Salir" CssClass="Img_Button" 
+                                ImageUrl="~/paginas/imagenes/paginas/icono_salir.png" 
+                                onclick="Btn_Orden_Variacion_Cancelar_Click" Width="24px" />
+                        </td>                        
+                    </tr>
+                </table>   
+                <br />
+                <cc1:TabContainer ID="Tab_Contenedor_Pestañas" runat="server" Width="98%" 
+                    ActiveTabIndex="1" Font-Bold="True">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <cc1:TabPanel  runat="server" HeaderText="Tab_Panel_Contrarecibos_Listados"  ID="Tab_Panel_Contrarecibos_Listados"  Width="100%"><HeaderTemplate>Contrarecibos y Listados</HeaderTemplate><ContentTemplate><cc1:TabContainer 
+                        ID="Tab_Contenedor_Pestañas_Contrarecibos" runat="server" Width="98%" 
+                                ActiveTabIndex="0"><cc1:TabPanel  runat="server" HeaderText="Tab_Panel_Contrarecibos"  ID="Tab_Panel_Contrarecibos"  Width="100%"  ><HeaderTemplate>Contrarecibo</HeaderTemplate><ContentTemplate><div style="width:98%; height:150px;" ><table width="100%"><tr><td style="text-align:left;" colspan="2"><asp:Label ID="Lbl_Titulo_Busqueda" runat="server" Text="Búsqueda"></asp:Label></td></tr><tr><td style="width:20%; text-align:left; "><asp:Label ID="Lbl_Cuenta_Predial" runat="server" Text="Cuenta Predial" CssClass="estilo_fuente"></asp:Label></td><td style="width:80%; text-align:left;"><asp:TextBox ID="Txt_Cuenta_Predial" runat="server" Width="200px"></asp:TextBox><cc1:FilteredTextBoxExtender ID="FTE_Txt_Cuenta_Predial" runat="server" 
+                                                            FilterType="Numbers, UppercaseLetters" 
+                                                            TargetControlID="Txt_Cuenta_Predial" Enabled="True"></cc1:FilteredTextBoxExtender></td></tr><tr><td style="width:20%; text-align:left; "><asp:Label ID="Lbl_No_Contrarecibo" runat="server" Text="No. Contrarecibo" CssClass="estilo_fuente"></asp:Label></td><td style="width:80%; text-align:left;"><asp:TextBox ID="Txt_No_Contrarecibo" runat="server" Width="200px"></asp:TextBox><cc1:FilteredTextBoxExtender ID="FTE_Txt_No_Contrarecibo" runat="server" 
+                                                            FilterType="Numbers" TargetControlID="Txt_No_Contrarecibo" Enabled="True"></cc1:FilteredTextBoxExtender></td></tr><tr><td style="width:20%; text-align:left; "><asp:Label ID="Lbl_Fecha_Escritura" runat="server" Text="Fecha Escritura" CssClass="estilo_fuente"></asp:Label></td><td style="width:80%; text-align:left;"><asp:TextBox ID="Txt_Fecha_Escritura" runat="server" Width="200px" Enabled="False"></asp:TextBox><asp:ImageButton ID="Btn_Fecha_Escritura" runat="server" ImageUrl="~/paginas/imagenes/paginas/SmallCalendar.gif" AlternateText="Seleccione la Fecha de Escritura" /><cc1:CalendarExtender ID="CE_Fecha_Fecha_Escritura" runat="server" 
+                                                            TargetControlID="Txt_Fecha_Escritura" PopupButtonID="Btn_Fecha_Escritura" 
+                                                            Format="dd/MMM/yyyy" Enabled="True"></cc1:CalendarExtender></td></tr><tr><td style="width:20%; text-align:left; "><asp:Label ID="Lbl_Fecha_Liberacion" runat="server" Text="Fecha Liberación" CssClass="estilo_fuente"></asp:Label></td><td style="width:80%; text-align:left;"><asp:TextBox ID="Txt_Fecha_Liberacion" runat="server" Width="200px" Enabled="False"></asp:TextBox><asp:ImageButton ID="Btn_Fecha_Liberacion" runat="server" ImageUrl="~/paginas/imagenes/paginas/SmallCalendar.gif" AlternateText="Seleccione la Fecha de Liberación" /><cc1:CalendarExtender ID="CE_Fecha_Liberacion" runat="server"  
+                                                            TargetControlID="Txt_Fecha_Liberacion" PopupButtonID="Btn_Fecha_Liberacion" 
+                                                            Format="dd/MMM/yyyy" Enabled="True"></cc1:CalendarExtender>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <asp:ImageButton ID="Btn_Buscar_Contrarecibos" runat="server" 
+                                                            CausesValidation="False" ImageUrl="~/paginas/imagenes/paginas/busqueda.png" 
+                                                            ToolTip="Buscar Contrarecibos" onclick="Btn_Buscar_Contrarecibos_Click"/><asp:ImageButton ID="Btn_Limpiar_Filtros_Buscar_Contrarecibos" runat="server"  
+                                                            CausesValidation="False"  
+                                                            ImageUrl="~/paginas/imagenes/paginas/icono_limpiar.png" Width="20px"  
+                                                            ToolTip="Limpiar Filtros" 
+                                                            onclick="Btn_Limpiar_Filtros_Buscar_Contrarecibos_Click" /></td></tr></table></div></ContentTemplate></cc1:TabPanel><cc1:TabPanel  runat="server" HeaderText="Tab_Panel_Listados"  ID="Tab_Panel_Listados"  Width="100%"  ><HeaderTemplate>Listado</HeaderTemplate><ContentTemplate><div style="width:98%; height:150px;" ><table width="100%"><tr><td style="text-align:left;" colspan="2"><asp:Label ID="Lbl_Busqueda_Listado" runat="server" Text="Búsqueda"></asp:Label></td></tr><tr><td style="width:20%; text-align:left; "><asp:Label ID="Lbl_No_Listado" runat="server" Text="No. Listado" CssClass="estilo_fuente"></asp:Label></td><td style="width:80%; text-align:left;"><asp:TextBox ID="Txt_No_Listado" runat="server" Width="200px"></asp:TextBox><cc1:FilteredTextBoxExtender ID="FTE_Txt_No_Listado" runat="server" FilterType="Numbers" 
+                                                            TargetControlID="Txt_No_Listado" Enabled="True"></cc1:FilteredTextBoxExtender></td></tr><tr><td style="width:20%; text-align:left; "><asp:Label ID="Lbl_Fecha_Generacion" runat="server" Text="Fecha Generacion" CssClass="estilo_fuente"></asp:Label></td><td style="width:80%; text-align:left;"><asp:TextBox ID="Txt_Fecha_Generacion" runat="server" Width="200px" Enabled="False"></asp:TextBox><asp:ImageButton ID="Btn_Fecha_Generacion" runat="server" ImageUrl="~/paginas/imagenes/paginas/SmallCalendar.gif" AlternateText="Seleccione la Fecha de Generacion del Listado" /><cc1:CalendarExtender ID="CalendarExtender1" runat="server" 
+                                                            TargetControlID="Txt_Fecha_Generacion" PopupButtonID="Btn_Fecha_Generacion" 
+                                                            Format="dd/MMM/yyyy" Enabled="True"></cc1:CalendarExtender></td></tr><tr><td style="width:20%; text-align:left; "><asp:Label ID="Lbl_Notario" runat="server" Text="Notario" CssClass="estilo_fuente"></asp:Label></td><td style="width:80%; text-align:left;"><asp:DropDownList ID="Cmb_Notarios" runat="server" Width="80%" ><asp:ListItem Text="&lt; SELECCIONE &gt;" Value="SELECCIONE"></asp:ListItem></asp:DropDownList>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <asp:ImageButton ID="Btn_Buscar_Listado" runat="server" 
+                                                            CausesValidation="False" ImageUrl="~/paginas/imagenes/paginas/busqueda.png" 
+                                                            ToolTip="Buscar Listados" OnClick="Btn_Buscar_Listado_Click"/><asp:ImageButton ID="Btn_Limpiar_Filtros_Buscar_Listado" runat="server"  
+                                                            CausesValidation="False"  
+                                                            ImageUrl="~/paginas/imagenes/paginas/icono_limpiar.png" Width="20px"  
+                                                            ToolTip="Limpiar Filtros" 
+                                                            OnClick="Btn_Limpiar_Filtros_Buscar_Listado_Click"  /></td></tr></table></div></ContentTemplate></cc1:TabPanel></cc1:TabContainer><div style="width:98%"><center><caption><br /><asp:GridView ID="Grid_Contrarecibos" runat="server" AllowPaging="True" 
+                                            AutoGenerateColumns="False" CssClass="GridView_1" GridLines="None" 
+                                            Width="98%" onrowdatabound="Grid_Contrarecibos_RowDataBound" 
+                                onselectedindexchanged="Grid_Contrarecibos_SelectedIndexChanged"><RowStyle CssClass="GridItem" /><AlternatingRowStyle CssClass="GridAltItem" /><Columns><asp:ButtonField ButtonType="Image" CommandName="Select" 
+                                                    ImageUrl="~/paginas/imagenes/gridview/blue_button.png"><ItemStyle Width="30px" /></asp:ButtonField><asp:BoundField DataField="NO_CONTRARECIBO" HeaderText="Contrarecibo" 
+                                                    SortExpression="NO_CONTRARECIBO" /><asp:BoundField DataField="CUENTA_PREDIAL" HeaderText="Cuenta Predial" NullDisplayText="SIN REGISTRO"
+                                                    SortExpression="CUENTA_PREDIAL" /><asp:BoundField DataField="NO_ESCRITURA" HeaderText="No. Escritura"
+                                                    SortExpression="NO_ESCRITURA" Visible="False" /><asp:BoundField DataField="FECHA_ESCRITURA" HeaderText="Fecha Escritura" DataFormatString="{0:dd/MMM/yyyy}"  
+                                                    SortExpression="FECHA_ESCRITURA" /><asp:BoundField DataField="FECHA_LIBERACION" HeaderText="Fecha Liberación" DataFormatString="{0:dd/MMM/yyyy}"   NullDisplayText="//"
+                                                    SortExpression="FECHA_LIBERACION" /><asp:BoundField DataField="FECHA_PAGO" HeaderText="Fecha Pago" DataFormatString="{0:dd/MMM/yyyy}" NullDisplayText="//"
+                                                    SortExpression="FECHA_PAGO" /><asp:BoundField DataField="ESTATUS" HeaderText="Estatus" 
+                                                    SortExpression="ESTATUS" Visible="False" /></Columns><HeaderStyle CssClass="GridHeader" /><PagerStyle CssClass="GridHeader" /><SelectedRowStyle CssClass="GridSelected" /></asp:GridView></caption></center></div></ContentTemplate></cc1:TabPanel>
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                    <cc1:TabPanel  runat="server" HeaderText="Tab_Panel_Orden_Variacion"  ID="Tab_Panel_Orden_Variacion"  Width="100%" ScrollBars="Vertical" Height="100"><HeaderTemplate>Orden de Variación</HeaderTemplate><ContentTemplate><div style="overflow: auto; height: 515px"><asp:HiddenField ID="Hidden_Orden_Variacion_Generales_Calle_ID" runat="server" /><asp:HiddenField ID="Hidden_Orden_Variacion_Generales_Colonia_ID" runat="server" /><asp:HiddenField ID="Hidden_Orden_Variacion_Propietario_ID" runat="server" /><asp:HiddenField ID="Hidden_Orden_Variacion_Copropietario_ID" runat="server" /><asp:HiddenField ID="Hidden_Orden_Variacion_Impuestos_Tasa_ID" runat="server" /><table width="100%"><tr><td 
+                        style="text-align:left; width: 20%;">Tipo Movimiento</td><td style="text-align:left; " colspan="4"><asp:DropDownList ID="Cmb_Orden_Variacion_Tipos_Movimientos" runat="server" 
+                                Width="268px"></asp:DropDownList></td><td style="text-align:left; width: auto;">&#160;</td><td 
+                        style="width:auto; text-align:left; ">&#160;</td></tr><tr style="background-color: #3366CC"><td 
+                            style="text-align:left; font-size: 15px; color: #FFFFFF;" colspan="7">Generales</td></tr><tr><td style="text-align:left; width: 20%;"><b>Cuenta Predial</b></td><td style="width:20%; text-align:left; "><asp:Label ID="Lbl_Orden_Variacion_Generales_Cuenta_Predial" runat="server" 
+                                    Font-Bold="True" Text="0000000000"></asp:Label></td><td></td><td style="width:20%; text-align:left; ">Cuenta Origen</td><td style="width:20%; text-align:left; "><asp:TextBox ID="Txt_Orden_Variacion_Generales_Cuenta_Origen" runat="server" 
+                                    Width="173px"></asp:TextBox></td><td style="width:auto; text-align:left; "></td><td style="width:auto; text-align:left; ">&#160;</td></tr><tr><td style="width:20%; text-align:left; ">Tipo Predio</td><td style="width:20%; text-align:left; "><asp:DropDownList ID="Cmb_Orden_Variacion_Generales_Tipos_Predio" 
+                                runat="server" Width="174px"></asp:DropDownList></td><td>&nbsp;</td><td style="width:20%; text-align:left; ">Uso de Predio</td><td style="width:20%; text-align:left; "><asp:DropDownList ID="Cmb_Orden_Variacion_Generales_Usos_Predio" runat="server" 
+                                Width="174px"></asp:DropDownList></td><td style="width:auto; text-align:left; " >&nbsp;</td><td 
+                            style="width:auto; text-align:left; "></td></tr><tr><td style="width:20%; text-align:left; ">Estato de Predio</td><td style="width:20%; text-align:left; "><asp:DropDownList 
+                            ID="Cmb_Orden_Variacion_Generales_Estados_Predio" runat="server" 
+                            Width="174px"></asp:DropDownList></td><td>&nbsp;</td><td style="width:20%; text-align:left; ">Estatus</td><td style="width:20%; text-align:left; "><asp:Label ID="Lbl_Orden_Variacion_Generales_Estatus" runat="server"></asp:Label></td><td style="width:auto; text-align:left; " >&#160;</td><td style="width:auto; text-align:left; ">&#160;</td></tr><tr><td style="width:20%; text-align:left; ">Superficie Construida (m<sup>2</sup>)</td><td style="width:20%; text-align:left; "><asp:TextBox ID="Txt_Orden_Variacion_Generales_Superficie_Construida_M2" 
+                                runat="server" Width="173px"></asp:TextBox></td><td></td><td style="width:20%; text-align:left; ">*Superficie Total (m<sup>2</sup>)</td><td style="width:20%; text-align:left; "><asp:TextBox ID="Txt_Orden_Variacion_Generales_Superficie_Total_M2" 
+                                runat="server" Width="173px"></asp:TextBox></td><td style="width:auto; text-align:left; ">&#160;</td><td 
+                            style="width:auto; text-align:left; ">&#160;</td></tr><tr><td style="width:20%; text-align:left; ">*Ubicación</td><td style="width:20%; text-align:left; ">&nbsp;<asp:Label 
+                                    ID="Lbl_Orden_Variacion_Generales_Ubicacion" runat="server"></asp:Label></td><td><asp:ImageButton ID="Btn_Orden_Variacion_Generales_Ubicaciones" runat="server" 
+                                    ImageUrl="~/paginas/imagenes/paginas/busqueda.png" 
+                                    OnClick="Btn_Orden_Variacion_Generales_Ubicaciones_Click" TabIndex="8" 
+                                    ToolTip="Ubicaciones" /></td><td style="width:20%; text-align:left; ">Colonia</td><td style="width:20%; text-align:left; "><asp:Label ID="Lbl_Orden_Variacion_Generales_Colonia" runat="server"></asp:Label></td><td style="width:auto; text-align:left; "></td><td 
+                            style="width:auto; text-align:left; ">&#160;</td></tr><tr><td style="width:20%; text-align:left; ">*Exterior</td><td style="width:20%; text-align:left; "><asp:TextBox ID="Txt_Orden_Variacion_Generales_Exterior" runat="server" 
+                                    Width="173px"></asp:TextBox></td><td>&nbsp;</td><td style="width:20%; text-align:left; ">Interior</td><td style="width:20%; text-align:left; "><asp:TextBox ID="Txt_Orden_Variacion_Generales_Interior" runat="server" 
+                                Width="173px"></asp:TextBox></td><td style="width:auto; text-align:left; "></td><td 
+                            style="width:auto; text-align:left; ">&#160;</td></tr><tr><td style="width:20%; text-align:left; ">Clave Catastral</td><td style="width:20%; text-align:left; "><asp:TextBox 
+                            ID="Txt_Orden_Variacion_Generales_Clave_Catastral" runat="server" Width="173px"></asp:TextBox></td><td>&#160;</td><td style="width:20%; text-align:left; ">Efectos</td><td style="width:20%; text-align:left; "><asp:DropDownList ID="Cmb_Orden_Variacion_Generales_Efectos_Año_Bimestre" 
+                                    runat="server" Width="70px"></asp:DropDownList><asp:DropDownList ID="Cmb_Orden_Variacion_Generales_Efectos_Bimestre" 
+                                    runat="server" Width="40px"><asp:ListItem>1</asp:ListItem><asp:ListItem>2</asp:ListItem><asp:ListItem>3</asp:ListItem><asp:ListItem>4</asp:ListItem><asp:ListItem>5</asp:ListItem><asp:ListItem>6</asp:ListItem></asp:DropDownList></td><td style="width:auto; text-align:left; " 
+                            >&nbsp;&nbsp;&nbsp;</td><td style="width:auto; text-align:left; ">&#160;</td></tr><tr><td style="width:20%; text-align:left; ">Último Movimiento</td><td style="width:20%; text-align:left; "><asp:Label ID="Lbl_Orden_Variacion_Generales_Ultimo_Movimiento" runat="server"></asp:Label></td><td></td><td style="width:20%; " class="style1">&nbsp;</td><td style="width:20%; text-align:left; "></td><td style="width:auto; text-align:left; " >&#160;</td><td 
+                        style="width:auto; text-align:left; ">&#160;</td></tr><tr><td style="width:20%; text-align:left; ">&#160;</td><td style="width:20%; text-align:left; "></td><td></td><td style="width:20%; " class="style1">&#160;</td><td style="width:20%; text-align:left; "></td><td style="width:auto; text-align:left; " >&#160;</td><td 
+                            style="width:auto; text-align:left; ">&nbsp;&nbsp;</td></tr><tr style="background-color: #3366CC"><td style="text-align:left; font-size: 15px; color: #FFFFFF;" colspan="7">Propietario</td></tr><tr><td style="text-align:left; width: 20%;">Nombre</td><td style="width:20%; text-align:left; "><asp:Label ID="Lbl_Orden_Variacion_Propietario_Nombre" runat="server"></asp:Label></td><td><asp:ImageButton ID="Btn_Orden_Variacion_Propietario_Nombres" runat="server" 
+                                    ImageUrl="~/paginas/imagenes/paginas/busqueda.png" 
+                                    OnClick="Btn_Orden_Variacion_Propietario_Nombres_Click" TabIndex="8" 
+                                    ToolTip="Propietarios" /></td><td style="width:20%; ">RFC</td><td style="width:20%; text-align:left; "><asp:Label ID="Lbl_Orden_Variacion_Propietario_RFC" runat="server"></asp:Label></td><td style="width:auto; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; "></td></tr><tr><td style="width:20%; text-align:left; ">Domicilio</td><td style="width:20%; text-align:left; "><asp:TextBox ID="Txt_Orden_Variacion_Propietario_Domicilio" runat="server" 
+                                Width="173px"></asp:TextBox></td><td><asp:CheckBox ID="Chk_Orden_Variacion_Propietario_Domicilio_Foraneo" 
+                                    runat="server" AutoPostBack="True" 
+                                    OnCheckedChanged="Chk_Orden_Variacion_Propietario_Domicilio_Foraneo_CheckedChanged" 
+                                    Text="¿Domicilio Foraneo?" /></td><td style="width:20%; ">Exterior</td><td style="width:20%; text-align:left; "><asp:TextBox ID="Txt_Orden_Variacion_Propietario_Exterior" runat="server" 
+                                Width="173px"></asp:TextBox></td><td style="width:auto; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td></tr><tr><td style="width:20%; text-align:left; ">Interior</td><td style="width:20%; text-align:left; "><asp:TextBox 
+                        ID="Txt_Orden_Variacion_Propietario_Interior" runat="server" 
+                        Width="173px"></asp:TextBox></td><td>&nbsp;</td><td style="width:20%; ">Colonia</td><td style="width:20%; text-align:left; "><asp:TextBox 
+                        ID="Txt_Orden_Variacion_Propietario_Colonia" runat="server" Width="173px"></asp:TextBox></td><td style="width:auto; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td></tr><tr><td style="width:20%; text-align:left; ">Ciudad</td><td style="width:20%; text-align:left; "><asp:TextBox 
+                        ID="Txt_Orden_Variacion_Propietario_Ciudad" runat="server" Width="173px"></asp:TextBox></td><td>&#160;</td><td style="width:20%; ">Estado</td><td style="width:20%; text-align:left; "><asp:TextBox 
+                        ID="Txt_Orden_Variacion_Propietario_Estado" runat="server" Width="173px"></asp:TextBox></td><td style="width:auto; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td></tr><tr><td style="width:20%; text-align:left; ">CP</td><td style="width:20%; text-align:left; "><asp:TextBox 
+                        ID="Txt_Orden_Variacion_Propietario_CP" runat="server" Width="173px"></asp:TextBox></td><td>&#160;</td><td style="width:20%; ">&#160;</td><td style="width:20%; text-align:left; ">&nbsp;</td><td style="width:auto; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td></tr><tr><td 
+                            style="text-align:left; width: 20%;">&nbsp;</td><td 
+                            style="width:20%; text-align:left; ">&nbsp;</td><td>&#160;</td><td 
+                            style="width:20%; ">&#160;</td><td style="width:20%; text-align:left; ">&#160;</td><td 
+                            style="width:auto; text-align:left; ">&#160;</td><td 
+                            style="width:auto; text-align:left; ">&#160;</td></tr><tr style="background-color: #3366CC"><td 
+                        style="text-align:left; font-size: 15px; color: #FFFFFF;" colspan="7">Impuestos</td></tr><tr><td style="text-align:left; width: 20%;">Valor Fiscal</td><td style="width:20%; text-align:left; "><asp:TextBox ID="Txt_Orden_Variacion_Impuestos_Valor_Fiscal" runat="server" 
+                                    AutoPostBack="True" 
+                                    OnTextChanged="Txt_Orden_Variacion_Impuestos_Valor_Fiscal_TextChanged" 
+                                    Width="173px"></asp:TextBox></td><td>&#160;</td><td style="width:20%; ">Tasa</td><td style="width:20%; text-align:left; "><asp:Label ID="Lbl_Orden_Variacion_Impuestos_Tasa" runat="server"></asp:Label></td><td style="width:auto; text-align:left; "><asp:ImageButton ID="Btn_Orden_Variacion_Impuestos_Tasa" runat="server" 
+                                    ImageUrl="~/paginas/imagenes/paginas/busqueda.png" 
+                                    OnClick="Btn_Orden_Variacion_Impuestos_Tasa_Click" TabIndex="8" 
+                                    ToolTip="Tasas" /></td><td style="width:auto; text-align:left; ">&#160;</td></tr><tr><td style="width:20%; text-align:left; ">Periodo Corriente</td><td style="width:20%; text-align:left; "><asp:Label ID="Lbl_Orden_Variacion_Impuestos_Periodo_Corriente" runat="server"></asp:Label></td><td>&#160;</td><td style="width:20%; ">Tipo Predio</td><td style="width:20%; text-align:left; "><asp:DropDownList ID="Cmb_Orden_Variacion_Impuestos_Tipos_Predio" 
+                                runat="server" Width="174px"></asp:DropDownList></td><td style="width:auto; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td></tr><tr><td style="width:20%; text-align:left; ">Cuota Anual</td><td style="width:20%; text-align:left; "><asp:TextBox ID="Txt_Orden_Variacion_Impuestos_Cuota_Anual" runat="server" 
+                                OnTextChanged="Txt_Orden_Variacion_Impuestos_Cuota_Anual_TextChanged" 
+                                Width="173px"></asp:TextBox></td><td><asp:ImageButton ID="Btn_Orden_Variacion_Impuestos_Calcular_Cuota_Anual_Bimestral" 
+                                runat="server" ImageUrl="~/paginas/imagenes/paginas/SIAS_Calc3.gif" 
+                                OnClick="Btn_Orden_Variacion_Impuestos_Calcular_Cuota_Anual_Bimestral_Click" 
+                                TabIndex="8" ToolTip="Calcular Cuotas" /></td><td style="width:20%; ">Cuota Bimestral</td><td style="width:20%; text-align:left; "><asp:TextBox ID="Txt_Orden_Variacion_Impuestos_Cuota_Bimestral" runat="server" 
+                            OnTextChanged="Txt_Orden_Variacion_Impuestos_Cuota_Bimestral_TextChanged" 
+                            Width="173px"></asp:TextBox></td><td style="width:auto; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td></tr><tr><td style="width:20%; text-align:left; ">% Exención</td><td style="width:20%; text-align:left; "><asp:TextBox 
+                        ID="Txt_Orden_Variacion_Impuestos_Porcentaje_Exencion" runat="server" 
+                        Width="173px"></asp:TextBox></td><td>&nbsp;</td><td style="width:20%; ">Término Exención</td><td style="width:20%; text-align:left; "><asp:TextBox 
+                        ID="Txt_Orden_Variacion_Impuestos_Termino_Exencion" runat="server" 
+                        Width="153px" Enabled="False"></asp:TextBox><asp:ImageButton ID="Btn_Orden_Variacion_Impuestos_Termino_Exencion" 
+                                runat="server" AlternateText="Seleccione la Fecha de Escritura" 
+                                ImageUrl="~/paginas/imagenes/paginas/SmallCalendar.gif" /><cc1:CalendarExtender ID="CE_Orden_Variacion_Impuestos_Termino_Exencion" 
+                                runat="server" Enabled="True" Format="dd/MMM/yyyy" 
+                                PopupButtonID="Btn_Orden_Variacion_Impuestos_Termino_Exencion" 
+                                TargetControlID="Txt_Orden_Variacion_Impuestos_Termino_Exencion"></cc1:CalendarExtender></td><td style="width:auto; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td></tr><tr><td style="width:20%; text-align:left; ">Cuota Fija</td><td style="width:20%; text-align:left; "><asp:CheckBox ID="Chk_Orden_Variacion_Impuestos_Cuota_Fija" runat="server" 
+                                AutoPostBack="True" 
+                                OnCheckedChanged="Chk_Orden_Variacion_Impuestos_Cuota_Fija_CheckedChanged" /></td><td>&nbsp;</td><td style="width:20%; ">Fecha Avalúo</td><td style="width:20%; text-align:left; "><asp:TextBox 
+                        ID="Txt_Orden_Variacion_Impuestos_Fecha_Avaluo" runat="server" 
+                        Enabled="False" Width="153px"></asp:TextBox><cc1:CalendarExtender ID="CE_Orden_Variacion_Impuestos_Fecha_Avaluo" 
+                        runat="server" Enabled="True" Format="dd/MMM/yyyy" 
+                        PopupButtonID="Btn_Orden_Variacion_Impuestos_Fecha_Avaluo" 
+                        TargetControlID="Txt_Orden_Variacion_Impuestos_Fecha_Avaluo"></cc1:CalendarExtender><asp:ImageButton 
+                        ID="Btn_Orden_Variacion_Impuestos_Fecha_Avaluo" runat="server" 
+                        AlternateText="Seleccione la Fecha de Escritura" 
+                        ImageUrl="~/paginas/imagenes/paginas/SmallCalendar.gif" /></td><td style="width:auto; text-align:left; " >&nbsp;</td><td style="width:auto; text-align:left; ">&#160;</td></tr><tr><td style="width:20%; text-align:left; ">&#160;</td><td style="width:20%; text-align:left; ">&nbsp;</td><td>&#160;</td><td style="width:20%; ">&#160;</td><td style="width:20%; text-align:left; ">&nbsp;</td><td style="width:auto; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td></tr><tr><td style="text-align:left; " colspan="7"><asp:Panel ID="Panel_Orden_Variacion_Impuestos_Casos_Especiales" runat="server"><table><tr><td style="text-align:left; ">Caso Especial</td><td style="text-align:left; ">&#160;<asp:Label ID="Lbl_Orden_Variacion_Impuestos_Caso_Especial" runat="server"></asp:Label></td><td style="text-align:left; "><asp:ImageButton ID="Btn_Orden_Variacion_Impuestos_Casos_Especiales" 
+                                                runat="server" ImageUrl="~/paginas/imagenes/paginas/busqueda.png" 
+                                                OnClick="Btn_Orden_Variacion_Impuestos_Casos_Especiales_Click" TabIndex="8" 
+                                                ToolTip="Casos Especiales" /></td><td style="text-align:left; ">&#160;</td><td style="text-align:left; ">&#160;</td><td style="text-align:left; ">&#160;</td><td style="text-align:left; ">&#160;</td></tr><tr><td style="text-align:left; width: 20%;">Artículo</td><td style="width:20%; text-align:left; "><asp:Label ID="Lbl_Orden_Variacion_Impuestos_Articulo" runat="server"></asp:Label></td><td>&#160;</td><td style="width:20%; ">Inciso</td><td style="width:20%; text-align:left; "><asp:Label ID="Lbl_Orden_Variacion_Impuestos_Inciso" runat="server"></asp:Label></td><td style="width:auto; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td></tr><tr><td style="text-align:left; width: 20%;">Detalles Caso Especial</td><td colspan="4" style="text-align:left; "><asp:TextBox ID="Txt_Orden_Variacion_Impuestos_Detalles_Caso_Especial" 
+                                                runat="server" ReadOnly="True" Rows="4" TextMode="MultiLine" Width="534px"></asp:TextBox></td><td style="width:auto; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td></tr><tr><td style="text-align:left; width: 20%;">&#160;</td><td style="width:20%; text-align:left; ">&#160;</td><td>&#160;</td><td style="width:20%; ">&#160;</td><td style="width:20%; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td></tr></table></asp:Panel></td></tr><tr style="background-color: #3366CC"><td colspan="7" 
+                                style="text-align:left; font-size: 15px; color: #FFFFFF;">Copropietarios</td></tr><tr><td style="text-align:left; width: 20%;">Nombre</td><td style="text-align:left; " colspan="2"><asp:ListBox ID="Lst_Orden_Variacion_Copropietarios_Nombres" runat="server" 
+                                    Width="300px"></asp:ListBox><br /></td><td style="width:20%; "><asp:ImageButton ID="Btn_Orden_Variacion_Copropietarios_Nombres" runat="server" 
+                                    ImageUrl="~/paginas/imagenes/paginas/busqueda.png" 
+                                    OnClick="Btn_Orden_Variacion_Copropietarios_Nombres_Click" TabIndex="8" 
+                                    ToolTip="Copropietarios" /><br /><asp:ImageButton ID="Btn_Orden_Variacion_Copropietarios_Quitar_Nombre" 
+                                    runat="server" Height="18px" ImageUrl="~/paginas/imagenes/paginas/quitar.png" 
+                                    TabIndex="8" ToolTip="Quitar Copropietario seleccionado" Width="18px" 
+                                onclick="Btn_Orden_Variacion_Copropietarios_Quitar_Nombre_Click" /></td><td style="width:20%; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td></tr><tr><td style="text-align:left; width: 20%;">&nbsp;</td><td style="width:20%; text-align:left; ">&#160;</td><td>&#160;</td><td style="width:20%; ">&#160;</td><td style="width:20%; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td></tr><tr style="background-color: #3366CC"><td 
+                            style="text-align:left; font-size: 15px; color: #FFFFFF;" colspan="7">Diferencias</td></tr><tr><td style="text-align:left; width: 20%;" rowspan="2">Periodo Rezago</td><td style="width:20%; text-align:left; "><asp:DropDownList ID="Cmb_Orden_Variacion_Diferencias_Periodos" runat="server" 
+                                    Width="174px"><asp:ListItem>Periodo Normal</asp:ListItem></asp:DropDownList></td><td>&#160;</td><td style="width:20%; ">&#160;</td><td style="width:20%; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td></tr><tr><td style="text-align:left; " colspan="4"><asp:DropDownList ID="Cmb_Orden_Variacion_Diferencias_Bimestre_Ini" 
+                                    runat="server" Width="40px"><asp:ListItem>1</asp:ListItem><asp:ListItem>2</asp:ListItem><asp:ListItem>3</asp:ListItem><asp:ListItem>4</asp:ListItem><asp:ListItem>5</asp:ListItem><asp:ListItem>6</asp:ListItem></asp:DropDownList><asp:DropDownList ID="Cmb_Orden_Variacion_Diferencias_Año_Bimestre_Ini" 
+                                    runat="server" Width="70px"></asp:DropDownList>&#160;-&#160;<asp:DropDownList ID="Cmb_Orden_Variacion_Diferencias_Bimestre_Fin" 
+                                    runat="server" Width="40px"><asp:ListItem>1</asp:ListItem><asp:ListItem>2</asp:ListItem><asp:ListItem>3</asp:ListItem><asp:ListItem>4</asp:ListItem><asp:ListItem>5</asp:ListItem><asp:ListItem>6</asp:ListItem></asp:DropDownList><asp:DropDownList ID="Cmb_Orden_Variacion_Diferencias_Año_Bimestre_Fin" 
+                                    runat="server" Width="70px"></asp:DropDownList></td><td style="width:auto; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td></tr><tr><td style="text-align:left; width: 20%;">&#160;</td><td style="width:20%; text-align:left; ">&#160;</td><td>&#160;</td><td style="width:20%; ">&#160;</td><td style="width:20%; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td></tr><tr style="background-color: #3366CC"><td style="text-align:left; font-size: 15px; color: #FFFFFF;" colspan="7">Observaciones</td></tr><tr><td style="text-align:left; width: 20%;">Observaciones Anteriores</td><td colspan="4" style="text-align:left; "><asp:Label ID="Lbl_Orden_Variacion_Observaciones_Anterios" runat="server"></asp:Label></td><td style="width:auto; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td></tr><tr><td style="text-align:left; width: 20%;">Observaciones</td><td colspan="4" style="text-align:left; "><asp:TextBox ID="Txt_Orden_Variacion_Observaciones" runat="server" Rows="4" 
+                                    TextMode="MultiLine" Width="534px"></asp:TextBox></td><td style="width:auto; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td></tr><tr><td style="text-align:left; width: 20%;">&#160;</td><td style="text-align:left; width: 20%;">&#160;</td><td>&#160;</td><td style="width:20%; ">&#160;</td><td style="width:20%; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td><td style="width:auto; text-align:left; ">&#160;</td></tr></table><div>&nbsp;&nbsp;&nbsp;</div></div></ContentTemplate></cc1:TabPanel>
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                </cc1:TabContainer>
+                <br />
+                <asp:Panel ID="Panel1" runat="server">
+                </asp:Panel>
+                <br />
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <%--<cc1:ModalPopupExtender runat="server"
+                ID="MPE_Orden_Variacion_Generales_Ubicacion"
+                TargetControlID="Btn_Orden_Variacion_Generales_Ubicaciones"
+                PopupControlID="Pnl_Modal_Orden_Variacion_Generales_Ubicacion"
+                BackgroundCssClass="progressBackgroundFilter"
+                OkControlID="Btn_Aceptar"
+                CancelControlID="Btn_Regresar">
+            </cc1:ModalPopupExtender>--%>
+            
+<%--            <asp:Button ID="Btn_Orden_Variacion_Generales_Ubicacion_Comodin" runat="server" Text="Comodin" style="display:none;"/>
+            <cc1:ModalPopupExtender ID="MPE_Crear_Plantilla" runat="server" TargetControlID="Btn_Orden_Variacion_Generales_Ubicacion_Comodin" 
+                PopupControlID="Pnl_Crear_Plantilla" CancelControlID="Btn_Orden_Variacion_Cancelar" PopupDragHandleControlID="Pnl_Interno"
+                DropShadow="True" BackgroundCssClass="progressBackgroundFilter"/>
+--%>        </ContentTemplate>
+    </asp:UpdatePanel>
+    <%--<asp:Panel ID="Pnl_Modal_Orden_Variacion_Generales_Ubicacion" runat="server" CssClass="drag" HorizontalAlign="Center" Width="650px" style="display:none;border-style:outset;border-color:Silver;background-repeat:repeat-y;">
+        <table style="width:100%;">
+            <tr>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+                <td>D</td>
+            </tr>
+            <tr >
+                <td>
+                    &nbsp;</td>
+                <td class="style1">
+                    <asp:Button ID="Btn_Aceptar" runat="server" Text="Aceptar"  
+                                    onclick="Btn_Aceptar_Click" />
+                </td>
+                <td>
+                    <asp:Button ID="Btn_Regresar" runat="server" Text="Regresar" 
+                                    onclick="Btn_Regresar_Click" />
+                </td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+        </table>
+    </asp:Panel>--%>
+<%--    <asp:Panel ID="Pnl_Crear_Plantilla" runat="server" CssClass="drag" HorizontalAlign="Center" Width="650px" style="display:none;border-style:outset;border-color:Silver;background-repeat:repeat-y;">                         
+    <asp:Panel ID="Pnl_Interno" runat="server" style="cursor: move;background-color:Silver;color:Black;font-size:12;font-weight:bold;border-style:outset;">    
+            <center>
+            <asp:UpdatePanel ID="UpPnl_Plantilla" runat="server"  UpdateMode="Conditional"> 
+                <ContentTemplate>
+                  <div id="Div1" style="width:98%;" runat="server" visible="false">
+                    <table style="width:100%;">
+                      <tr>
+                        <td colspan="2" align="left">
+                          <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/paginas/imagenes/paginas/sias_warning.png" 
+                            Width="24px" Height="24px"/>
+                            <asp:Label ID="Label1" runat="server" Text="" CssClass="estilo_fuente_mensaje_error" />
+                        </td>            
+                      </tr>
+                      <tr>
+                        <td style="width:10%;">              
+                        </td>          
+                        <td style="width:90%;text-align:left;" valign="top" >
+                          <asp:Label ID="Label2" runat="server" Text=""  CssClass="estilo_fuente_mensaje_error" />
+                        </td>
+                      </tr>          
+                    </table>                   
+                  </div>                          
+                <div>
+                    <table  style="width:98%;" border="0" cellspacing="0" class="estilo_fuente">
+                        <tr>
+                            <td align="center">
+                                &nbsp;</td>
+                            <td colspan="2" align="center">
+                                &nbsp;</td>
+                            <td align="center">
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                &nbsp;</td>
+                            <td colspan="2" align="center" style="background-color: #6699FF">
+                                <asp:Label ID="Lbl_Title" runat="server" Text="Label" Font-Bold="True" 
+                                    ForeColor="White"></asp:Label>
+                            </td>
+                            <td align="center">
+                                &nbsp;</td>
+                        </tr>
+                        <tr >
+                            <td>
+                                &nbsp;</td>
+                            <td colspan="2">
+                                &nbsp;</td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr >
+                            <td>
+                                &nbsp;</td>
+                            <td colspan="2" style="font-weight: bold">
+                                Colonias</td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr >
+                            <td>
+                                &nbsp;</td>
+                            <td colspan="2">
+                                <asp:GridView runat="server" AllowPaging="True" AutoGenerateColumns="False" 
+                                    GridLines="None" CssClass="GridView_1" Width="100%" ID="Grid_Colonias" 
+                                    PageSize="5" onpageindexchanging="Grid_Colonias_PageIndexChanging" 
+                                    onselectedindexchanged="Grid_Colonias_SelectedIndexChanged" >
+                                    <AlternatingRowStyle CssClass="GridAltItem"></AlternatingRowStyle>
+                                    <Columns>
+                                        <asp:ButtonField CommandName="Select" ImageUrl="~/paginas/imagenes/gridview/blue_button.png" ButtonType="Image">
+                                            <ItemStyle Width="30px"></ItemStyle>
+                                        </asp:ButtonField>
+                                        <asp:BoundField DataField="COLONIA_ID" HeaderText="Colonia_ID" 
+                                            SortExpression="COLONIA_ID">
+                                            <HeaderStyle Width="100px" />
+                                            <ItemStyle Width="100px" />
+                                        </asp:BoundField>
+                                        <asp:BoundField DataField="NOMBRE" HeaderText="Nombre" 
+                                            SortExpression="NOMBRE" />
+                                    </Columns>
+                                    <HeaderStyle CssClass="GridHeader"></HeaderStyle>
+                                    <PagerStyle CssClass="GridHeader"></PagerStyle>
+                                    <RowStyle CssClass="GridItem"></RowStyle>
+                                    <SelectedRowStyle CssClass="GridSelected"></SelectedRowStyle>
+                                </asp:GridView>
+                            </td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr >
+                            <td>
+                                &nbsp;</td>
+                            <td colspan="2">
+                                &nbsp;</td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr >
+                            <td>
+                                &nbsp;</td>
+                            <td colspan="2" style="font-weight: bold">
+                                Calles</td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr >
+                            <td>
+                                &nbsp;</td>
+                            <td colspan="2">
+                                <asp:GridView runat="server" AllowPaging="True" AutoGenerateColumns="False" 
+                                    GridLines="None" CssClass="GridView_1" Width="100%" ID="Grid_Calles" 
+                                    PageSize="5" onselectedindexchanged="Grid_Calles_SelectedIndexChanged" >
+                                    <AlternatingRowStyle CssClass="GridAltItem"></AlternatingRowStyle>
+                                    <Columns>
+                                        <asp:ButtonField CommandName="Select" ImageUrl="~/paginas/imagenes/gridview/blue_button.png" ButtonType="Image">
+                                            <ItemStyle Width="30px"></ItemStyle>
+                                        </asp:ButtonField>
+                                        <asp:BoundField DataField="CALLE_ID" HeaderText="Calle_ID" 
+                                            SortExpression="CALLE_ID">
+                                            <HeaderStyle Width="100px" />
+                                            <ItemStyle Width="100px" />
+                                        </asp:BoundField>
+                                        <asp:BoundField DataField="NOMBRE" HeaderText="Nombre" 
+                                            SortExpression="NOMBRE" />
+                                    </Columns>
+                                    <HeaderStyle CssClass="GridHeader"></HeaderStyle>
+                                    <PagerStyle CssClass="GridHeader"></PagerStyle>
+                                    <RowStyle CssClass="GridItem"></RowStyle>
+                                    <SelectedRowStyle CssClass="GridSelected"></SelectedRowStyle>
+                                </asp:GridView>
+                            </td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr >
+                            <td>
+                                &nbsp;</td>
+                            <td colspan="2">
+                                &nbsp;</td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr >
+                            <td>
+                                &nbsp;</td>
+                            <td class="style1">
+                                <asp:Button ID="Btn_Aceptar" runat="server" Text="Aceptar" 
+                                    onclick="Btn_Aceptar_Click" />
+                            </td>
+                            <td>
+                                <asp:Button ID="Btn_Regresar" runat="server" Text="Regresar" 
+                                    onclick="Btn_Regresar_Click" />
+                            </td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                    </table>
+                
+                </div>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </center>
+    </asp:Panel>
+    </asp:Panel>
+--%></asp:Content>

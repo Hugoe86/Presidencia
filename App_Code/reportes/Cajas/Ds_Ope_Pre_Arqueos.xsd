@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Ope_Pre_Arqueos" targetNamespace="http://tempuri.org/Ds_Ope_Pre_Arqueos.xsd" xmlns:mstns="http://tempuri.org/Ds_Ope_Pre_Arqueos.xsd" xmlns="http://tempuri.org/Ds_Ope_Pre_Arqueos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Ope_Pre_Arqueos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="Ds_Ope_Pre_Arqueos" msprop:Generator_UserDSName="Ds_Ope_Pre_Arqueos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Datos_Generales" msprop:Generator_UserTableName="Dt_Datos_Generales" msprop:Generator_RowEvArgName="Dt_Datos_GeneralesRowChangeEvent" msprop:Generator_TableVarName="tableDt_Datos_Generales" msprop:Generator_TablePropName="Dt_Datos_Generales" msprop:Generator_RowDeletingName="Dt_Datos_GeneralesRowDeleting" msprop:Generator_RowChangingName="Dt_Datos_GeneralesRowChanging" msprop:Generator_RowDeletedName="Dt_Datos_GeneralesRowDeleted" msprop:Generator_TableClassName="Dt_Datos_GeneralesDataTable" msprop:Generator_RowChangedName="Dt_Datos_GeneralesRowChanged" msprop:Generator_RowEvHandlerName="Dt_Datos_GeneralesRowChangeEventHandler" msprop:Generator_RowClassName="Dt_Datos_GeneralesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="No_Caja" msprop:Generator_ColumnVarNameInTable="columnNo_Caja" msprop:Generator_ColumnPropNameInRow="No_Caja" msprop:Generator_ColumnPropNameInTable="No_CajaColumn" msprop:Generator_UserColumnName="No_Caja" type="xs:string" minOccurs="0" />
+              <xs:element name="Departamento" msprop:Generator_ColumnVarNameInTable="columnDepartamento" msprop:Generator_ColumnPropNameInRow="Departamento" msprop:Generator_ColumnPropNameInTable="DepartamentoColumn" msprop:Generator_UserColumnName="Departamento" type="xs:string" minOccurs="0" />
+              <xs:element name="Nombre_Cajero" msprop:Generator_ColumnVarNameInTable="columnNombre_Cajero" msprop:Generator_ColumnPropNameInRow="Nombre_Cajero" msprop:Generator_ColumnPropNameInTable="Nombre_CajeroColumn" msprop:Generator_UserColumnName="Nombre_Cajero" type="xs:string" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:string" minOccurs="0" />
+              <xs:element name="Hora" msprop:Generator_ColumnVarNameInTable="columnHora" msprop:Generator_ColumnPropNameInRow="Hora" msprop:Generator_ColumnPropNameInTable="HoraColumn" msprop:Generator_UserColumnName="Hora" type="xs:string" minOccurs="0" />
+              <xs:element name="Recibo_Inicial" msprop:Generator_ColumnVarNameInTable="columnRecibo_Inicial" msprop:Generator_ColumnPropNameInRow="Recibo_Inicial" msprop:Generator_ColumnPropNameInTable="Recibo_InicialColumn" msprop:Generator_UserColumnName="Recibo_Inicial" type="xs:string" minOccurs="0" />
+              <xs:element name="Recibo_Final" msprop:Generator_ColumnVarNameInTable="columnRecibo_Final" msprop:Generator_ColumnPropNameInRow="Recibo_Final" msprop:Generator_ColumnPropNameInTable="Recibo_FinalColumn" msprop:Generator_UserColumnName="Recibo_Final" type="xs:string" minOccurs="0" />
+              <xs:element name="Total_Entregas_Parciales" msprop:Generator_ColumnVarNameInTable="columnTotal_Entregas_Parciales" msprop:Generator_ColumnPropNameInRow="Total_Entregas_Parciales" msprop:Generator_ColumnPropNameInTable="Total_Entregas_ParcialesColumn" msprop:Generator_UserColumnName="Total_Entregas_Parciales" type="xs:double" minOccurs="0" />
+              <xs:element name="Cajero_General" msprop:Generator_ColumnVarNameInTable="columnCajero_General" msprop:Generator_ColumnPropNameInRow="Cajero_General" msprop:Generator_ColumnPropNameInTable="Cajero_GeneralColumn" msprop:Generator_UserColumnName="Cajero_General" type="xs:string" minOccurs="0" />
+              <xs:element name="Diferencia" msprop:Generator_ColumnVarNameInTable="columnDiferencia" msprop:Generator_ColumnPropNameInRow="Diferencia" msprop:Generator_ColumnPropNameInTable="DiferenciaColumn" msprop:Generator_UserColumnName="Diferencia" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dt_Arqueos" msprop:Generator_UserTableName="Dt_Arqueos" msprop:Generator_RowEvArgName="Dt_ArqueosRowChangeEvent" msprop:Generator_TableVarName="tableDt_Arqueos" msprop:Generator_TablePropName="Dt_Arqueos" msprop:Generator_RowDeletingName="Dt_ArqueosRowDeleting" msprop:Generator_RowChangingName="Dt_ArqueosRowChanging" msprop:Generator_RowDeletedName="Dt_ArqueosRowDeleted" msprop:Generator_TableClassName="Dt_ArqueosDataTable" msprop:Generator_RowChangedName="Dt_ArqueosRowChanged" msprop:Generator_RowEvHandlerName="Dt_ArqueosRowChangeEventHandler" msprop:Generator_RowClassName="Dt_ArqueosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="No" msprop:Generator_ColumnVarNameInTable="columnNo" msprop:Generator_ColumnPropNameInRow="No" msprop:Generator_ColumnPropNameInTable="NoColumn" msprop:Generator_UserColumnName="No" type="xs:int" minOccurs="0" />
+              <xs:element name="Denominacion" msprop:Generator_ColumnVarNameInTable="columnDenominacion" msprop:Generator_ColumnPropNameInRow="Denominacion" msprop:Generator_ColumnPropNameInTable="DenominacionColumn" msprop:Generator_UserColumnName="Denominacion" type="xs:string" minOccurs="0" />
+              <xs:element name="Subtotal" msprop:Generator_ColumnVarNameInTable="columnSubtotal" msprop:Generator_ColumnPropNameInRow="Subtotal" msprop:Generator_ColumnPropNameInTable="SubtotalColumn" msprop:Generator_UserColumnName="Subtotal" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dt_Forma_Pago" msprop:Generator_UserTableName="Dt_Forma_Pago" msprop:Generator_RowEvArgName="Dt_Forma_PagoRowChangeEvent" msprop:Generator_TableVarName="tableDt_Forma_Pago" msprop:Generator_TablePropName="Dt_Forma_Pago" msprop:Generator_RowDeletingName="Dt_Forma_PagoRowDeleting" msprop:Generator_RowChangingName="Dt_Forma_PagoRowChanging" msprop:Generator_RowDeletedName="Dt_Forma_PagoRowDeleted" msprop:Generator_TableClassName="Dt_Forma_PagoDataTable" msprop:Generator_RowChangedName="Dt_Forma_PagoRowChanged" msprop:Generator_RowEvHandlerName="Dt_Forma_PagoRowChangeEventHandler" msprop:Generator_RowClassName="Dt_Forma_PagoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_UserColumnName="NOMBRE" type="xs:string" minOccurs="0" />
+              <xs:element name="MONTO" msprop:Generator_ColumnVarNameInTable="columnMONTO" msprop:Generator_ColumnPropNameInRow="MONTO" msprop:Generator_ColumnPropNameInTable="MONTOColumn" msprop:Generator_UserColumnName="MONTO" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dt_Entregas_Parciales" msprop:Generator_UserTableName="Dt_Entregas_Parciales" msprop:Generator_RowEvArgName="Dt_Entregas_ParcialesRowChangeEvent" msprop:Generator_TableVarName="tableDt_Entregas_Parciales" msprop:Generator_TablePropName="Dt_Entregas_Parciales" msprop:Generator_RowDeletingName="Dt_Entregas_ParcialesRowDeleting" msprop:Generator_RowChangingName="Dt_Entregas_ParcialesRowChanging" msprop:Generator_RowDeletedName="Dt_Entregas_ParcialesRowDeleted" msprop:Generator_TableClassName="Dt_Entregas_ParcialesDataTable" msprop:Generator_RowChangedName="Dt_Entregas_ParcialesRowChanged" msprop:Generator_RowEvHandlerName="Dt_Entregas_ParcialesRowChangeEventHandler" msprop:Generator_RowClassName="Dt_Entregas_ParcialesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NO_RECOLECCION" msprop:Generator_ColumnVarNameInTable="columnNO_RECOLECCION" msprop:Generator_ColumnPropNameInRow="NO_RECOLECCION" msprop:Generator_ColumnPropNameInTable="NO_RECOLECCIONColumn" msprop:Generator_UserColumnName="NO_RECOLECCION" type="xs:string" minOccurs="0" />
+              <xs:element name="MONTO" msprop:Generator_ColumnVarNameInTable="columnMONTO" msprop:Generator_ColumnPropNameInRow="MONTO" msprop:Generator_ColumnPropNameInTable="MONTOColumn" msprop:Generator_UserColumnName="MONTO" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

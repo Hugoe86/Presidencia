@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Reporte_Presupuestos" targetNamespace="http://tempuri.org/Ds_Reporte_Presupuestos.xsd" xmlns:mstns="http://tempuri.org/Ds_Reporte_Presupuestos.xsd" xmlns="http://tempuri.org/Ds_Reporte_Presupuestos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Reporte_Presupuestos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Reporte_Presupuestos" msprop:Generator_DataSetName="Ds_Reporte_Presupuestos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Presupuestos" msprop:Generator_UserTableName="Dt_Presupuestos" msprop:Generator_RowDeletedName="Dt_PresupuestosRowDeleted" msprop:Generator_TableClassName="Dt_PresupuestosDataTable" msprop:Generator_RowChangedName="Dt_PresupuestosRowChanged" msprop:Generator_RowClassName="Dt_PresupuestosRow" msprop:Generator_RowChangingName="Dt_PresupuestosRowChanging" msprop:Generator_RowEvArgName="Dt_PresupuestosRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_PresupuestosRowChangeEventHandler" msprop:Generator_TablePropName="Dt_Presupuestos" msprop:Generator_TableVarName="tableDt_Presupuestos" msprop:Generator_RowDeletingName="Dt_PresupuestosRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UR" msprop:Generator_UserColumnName="UR" msprop:Generator_ColumnPropNameInRow="UR" msprop:Generator_ColumnVarNameInTable="columnUR" msprop:Generator_ColumnPropNameInTable="URColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FUENTE" msprop:Generator_UserColumnName="FUENTE" msprop:Generator_ColumnPropNameInRow="FUENTE" msprop:Generator_ColumnVarNameInTable="columnFUENTE" msprop:Generator_ColumnPropNameInTable="FUENTEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PROGRAMA" msprop:Generator_UserColumnName="PROGRAMA" msprop:Generator_ColumnPropNameInRow="PROGRAMA" msprop:Generator_ColumnVarNameInTable="columnPROGRAMA" msprop:Generator_ColumnPropNameInTable="PROGRAMAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PARTIDA_GENERICA" msprop:Generator_UserColumnName="PARTIDA_GENERICA" msprop:Generator_ColumnPropNameInRow="PARTIDA_GENERICA" msprop:Generator_ColumnVarNameInTable="columnPARTIDA_GENERICA" msprop:Generator_ColumnPropNameInTable="PARTIDA_GENERICAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PARTIDA" msprop:Generator_UserColumnName="PARTIDA" msprop:Generator_ColumnPropNameInRow="PARTIDA" msprop:Generator_ColumnVarNameInTable="columnPARTIDA" msprop:Generator_ColumnPropNameInTable="PARTIDAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CAPITULO" msprop:Generator_UserColumnName="CAPITULO" msprop:Generator_ColumnPropNameInRow="CAPITULO" msprop:Generator_ColumnVarNameInTable="columnCAPITULO" msprop:Generator_ColumnPropNameInTable="CAPITULOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CONCEPTO" msprop:Generator_UserColumnName="CONCEPTO" msprop:Generator_ColumnPropNameInRow="CONCEPTO" msprop:Generator_ColumnVarNameInTable="columnCONCEPTO" msprop:Generator_ColumnPropNameInTable="CONCEPTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ASIGNADO" msprop:Generator_UserColumnName="ASIGNADO" msprop:Generator_ColumnPropNameInRow="ASIGNADO" msprop:Generator_ColumnVarNameInTable="columnASIGNADO" msprop:Generator_ColumnPropNameInTable="ASIGNADOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="AMPLIACION" msprop:Generator_UserColumnName="AMPLIACION" msprop:Generator_ColumnPropNameInRow="AMPLIACION" msprop:Generator_ColumnVarNameInTable="columnAMPLIACION" msprop:Generator_ColumnPropNameInTable="AMPLIACIONColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="REDUCCION" msprop:Generator_UserColumnName="REDUCCION" msprop:Generator_ColumnPropNameInRow="REDUCCION" msprop:Generator_ColumnVarNameInTable="columnREDUCCION" msprop:Generator_ColumnPropNameInTable="REDUCCIONColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="MODIFICADO" msprop:Generator_UserColumnName="MODIFICADO" msprop:Generator_ColumnPropNameInRow="MODIFICADO" msprop:Generator_ColumnVarNameInTable="columnMODIFICADO" msprop:Generator_ColumnPropNameInTable="MODIFICADOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="DEVENGADO" msprop:Generator_UserColumnName="DEVENGADO" msprop:Generator_ColumnPropNameInRow="DEVENGADO" msprop:Generator_ColumnVarNameInTable="columnDEVENGADO" msprop:Generator_ColumnPropNameInTable="DEVENGADOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="PAGADO" msprop:Generator_UserColumnName="PAGADO" msprop:Generator_ColumnPropNameInRow="PAGADO" msprop:Generator_ColumnVarNameInTable="columnPAGADO" msprop:Generator_ColumnPropNameInTable="PAGADOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="COMPROMETIDO" msprop:Generator_UserColumnName="COMPROMETIDO" msprop:Generator_ColumnPropNameInRow="COMPROMETIDO" msprop:Generator_ColumnVarNameInTable="columnCOMPROMETIDO" msprop:Generator_ColumnPropNameInTable="COMPROMETIDOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="DISPONIBLE" msprop:Generator_UserColumnName="DISPONIBLE" msprop:Generator_ColumnPropNameInRow="DISPONIBLE" msprop:Generator_ColumnVarNameInTable="columnDISPONIBLE" msprop:Generator_ColumnPropNameInTable="DISPONIBLEColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="EJERCIDO" msprop:Generator_UserColumnName="EJERCIDO" msprop:Generator_ColumnPropNameInRow="EJERCIDO" msprop:Generator_ColumnVarNameInTable="columnEJERCIDO" msprop:Generator_ColumnPropNameInTable="EJERCIDOColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dt_Detalle_Filtros" msprop:Generator_UserTableName="Dt_Detalle_Filtros" msprop:Generator_RowDeletedName="Dt_Detalle_FiltrosRowDeleted" msprop:Generator_TableClassName="Dt_Detalle_FiltrosDataTable" msprop:Generator_RowChangedName="Dt_Detalle_FiltrosRowChanged" msprop:Generator_RowClassName="Dt_Detalle_FiltrosRow" msprop:Generator_RowChangingName="Dt_Detalle_FiltrosRowChanging" msprop:Generator_RowEvArgName="Dt_Detalle_FiltrosRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Detalle_FiltrosRowChangeEventHandler" msprop:Generator_TablePropName="Dt_Detalle_Filtros" msprop:Generator_TableVarName="tableDt_Detalle_Filtros" msprop:Generator_RowDeletingName="Dt_Detalle_FiltrosRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DESCRIPCION_FILTROS" msprop:Generator_UserColumnName="DESCRIPCION_FILTROS" msprop:Generator_ColumnPropNameInRow="DESCRIPCION_FILTROS" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION_FILTROS" msprop:Generator_ColumnPropNameInTable="DESCRIPCION_FILTROSColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

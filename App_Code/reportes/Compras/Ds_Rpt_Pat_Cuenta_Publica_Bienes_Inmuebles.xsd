@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Pat_Cuenta_Publica_Bienes_Inmuebles" targetNamespace="http://tempuri.org/Ds_Rpt_Pat_Cuenta_Publica_Bienes_Inmuebles.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Pat_Cuenta_Publica_Bienes_Inmuebles.xsd" xmlns="http://tempuri.org/Ds_Rpt_Pat_Cuenta_Publica_Bienes_Inmuebles.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Pat_Cuenta_Publica_Bienes_Inmuebles" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Pat_Cuenta_Publica_Bienes_Inmuebles" msprop:Generator_DataSetName="Ds_Rpt_Pat_Cuenta_Publica_Bienes_Inmuebles">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_DATOS" msprop:Generator_UserTableName="DT_DATOS" msprop:Generator_RowDeletedName="DT_DATOSRowDeleted" msprop:Generator_RowChangedName="DT_DATOSRowChanged" msprop:Generator_RowClassName="DT_DATOSRow" msprop:Generator_RowChangingName="DT_DATOSRowChanging" msprop:Generator_RowEvArgName="DT_DATOSRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_DATOSRowChangeEventHandler" msprop:Generator_TableClassName="DT_DATOSDataTable" msprop:Generator_TableVarName="tableDT_DATOS" msprop:Generator_RowDeletingName="DT_DATOSRowDeleting" msprop:Generator_TablePropName="DT_DATOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BIEN_INMUEBLE_ID" msprop:Generator_UserColumnName="BIEN_INMUEBLE_ID" msprop:Generator_ColumnVarNameInTable="columnBIEN_INMUEBLE_ID" msprop:Generator_ColumnPropNameInRow="BIEN_INMUEBLE_ID" msprop:Generator_ColumnPropNameInTable="BIEN_INMUEBLE_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MOVIMIENTO" msprop:Generator_UserColumnName="MOVIMIENTO" msprop:Generator_ColumnVarNameInTable="columnMOVIMIENTO" msprop:Generator_ColumnPropNameInRow="MOVIMIENTO" msprop:Generator_ColumnPropNameInTable="MOVIMIENTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="UBICACION" msprop:Generator_UserColumnName="UBICACION" msprop:Generator_ColumnVarNameInTable="columnUBICACION" msprop:Generator_ColumnPropNameInRow="UBICACION" msprop:Generator_ColumnPropNameInTable="UBICACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DATOS_JURIDICO" msprop:Generator_UserColumnName="DATOS_JURIDICO" msprop:Generator_ColumnVarNameInTable="columnDATOS_JURIDICO" msprop:Generator_ColumnPropNameInRow="DATOS_JURIDICO" msprop:Generator_ColumnPropNameInTable="DATOS_JURIDICOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SUPERFICIE" msprop:Generator_UserColumnName="SUPERFICIE" msprop:Generator_ColumnVarNameInTable="columnSUPERFICIE" msprop:Generator_ColumnPropNameInRow="SUPERFICIE" msprop:Generator_ColumnPropNameInTable="SUPERFICIEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="OBSERVACIONES" msprop:Generator_UserColumnName="OBSERVACIONES" msprop:Generator_ColumnVarNameInTable="columnOBSERVACIONES" msprop:Generator_ColumnPropNameInRow="OBSERVACIONES" msprop:Generator_ColumnPropNameInTable="OBSERVACIONESColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PROVEEDOR" msprop:Generator_UserColumnName="PROVEEDOR" msprop:Generator_ColumnVarNameInTable="columnPROVEEDOR" msprop:Generator_ColumnPropNameInRow="PROVEEDOR" msprop:Generator_ColumnPropNameInTable="PROVEEDORColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FOLIO_REAL" msprop:Generator_UserColumnName="FOLIO_REAL" msprop:Generator_ColumnVarNameInTable="columnFOLIO_REAL" msprop:Generator_ColumnPropNameInRow="FOLIO_REAL" msprop:Generator_ColumnPropNameInTable="FOLIO_REALColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA_MOVIMIENTO" msprop:Generator_UserColumnName="FECHA_MOVIMIENTO" msprop:Generator_ColumnPropNameInRow="FECHA_MOVIMIENTO" msprop:Generator_ColumnVarNameInTable="columnFECHA_MOVIMIENTO" msprop:Generator_ColumnPropNameInTable="FECHA_MOVIMIENTOColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

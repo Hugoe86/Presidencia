@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Nom_Percepciones_Deducciones" targetNamespace="http://tempuri.org/Ds_Rpt_Nom_Percepciones_Deducciones.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Nom_Percepciones_Deducciones.xsd" xmlns="http://tempuri.org/Ds_Rpt_Nom_Percepciones_Deducciones.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Nom_Percepciones_Deducciones" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Nom_Percepciones_Deducciones" msprop:Generator_DataSetName="Ds_Rpt_Nom_Percepciones_Deducciones">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_GENERALES_REPORTE" msprop:Generator_UserTableName="DT_GENERALES_REPORTE" msprop:Generator_RowDeletedName="DT_GENERALES_REPORTERowDeleted" msprop:Generator_TableClassName="DT_GENERALES_REPORTEDataTable" msprop:Generator_RowChangedName="DT_GENERALES_REPORTERowChanged" msprop:Generator_RowClassName="DT_GENERALES_REPORTERow" msprop:Generator_RowChangingName="DT_GENERALES_REPORTERowChanging" msprop:Generator_RowEvArgName="DT_GENERALES_REPORTERowChangeEvent" msprop:Generator_RowEvHandlerName="DT_GENERALES_REPORTERowChangeEventHandler" msprop:Generator_TablePropName="DT_GENERALES_REPORTE" msprop:Generator_TableVarName="tableDT_GENERALES_REPORTE" msprop:Generator_RowDeletingName="DT_GENERALES_REPORTERowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ELABORO" msprop:Generator_UserColumnName="ELABORO" msprop:Generator_ColumnPropNameInRow="ELABORO" msprop:Generator_ColumnVarNameInTable="columnELABORO" msprop:Generator_ColumnPropNameInTable="ELABOROColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE_REPORTE" msprop:Generator_UserColumnName="NOMBRE_REPORTE" msprop:Generator_ColumnPropNameInRow="NOMBRE_REPORTE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_REPORTE" msprop:Generator_ColumnPropNameInTable="NOMBRE_REPORTEColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_DATOS" msprop:Generator_UserTableName="DT_DATOS" msprop:Generator_RowDeletedName="DT_DATOSRowDeleted" msprop:Generator_TableClassName="DT_DATOSDataTable" msprop:Generator_RowChangedName="DT_DATOSRowChanged" msprop:Generator_RowClassName="DT_DATOSRow" msprop:Generator_RowChangingName="DT_DATOSRowChanging" msprop:Generator_RowEvArgName="DT_DATOSRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_DATOSRowChangeEventHandler" msprop:Generator_TablePropName="DT_DATOS" msprop:Generator_TableVarName="tableDT_DATOS" msprop:Generator_RowDeletingName="DT_DATOSRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NO_RECIBO" msprop:Generator_UserColumnName="NO_RECIBO" msprop:Generator_ColumnPropNameInRow="NO_RECIBO" msprop:Generator_ColumnVarNameInTable="columnNO_RECIBO" msprop:Generator_ColumnPropNameInTable="NO_RECIBOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="EMPLEADO_ID" msprop:Generator_UserColumnName="EMPLEADO_ID" msprop:Generator_ColumnPropNameInRow="EMPLEADO_ID" msprop:Generator_ColumnVarNameInTable="columnEMPLEADO_ID" msprop:Generator_ColumnPropNameInTable="EMPLEADO_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE_DEPENDENCIA" msprop:Generator_UserColumnName="NOMBRE_DEPENDENCIA" msprop:Generator_ColumnPropNameInRow="NOMBRE_DEPENDENCIA" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_DEPENDENCIA" msprop:Generator_ColumnPropNameInTable="NOMBRE_DEPENDENCIAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_EMPLEADO" msprop:Generator_UserColumnName="NO_EMPLEADO" msprop:Generator_ColumnPropNameInRow="NO_EMPLEADO" msprop:Generator_ColumnVarNameInTable="columnNO_EMPLEADO" msprop:Generator_ColumnPropNameInTable="NO_EMPLEADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE_EMPLEADO" msprop:Generator_UserColumnName="NOMBRE_EMPLEADO" msprop:Generator_ColumnPropNameInRow="NOMBRE_EMPLEADO" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_EMPLEADO" msprop:Generator_ColumnPropNameInTable="NOMBRE_EMPLEADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ANIO" msprop:Generator_UserColumnName="ANIO" msprop:Generator_ColumnPropNameInRow="ANIO" msprop:Generator_ColumnVarNameInTable="columnANIO" msprop:Generator_ColumnPropNameInTable="ANIOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PERIODO" msprop:Generator_UserColumnName="PERIODO" msprop:Generator_ColumnPropNameInRow="PERIODO" msprop:Generator_ColumnVarNameInTable="columnPERIODO" msprop:Generator_ColumnPropNameInTable="PERIODOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PERCEPCION_DEDUCCION" msprop:Generator_UserColumnName="PERCEPCION_DEDUCCION" msprop:Generator_ColumnPropNameInRow="PERCEPCION_DEDUCCION" msprop:Generator_ColumnVarNameInTable="columnPERCEPCION_DEDUCCION" msprop:Generator_ColumnPropNameInTable="PERCEPCION_DEDUCCIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IMPORTE" msprop:Generator_UserColumnName="IMPORTE" msprop:Generator_ColumnPropNameInRow="IMPORTE" msprop:Generator_ColumnVarNameInTable="columnIMPORTE" msprop:Generator_ColumnPropNameInTable="IMPORTEColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

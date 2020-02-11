@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Pat_Com_Listado_Bienes" targetNamespace="http://tempuri.org/Ds_Pat_Com_Listado_Bienes.xsd" xmlns:mstns="http://tempuri.org/Ds_Pat_Com_Listado_Bienes.xsd" xmlns="http://tempuri.org/Ds_Pat_Com_Listado_Bienes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Pat_Com_Listado_Bienes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Pat_Com_Listado_Bienes" msprop:Generator_DataSetName="Ds_Pat_Com_Listado_Bienes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DATOS" msprop:Generator_UserTableName="DATOS" msprop:Generator_RowDeletedName="DATOSRowDeleted" msprop:Generator_TableClassName="DATOSDataTable" msprop:Generator_RowChangedName="DATOSRowChanged" msprop:Generator_RowClassName="DATOSRow" msprop:Generator_RowChangingName="DATOSRowChanging" msprop:Generator_RowEvArgName="DATOSRowChangeEvent" msprop:Generator_RowEvHandlerName="DATOSRowChangeEventHandler" msprop:Generator_TablePropName="DATOS" msprop:Generator_TableVarName="tableDATOS" msprop:Generator_RowDeletingName="DATOSRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BIEN_ID" msprop:Generator_UserColumnName="BIEN_ID" msprop:Generator_ColumnPropNameInRow="BIEN_ID" msprop:Generator_ColumnVarNameInTable="columnBIEN_ID" msprop:Generator_ColumnPropNameInTable="BIEN_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DEPENDENCIA" msprop:Generator_UserColumnName="DEPENDENCIA" msprop:Generator_ColumnPropNameInRow="DEPENDENCIA" msprop:Generator_ColumnVarNameInTable="columnDEPENDENCIA" msprop:Generator_ColumnPropNameInTable="DEPENDENCIAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PRODUCTO" msprop:Generator_UserColumnName="PRODUCTO" msprop:Generator_ColumnPropNameInRow="PRODUCTO" msprop:Generator_ColumnVarNameInTable="columnPRODUCTO" msprop:Generator_ColumnPropNameInTable="PRODUCTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="INVENTARIO_ANTERIOR" msprop:Generator_UserColumnName="INVENTARIO_ANTERIOR" msprop:Generator_ColumnPropNameInRow="INVENTARIO_ANTERIOR" msprop:Generator_ColumnVarNameInTable="columnINVENTARIO_ANTERIOR" msprop:Generator_ColumnPropNameInTable="INVENTARIO_ANTERIORColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="INVENTARIO_NUEVO" msprop:Generator_UserColumnName="INVENTARIO_NUEVO" msprop:Generator_ColumnPropNameInRow="INVENTARIO_NUEVO" msprop:Generator_ColumnVarNameInTable="columnINVENTARIO_NUEVO" msprop:Generator_ColumnPropNameInTable="INVENTARIO_NUEVOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MARCA" msprop:Generator_UserColumnName="MARCA" msprop:Generator_ColumnPropNameInRow="MARCA" msprop:Generator_ColumnVarNameInTable="columnMARCA" msprop:Generator_ColumnPropNameInTable="MARCAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MODELO" msprop:Generator_UserColumnName="MODELO" msprop:Generator_ColumnPropNameInRow="MODELO" msprop:Generator_ColumnVarNameInTable="columnMODELO" msprop:Generator_ColumnPropNameInTable="MODELOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ESTATUS" msprop:Generator_UserColumnName="ESTATUS" msprop:Generator_ColumnPropNameInRow="ESTATUS" msprop:Generator_ColumnVarNameInTable="columnESTATUS" msprop:Generator_ColumnPropNameInTable="ESTATUSColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

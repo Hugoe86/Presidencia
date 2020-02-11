@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Alm_Com_Rep_Contrarecibos" targetNamespace="http://tempuri.org/Ds_Alm_Com_Rep_Contrarecibos.xsd" xmlns:mstns="http://tempuri.org/Ds_Alm_Com_Rep_Contrarecibos.xsd" xmlns="http://tempuri.org/Ds_Alm_Com_Rep_Contrarecibos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Alm_Com_Rep_Contrarecibos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Alm_Com_Rep_Contrarecibos" msprop:Generator_DataSetName="Ds_Alm_Com_Rep_Contrarecibos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Detalles" msprop:Generator_UserTableName="Detalles" msprop:Generator_RowDeletedName="DetallesRowDeleted" msprop:Generator_RowChangedName="DetallesRowChanged" msprop:Generator_RowClassName="DetallesRow" msprop:Generator_RowChangingName="DetallesRowChanging" msprop:Generator_RowEvArgName="DetallesRowChangeEvent" msprop:Generator_RowEvHandlerName="DetallesRowChangeEventHandler" msprop:Generator_TableClassName="DetallesDataTable" msprop:Generator_TableVarName="tableDetalles" msprop:Generator_RowDeletingName="DetallesRowDeleting" msprop:Generator_TablePropName="Detalles">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NO_CONTRARECIBO" msprop:Generator_UserColumnName="NO_CONTRARECIBO" msprop:Generator_ColumnVarNameInTable="columnNO_CONTRARECIBO" msprop:Generator_ColumnPropNameInRow="NO_CONTRARECIBO" msprop:Generator_ColumnPropNameInTable="NO_CONTRARECIBOColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="NO_FACTURA_PROVEEDOR" msprop:Generator_UserColumnName="NO_FACTURA_PROVEEDOR" msprop:Generator_ColumnVarNameInTable="columnNO_FACTURA_PROVEEDOR" msprop:Generator_ColumnPropNameInRow="NO_FACTURA_PROVEEDOR" msprop:Generator_ColumnPropNameInTable="NO_FACTURA_PROVEEDORColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="PROVEEDOR" msprop:Generator_UserColumnName="PROVEEDOR" msprop:Generator_ColumnVarNameInTable="columnPROVEEDOR" msprop:Generator_ColumnPropNameInRow="PROVEEDOR" msprop:Generator_ColumnPropNameInTable="PROVEEDORColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="FECHA_RECEPCION" msprop:Generator_UserColumnName="FECHA_RECEPCION" msprop:Generator_ColumnVarNameInTable="columnFECHA_RECEPCION" msprop:Generator_ColumnPropNameInRow="FECHA_RECEPCION" msprop:Generator_ColumnPropNameInTable="FECHA_RECEPCIONColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="USUARIO_GENERO" msprop:Generator_UserColumnName="USUARIO_GENERO" msprop:Generator_ColumnVarNameInTable="columnUSUARIO_GENERO" msprop:Generator_ColumnPropNameInRow="USUARIO_GENERO" msprop:Generator_ColumnPropNameInTable="USUARIO_GENEROColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="FOLIO" msprop:Generator_UserColumnName="FOLIO" msprop:Generator_ColumnVarNameInTable="columnFOLIO" msprop:Generator_ColumnPropNameInRow="FOLIO" msprop:Generator_ColumnPropNameInTable="FOLIOColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="SUB_TOTAL" msprop:Generator_UserColumnName="SUB_TOTAL" msprop:Generator_ColumnVarNameInTable="columnSUB_TOTAL" msprop:Generator_ColumnPropNameInRow="SUB_TOTAL" msprop:Generator_ColumnPropNameInTable="SUB_TOTALColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="TOTAL_IEPS" msprop:Generator_UserColumnName="TOTAL_IEPS" msprop:Generator_ColumnVarNameInTable="columnTOTAL_IEPS" msprop:Generator_ColumnPropNameInRow="TOTAL_IEPS" msprop:Generator_ColumnPropNameInTable="TOTAL_IEPSColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="TOTAL_IVA" msprop:Generator_UserColumnName="TOTAL_IVA" msprop:Generator_ColumnVarNameInTable="columnTOTAL_IVA" msprop:Generator_ColumnPropNameInRow="TOTAL_IVA" msprop:Generator_ColumnPropNameInTable="TOTAL_IVAColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="TOTAL_OC" msprop:Generator_UserColumnName="TOTAL_OC" msprop:Generator_ColumnVarNameInTable="columnTOTAL_OC" msprop:Generator_ColumnPropNameInRow="TOTAL_OC" msprop:Generator_ColumnPropNameInTable="TOTAL_OCColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="TOTAL_FACTURA" msprop:Generator_UserColumnName="COMPROMETIDO" msprop:Generator_ColumnVarNameInTable="columnCOMPROMETIDO" msprop:Generator_ColumnPropNameInRow="COMPROMETIDO" msprop:Generator_ColumnPropNameInTable="COMPROMETIDOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="USUARIO_IMPRIMIO" msprop:Generator_UserColumnName="USUARIO_IMPRIMIO" msprop:Generator_ColumnVarNameInTable="columnUSUARIO_IMPRIMIO" msprop:Generator_ColumnPropNameInRow="USUARIO_IMPRIMIO" msprop:Generator_ColumnPropNameInTable="USUARIO_IMPRIMIOColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

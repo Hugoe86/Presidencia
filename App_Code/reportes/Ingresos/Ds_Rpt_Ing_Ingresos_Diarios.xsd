@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Ing_Ingresos_Diarios" targetNamespace="http://tempuri.org/Ds_Rpt_Ing_Ingresos_Diarios.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Ing_Ingresos_Diarios.xsd" xmlns="http://tempuri.org/Ds_Rpt_Ing_Ingresos_Diarios.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Ing_Ingresos_Diarios" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Ing_Ingresos_Diarios" msprop:Generator_DataSetName="Ds_Rpt_Ing_Ingresos_Diarios">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Ingresos_Diarios" msprop:Generator_UserTableName="Ingresos_Diarios" msprop:Generator_RowDeletedName="Ingresos_DiariosRowDeleted" msprop:Generator_TableClassName="Ingresos_DiariosDataTable" msprop:Generator_RowChangedName="Ingresos_DiariosRowChanged" msprop:Generator_RowClassName="Ingresos_DiariosRow" msprop:Generator_RowChangingName="Ingresos_DiariosRowChanging" msprop:Generator_RowEvArgName="Ingresos_DiariosRowChangeEvent" msprop:Generator_RowEvHandlerName="Ingresos_DiariosRowChangeEventHandler" msprop:Generator_TablePropName="Ingresos_Diarios" msprop:Generator_TableVarName="tableIngresos_Diarios" msprop:Generator_RowDeletingName="Ingresos_DiariosRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CLAVE" msprop:Generator_UserColumnName="CLAVE" msprop:Generator_ColumnPropNameInRow="CLAVE" msprop:Generator_ColumnVarNameInTable="columnCLAVE" msprop:Generator_ColumnPropNameInTable="CLAVEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CANTIDAD" msprop:Generator_UserColumnName="CANTIDAD" msprop:Generator_ColumnPropNameInRow="CANTIDAD" msprop:Generator_ColumnVarNameInTable="columnCANTIDAD" msprop:Generator_ColumnPropNameInTable="CANTIDADColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="MONTO" msprop:Generator_UserColumnName="MONTO" msprop:Generator_ColumnPropNameInRow="MONTO" msprop:Generator_ColumnVarNameInTable="columnMONTO" msprop:Generator_ColumnPropNameInTable="MONTOColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,620 @@
+body 
+{
+}
+
+a:{color:Black; text-decoration:none}
+a:link {color:White; text-decoration:none}
+a:visited {color:Aqua;}
+a:hover {color:Red; text-decoration:underline}
+a:active {color:Black; text-decoration:none}
+
+.text_cantidades_grid
+{
+    text-align:right;
+}
+
+
+.barra_busqueda{
+	width:100%; 
+	height:30px;
+	vertical-align: middle;		
+	background-color: #2F4E7D; 
+	color: #FFFFFF; 
+	font-weight: bold; 
+	font-style: normal; 
+	font-variant: normal; 
+	font-family: arial;
+
+}
+.barra_delgada{
+	width:100%; 
+	height:3px;
+	background-color: #2F4E7D; 
+	color: #FFFFFF; 
+}
+.estilo_fuente
+{
+    text-align: left; 
+    font-size: small; 
+    font-family: Verdana, Geneva, MS Sans Serif;
+    color: #25406D;
+}
+.estilo_fuente_comentarios
+{
+    color: #008000; 
+    font-size:smaller;
+}
+.estilo_fuente_mensaje_error
+{
+    color:#FF3300;
+    text-align: left; 
+    font-size: 9px; 
+    font-family: Verdana, Geneva, MS Sans Serif;
+    }
+/*Formato para las tablas*/
+.scroll {
+     width:215px;
+     height:315px;
+     overflow:hidden;
+}
+/*Formato para botones  #507CD1  #002f70*/
+.button
+{
+	background-color:#2F4E7D;
+	color:White;
+	border-color:White;
+    height: 26px;    
+    font-weight:bold;
+    width:120px;
+    volume:loud;
+    border-style:outset;
+
+
+}
+.lnk
+{
+	background-color:Black;
+	color:Black;
+}
+
+/*Formato para los encabezados de las paginas*/
+.label_titulo
+{
+    text-align: center;
+    font-size:medium;
+    color:#18468C; 
+    font-weight:bold;
+}
+/*Formato para los GridView*/
+.GridView_1
+{
+    font-family :Verdana, Geneva, MS Sans Serif;
+    font-size:8px;
+    color: #2F4E7D;
+    font-weight:normal;
+    padding: 3px 6px 3px 6px;
+    vertical-align:middle;
+    background-color:White;
+    border-style:none;
+    border-width:5px;
+    width:98%;    
+    text-align:left;
+}
+.GridHeader
+ {
+     font-weight:bold;
+     background-color:#2F4E7D;
+     color:#ffffff;
+     text-align:left;
+     height:23px;
+ }
+
+.GridAltItem
+{
+	/*#E6E6E6 #E0F8F7*/
+ background-color:#E6E6E6;
+ color:#25406D;
+ font-size:8px;
+}
+
+.GridSelected
+{
+ background-color:#A4A4A4; /*#A9F5F2;*/
+ color:#25406D;
+ font-size:8px;
+}
+.GridItem
+{
+ background-color:white;
+ color:#25406D;
+ font-size:8px;
+}
+.renglon_botones
+{
+   vertical-align:middle; 
+   height:40px;
+}
+/**********************************************************************
+ * Div Updating Styles            #CEF6CE* #58ACFA
+ **********************************************************************/
+ .progressBackgroundFilter { 
+    z-index:1000;
+	background-color:Black;
+	width:3000px;
+	height:3000px; 
+	position:fixed;
+	top:0px;
+	left:0px;
+	filter:alpha(opacity=80);
+	-moz-opacity: 0.80;
+	opacity: 0.80;
+} 
+.processMessage {  
+    position:fixed;  
+    top:30%;  
+    left:43%; 
+    padding:10px; 
+    width:14%; 
+    z-index:1001;  
+} 
+.progressTemplate
+{
+    background-color:Gray; 
+    width:100%; height:100%;
+    position:absolute; 
+    top:0px; left:0px; 
+    /*filter:alpha(opacity=50); */
+    -moz-opacity: 0.75;
+    /*opacity: 0.75; */
+    elevation:above; 
+    z-index:1000;
+    }
+ .Panel_Popup
+    {
+        background-color: #FFFFFF;
+        border-width: 4px;
+        border-style: outset;
+        border-color: black;
+        padding: 0px;
+        width: 700px;
+        font-weight: bold;
+        font-style: italic;
+        
+    }
+.Fondo_Imagen
+    {
+        background-color: Gray;
+        /*filter: alpha(opacity=20);
+        opacity: 0.7;*/
+    } 
+
+.FondoAplicacion
+    {
+        background-color: Gray;
+        /*filter: alpha(opacity=70);
+        opacity: 0.7;*/
+    } 
+.Img_Button
+    {    	
+    	padding-right:10px;
+    	border-top:5px;
+    	width:24px;
+    	height:24px;
+    } 
+.faceHide
+     {
+     	font-size:0px; 
+     	display:none;    	
+     	}
+.faceSumaryError
+     {   
+     	font-size:8px;
+     	text-align:left;
+	    width:80%;	   
+     	}	   	
+.watermarked {	            
+	     background-color:#F0F8FF;
+	     color:gray;
+	     text-align:center;
+	     font-size:12px;
+     }
+.linea 
+{	            
+	width:100%; 
+	color:#507CD1;
+}     
+
+.WindowsStyle .ajax__combobox_inputcontainer .ajax__combobox_textboxcontainer INPUT
+{
+    BORDER-BOTTOM: #7f9db9 1px solid;
+    BORDER-LEFT: #7f9db9 1px solid;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-LEFT: 5px;
+    PADDING-RIGHT: 0px;
+    HEIGHT: 18px;
+    FONT-SIZE: 13px;
+    BORDER-TOP: #7f9db9 1px solid;
+    BORDER-RIGHT: 0px;
+    PADDING-TOP: 1px
+}
+.WindowsStyle .ajax__combobox_inputcontainer .ajax__combobox_buttoncontainer BUTTON
+{
+    BACKGROUND-IMAGE: url(../imagenes/paginas/windows-arrow.gif);    
+    BORDER-BOTTOM: 0px;
+    BORDER-LEFT: 0px;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-LEFT: 0px;
+    WIDTH: 21px;
+    PADDING-RIGHT: 0px;
+    BACKGROUND-POSITION: left top;
+    HEIGHT: 21px;
+    BORDER-TOP: 0px;
+    BORDER-RIGHT: 0px;
+    PADDING-TOP: 0px
+}
+.WindowsStyle .ajax__combobox_itemlist
+{
+    BORDER-BOTTOM-COLOR: #7f9db9;
+    BORDER-TOP-COLOR: #7f9db9;
+    BORDER-RIGHT-COLOR: #7f9db9;
+    BORDER-LEFT-COLOR: #7f9db9
+}
+.drag
+ {
+   background-color: #FFFFFF;  
+   border: solid 2px #5D7B9D;
+   padding: 10px 10px 10px 10px;
+ }
+  .popUpStyle
+ {
+   background-color: #000;
+   /*filter:alpha(opacity=75);*/
+   -moz-opacity: 0.75;
+   /*opacity: 0.75; */
+ }
+ .button_autorizar{
+    display:block;
+    margin:0 7px 0 0;
+    background-color:#f5f5f5;
+    border:1px solid #dedede;
+    border-top:1px solid #eee;
+    border-left:1px solid #eee;
+
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    font-size:100%;    
+    line-height:130%;
+    text-decoration:none;
+    font-weight:bold;
+    color:#565656;
+    cursor:pointer;
+    padding:5px 10px 6px 7px; /* Links */
+    width:99%;
+}
+ .button_agregar{
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    font-size: 12px; 
+    font-weight: bold; 
+    color: #161616; 
+    cursor:pointer;
+    margin:0 7px 0 0;
+    background-color: #D1D1D1; 
+    border:1px solid #dedede;
+    border-top:1px solid #eee;
+    border-left:1px solid #eee;
+    padding:2px 7px 2px 7px; /* Links */
+}
+
+.progressTemplateInner
+{
+    background-color:Black; 
+    width:100%; height:100%;
+    position:absolute; 
+    top:0px; left:0px; 
+    /*filter:alpha(opacity=50); */
+    -moz-opacity: 0.75;
+    /*opacity: 0.75; */
+    elevation:above; 
+    z-index:1000;
+    }
+    
+.Informacion_Incidencia
+{
+    BACKGROUND-IMAGE: url(../imagenes/paginas/slide0018_background.gif);  
+    background-repeat: no-repeat;      
+    background-attachment: scroll; 
+    background-position:left;     
+    display:block;
+    float:left;
+    margin:0 7px 0 0;
+    background-color:#f5f5f5;
+    border:1px solid #dedede;
+    border-top:1px solid #eee;
+    border-left:1px solid #eee;
+
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    font-size:10px;    
+    line-height:130%;
+    text-decoration:none;
+    font-weight:bold;
+    color:#000000;
+    padding:5px 10px 6px 7px; /* Links */
+    width:99%;
+}
+
+.tblHead 
+{
+    font-size: 12px;
+    font-weight : bold;
+    color : white;
+    background-color:#2F4E7D;
+    height:23px;
+    text-align : center;    
+}
+
+.tblHead a:link {
+    color : white;
+    text-decoration : none;
+}
+
+.tblHead a:visited {
+    color : white;
+    text-decoration : none;
+}
+
+.tblHead a:hover {
+    color : white;
+    text-decoration : underline;    
+}
+
+.tblHead a:active {
+    color : white;
+    text-decoration : underline;
+}
+.GridView_Nested
+{
+    font-family: Arial, Sans-Serif;
+    font-size:small;
+    table-layout: inherit;
+    border-collapse: collapse;
+    border:#666 2px solid;
+}
+.GridHeader_Nested
+ {
+    background-image: url(../imagenes/gridview/HeaderChrome.jpg);
+    background-position:center;
+    background-repeat:repeat-x;
+    background-color:#1d1d1d;
+	border-bottom: #1d1d1d 1px solid;
+	color:White;
+ }
+
+.GridAltItem_Nested
+{
+ background-color: #f0f0f0;
+}
+
+.GridSelected_Nested
+{
+ background-color: #ffff66;
+}
+.GridItem_Nested
+{
+ background-color: #c9c9c9;
+}   
+/*###################################################################################*/
+ 
+.glossymenu{
+	margin: 5px 0;
+	padding: 0;
+	width: 198px; 
+	border: 1px solid #9A9A9A;
+	border-bottom-width: 0;
+}
+
+.glossymenu a.menuitem{
+	background: black url(../imagenes/paginas/glossyback.gif) repeat-x bottom left;
+	font: bold 12px "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, sans-serif;
+	color: white;
+	display: block;
+	position: relative; 
+	width: auto;
+	padding: 2px 0;
+	padding-left: 19px;
+	text-decoration: none;
+}
+
+.glossymenu a.menuitem:visited, .glossymenu .menuitem:active{
+	color: white;
+}
+
+.glossymenu a.menuitem .statusicon{ 
+	position: absolute;
+	top: 5px;
+	left: 2px;
+	border: none;
+
+}
+
+.glossymenu a.menuitem:hover{
+	background-image: url(../imagenes/paginas/glossyback2.gif);
+}
+.glossymenu div.submenu{ 
+	background: white;
+}
+
+.glossymenu div.submenu ul{ 
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.glossymenu div.submenu ul li{
+	border-bottom: 1px solid Silver;
+	background-color:#F0F8FF;
+}
+
+.glossymenu div.submenu ul li a{
+	display: block;
+	font: normal 11px "Tahoma";
+	color: black;
+	text-decoration: none;
+	padding: 2px 0;
+	padding-left: 19px; 
+	background: url(../imagenes/paginas/arrowbullet.png) no-repeat center left; 
+	font-weight: normal;
+}
+
+.glossymenu div.submenu ul li a:hover{
+	background-color: #507CD1;
+	color: white;
+}
+/*###################################################################################*/
+#slideshow {
+    position:relative;
+    height:350px;
+}
+
+#slideshow IMG {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+}
+
+#slideshow IMG.active {
+    z-index:10;
+}
+
+#slideshow IMG.last-active {
+    z-index:9;
+}
+.li_Orden_Menu{
+	background: black url(../imagenes/paginas/glossyback.gif) repeat-x bottom left;
+	font-family:Tahoma;
+	color: Silver ;
+	display: list-item;
+	position: relative; /*To help in the anchoring of the ".statusicon" icon image*/
+	width: auto;
+	padding: 4px 0;
+	padding-left: 10px;
+	text-decoration:none;
+	cursor:hand;
+	border-style:outset;
+	font-weight:bold;
+}
+
+.li_Orden_Submenu{
+	border-bottom: 1px solid Silver;
+	cursor:hand;
+	padding: 2px 0;
+	padding-left: 19px; 
+	background: url(../imagenes/paginas/arrowbullet.png) no-repeat center left; 
+	background-color:#F0F8FF;
+	color:gray;
+	font-weight:bold;
+}
+
+
+
+.Ocultar
+{
+	display:none;
+	}
+	
+.CajaTextoDefault
+{
+	background-image:none;
+	background-repeat:no-repeat;
+	background-position:inherit;
+	border-style:none;
+	border-color:inherit;
+	font-family:Courier;
+	font-size:14;
+	font-weight:normal;
+	color:Black;
+	}
+	
+.CajaTextoCantidad
+{
+	background-image: url(../imagenes/gridview/economico.png);
+	background-repeat:no-repeat;
+	background-position:left;
+	border-style:Solid;
+	border-color:#2F4E7D;
+	font-family:Courier;
+	font-size:18px;
+	font-weight:bold;
+	color:#2F4E7D;
+	height:24px;
+}
+
+.tooltip {
+        display:none;
+        background:transparent url(../imagenes/paginas/black_arrow.png);
+        font-size:12px;
+        height:70px;
+        width:160px;
+        padding:25px;
+        color:#eee;
+        z-index:1000;
+        position:absolute;
+        elevation:higher;
+}
+
+/* simple css-based tooltip */
+.tooltip_fields {
+    background-color:#000;
+    border:1px solid #fff;
+    padding:10px 15px;
+    width:200px;
+    display:none;
+    color:#fff;
+    text-align:left;
+    font-size:12px;
+
+    /* outline radius for mozilla/firefox only */
+    -moz-box-shadow:0 0 10px #000;
+    -webkit-box-shadow:0 0 10px #000;
+}
+
+
+
+/* the overlayed element */
+.apple_overlay {
+
+    /* initially overlay is hidden */
+    display:none;
+
+    /* growing background image */
+    background-image:url(../imagenes/overlays/white.png);
+
+    /*
+      width after the growing animation finishes
+      height is automatically calculated
+      */
+    width:640px;
+
+    /* some padding to layout nested elements nicely  */
+    padding:35px;
+
+    /* a little styling */
+    font-size:11px;
+}
+
+/* default close button positioned on upper right corner */
+.apple_overlay .close {
+    background-image:url(../imagenes/overlays/close.png);
+    position:absolute; right:5px; top:5px;
+    cursor:pointer;
+    height:35px;
+    width:35px;
+}
+
+#apple {
+    background-image:url(../imagenes/overlays/white_.png);
+    color:#fff;
+    padding:50px 70px;
+}
+

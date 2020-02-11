@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Cajas_Pagos_Detallado" targetNamespace="http://tempuri.org/Ds_Rpt_Cajas_Pagos_Detallado.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Cajas_Pagos_Detallado.xsd" xmlns="http://tempuri.org/Ds_Rpt_Cajas_Pagos_Detallado.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Cajas_Pagos_Detallado" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Cajas_Pagos_Detallado" msprop:Generator_DataSetName="Ds_Rpt_Cajas_Pagos_Detallado">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_CAJA_PAGOS" msprop:Generator_UserTableName="Dt_CAJA_PAGOS" msprop:Generator_RowDeletedName="Dt_CAJA_PAGOSRowDeleted" msprop:Generator_RowChangedName="Dt_CAJA_PAGOSRowChanged" msprop:Generator_RowClassName="Dt_CAJA_PAGOSRow" msprop:Generator_RowChangingName="Dt_CAJA_PAGOSRowChanging" msprop:Generator_RowEvArgName="Dt_CAJA_PAGOSRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_CAJA_PAGOSRowChangeEventHandler" msprop:Generator_TableClassName="Dt_CAJA_PAGOSDataTable" msprop:Generator_TableVarName="tableDt_CAJA_PAGOS" msprop:Generator_RowDeletingName="Dt_CAJA_PAGOSRowDeleting" msprop:Generator_TablePropName="Dt_CAJA_PAGOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CAJA" msprop:Generator_UserColumnName="CAJA" msprop:Generator_ColumnPropNameInRow="CAJA" msprop:Generator_ColumnVarNameInTable="columnCAJA" msprop:Generator_ColumnPropNameInTable="CAJAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CVE_INGRESO" msprop:Generator_UserColumnName="CVE_INGRESO" msprop:Generator_ColumnPropNameInRow="CVE_INGRESO" msprop:Generator_ColumnVarNameInTable="columnCVE_INGRESO" msprop:Generator_ColumnPropNameInTable="CVE_INGRESOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ESTATUS" msprop:Generator_UserColumnName="ESTATUS" msprop:Generator_ColumnPropNameInRow="ESTATUS" msprop:Generator_ColumnVarNameInTable="columnESTATUS" msprop:Generator_ColumnPropNameInTable="ESTATUSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_RECIBO" msprop:Generator_UserColumnName="NO_RECIBO" msprop:Generator_ColumnPropNameInRow="NO_RECIBO" msprop:Generator_ColumnVarNameInTable="columnNO_RECIBO" msprop:Generator_ColumnPropNameInTable="NO_RECIBOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="NO_OPERACION_PAGO" msprop:Generator_UserColumnName="NO_OPERACION_PAGO" msprop:Generator_ColumnPropNameInRow="NO_OPERACION_PAGO" msprop:Generator_ColumnVarNameInTable="columnNO_OPERACION_PAGO" msprop:Generator_ColumnPropNameInTable="NO_OPERACION_PAGOColumn" type="xs:unsignedInt" minOccurs="0" />
+              <xs:element name="NO_OPERACION_CANCELACION" msprop:Generator_UserColumnName="NO_OPERACION_CANCELACION" msprop:Generator_ColumnVarNameInTable="columnNO_OPERACION_CANCELACION" msprop:Generator_ColumnPropNameInRow="NO_OPERACION_CANCELACION" msprop:Generator_ColumnPropNameInTable="NO_OPERACION_CANCELACIONColumn" type="xs:unsignedInt" minOccurs="0" />
+              <xs:element name="PREDIO" msprop:Generator_UserColumnName="PREDIO" msprop:Generator_ColumnVarNameInTable="columnPREDIO" msprop:Generator_ColumnPropNameInRow="PREDIO" msprop:Generator_ColumnPropNameInTable="PREDIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CONCEPTO" msprop:Generator_UserColumnName="CONCEPTO" msprop:Generator_ColumnVarNameInTable="columnCONCEPTO" msprop:Generator_ColumnPropNameInRow="CONCEPTO" msprop:Generator_ColumnPropNameInTable="CONCEPTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IMPORTE" msprop:Generator_UserColumnName="IMPORTE" msprop:Generator_ColumnVarNameInTable="columnIMPORTE" msprop:Generator_ColumnPropNameInRow="IMPORTE" msprop:Generator_ColumnPropNameInTable="IMPORTEColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

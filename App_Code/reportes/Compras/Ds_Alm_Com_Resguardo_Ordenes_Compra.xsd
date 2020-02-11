@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Alm_Com_Resguardo_Ordenes_Compra" targetNamespace="http://tempuri.org/Ds_Alm_Com_Resguardo_Ordenes_Compra.xsd" xmlns:mstns="http://tempuri.org/Ds_Alm_Com_Resguardo_Ordenes_Compra.xsd" xmlns="http://tempuri.org/Ds_Alm_Com_Resguardo_Ordenes_Compra.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Alm_Com_Resguardo_Ordenes_Compra" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Alm_Com_Resguardo_Ordenes_Compra" msprop:Generator_DataSetName="Ds_Alm_Com_Resguardo_Ordenes_Compra">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Cabecera" msprop:Generator_UserTableName="Cabecera" msprop:Generator_RowDeletedName="CabeceraRowDeleted" msprop:Generator_TableClassName="CabeceraDataTable" msprop:Generator_RowChangedName="CabeceraRowChanged" msprop:Generator_RowClassName="CabeceraRow" msprop:Generator_RowChangingName="CabeceraRowChanging" msprop:Generator_RowEvArgName="CabeceraRowChangeEvent" msprop:Generator_RowEvHandlerName="CabeceraRowChangeEventHandler" msprop:Generator_TablePropName="Cabecera" msprop:Generator_TableVarName="tableCabecera" msprop:Generator_RowDeletingName="CabeceraRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ORDEN_COMPRA" msprop:Generator_UserColumnName="ORDEN_COMPRA" msprop:Generator_ColumnPropNameInRow="ORDEN_COMPRA" msprop:Generator_ColumnVarNameInTable="columnORDEN_COMPRA" msprop:Generator_ColumnPropNameInTable="ORDEN_COMPRAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PROVEEDOR" msprop:Generator_UserColumnName="PROVEEDOR" msprop:Generator_ColumnPropNameInRow="PROVEEDOR" msprop:Generator_ColumnVarNameInTable="columnPROVEEDOR" msprop:Generator_ColumnPropNameInTable="PROVEEDORColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_FACTURA" msprop:Generator_UserColumnName="NO_FACTURA" msprop:Generator_ColumnPropNameInRow="NO_FACTURA" msprop:Generator_ColumnVarNameInTable="columnNO_FACTURA" msprop:Generator_ColumnPropNameInTable="NO_FACTURAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="FECHA_RECEPCION" msprop:Generator_UserColumnName="FECHA_RECEPCION" msprop:Generator_ColumnPropNameInRow="FECHA_RECEPCION" msprop:Generator_ColumnVarNameInTable="columnFECHA_RECEPCION" msprop:Generator_ColumnPropNameInTable="FECHA_RECEPCIONColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SUBTOTAL" msprop:Generator_UserColumnName="SUBTOTAL" msprop:Generator_ColumnPropNameInRow="SUBTOTAL" msprop:Generator_ColumnVarNameInTable="columnSUBTOTAL" msprop:Generator_ColumnPropNameInTable="SUBTOTALColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="IVA" msprop:Generator_UserColumnName="IVA" msprop:Generator_ColumnPropNameInRow="IVA" msprop:Generator_ColumnVarNameInTable="columnIVA" msprop:Generator_ColumnPropNameInTable="IVAColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="IEPS" msprop:Generator_UserColumnName="IEPS" msprop:Generator_ColumnPropNameInRow="IEPS" msprop:Generator_ColumnVarNameInTable="columnIEPS" msprop:Generator_ColumnPropNameInTable="IEPSColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="TOTAL_FACTURA" msprop:Generator_UserColumnName="TOTAL_FACTURA" msprop:Generator_ColumnPropNameInRow="TOTAL_FACTURA" msprop:Generator_ColumnVarNameInTable="columnTOTAL_FACTURA" msprop:Generator_ColumnPropNameInTable="TOTAL_FACTURAColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="EMPLEADO_RESGUARDO" msprop:Generator_UserColumnName="EMPLEADO_RESGUARDO" msprop:Generator_ColumnPropNameInRow="EMPLEADO_RESGUARDO" msprop:Generator_ColumnVarNameInTable="columnEMPLEADO_RESGUARDO" msprop:Generator_ColumnPropNameInTable="EMPLEADO_RESGUARDOColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Detalles" msprop:Generator_UserTableName="Detalles" msprop:Generator_RowDeletedName="DetallesRowDeleted" msprop:Generator_TableClassName="DetallesDataTable" msprop:Generator_RowChangedName="DetallesRowChanged" msprop:Generator_RowClassName="DetallesRow" msprop:Generator_RowChangingName="DetallesRowChanging" msprop:Generator_RowEvArgName="DetallesRowChangeEvent" msprop:Generator_RowEvHandlerName="DetallesRowChangeEventHandler" msprop:Generator_TablePropName="Detalles" msprop:Generator_TableVarName="tableDetalles" msprop:Generator_RowDeletingName="DetallesRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ORDEN_COMPRA" msprop:Generator_UserColumnName="ORDEN_COMPRA" msprop:Generator_ColumnPropNameInRow="ORDEN_COMPRA" msprop:Generator_ColumnVarNameInTable="columnORDEN_COMPRA" msprop:Generator_ColumnPropNameInTable="ORDEN_COMPRAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CLAVE" msprop:Generator_UserColumnName="CLAVE" msprop:Generator_ColumnPropNameInRow="CLAVE" msprop:Generator_ColumnVarNameInTable="columnCLAVE" msprop:Generator_ColumnPropNameInTable="CLAVEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PRODUCTO" msprop:Generator_UserColumnName="PRODUCTO" msprop:Generator_ColumnPropNameInRow="PRODUCTO" msprop:Generator_ColumnVarNameInTable="columnPRODUCTO" msprop:Generator_ColumnPropNameInTable="PRODUCTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MODELO" msprop:Generator_UserColumnName="MODELO" msprop:Generator_ColumnPropNameInRow="MODELO" msprop:Generator_ColumnVarNameInTable="columnMODELO" msprop:Generator_ColumnPropNameInTable="MODELOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MARCA" msprop:Generator_UserColumnName="MARCA" msprop:Generator_ColumnPropNameInRow="MARCA" msprop:Generator_ColumnVarNameInTable="columnMARCA" msprop:Generator_ColumnPropNameInTable="MARCAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CANTIDAD" msprop:Generator_UserColumnName="CANTIDAD" msprop:Generator_ColumnPropNameInRow="CANTIDAD" msprop:Generator_ColumnVarNameInTable="columnCANTIDAD" msprop:Generator_ColumnPropNameInTable="CANTIDADColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="UNIDAD" msprop:Generator_UserColumnName="UNIDAD" msprop:Generator_ColumnPropNameInRow="UNIDAD" msprop:Generator_ColumnVarNameInTable="columnUNIDAD" msprop:Generator_ColumnPropNameInTable="UNIDADColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PRECIO" msprop:Generator_UserColumnName="PRECIO" msprop:Generator_ColumnPropNameInRow="PRECIO" msprop:Generator_ColumnVarNameInTable="columnPRECIO" msprop:Generator_ColumnPropNameInTable="PRECIOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="TOTAL" msprop:Generator_UserColumnName="TOTAL" msprop:Generator_ColumnPropNameInRow="TOTAL" msprop:Generator_ColumnVarNameInTable="columnTOTAL" msprop:Generator_ColumnPropNameInTable="TOTALColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Detalles_Cabecera" msdata:parent="Detalles" msdata:child="Cabecera" msdata:parentkey="ORDEN_COMPRA" msdata:childkey="ORDEN_COMPRA" msprop:Generator_UserRelationName="Detalles_Cabecera" msprop:Generator_RelationVarName="relationDetalles_Cabecera" msprop:Generator_UserChildTable="Cabecera" msprop:Generator_UserParentTable="Detalles" msprop:Generator_ParentPropName="DetallesRow" msprop:Generator_ChildPropName="GetCabeceraRows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

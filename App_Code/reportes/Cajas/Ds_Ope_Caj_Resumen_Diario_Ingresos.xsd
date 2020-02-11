@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Ope_Caj_Resumen_Diario_Ingresos" targetNamespace="http://tempuri.org/Ds_Ope_Caj_Resumen_Diario_Ingresos.xsd" xmlns:mstns="http://tempuri.org/Ds_Ope_Caj_Resumen_Diario_Ingresos.xsd" xmlns="http://tempuri.org/Ds_Ope_Caj_Resumen_Diario_Ingresos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Ope_Caj_Resumen_Diario_Ingresos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Ope_Caj_Resumen_Diario_Ingresos" msprop:Generator_DataSetName="Ds_Ope_Caj_Resumen_Diario_Ingresos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Ope_Caj_Resumen_Diario_Ingresos" msprop:Generator_UserTableName="Dt_Ope_Caj_Resumen_Diario_Ingresos" msprop:Generator_RowDeletedName="Dt_Ope_Caj_Resumen_Diario_IngresosRowDeleted" msprop:Generator_RowChangedName="Dt_Ope_Caj_Resumen_Diario_IngresosRowChanged" msprop:Generator_RowClassName="Dt_Ope_Caj_Resumen_Diario_IngresosRow" msprop:Generator_RowChangingName="Dt_Ope_Caj_Resumen_Diario_IngresosRowChanging" msprop:Generator_RowEvArgName="Dt_Ope_Caj_Resumen_Diario_IngresosRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Ope_Caj_Resumen_Diario_IngresosRowChangeEventHandler" msprop:Generator_TableClassName="Dt_Ope_Caj_Resumen_Diario_IngresosDataTable" msprop:Generator_TableVarName="tableDt_Ope_Caj_Resumen_Diario_Ingresos" msprop:Generator_RowDeletingName="Dt_Ope_Caj_Resumen_Diario_IngresosRowDeleting" msprop:Generator_TablePropName="Dt_Ope_Caj_Resumen_Diario_Ingresos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RECAUDACION_DIA" msprop:Generator_UserColumnName="RECAUDACION_DIA" msprop:Generator_ColumnVarNameInTable="columnRECAUDACION_DIA" msprop:Generator_ColumnPropNameInRow="RECAUDACION_DIA" msprop:Generator_ColumnPropNameInTable="RECAUDACION_DIAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RECAUDACION_MES" msprop:Generator_UserColumnName="RECAUDACION_MES" msprop:Generator_ColumnVarNameInTable="columnRECAUDACION_MES" msprop:Generator_ColumnPropNameInRow="RECAUDACION_MES" msprop:Generator_ColumnPropNameInTable="RECAUDACION_MESColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RECAUDACION_ANIO" msprop:Generator_UserColumnName="RECAUDACION_ANIO" msprop:Generator_ColumnVarNameInTable="columnRECAUDACION_ANIO" msprop:Generator_ColumnPropNameInRow="RECAUDACION_ANIO" msprop:Generator_ColumnPropNameInTable="RECAUDACION_ANIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PRESUPUESTO_ANIO" msprop:Generator_UserColumnName="PRESUPUESTO_ANIO" msprop:Generator_ColumnVarNameInTable="columnPRESUPUESTO_ANIO" msprop:Generator_ColumnPropNameInRow="PRESUPUESTO_ANIO" msprop:Generator_ColumnPropNameInTable="PRESUPUESTO_ANIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PORCENTAJE" msprop:Generator_UserColumnName="PORCENTAJE" msprop:Generator_ColumnVarNameInTable="columnPORCENTAJE" msprop:Generator_ColumnPropNameInRow="PORCENTAJE" msprop:Generator_ColumnPropNameInTable="PORCENTAJEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PRESUPUESTO_EJERCER" msprop:Generator_UserColumnName="PRESUPUESTO_EJERCER" msprop:Generator_ColumnVarNameInTable="columnPRESUPUESTO_EJERCER" msprop:Generator_ColumnPropNameInRow="PRESUPUESTO_EJERCER" msprop:Generator_ColumnPropNameInTable="PRESUPUESTO_EJERCERColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dt_Ope_Caj_Resumen_Diario_Ingresos_Totales" msprop:Generator_UserTableName="Dt_Ope_Caj_Resumen_Diario_Ingresos_Totales" msprop:Generator_RowDeletedName="Dt_Ope_Caj_Resumen_Diario_Ingresos_TotalesRowDeleted" msprop:Generator_RowChangedName="Dt_Ope_Caj_Resumen_Diario_Ingresos_TotalesRowChanged" msprop:Generator_RowClassName="Dt_Ope_Caj_Resumen_Diario_Ingresos_TotalesRow" msprop:Generator_RowChangingName="Dt_Ope_Caj_Resumen_Diario_Ingresos_TotalesRowChanging" msprop:Generator_RowEvArgName="Dt_Ope_Caj_Resumen_Diario_Ingresos_TotalesRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Ope_Caj_Resumen_Diario_Ingresos_TotalesRowChangeEventHandler" msprop:Generator_TableClassName="Dt_Ope_Caj_Resumen_Diario_Ingresos_TotalesDataTable" msprop:Generator_TableVarName="tableDt_Ope_Caj_Resumen_Diario_Ingresos_Totales" msprop:Generator_RowDeletingName="Dt_Ope_Caj_Resumen_Diario_Ingresos_TotalesRowDeleting" msprop:Generator_TablePropName="Dt_Ope_Caj_Resumen_Diario_Ingresos_Totales">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RECAUDACION_DIA" msprop:Generator_UserColumnName="RECAUDACION_DIA" msprop:Generator_ColumnVarNameInTable="columnRECAUDACION_DIA" msprop:Generator_ColumnPropNameInRow="RECAUDACION_DIA" msprop:Generator_ColumnPropNameInTable="RECAUDACION_DIAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RECAUDACION_MES" msprop:Generator_UserColumnName="RECAUDACION_MES" msprop:Generator_ColumnVarNameInTable="columnRECAUDACION_MES" msprop:Generator_ColumnPropNameInRow="RECAUDACION_MES" msprop:Generator_ColumnPropNameInTable="RECAUDACION_MESColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RECAUDACION_ANIO" msprop:Generator_UserColumnName="RECAUDACION_ANIO" msprop:Generator_ColumnVarNameInTable="columnRECAUDACION_ANIO" msprop:Generator_ColumnPropNameInRow="RECAUDACION_ANIO" msprop:Generator_ColumnPropNameInTable="RECAUDACION_ANIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PRESUPUESTO_ANIO" msprop:Generator_UserColumnName="PRESUPUESTO_ANIO" msprop:Generator_ColumnVarNameInTable="columnPRESUPUESTO_ANIO" msprop:Generator_ColumnPropNameInRow="PRESUPUESTO_ANIO" msprop:Generator_ColumnPropNameInTable="PRESUPUESTO_ANIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PORCENTAJE" msprop:Generator_UserColumnName="PORCENTAJE" msprop:Generator_ColumnVarNameInTable="columnPORCENTAJE" msprop:Generator_ColumnPropNameInRow="PORCENTAJE" msprop:Generator_ColumnPropNameInTable="PORCENTAJEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PRESUPUESTO_EJERCER" msprop:Generator_UserColumnName="PRESUPUESTO_EJERCER" msprop:Generator_ColumnVarNameInTable="columnPRESUPUESTO_EJERCER" msprop:Generator_ColumnPropNameInRow="PRESUPUESTO_EJERCER" msprop:Generator_ColumnPropNameInTable="PRESUPUESTO_EJERCERColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TIPO" msprop:Generator_UserColumnName="TIPO" msprop:Generator_ColumnPropNameInRow="TIPO" msprop:Generator_ColumnVarNameInTable="columnTIPO" msprop:Generator_ColumnPropNameInTable="TIPOColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

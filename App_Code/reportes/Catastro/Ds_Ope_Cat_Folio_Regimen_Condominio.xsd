@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Ope_Cat_Folio_Regimen_Condominio" targetNamespace="http://tempuri.org/Ds_Ope_Cat_Folio_Regimen_Condominio.xsd" xmlns:mstns="http://tempuri.org/Ds_Ope_Cat_Folio_Regimen_Condominio.xsd" xmlns="http://tempuri.org/Ds_Ope_Cat_Folio_Regimen_Condominio.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Ope_Cat_Folio_Regimen_Condominio" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Ope_Cat_Folio_Regimen_Condominio" msprop:Generator_DataSetName="Ds_Ope_Cat_Folio_Regimen_Condominio">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Ope_Cat_Folio_Pago" msprop:Generator_UserTableName="Dt_Ope_Cat_Folio_Pago" msprop:Generator_RowDeletedName="Dt_Ope_Cat_Folio_PagoRowDeleted" msprop:Generator_RowChangedName="Dt_Ope_Cat_Folio_PagoRowChanged" msprop:Generator_RowClassName="Dt_Ope_Cat_Folio_PagoRow" msprop:Generator_RowChangingName="Dt_Ope_Cat_Folio_PagoRowChanging" msprop:Generator_RowEvArgName="Dt_Ope_Cat_Folio_PagoRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Ope_Cat_Folio_PagoRowChangeEventHandler" msprop:Generator_TableClassName="Dt_Ope_Cat_Folio_PagoDataTable" msprop:Generator_TableVarName="tableDt_Ope_Cat_Folio_Pago" msprop:Generator_RowDeletingName="Dt_Ope_Cat_Folio_PagoRowDeleting" msprop:Generator_TablePropName="Dt_Ope_Cat_Folio_Pago">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IMPORTE" msprop:Generator_UserColumnName="IMPORTE" msprop:Generator_ColumnPropNameInRow="IMPORTE" msprop:Generator_ColumnVarNameInTable="columnIMPORTE" msprop:Generator_ColumnPropNameInTable="IMPORTEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FOLIO" msprop:Generator_UserColumnName="FOLIO" msprop:Generator_ColumnPropNameInRow="FOLIO" msprop:Generator_ColumnVarNameInTable="columnFOLIO" msprop:Generator_ColumnPropNameInTable="FOLIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IMPORTE_LETRA" msprop:Generator_UserColumnName="IMPORTE_LETRA" msprop:Generator_ColumnPropNameInRow="IMPORTE_LETRA" msprop:Generator_ColumnVarNameInTable="columnIMPORTE_LETRA" msprop:Generator_ColumnPropNameInTable="IMPORTE_LETRAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="UBICACION" msprop:Generator_UserColumnName="UBICACION" msprop:Generator_ColumnPropNameInRow="UBICACION" msprop:Generator_ColumnVarNameInTable="columnUBICACION" msprop:Generator_ColumnPropNameInTable="UBICACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CUENTA_PREDIAL" msprop:Generator_UserColumnName="CUENTA_PREDIAL" msprop:Generator_ColumnPropNameInRow="CUENTA_PREDIAL" msprop:Generator_ColumnVarNameInTable="columnCUENTA_PREDIAL" msprop:Generator_ColumnPropNameInTable="CUENTA_PREDIALColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MEMORIAS_DESCRIPTIVAS" msprop:Generator_UserColumnName="MEMORIAS_DESCRIPTIVAS" msprop:Generator_ColumnPropNameInRow="MEMORIAS_DESCRIPTIVAS" msprop:Generator_ColumnVarNameInTable="columnMEMORIAS_DESCRIPTIVAS" msprop:Generator_ColumnPropNameInTable="MEMORIAS_DESCRIPTIVASColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FRACCIONAMIENTO" msprop:Generator_UserColumnName="FRACCIONAMIENTO" msprop:Generator_ColumnPropNameInRow="FRACCIONAMIENTO" msprop:Generator_ColumnVarNameInTable="columnFRACCIONAMIENTO" msprop:Generator_ColumnPropNameInTable="FRACCIONAMIENTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ORIENTACION" msprop:Generator_UserColumnName="ORIENTACION" msprop:Generator_ColumnVarNameInTable="columnORIENTACION" msprop:Generator_ColumnPropNameInRow="ORIENTACION" msprop:Generator_ColumnPropNameInTable="ORIENTACIONColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

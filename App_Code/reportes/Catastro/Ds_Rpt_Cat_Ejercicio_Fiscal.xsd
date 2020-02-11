@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Cat_Ejercicio_Fiscal" targetNamespace="http://tempuri.org/Ds_Rpt_Cat_Ejercicio_Fiscal.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Cat_Ejercicio_Fiscal.xsd" xmlns="http://tempuri.org/Ds_Rpt_Cat_Ejercicio_Fiscal.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Cat_Ejercicio_Fiscal" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Cat_Ejercicio_Fiscal" msprop:Generator_DataSetName="Ds_Rpt_Cat_Ejercicio_Fiscal">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_TOTALES_EJERCICIO_FISCAL" msprop:Generator_UserTableName="DT_TOTALES_EJERCICIO_FISCAL" msprop:Generator_RowDeletedName="DT_TOTALES_EJERCICIO_FISCALRowDeleted" msprop:Generator_RowChangedName="DT_TOTALES_EJERCICIO_FISCALRowChanged" msprop:Generator_RowClassName="DT_TOTALES_EJERCICIO_FISCALRow" msprop:Generator_RowChangingName="DT_TOTALES_EJERCICIO_FISCALRowChanging" msprop:Generator_RowEvArgName="DT_TOTALES_EJERCICIO_FISCALRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_TOTALES_EJERCICIO_FISCALRowChangeEventHandler" msprop:Generator_TableClassName="DT_TOTALES_EJERCICIO_FISCALDataTable" msprop:Generator_TableVarName="tableDT_TOTALES_EJERCICIO_FISCAL" msprop:Generator_RowDeletingName="DT_TOTALES_EJERCICIO_FISCALRowDeleting" msprop:Generator_TablePropName="DT_TOTALES_EJERCICIO_FISCAL">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TOTAL_ENTREGAR" msprop:Generator_UserColumnName="TOTAL_ENTREGAR" msprop:Generator_ColumnVarNameInTable="columnTOTAL_ENTREGAR" msprop:Generator_ColumnPropNameInRow="TOTAL_ENTREGAR" msprop:Generator_ColumnPropNameInTable="TOTAL_ENTREGARColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="TOTAL_ENTREGADOS" msprop:Generator_UserColumnName="TOTAL_ENTREGADOS" msprop:Generator_ColumnVarNameInTable="columnTOTAL_ENTREGADOS" msprop:Generator_ColumnPropNameInRow="TOTAL_ENTREGADOS" msprop:Generator_ColumnPropNameInTable="TOTAL_ENTREGADOSColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="TOTAL_PORCENTAJE_ENTREGADOS" msprop:Generator_UserColumnName="TOTAL_PORCENTAJE_ENTREGADOS" msprop:Generator_ColumnVarNameInTable="columnTOTAL_PORCENTAJE_ENTREGADOS" msprop:Generator_ColumnPropNameInRow="TOTAL_PORCENTAJE_ENTREGADOS" msprop:Generator_ColumnPropNameInTable="TOTAL_PORCENTAJE_ENTREGADOSColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="TOTAL_DIFERENCIA_AVALUOS" msprop:Generator_UserColumnName="TOTAL_DIFERENCIA_AVALUOS" msprop:Generator_ColumnVarNameInTable="columnTOTAL_DIFERENCIA_AVALUOS" msprop:Generator_ColumnPropNameInRow="TOTAL_DIFERENCIA_AVALUOS" msprop:Generator_ColumnPropNameInTable="TOTAL_DIFERENCIA_AVALUOSColumn" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_EJERCICIO_FISCAL_AV" msprop:Generator_UserTableName="DT_EJERCICIO_FISCAL_AV" msprop:Generator_RowDeletedName="DT_EJERCICIO_FISCAL_AVRowDeleted" msprop:Generator_RowChangedName="DT_EJERCICIO_FISCAL_AVRowChanged" msprop:Generator_RowClassName="DT_EJERCICIO_FISCAL_AVRow" msprop:Generator_RowChangingName="DT_EJERCICIO_FISCAL_AVRowChanging" msprop:Generator_RowEvArgName="DT_EJERCICIO_FISCAL_AVRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_EJERCICIO_FISCAL_AVRowChangeEventHandler" msprop:Generator_TableClassName="DT_EJERCICIO_FISCAL_AVDataTable" msprop:Generator_TableVarName="tableDT_EJERCICIO_FISCAL_AV" msprop:Generator_RowDeletingName="DT_EJERCICIO_FISCAL_AVRowDeleting" msprop:Generator_TablePropName="DT_EJERCICIO_FISCAL_AV">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NO_ENTREGA" msprop:Generator_UserColumnName="NO_ENTREGA" msprop:Generator_ColumnVarNameInTable="columnNO_ENTREGA" msprop:Generator_ColumnPropNameInRow="NO_ENTREGA" msprop:Generator_ColumnPropNameInTable="NO_ENTREGAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="FECHA_ENTREGA" msprop:Generator_UserColumnName="FECHA_ENTREGA" msprop:Generator_ColumnVarNameInTable="columnFECHA_ENTREGA" msprop:Generator_ColumnPropNameInRow="FECHA_ENTREGA" msprop:Generator_ColumnPropNameInTable="FECHA_ENTREGAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHA_ENTREGA_REAL" msprop:Generator_UserColumnName="FECHA_ENTREGA_REAL" msprop:Generator_ColumnVarNameInTable="columnFECHA_ENTREGA_REAL" msprop:Generator_ColumnPropNameInRow="FECHA_ENTREGA_REAL" msprop:Generator_ColumnPropNameInTable="FECHA_ENTREGA_REALColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AVALUOS_ENTREGAR" msprop:Generator_UserColumnName="AVALUOS_ENTREGAR" msprop:Generator_ColumnVarNameInTable="columnAVALUOS_ENTREGAR" msprop:Generator_ColumnPropNameInRow="AVALUOS_ENTREGAR" msprop:Generator_ColumnPropNameInTable="AVALUOS_ENTREGARColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="AVALUOS_ENTREGADOS" msprop:Generator_UserColumnName="AVALUOS_ENTREGADOS" msprop:Generator_ColumnVarNameInTable="columnAVALUOS_ENTREGADOS" msprop:Generator_ColumnPropNameInRow="AVALUOS_ENTREGADOS" msprop:Generator_ColumnPropNameInTable="AVALUOS_ENTREGADOSColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="PORCENTAJE_ENTREGADOS" msprop:Generator_UserColumnName="PORCENTAJE_ENTREGADOS" msprop:Generator_ColumnVarNameInTable="columnPORCENTAJE_ENTREGADOS" msprop:Generator_ColumnPropNameInRow="PORCENTAJE_ENTREGADOS" msprop:Generator_ColumnPropNameInTable="PORCENTAJE_ENTREGADOSColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="DIFERENCIA_AVALUOS" msprop:Generator_UserColumnName="DIFERENCIA_AVALUOS" msprop:Generator_ColumnVarNameInTable="columnDIFERENCIA_AVALUOS" msprop:Generator_ColumnPropNameInRow="DIFERENCIA_AVALUOS" msprop:Generator_ColumnPropNameInTable="DIFERENCIA_AVALUOSColumn" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

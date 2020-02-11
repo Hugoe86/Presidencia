@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Pre_Ordenes_Variacion" targetNamespace="http://tempuri.org/Ds_Rpt_Pre_Beneficios.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Pre_Beneficios.xsd" xmlns="http://tempuri.org/Ds_Rpt_Pre_Beneficios.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Pre_Ordenes_Variacion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Pre_Ordenes_Variacion" msprop:Generator_DataSetName="Ds_Rpt_Pre_Ordenes_Variacion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Notas_Rechazadas" msprop:Generator_UserTableName="Dt_Notas_Rechazadas" msprop:Generator_RowDeletedName="Dt_Notas_RechazadasRowDeleted" msprop:Generator_RowChangedName="Dt_Notas_RechazadasRowChanged" msprop:Generator_RowClassName="Dt_Notas_RechazadasRow" msprop:Generator_RowChangingName="Dt_Notas_RechazadasRowChanging" msprop:Generator_RowEvArgName="Dt_Notas_RechazadasRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Notas_RechazadasRowChangeEventHandler" msprop:Generator_TableClassName="Dt_Notas_RechazadasDataTable" msprop:Generator_TableVarName="tableDt_Notas_Rechazadas" msprop:Generator_RowDeletingName="Dt_Notas_RechazadasRowDeleting" msprop:Generator_TablePropName="Dt_Notas_Rechazadas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CUENTA_PREDIAL" msprop:Generator_UserColumnName="CUENTA_PREDIAL" msprop:Generator_ColumnPropNameInRow="CUENTA_PREDIAL" msprop:Generator_ColumnVarNameInTable="columnCUENTA_PREDIAL" msprop:Generator_ColumnPropNameInTable="CUENTA_PREDIALColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_ORDEN_VARIACION" msprop:Generator_UserColumnName="NO_ORDEN_VARIACION" msprop:Generator_ColumnPropNameInRow="NO_ORDEN_VARIACION" msprop:Generator_ColumnVarNameInTable="columnNO_ORDEN_VARIACION" msprop:Generator_ColumnPropNameInTable="NO_ORDEN_VARIACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ESTATUS_ORDEN" msprop:Generator_UserColumnName="ESTATUS_ORDEN" msprop:Generator_ColumnPropNameInRow="ESTATUS_ORDEN" msprop:Generator_ColumnVarNameInTable="columnESTATUS_ORDEN" msprop:Generator_ColumnPropNameInTable="ESTATUS_ORDENColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_CONTRARECIBO" msprop:Generator_UserColumnName="NO_CONTRARECIBO" msprop:Generator_ColumnPropNameInRow="NO_CONTRARECIBO" msprop:Generator_ColumnVarNameInTable="columnNO_CONTRARECIBO" msprop:Generator_ColumnPropNameInTable="NO_CONTRARECIBOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AREA" msprop:Generator_UserColumnName="AREA" msprop:Generator_ColumnPropNameInRow="AREA" msprop:Generator_ColumnVarNameInTable="columnAREA" msprop:Generator_ColumnPropNameInTable="AREAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="USUARIO_CREO" msprop:Generator_UserColumnName="USUARIO_CREO" msprop:Generator_ColumnPropNameInRow="USUARIO_CREO" msprop:Generator_ColumnVarNameInTable="columnUSUARIO_CREO" msprop:Generator_ColumnPropNameInTable="USUARIO_CREOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA_RECHAZO" msprop:Generator_UserColumnName="FECHA_RECHAZO" msprop:Generator_ColumnPropNameInRow="FECHA_RECHAZO" msprop:Generator_ColumnVarNameInTable="columnFECHA_RECHAZO" msprop:Generator_ColumnPropNameInTable="FECHA_RECHAZOColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CONCEPTO_RECHAZO" msprop:Generator_UserColumnName="CONCEPTO_RECHAZO" msprop:Generator_ColumnPropNameInRow="CONCEPTO_RECHAZO" msprop:Generator_ColumnVarNameInTable="columnCONCEPTO_RECHAZO" msprop:Generator_ColumnPropNameInTable="CONCEPTO_RECHAZOColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dt_Movimientos_En_Proceso" msprop:Generator_UserTableName="Dt_Movimientos_En_Proceso" msprop:Generator_RowDeletedName="Dt_Movimientos_En_ProcesoRowDeleted" msprop:Generator_RowChangedName="Dt_Movimientos_En_ProcesoRowChanged" msprop:Generator_RowClassName="Dt_Movimientos_En_ProcesoRow" msprop:Generator_RowChangingName="Dt_Movimientos_En_ProcesoRowChanging" msprop:Generator_RowEvArgName="Dt_Movimientos_En_ProcesoRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Movimientos_En_ProcesoRowChangeEventHandler" msprop:Generator_TableClassName="Dt_Movimientos_En_ProcesoDataTable" msprop:Generator_TableVarName="tableDt_Movimientos_En_Proceso" msprop:Generator_RowDeletingName="Dt_Movimientos_En_ProcesoRowDeleting" msprop:Generator_TablePropName="Dt_Movimientos_En_Proceso">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CUENTA_PREDIAL" msprop:Generator_UserColumnName="CUENTA_PREDIAL" msprop:Generator_ColumnVarNameInTable="columnCUENTA_PREDIAL" msprop:Generator_ColumnPropNameInRow="CUENTA_PREDIAL" msprop:Generator_ColumnPropNameInTable="CUENTA_PREDIALColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_ORDEN_VARIACION" msprop:Generator_UserColumnName="NO_ORDEN_VARIACION" msprop:Generator_ColumnVarNameInTable="columnNO_ORDEN_VARIACION" msprop:Generator_ColumnPropNameInRow="NO_ORDEN_VARIACION" msprop:Generator_ColumnPropNameInTable="NO_ORDEN_VARIACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ESTATUS_ORDEN" msprop:Generator_UserColumnName="ESTATUS_ORDEN" msprop:Generator_ColumnVarNameInTable="columnESTATUS_ORDEN" msprop:Generator_ColumnPropNameInRow="ESTATUS_ORDEN" msprop:Generator_ColumnPropNameInTable="ESTATUS_ORDENColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA_CREO" msprop:Generator_UserColumnName="FECHA_CREO" msprop:Generator_ColumnVarNameInTable="columnFECHA_CREO" msprop:Generator_ColumnPropNameInRow="FECHA_CREO" msprop:Generator_ColumnPropNameInTable="FECHA_CREOColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHA_MODIFICO" msprop:Generator_UserColumnName="FECHA_MODIFICO" msprop:Generator_ColumnVarNameInTable="columnFECHA_MODIFICO" msprop:Generator_ColumnPropNameInRow="FECHA_MODIFICO" msprop:Generator_ColumnPropNameInTable="FECHA_MODIFICOColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dt_Ordenes_Aplicadas" msprop:Generator_UserTableName="Dt_Ordenes_Aplicadas" msprop:Generator_RowDeletedName="Dt_Ordenes_AplicadasRowDeleted" msprop:Generator_RowChangedName="Dt_Ordenes_AplicadasRowChanged" msprop:Generator_RowClassName="Dt_Ordenes_AplicadasRow" msprop:Generator_RowChangingName="Dt_Ordenes_AplicadasRowChanging" msprop:Generator_RowEvArgName="Dt_Ordenes_AplicadasRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Ordenes_AplicadasRowChangeEventHandler" msprop:Generator_TableClassName="Dt_Ordenes_AplicadasDataTable" msprop:Generator_TableVarName="tableDt_Ordenes_Aplicadas" msprop:Generator_RowDeletingName="Dt_Ordenes_AplicadasRowDeleting" msprop:Generator_TablePropName="Dt_Ordenes_Aplicadas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CUENTA_PREDIAL" msprop:Generator_UserColumnName="CUENTA_PREDIAL" msprop:Generator_ColumnVarNameInTable="columnCUENTA_PREDIAL" msprop:Generator_ColumnPropNameInRow="CUENTA_PREDIAL" msprop:Generator_ColumnPropNameInTable="CUENTA_PREDIALColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_ORDEN_VARIACION" msprop:Generator_UserColumnName="NO_ORDEN_VARIACION" msprop:Generator_ColumnVarNameInTable="columnNO_ORDEN_VARIACION" msprop:Generator_ColumnPropNameInRow="NO_ORDEN_VARIACION" msprop:Generator_ColumnPropNameInTable="NO_ORDEN_VARIACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ESTATUS_ORDEN" msprop:Generator_UserColumnName="ESTATUS_ORDEN" msprop:Generator_ColumnVarNameInTable="columnESTATUS_ORDEN" msprop:Generator_ColumnPropNameInRow="ESTATUS_ORDEN" msprop:Generator_ColumnPropNameInTable="ESTATUS_ORDENColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IDENTIFICADOR_MOVIMIENTO" msprop:Generator_UserColumnName="IDENTIFICADOR_MOVIMIENTO" msprop:Generator_ColumnVarNameInTable="columnIDENTIFICADOR_MOVIMIENTO" msprop:Generator_ColumnPropNameInRow="IDENTIFICADOR_MOVIMIENTO" msprop:Generator_ColumnPropNameInTable="IDENTIFICADOR_MOVIMIENTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_CONTRARECIBO" msprop:Generator_UserColumnName="NO_CONTRARECIBO" msprop:Generator_ColumnVarNameInTable="columnNO_CONTRARECIBO" msprop:Generator_ColumnPropNameInRow="NO_CONTRARECIBO" msprop:Generator_ColumnPropNameInTable="NO_CONTRARECIBOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_NOTA" msprop:Generator_UserColumnName="NO_NOTA" msprop:Generator_ColumnVarNameInTable="columnNO_NOTA" msprop:Generator_ColumnPropNameInRow="NO_NOTA" msprop:Generator_ColumnPropNameInTable="NO_NOTAColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="AREA" msprop:Generator_UserColumnName="AREA" msprop:Generator_ColumnVarNameInTable="columnAREA" msprop:Generator_ColumnPropNameInRow="AREA" msprop:Generator_ColumnPropNameInTable="AREAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="USUARIO_CREO" msprop:Generator_UserColumnName="USUARIO_CREO" msprop:Generator_ColumnVarNameInTable="columnUSUARIO_CREO" msprop:Generator_ColumnPropNameInRow="USUARIO_CREO" msprop:Generator_ColumnPropNameInTable="USUARIO_CREOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA_CREO" msprop:Generator_UserColumnName="FECHA_CREO" msprop:Generator_ColumnVarNameInTable="columnFECHA_CREO" msprop:Generator_ColumnPropNameInRow="FECHA_CREO" msprop:Generator_ColumnPropNameInTable="FECHA_CREOColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="USUARIO_VALIDO" msprop:Generator_UserColumnName="USUARIO_VALIDO" msprop:Generator_ColumnVarNameInTable="columnUSUARIO_VALIDO" msprop:Generator_ColumnPropNameInRow="USUARIO_VALIDO" msprop:Generator_ColumnPropNameInTable="USUARIO_VALIDOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA_VALIDO" msprop:Generator_UserColumnName="FECHA_VALIDO" msprop:Generator_ColumnVarNameInTable="columnFECHA_VALIDO" msprop:Generator_ColumnPropNameInRow="FECHA_VALIDO" msprop:Generator_ColumnPropNameInTable="FECHA_VALIDOColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CLAVE_NOMBRE_GRUPO_MOVIMIENTO" msprop:Generator_UserColumnName="CLAVE_NOMBRE_GRUPO_MOVIMIENTO" msprop:Generator_ColumnVarNameInTable="columnCLAVE_NOMBRE_GRUPO_MOVIMIENTO" msprop:Generator_ColumnPropNameInRow="CLAVE_NOMBRE_GRUPO_MOVIMIENTO" msprop:Generator_ColumnPropNameInTable="CLAVE_NOMBRE_GRUPO_MOVIMIENTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCRIPCION_TIPO_PREDIO" msprop:Generator_UserColumnName="DESCRIPCION_TIPO_PREDIO" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION_TIPO_PREDIO" msprop:Generator_ColumnPropNameInRow="DESCRIPCION_TIPO_PREDIO" msprop:Generator_ColumnPropNameInTable="DESCRIPCION_TIPO_PREDIOColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

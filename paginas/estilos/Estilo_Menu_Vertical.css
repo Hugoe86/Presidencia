@@ -1,0 +1,172 @@
+﻿ul
+{	
+	list-style:none;
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+	background-color:Transparent;
+	_height:1%;
+	overflow:hidden;
+	position:relative;
+	margin-left:0px;
+}
+	
+#menu
+{	
+	-moz-border-radius:5px;/*Esquinas Redondeadas funcion propia del browser Mozilla*/
+	-moz-box-shadow: 7px 7px 5px -1px #999;/*Sombras funcion propia del browser de Mozilla*/
+	
+	-webkit-border-radius:5px;/*Esquinas Redondeadas funcion propia del browser de Safari*/
+	-webkit-box-shadow:1px 1px 3px #888;/*Sombras funcion propia del browser Safari*/
+	
+	border-radius:10px;/*Esquinas Redondeadas funcion propia del estandar CSS 3*/	
+}
+
+/*---------------------------------- PRIMER NIVEL ---------------------------------------*/
+/*Elementos 1er Nivel*/
+#menu li
+{	
+	background-color:Transparent;
+}
+	
+/*Titulo del Primer Nivel*/
+#menu li a
+{
+	background: Transparent url(../imagenes/menu/glossyback2.gif) repeat-x;
+	background-position: 0px -15px;
+	font-family:Bernard MT;
+    color: White;    
+    min-height:24px;
+    text-decoration:none;
+    cursor:hand;
+    font-weight:bold;        	
+    font-size:11px;
+    background-color:#333;
+    width:217px;
+    letter-spacing:0.15em; 
+    display:inline-block !important;
+}	
+	
+#menu li a:hover
+{
+	min-height:24px;
+	color:#000000;	
+	background: Transparent url(../imagenes/menu/a.png) no-repeat;
+	background-position: 0px 0px;	
+	text-decoration:none;
+	font-size: 11px;
+	
+	transition:  color 0.2s linear;/*Efecto que se produce cuando cambia gradualmente de un estilo a otro, función propia del estandar CSS 3*/	
+	-webkit-transition: color 0.2s linear;/*Efecto que se produce cuando cambia gradualmente de un estilo a otro, función propia del browser Safari*/
+	-moz-transition: color 0.2s linear;/*Efecto que se produce cuando cambia gradualmente de un estilo a otro, función propia del browser Mozilla*/
+	-o-transition: color 0.2s linear;/*Efecto que se produce cuando cambia gradualmente de un estilo a otro, función propia del browser Opera*/ 
+	
+	text-shadow: 2px 2px 4px #333;/*Efecto de sombra en el texto, función propia del estandar CSS 3*/	
+	-moz-text-shadow: 2px 2px 4px #333;/*Texto sombreado función propia del browser Mozilla*/
+	-webkit-text-shadow: 2px 2px 4px #333;/*Texto sombreado función propia del browser Safari*/
+	-o-text-shadow: 2px 2px 4px #333;/*Texto sombreado función propia del browser Opera*/
+	
+	-moz-border-radius:10px;
+}
+	
+/*----------------------------------------------------------------------------------------*/	
+
+
+
+/*---------------------------------- SEGUNDO NIVEL ---------------------------------------*/
+/*Elementos 2do Nivel*/	
+#menu li ul li
+{
+	background-color:Transparent;
+}
+
+/*Titulo del Segundo Nivel*/
+#menu li ul li a
+{
+	background: Transparent url(../imagenes/menu/glossyback.gif) repeat-x;
+	background-position: 0px 0px;	
+	margin-left:0px;
+	padding-left:0px;
+	font-family:Courier New;
+    color: #333;    
+    min-height:24px;
+    text-decoration: none;
+    cursor:hand;
+    font-weight:bold;        	
+    font-size:11px;
+    background-color:#333;
+    vertical-align:middle; 
+    letter-spacing:0.05em; 
+}
+
+/*RollOver del Listado Segundo Nivel*/	
+#menu li ul li  a:hover
+{
+	min-height:24px;
+	color:#000000;
+	background: Transparent url(../imagenes/menu/a.png) no-repeat;
+	background-position: 0px -24px;
+	text-decoration:none;
+	
+	transition: color 0.2s linear;/*Efecto que se produce cuando cambia gradualmente de un estilo a otro, función propia del estandar CSS 3*/	
+	-webkit-transition: color 0.2s linear;/*Efecto que se produce cuando cambia gradualmente de un estilo a otro, función propia del browser Safari*/
+	-moz-transition: color 0.2s linear;/*Efecto que se produce cuando cambia gradualmente de un estilo a otro, función propia del browser Mozilla*/
+	-o-transition: color 0.2s linear;/*Efecto que se produce cuando cambia gradualmente de un estilo a otro, función propia del browser Opera*/ 
+	
+	text-shadow: 2px 2px 4px #333;/*Efecto de sombra en el texto, función propia del estandar CSS 3*/	
+	-moz-text-shadow: 2px 2px 4px #333;/*Texto sombreado función propia del browser Mozilla*/
+	-webkit-text-shadow: 2px 2px 4px #333;/*Texto sombreado función propia del browser Safari*/
+	-o-text-shadow: 2px 2px 4px #333;/*Texto sombreado función propia del browser Opera*/
+}
+/*--------------------------------------------------------------------------------------*/	
+
+
+/*---------------------------------- TERCER NIVEL ---------------------------------------*/
+/*Elementos 3er Nivel*/	
+#menu li ul li ul li
+{
+	background-color:Transparent;
+}
+
+/*Titulo del Segundo Nivel*/
+#menu li ul li ul li a
+{
+	padding-left:20px;	
+	font-family:Courier New;
+    min-height:24px;
+    text-decoration:none;
+    cursor:hand;
+    font-weight:bold;        	
+    font-size:11px;
+    background-color:#333;
+	color:#666;
+	background: Transparent url(../imagenes/menu/barraPie.PNG) no-repeat;
+	background-position: 10px 0px;
+	vertical-align:middle;
+	letter-spacing:0.05em; 
+}
+
+/*RollOver del Listado Tercer Nivel*/		
+#menu li ul li ul li a:hover
+{
+	min-height:24px;
+	background-color:#FFF;
+	color:#2961A9;
+	background:#F0F8FF; 
+	background: Transparent url(../imagenes/menu/c.png) no-repeat;
+	background-position: 10px -24px;
+
+	transition:  color 0.2s linear;/*Efecto que se produce cuando cambia gradualmente de un estilo a otro, función propia del estandar CSS 3*/	
+	-webkit-transition: color 0.2s linear;/*Efecto que se produce cuando cambia gradualmente de un estilo a otro, función propia del browser Safari*/
+	-moz-transition: color 0.2s linear;/*Efecto que se produce cuando cambia gradualmente de un estilo a otro, función propia del browser Mozilla*/
+	-o-transition: color 0.2s linear;/*Efecto que se produce cuando cambia gradualmente de un estilo a otro, función propia del browser Opera*/ 
+	
+	text-shadow: 2px 2px 4px #333;/*Efecto de sombra en el texto, función propia del estandar CSS 3*/	
+	-moz-text-shadow: 2px 2px 4px #333;/*Texto sombreado función propia del browser Mozilla*/
+	-webkit-text-shadow: 2px 2px 4px #333;/*Texto sombreado función propia del browser Safari*/
+	-o-text-shadow: 2px 2px 4px #333;/*Texto sombreado función propia del browser Opera*/	
+}
+/*--------------------------------------------------------------------------------------*/	
+#menu li ul 
+{
+	display:none;
+}

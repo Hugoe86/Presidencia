@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Alm_Com_Contrarecibo" targetNamespace="http://tempuri.org/Ds_Alm_Com_Contrarecibo.xsd" xmlns:mstns="http://tempuri.org/Ds_Alm_Com_Contrarecibo.xsd" xmlns="http://tempuri.org/Ds_Alm_Com_Contrarecibo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Alm_Com_Contrarecibo1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Alm_Com_Contrarecibo" msprop:Generator_DataSetName="Ds_Alm_Com_Contrarecibo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Cabecera1" msprop:Generator_UserTableName="Cabecera1" msprop:Generator_RowDeletedName="CabeceraRowDeleted1" msprop:Generator_TableClassName="CabeceraDataTable1" msprop:Generator_RowChangedName="CabeceraRowChanged1" msprop:Generator_RowClassName="CabeceraRow1" msprop:Generator_RowChangingName="CabeceraRowChanging1" msprop:Generator_RowEvArgName="CabeceraRowChangeEvent1" msprop:Generator_RowEvHandlerName="CabeceraRowChangeEventHandler1" msprop:Generator_TablePropName="Cabecera1" msprop:Generator_TableVarName="tableCabecera1" msprop:Generator_RowDeletingName="CabeceraRowDeleting1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="No_Contrarecibo" msprop:Generator_UserColumnName="No_Contrarecibo" msprop:Generator_ColumnPropNameInRow="No_Contrarecibo" msprop:Generator_ColumnVarNameInTable="columnNo_Contrarecibo" msprop:Generator_ColumnPropNameInTable="No_ContrareciboColumn" type="xs:string" default="&quot;&quot;" />
+              <xs:element name="No_Proveedor" msprop:Generator_UserColumnName="No_Proveedor" msprop:Generator_ColumnPropNameInRow="No_Proveedor" msprop:Generator_ColumnVarNameInTable="columnNo_Proveedor" msprop:Generator_ColumnPropNameInTable="No_ProveedorColumn" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="Proveedor" msprop:Generator_UserColumnName="Proveedor" msprop:Generator_ColumnPropNameInRow="Proveedor" msprop:Generator_ColumnVarNameInTable="columnProveedor" msprop:Generator_ColumnPropNameInTable="ProveedorColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="Fecha_Recepcion" msprop:Generator_UserColumnName="Fecha_Recepcion" msprop:Generator_ColumnPropNameInRow="Fecha_Recepcion" msprop:Generator_ColumnVarNameInTable="columnFecha_Recepcion" msprop:Generator_ColumnPropNameInTable="Fecha_RecepcionColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Fecha_Pago" msprop:Generator_UserColumnName="Fecha_Pago" msprop:Generator_ColumnPropNameInRow="Fecha_Pago" msprop:Generator_ColumnVarNameInTable="columnFecha_Pago" msprop:Generator_ColumnPropNameInTable="Fecha_PagoColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Empleado_Almacen" msprop:Generator_UserColumnName="Empleado_Almacen" msprop:Generator_ColumnPropNameInRow="Empleado_Almacen" msprop:Generator_ColumnVarNameInTable="columnEmpleado_Almacen" msprop:Generator_ColumnPropNameInTable="Empleado_AlmacenColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="Observaciones" msprop:Generator_UserColumnName="Observaciones" msprop:Generator_ColumnPropNameInRow="Observaciones" msprop:Generator_ColumnVarNameInTable="columnObservaciones" msprop:Generator_ColumnPropNameInTable="ObservacionesColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Detalles1" msprop:Generator_UserTableName="Detalles1" msprop:Generator_RowDeletedName="DetallesRowDeleted1" msprop:Generator_TableClassName="DetallesDataTable1" msprop:Generator_RowChangedName="DetallesRowChanged1" msprop:Generator_RowClassName="DetallesRow1" msprop:Generator_RowChangingName="DetallesRowChanging1" msprop:Generator_RowEvArgName="DetallesRowChangeEvent1" msprop:Generator_RowEvHandlerName="DetallesRowChangeEventHandler1" msprop:Generator_TablePropName="Detalles1" msprop:Generator_TableVarName="tableDetalles1" msprop:Generator_RowDeletingName="DetallesRowDeleting1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="No_Contrarecibo" msprop:Generator_UserColumnName="No_Contrarecibo" msprop:Generator_ColumnPropNameInRow="No_Contrarecibo" msprop:Generator_ColumnVarNameInTable="columnNo_Contrarecibo" msprop:Generator_ColumnPropNameInTable="No_ContrareciboColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Factura" msprop:Generator_UserColumnName="Factura" msprop:Generator_ColumnPropNameInRow="Factura" msprop:Generator_ColumnVarNameInTable="columnFactura" msprop:Generator_ColumnPropNameInTable="FacturaColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="Importe" msprop:Generator_UserColumnName="Importe" msprop:Generator_ColumnPropNameInRow="Importe" msprop:Generator_ColumnVarNameInTable="columnImporte" msprop:Generator_ColumnPropNameInTable="ImporteColumn" type="xs:double" default="0" minOccurs="0" />
+              <xs:element name="Orden_Compra" msprop:Generator_UserColumnName="Orden_Compra" msprop:Generator_ColumnPropNameInRow="Orden_Compra" msprop:Generator_ColumnVarNameInTable="columnOrden_Compra" msprop:Generator_ColumnPropNameInTable="Orden_CompraColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="CabeceraKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Cabecera" />
+      <xs:field xpath="mstns:No_Contrarecibo" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Cabecera_Detalles" msdata:parent="Cabecera1" msdata:child="Detalles1" msdata:parentkey="No_Contrarecibo" msdata:childkey="No_Contrarecibo" msprop:Generator_UserRelationName="Cabecera_Detalles" msprop:Generator_RelationVarName="relationCabecera_Detalles" msprop:Generator_UserChildTable="Detalles1" msprop:Generator_UserParentTable="Cabecera1" msprop:Generator_ParentPropName="CabeceraRow" msprop:Generator_ChildPropName="GetDetallesRows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

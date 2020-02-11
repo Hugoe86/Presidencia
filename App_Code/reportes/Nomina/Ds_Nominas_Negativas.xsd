@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Nominas_Negativas" targetNamespace="http://tempuri.org/Ds_Nominas_Negativas.xsd" xmlns:mstns="http://tempuri.org/Ds_Nominas_Negativas.xsd" xmlns="http://tempuri.org/Ds_Nominas_Negativas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Nominas_Negativas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Nominas_Negativas" msprop:Generator_DataSetName="Ds_Nominas_Negativas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Nominas_Negativas" msprop:Generator_UserTableName="Nominas_Negativas" msprop:Generator_RowDeletedName="Nominas_NegativasRowDeleted" msprop:Generator_TableClassName="Nominas_NegativasDataTable" msprop:Generator_RowChangedName="Nominas_NegativasRowChanged" msprop:Generator_RowClassName="Nominas_NegativasRow" msprop:Generator_RowChangingName="Nominas_NegativasRowChanging" msprop:Generator_RowEvArgName="Nominas_NegativasRowChangeEvent" msprop:Generator_RowEvHandlerName="Nominas_NegativasRowChangeEventHandler" msprop:Generator_TablePropName="Nominas_Negativas" msprop:Generator_TableVarName="tableNominas_Negativas" msprop:Generator_RowDeletingName="Nominas_NegativasRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NO_EMPLEADO" msprop:Generator_UserColumnName="NO_EMPLEADO" msprop:Generator_ColumnPropNameInRow="NO_EMPLEADO" msprop:Generator_ColumnVarNameInTable="columnNO_EMPLEADO" msprop:Generator_ColumnPropNameInTable="NO_EMPLEADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="EMPLEADO" msprop:Generator_UserColumnName="EMPLEADO" msprop:Generator_ColumnPropNameInRow="EMPLEADO" msprop:Generator_ColumnVarNameInTable="columnEMPLEADO" msprop:Generator_ColumnPropNameInTable="EMPLEADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SALARIO_DIARIO" msprop:Generator_UserColumnName="SALARIO_DIARIO" msprop:Generator_ColumnPropNameInRow="SALARIO_DIARIO" msprop:Generator_ColumnVarNameInTable="columnSALARIO_DIARIO" msprop:Generator_ColumnPropNameInTable="SALARIO_DIARIOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="TOTAL_PERCEPCIONES" msprop:Generator_UserColumnName="TOTAL_PERCEPCIONES" msprop:Generator_ColumnPropNameInRow="TOTAL_PERCEPCIONES" msprop:Generator_ColumnVarNameInTable="columnTOTAL_PERCEPCIONES" msprop:Generator_ColumnPropNameInTable="TOTAL_PERCEPCIONESColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="GRAVADO" msprop:Generator_UserColumnName="GRAVADO" msprop:Generator_ColumnPropNameInRow="GRAVADO" msprop:Generator_ColumnVarNameInTable="columnGRAVADO" msprop:Generator_ColumnPropNameInTable="GRAVADOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="EXENTO" msprop:Generator_UserColumnName="EXENTO" msprop:Generator_ColumnPropNameInRow="EXENTO" msprop:Generator_ColumnVarNameInTable="columnEXENTO" msprop:Generator_ColumnPropNameInTable="EXENTOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="TOTAL_DEDUCCIONES" msprop:Generator_UserColumnName="TOTAL_DEDUCCIONES" msprop:Generator_ColumnPropNameInRow="TOTAL_DEDUCCIONES" msprop:Generator_ColumnVarNameInTable="columnTOTAL_DEDUCCIONES" msprop:Generator_ColumnPropNameInTable="TOTAL_DEDUCCIONESColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="TOTAL_NOMINA" msprop:Generator_UserColumnName="TOTAL_NOMINA" msprop:Generator_ColumnPropNameInRow="TOTAL_NOMINA" msprop:Generator_ColumnVarNameInTable="columnTOTAL_NOMINA" msprop:Generator_ColumnPropNameInTable="TOTAL_NOMINAColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

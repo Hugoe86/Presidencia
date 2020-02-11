@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Ope_Cat_Entregas" targetNamespace="http://tempuri.org/Ds_Ope_Cat_Entregas.xsd" xmlns:mstns="http://tempuri.org/Ds_Ope_Cat_Entregas.xsd" xmlns="http://tempuri.org/Ds_Ope_Cat_Entregas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Ope_Cat_Entregas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Ope_Cat_Entregas" msprop:Generator_DataSetName="Ds_Ope_Cat_Entregas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Entergas" msprop:Generator_UserTableName="Dt_Entergas" msprop:Generator_RowDeletedName="Dt_EntergasRowDeleted" msprop:Generator_TableClassName="Dt_EntergasDataTable" msprop:Generator_RowChangedName="Dt_EntergasRowChanged" msprop:Generator_RowClassName="Dt_EntergasRow" msprop:Generator_RowChangingName="Dt_EntergasRowChanging" msprop:Generator_RowEvArgName="Dt_EntergasRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_EntergasRowChangeEventHandler" msprop:Generator_TablePropName="Dt_Entergas" msprop:Generator_TableVarName="tableDt_Entergas" msprop:Generator_RowDeletingName="Dt_EntergasRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FOLIO_PREDIAL" msprop:Generator_UserColumnName="FOLIO_PREDIAL" msprop:Generator_ColumnPropNameInRow="FOLIO_PREDIAL" msprop:Generator_ColumnVarNameInTable="columnFOLIO_PREDIAL" msprop:Generator_ColumnPropNameInTable="FOLIO_PREDIALColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FOLIO_CATASTRO" msprop:Generator_UserColumnName="FOLIO_CATASTRO" msprop:Generator_ColumnPropNameInRow="FOLIO_CATASTRO" msprop:Generator_ColumnVarNameInTable="columnFOLIO_CATASTRO" msprop:Generator_ColumnPropNameInTable="FOLIO_CATASTROColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE_CALLE" msprop:Generator_UserColumnName="NOMBRE_CALLE" msprop:Generator_ColumnPropNameInRow="NOMBRE_CALLE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_CALLE" msprop:Generator_ColumnPropNameInTable="NOMBRE_CALLEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE_COLONIA" msprop:Generator_UserColumnName="NOMBRE_COLONIA" msprop:Generator_ColumnPropNameInRow="NOMBRE_COLONIA" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_COLONIA" msprop:Generator_ColumnPropNameInTable="NOMBRE_COLONIAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CUENTA" msprop:Generator_UserColumnName="CUENTA" msprop:Generator_ColumnPropNameInRow="CUENTA" msprop:Generator_ColumnVarNameInTable="columnCUENTA" msprop:Generator_ColumnPropNameInTable="CUENTAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NUMERO_EXTERIOR" msprop:Generator_UserColumnName="NUMERO_EXTERIOR" msprop:Generator_ColumnPropNameInRow="NUMERO_EXTERIOR" msprop:Generator_ColumnVarNameInTable="columnNUMERO_EXTERIOR" msprop:Generator_ColumnPropNameInTable="NUMERO_EXTERIORColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NUMERO_INTERIOR" msprop:Generator_UserColumnName="NUMERO_INTERIOR" msprop:Generator_ColumnPropNameInRow="NUMERO_INTERIOR" msprop:Generator_ColumnVarNameInTable="columnNUMERO_INTERIOR" msprop:Generator_ColumnPropNameInTable="NUMERO_INTERIORColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_ENTREGA" msprop:Generator_UserColumnName="NO_ENTREGA" msprop:Generator_ColumnPropNameInRow="NO_ENTREGA" msprop:Generator_ColumnVarNameInTable="columnNO_ENTREGA" msprop:Generator_ColumnPropNameInTable="NO_ENTREGAColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

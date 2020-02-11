@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Nom_Orden_Judicial" targetNamespace="http://tempuri.org/Ds_Rpt_Nom_Orden_Judicial.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Nom_Orden_Judicial.xsd" xmlns="http://tempuri.org/Ds_Rpt_Nom_Orden_Judicial.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Nom_Orden_Judicial" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Nom_Orden_Judicial" msprop:Generator_DataSetName="Ds_Rpt_Nom_Orden_Judicial">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Rpt_Orden_Judicial" msprop:Generator_UserTableName="Dt_Rpt_Orden_Judicial" msprop:Generator_RowDeletedName="Dt_Rpt_Orden_JudicialRowDeleted" msprop:Generator_RowChangedName="Dt_Rpt_Orden_JudicialRowChanged" msprop:Generator_RowClassName="Dt_Rpt_Orden_JudicialRow" msprop:Generator_RowChangingName="Dt_Rpt_Orden_JudicialRowChanging" msprop:Generator_RowEvArgName="Dt_Rpt_Orden_JudicialRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Rpt_Orden_JudicialRowChangeEventHandler" msprop:Generator_TableClassName="Dt_Rpt_Orden_JudicialDataTable" msprop:Generator_TableVarName="tableDt_Rpt_Orden_Judicial" msprop:Generator_RowDeletingName="Dt_Rpt_Orden_JudicialRowDeleting" msprop:Generator_TablePropName="Dt_Rpt_Orden_Judicial">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CANTIDAD_NUMERO" msprop:Generator_UserColumnName="CANTIDAD_NUMERO" msprop:Generator_ColumnVarNameInTable="columnCANTIDAD_NUMERO" msprop:Generator_ColumnPropNameInRow="CANTIDAD_NUMERO" msprop:Generator_ColumnPropNameInTable="CANTIDAD_NUMEROColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="CANTIDAD_LETRA" msprop:Generator_UserColumnName="CANTIDAD_LETRA" msprop:Generator_ColumnVarNameInTable="columnCANTIDAD_LETRA" msprop:Generator_ColumnPropNameInRow="CANTIDAD_LETRA" msprop:Generator_ColumnPropNameInTable="CANTIDAD_LETRAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CATORCENA" msprop:Generator_UserColumnName="CATORCENA" msprop:Generator_ColumnVarNameInTable="columnCATORCENA" msprop:Generator_ColumnPropNameInRow="CATORCENA" msprop:Generator_ColumnPropNameInTable="CATORCENAColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="FECHA_FINAL" msprop:Generator_UserColumnName="FECHA_FINAL" msprop:Generator_ColumnVarNameInTable="columnFECHA_FINAL" msprop:Generator_ColumnPropNameInRow="FECHA_FINAL" msprop:Generator_ColumnPropNameInTable="FECHA_FINALColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NOMBRE_DEPENDENCIA" msprop:Generator_UserColumnName="NOMBRE_DEPENDENCIA" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_DEPENDENCIA" msprop:Generator_ColumnPropNameInRow="NOMBRE_DEPENDENCIA" msprop:Generator_ColumnPropNameInTable="NOMBRE_DEPENDENCIAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE_EMPLEADO" msprop:Generator_UserColumnName="NOMBRE_EMPLEADO" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_EMPLEADO" msprop:Generator_ColumnPropNameInRow="NOMBRE_EMPLEADO" msprop:Generator_ColumnPropNameInTable="NOMBRE_EMPLEADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BENEFICIARIO" msprop:Generator_UserColumnName="BENEFICIARIO" msprop:Generator_ColumnVarNameInTable="columnBENEFICIARIO" msprop:Generator_ColumnPropNameInRow="BENEFICIARIO" msprop:Generator_ColumnPropNameInTable="BENEFICIARIOColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

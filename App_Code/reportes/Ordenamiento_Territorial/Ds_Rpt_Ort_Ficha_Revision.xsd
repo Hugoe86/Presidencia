@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Ort_Ficha_Revision" targetNamespace="http://tempuri.org/Ds_Rpt_Ort_Ficha_Revision.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Ort_Ficha_Revision.xsd" xmlns="http://tempuri.org/Ds_Rpt_Ort_Ficha_Revision.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Ort_Ficha_Revision" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Ort_Ficha_Revision" msprop:Generator_DataSetName="Ds_Rpt_Ort_Ficha_Revision">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Ficha_Revision" msprop:Generator_UserTableName="Dt_Ficha_Revision" msprop:Generator_RowDeletedName="Dt_Ficha_RevisionRowDeleted" msprop:Generator_TableClassName="Dt_Ficha_RevisionDataTable" msprop:Generator_RowChangedName="Dt_Ficha_RevisionRowChanged" msprop:Generator_RowClassName="Dt_Ficha_RevisionRow" msprop:Generator_RowChangingName="Dt_Ficha_RevisionRowChanging" msprop:Generator_RowEvArgName="Dt_Ficha_RevisionRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Ficha_RevisionRowChangeEventHandler" msprop:Generator_TablePropName="Dt_Ficha_Revision" msprop:Generator_TableVarName="tableDt_Ficha_Revision" msprop:Generator_RowDeletingName="Dt_Ficha_RevisionRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SOLICITUD_INTERNA_ID" msprop:Generator_UserColumnName="SOLICITUD_INTERNA_ID" msprop:Generator_ColumnPropNameInRow="SOLICITUD_INTERNA_ID" msprop:Generator_ColumnVarNameInTable="columnSOLICITUD_INTERNA_ID" msprop:Generator_ColumnPropNameInTable="SOLICITUD_INTERNA_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SOLICITUD_ID" msprop:Generator_UserColumnName="SOLICITUD_ID" msprop:Generator_ColumnPropNameInRow="SOLICITUD_ID" msprop:Generator_ColumnVarNameInTable="columnSOLICITUD_ID" msprop:Generator_ColumnPropNameInTable="SOLICITUD_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ZONA" msprop:Generator_UserColumnName="ZONA" msprop:Generator_ColumnPropNameInRow="ZONA" msprop:Generator_ColumnVarNameInTable="columnZONA" msprop:Generator_ColumnPropNameInTable="ZONAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AREA" msprop:Generator_UserColumnName="AREA" msprop:Generator_ColumnPropNameInRow="AREA" msprop:Generator_ColumnVarNameInTable="columnAREA" msprop:Generator_ColumnPropNameInTable="AREAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="OBSERVACION" msprop:Generator_UserColumnName="OBSERVACION" msprop:Generator_ColumnPropNameInRow="OBSERVACION" msprop:Generator_ColumnVarNameInTable="columnOBSERVACION" msprop:Generator_ColumnPropNameInTable="OBSERVACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RESPUESTA" msprop:Generator_UserColumnName="RESPUESTA" msprop:Generator_ColumnPropNameInRow="RESPUESTA" msprop:Generator_ColumnVarNameInTable="columnRESPUESTA" msprop:Generator_ColumnPropNameInTable="RESPUESTAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA_SOLICITUD" msprop:Generator_UserColumnName="FECHA_SOLICITUD" msprop:Generator_ColumnPropNameInRow="FECHA_SOLICITUD" msprop:Generator_ColumnVarNameInTable="columnFECHA_SOLICITUD" msprop:Generator_ColumnPropNameInTable="FECHA_SOLICITUDColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHA_RESPUESTA" msprop:Generator_UserColumnName="FECHA_RESPUESTA" msprop:Generator_ColumnPropNameInRow="FECHA_RESPUESTA" msprop:Generator_ColumnVarNameInTable="columnFECHA_RESPUESTA" msprop:Generator_ColumnPropNameInTable="FECHA_RESPUESTAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CREO" msprop:Generator_UserColumnName="CREO" msprop:Generator_ColumnPropNameInRow="CREO" msprop:Generator_ColumnVarNameInTable="columnCREO" msprop:Generator_ColumnPropNameInTable="CREOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MODIFICO" msprop:Generator_UserColumnName="MODIFICO" msprop:Generator_ColumnPropNameInRow="MODIFICO" msprop:Generator_ColumnVarNameInTable="columnMODIFICO" msprop:Generator_ColumnPropNameInTable="MODIFICOColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

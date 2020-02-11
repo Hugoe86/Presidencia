@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Pre_Convenio_Predial_Pago" targetNamespace="http://tempuri.org/Ds_Pre_Convenio_Predial_Pago.xsd" xmlns:mstns="http://tempuri.org/Ds_Pre_Convenio_Predial_Pago.xsd" xmlns="http://tempuri.org/Ds_Pre_Convenio_Predial_Pago.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Pre_Convenio_Predial_Pago" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Pre_Convenio_Predial_Pago" msprop:Generator_DataSetName="Ds_Pre_Convenio_Predial_Pago">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Convenio_Predial" msprop:Generator_UserTableName="Dt_Convenio_Predial" msprop:Generator_RowDeletedName="Dt_Convenio_PredialRowDeleted" msprop:Generator_TableClassName="Dt_Convenio_PredialDataTable" msprop:Generator_RowChangedName="Dt_Convenio_PredialRowChanged" msprop:Generator_RowClassName="Dt_Convenio_PredialRow" msprop:Generator_RowChangingName="Dt_Convenio_PredialRowChanging" msprop:Generator_RowEvArgName="Dt_Convenio_PredialRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Convenio_PredialRowChangeEventHandler" msprop:Generator_TablePropName="Dt_Convenio_Predial" msprop:Generator_TableVarName="tableDt_Convenio_Predial" msprop:Generator_RowDeletingName="Dt_Convenio_PredialRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NO_CONVENIO" msdata:Caption="NO_CALCULO" msprop:Generator_UserColumnName="NO_CONVENIO" msprop:Generator_ColumnPropNameInRow="NO_CONVENIO" msprop:Generator_ColumnVarNameInTable="columnNO_CONVENIO" msprop:Generator_ColumnPropNameInTable="NO_CONVENIOColumn" type="xs:string" />
+              <xs:element name="FOLIO" msdata:Caption="RECARGOS" msprop:Generator_UserColumnName="FOLIO" msprop:Generator_ColumnPropNameInRow="FOLIO" msprop:Generator_ColumnVarNameInTable="columnFOLIO" msprop:Generator_ColumnPropNameInTable="FOLIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="UBICACION" msdata:Caption="MULTAS" msprop:Generator_UserColumnName="UBICACION" msprop:Generator_ColumnPropNameInRow="UBICACION" msprop:Generator_ColumnVarNameInTable="columnUBICACION" msprop:Generator_ColumnPropNameInTable="UBICACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CUENTA_PREDIAL" msdata:Caption="TOTAL" msprop:Generator_UserColumnName="CUENTA_PREDIAL" msprop:Generator_ColumnPropNameInRow="CUENTA_PREDIAL" msprop:Generator_ColumnVarNameInTable="columnCUENTA_PREDIAL" msprop:Generator_ColumnPropNameInTable="CUENTA_PREDIALColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PROPIETARIO" msdata:Caption="TIPO" msprop:Generator_UserColumnName="PROPIETARIO" msprop:Generator_ColumnPropNameInRow="PROPIETARIO" msprop:Generator_ColumnVarNameInTable="columnPROPIETARIO" msprop:Generator_ColumnPropNameInTable="PROPIETARIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SOLICITANTE" msdata:Caption="NO_ORDEN_VARIACION" msprop:Generator_UserColumnName="SOLICITANTE" msprop:Generator_ColumnPropNameInRow="SOLICITANTE" msprop:Generator_ColumnVarNameInTable="columnSOLICITANTE" msprop:Generator_ColumnPropNameInTable="SOLICITANTEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RFC" msdata:Caption="TANTOS_SALARIO" msprop:Generator_UserColumnName="RFC" msprop:Generator_ColumnPropNameInRow="RFC" msprop:Generator_ColumnVarNameInTable="columnRFC" msprop:Generator_ColumnPropNameInTable="RFCColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="REALIZO" msdata:Caption="REALIZO_CALCULO" msprop:Generator_UserColumnName="REALIZO" msprop:Generator_ColumnPropNameInRow="REALIZO" msprop:Generator_ColumnVarNameInTable="columnREALIZO" msprop:Generator_ColumnPropNameInTable="REALIZOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="HASTA_BIMESTRE" msdata:Caption="FUNDAMENTO" msprop:Generator_UserColumnName="HASTA_BIMESTRE" msprop:Generator_ColumnPropNameInRow="HASTA_BIMESTRE" msprop:Generator_ColumnVarNameInTable="columnHASTA_BIMESTRE" msprop:Generator_ColumnPropNameInTable="HASTA_BIMESTREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MONTO_PREDIAL" msprop:Generator_UserColumnName="MONTO_PREDIAL" msprop:Generator_ColumnPropNameInRow="MONTO_PREDIAL" msprop:Generator_ColumnVarNameInTable="columnMONTO_PREDIAL" msprop:Generator_ColumnPropNameInTable="MONTO_PREDIALColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MONTO_RECARGOS" msprop:Generator_UserColumnName="MONTO_RECARGOS" msprop:Generator_ColumnPropNameInRow="MONTO_RECARGOS" msprop:Generator_ColumnVarNameInTable="columnMONTO_RECARGOS" msprop:Generator_ColumnPropNameInTable="MONTO_RECARGOSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MONTO_MORATORIOS" msprop:Generator_UserColumnName="MONTO_MORATORIOS" msprop:Generator_ColumnPropNameInRow="MONTO_MORATORIOS" msprop:Generator_ColumnVarNameInTable="columnMONTO_MORATORIOS" msprop:Generator_ColumnPropNameInTable="MONTO_MORATORIOSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MONTO_HONORARIOS" msprop:Generator_UserColumnName="MONTO_HONORARIOS" msprop:Generator_ColumnPropNameInRow="MONTO_HONORARIOS" msprop:Generator_ColumnVarNameInTable="columnMONTO_HONORARIOS" msprop:Generator_ColumnPropNameInTable="MONTO_HONORARIOSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCUENTO_RECARGOS" msprop:Generator_UserColumnName="DESCUENTO_RECARGOS" msprop:Generator_ColumnPropNameInRow="DESCUENTO_RECARGOS" msprop:Generator_ColumnVarNameInTable="columnDESCUENTO_RECARGOS" msprop:Generator_ColumnPropNameInTable="DESCUENTO_RECARGOSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCUENTO_MORATORIOS" msprop:Generator_UserColumnName="DESCUENTO_MORATORIOS" msprop:Generator_ColumnPropNameInRow="DESCUENTO_MORATORIOS" msprop:Generator_ColumnVarNameInTable="columnDESCUENTO_MORATORIOS" msprop:Generator_ColumnPropNameInTable="DESCUENTO_MORATORIOSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TOTAL_ADEUDO" msprop:Generator_UserColumnName="TOTAL_ADEUDO" msprop:Generator_ColumnPropNameInRow="TOTAL_ADEUDO" msprop:Generator_ColumnVarNameInTable="columnTOTAL_ADEUDO" msprop:Generator_ColumnPropNameInTable="TOTAL_ADEUDOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TOTAL_DESCUENTO" msprop:Generator_UserColumnName="TOTAL_DESCUENTO" msprop:Generator_ColumnPropNameInRow="TOTAL_DESCUENTO" msprop:Generator_ColumnVarNameInTable="columnTOTAL_DESCUENTO" msprop:Generator_ColumnPropNameInTable="TOTAL_DESCUENTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IMPORTE_PARCIALIDAD" msprop:Generator_UserColumnName="IMPORTE_PARCIALIDAD" msprop:Generator_ColumnPropNameInRow="IMPORTE_PARCIALIDAD" msprop:Generator_ColumnVarNameInTable="columnIMPORTE_PARCIALIDAD" msprop:Generator_ColumnPropNameInTable="IMPORTE_PARCIALIDADColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA_SIGUIENTE_PAGO" msprop:Generator_UserColumnName="FECHA_SIGUIENTE_PAGO" msprop:Generator_ColumnPropNameInRow="FECHA_SIGUIENTE_PAGO" msprop:Generator_ColumnVarNameInTable="columnFECHA_SIGUIENTE_PAGO" msprop:Generator_ColumnPropNameInTable="FECHA_SIGUIENTE_PAGOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PERIODO" msprop:Generator_UserColumnName="PERIODO" msprop:Generator_ColumnPropNameInRow="PERIODO" msprop:Generator_ColumnVarNameInTable="columnPERIODO" msprop:Generator_ColumnPropNameInTable="PERIODOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IMPORTE_SIGUIENTE_PAGO" msprop:Generator_UserColumnName="IMPORTE_SIGUIENTE_PAGO" msprop:Generator_ColumnPropNameInRow="IMPORTE_SIGUIENTE_PAGO" msprop:Generator_ColumnVarNameInTable="columnIMPORTE_SIGUIENTE_PAGO" msprop:Generator_ColumnPropNameInTable="IMPORTE_SIGUIENTE_PAGOColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Dt_Calculo_Imp_TrasladoKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Dt_Convenio_Predial" />
+      <xs:field xpath="mstns:NO_CONVENIO" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

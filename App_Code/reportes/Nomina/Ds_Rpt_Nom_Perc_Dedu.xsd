@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Nom_Perc_Dedu" targetNamespace="http://tempuri.org/Ds_Rpt_Nom_Perc_Dedu.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Nom_Perc_Dedu.xsd" xmlns="http://tempuri.org/Ds_Rpt_Nom_Perc_Dedu.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Nom_Perc_Dedu" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Nom_Perc_Dedu" msprop:Generator_DataSetName="Ds_Rpt_Nom_Perc_Dedu">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="percepciones_deducciones" msprop:Generator_UserTableName="percepciones_deducciones" msprop:Generator_RowDeletedName="percepciones_deduccionesRowDeleted" msprop:Generator_RowChangedName="percepciones_deduccionesRowChanged" msprop:Generator_RowClassName="percepciones_deduccionesRow" msprop:Generator_RowChangingName="percepciones_deduccionesRowChanging" msprop:Generator_RowEvArgName="percepciones_deduccionesRowChangeEvent" msprop:Generator_RowEvHandlerName="percepciones_deduccionesRowChangeEventHandler" msprop:Generator_TableClassName="percepciones_deduccionesDataTable" msprop:Generator_TableVarName="tablepercepciones_deducciones" msprop:Generator_RowDeletingName="percepciones_deduccionesRowDeleting" msprop:Generator_TablePropName="percepciones_deducciones">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PERCEPCION_DEDUCCION_ID" msprop:Generator_UserColumnName="PERCEPCION_DEDUCCION_ID" msprop:Generator_ColumnVarNameInTable="columnPERCEPCION_DEDUCCION_ID" msprop:Generator_ColumnPropNameInRow="PERCEPCION_DEDUCCION_ID" msprop:Generator_ColumnPropNameInTable="PERCEPCION_DEDUCCION_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ESTATUS" msprop:Generator_UserColumnName="ESTATUS" msprop:Generator_ColumnVarNameInTable="columnESTATUS" msprop:Generator_ColumnPropNameInRow="ESTATUS" msprop:Generator_ColumnPropNameInTable="ESTATUSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TIPO" msprop:Generator_UserColumnName="TIPO" msprop:Generator_ColumnVarNameInTable="columnTIPO" msprop:Generator_ColumnPropNameInRow="TIPO" msprop:Generator_ColumnPropNameInTable="TIPOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="APLICAR" msprop:Generator_UserColumnName="APLICAR" msprop:Generator_ColumnVarNameInTable="columnAPLICAR" msprop:Generator_ColumnPropNameInRow="APLICAR" msprop:Generator_ColumnPropNameInTable="APLICARColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TIPO_ASIGNACION" msprop:Generator_UserColumnName="TIPO_ASIGNACION" msprop:Generator_ColumnVarNameInTable="columnTIPO_ASIGNACION" msprop:Generator_ColumnPropNameInRow="TIPO_ASIGNACION" msprop:Generator_ColumnPropNameInTable="TIPO_ASIGNACIONColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="GRAVABLE" msprop:Generator_UserColumnName="GRAVABLE" msprop:Generator_ColumnVarNameInTable="columnGRAVABLE" msprop:Generator_ColumnPropNameInRow="GRAVABLE" msprop:Generator_ColumnPropNameInTable="GRAVABLEColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PORCENTAJE_GRAVABLE" msprop:Generator_UserColumnName="PORCENTAJE_GRAVABLE" msprop:Generator_ColumnVarNameInTable="columnPORCENTAJE_GRAVABLE" msprop:Generator_ColumnPropNameInRow="PORCENTAJE_GRAVABLE" msprop:Generator_ColumnPropNameInTable="PORCENTAJE_GRAVABLEColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="COMENTARIOS" msprop:Generator_UserColumnName="COMENTARIOS" msprop:Generator_ColumnPropNameInRow="COMENTARIOS" msprop:Generator_ColumnVarNameInTable="columnCOMENTARIOS" msprop:Generator_ColumnPropNameInTable="COMENTARIOSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="USUARIO_CREO" msprop:Generator_UserColumnName="USUARIO_CREO" msprop:Generator_ColumnPropNameInRow="USUARIO_CREO" msprop:Generator_ColumnVarNameInTable="columnUSUARIO_CREO" msprop:Generator_ColumnPropNameInTable="USUARIO_CREOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA_CREO" msprop:Generator_UserColumnName="FECHA_CREO" msprop:Generator_ColumnPropNameInRow="FECHA_CREO" msprop:Generator_ColumnVarNameInTable="columnFECHA_CREO" msprop:Generator_ColumnPropNameInTable="FECHA_CREOColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="USUARIO_MODIFICO" msprop:Generator_UserColumnName="USUARIO_MODIFICO" msprop:Generator_ColumnPropNameInRow="USUARIO_MODIFICO" msprop:Generator_ColumnVarNameInTable="columnUSUARIO_MODIFICO" msprop:Generator_ColumnPropNameInTable="USUARIO_MODIFICOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA_MODIFICO" msprop:Generator_UserColumnName="FECHA_MODIFICO" msprop:Generator_ColumnPropNameInRow="FECHA_MODIFICO" msprop:Generator_ColumnVarNameInTable="columnFECHA_MODIFICO" msprop:Generator_ColumnPropNameInTable="FECHA_MODIFICOColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CONCEPTO" msprop:Generator_UserColumnName="CONCEPTO" msprop:Generator_ColumnPropNameInRow="CONCEPTO" msprop:Generator_ColumnVarNameInTable="columnCONCEPTO" msprop:Generator_ColumnPropNameInTable="CONCEPTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="APLICA_IMSS" msprop:Generator_UserColumnName="APLICA_IMSS" msprop:Generator_ColumnPropNameInRow="APLICA_IMSS" msprop:Generator_ColumnVarNameInTable="columnAPLICA_IMSS" msprop:Generator_ColumnPropNameInTable="APLICA_IMSSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CLAVE" msprop:Generator_UserColumnName="CLAVE" msprop:Generator_ColumnPropNameInRow="CLAVE" msprop:Generator_ColumnVarNameInTable="columnCLAVE" msprop:Generator_ColumnPropNameInTable="CLAVEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CUENTA_CONTABLE_ID" msprop:Generator_UserColumnName="CUENTA_CONTABLE_ID" msprop:Generator_ColumnPropNameInRow="CUENTA_CONTABLE_ID" msprop:Generator_ColumnVarNameInTable="columnCUENTA_CONTABLE_ID" msprop:Generator_ColumnPropNameInTable="CUENTA_CONTABLE_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE_CONCEPTO" msprop:Generator_UserColumnName="NOMBRE_CONCEPTO" msprop:Generator_ColumnPropNameInRow="NOMBRE_CONCEPTO" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_CONCEPTO" msprop:Generator_ColumnPropNameInTable="NOMBRE_CONCEPTOColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

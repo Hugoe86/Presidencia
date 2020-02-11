@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Cat_Numero_Entregas" targetNamespace="http://tempuri.org/Ds_Rpt_Cat_Numero_Entregas.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Cat_Numero_Entregas.xsd" xmlns="http://tempuri.org/Ds_Rpt_Cat_Numero_Entregas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Cat_Numero_Entregas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Cat_Numero_Entregas" msprop:Generator_DataSetName="Ds_Rpt_Cat_Numero_Entregas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_NUM_ENTREGAS_PERS_PRIM" msprop:Generator_UserTableName="DT_NUM_ENTREGAS_PERS_PRIM" msprop:Generator_RowDeletedName="DT_NUM_ENTREGAS_PERS_PRIMRowDeleted" msprop:Generator_RowChangedName="DT_NUM_ENTREGAS_PERS_PRIMRowChanged" msprop:Generator_RowClassName="DT_NUM_ENTREGAS_PERS_PRIMRow" msprop:Generator_RowChangingName="DT_NUM_ENTREGAS_PERS_PRIMRowChanging" msprop:Generator_RowEvArgName="DT_NUM_ENTREGAS_PERS_PRIMRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_NUM_ENTREGAS_PERS_PRIMRowChangeEventHandler" msprop:Generator_TableClassName="DT_NUM_ENTREGAS_PERS_PRIMDataTable" msprop:Generator_TableVarName="tableDT_NUM_ENTREGAS_PERS_PRIM" msprop:Generator_RowDeletingName="DT_NUM_ENTREGAS_PERS_PRIMRowDeleting" msprop:Generator_TablePropName="DT_NUM_ENTREGAS_PERS_PRIM">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CUOTA" msprop:Generator_UserColumnName="CUOTA" msprop:Generator_ColumnVarNameInTable="columnCUOTA" msprop:Generator_ColumnPropNameInRow="CUOTA" msprop:Generator_ColumnPropNameInTable="CUOTAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="TOTAL_ENTREGADOS" msprop:Generator_UserColumnName="TOTAL_ENTREGADOS" msprop:Generator_ColumnVarNameInTable="columnTOTAL_ENTREGADOS" msprop:Generator_ColumnPropNameInRow="TOTAL_ENTREGADOS" msprop:Generator_ColumnPropNameInTable="TOTAL_ENTREGADOSColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DIFERENCIA" msprop:Generator_UserColumnName="DIFERENCIA" msprop:Generator_ColumnVarNameInTable="columnDIFERENCIA" msprop:Generator_ColumnPropNameInRow="DIFERENCIA" msprop:Generator_ColumnPropNameInTable="DIFERENCIAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PERITO_INTERNO_ID" msprop:Generator_UserColumnName="PERITO_INTERNO_ID" msprop:Generator_ColumnVarNameInTable="columnPERITO_INTERNO_ID" msprop:Generator_ColumnPropNameInRow="PERITO_INTERNO_ID" msprop:Generator_ColumnPropNameInTable="PERITO_INTERNO_IDColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_NUM_ENTREGAS_PERS_SEG" msprop:Generator_UserTableName="DT_NUM_ENTREGAS_PERS_SEG" msprop:Generator_RowDeletedName="DT_NUM_ENTREGAS_PERS_SEGRowDeleted" msprop:Generator_RowChangedName="DT_NUM_ENTREGAS_PERS_SEGRowChanged" msprop:Generator_RowClassName="DT_NUM_ENTREGAS_PERS_SEGRow" msprop:Generator_RowChangingName="DT_NUM_ENTREGAS_PERS_SEGRowChanging" msprop:Generator_RowEvArgName="DT_NUM_ENTREGAS_PERS_SEGRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_NUM_ENTREGAS_PERS_SEGRowChangeEventHandler" msprop:Generator_TableClassName="DT_NUM_ENTREGAS_PERS_SEGDataTable" msprop:Generator_TableVarName="tableDT_NUM_ENTREGAS_PERS_SEG" msprop:Generator_RowDeletingName="DT_NUM_ENTREGAS_PERS_SEGRowDeleting" msprop:Generator_TablePropName="DT_NUM_ENTREGAS_PERS_SEG">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CUOTA" msprop:Generator_UserColumnName="CUOTA" msprop:Generator_ColumnVarNameInTable="columnCUOTA" msprop:Generator_ColumnPropNameInRow="CUOTA" msprop:Generator_ColumnPropNameInTable="CUOTAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="TOTAL_ENTREGADOS" msprop:Generator_UserColumnName="TOTAL_ENTREGADOS" msprop:Generator_ColumnVarNameInTable="columnTOTAL_ENTREGADOS" msprop:Generator_ColumnPropNameInRow="TOTAL_ENTREGADOS" msprop:Generator_ColumnPropNameInTable="TOTAL_ENTREGADOSColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DIFERENCIA" msprop:Generator_UserColumnName="DIFERENCIA" msprop:Generator_ColumnVarNameInTable="columnDIFERENCIA" msprop:Generator_ColumnPropNameInRow="DIFERENCIA" msprop:Generator_ColumnPropNameInTable="DIFERENCIAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PERITO_INTERNO_ID" msprop:Generator_UserColumnName="PERITO_INTERNO_ID" msprop:Generator_ColumnVarNameInTable="columnPERITO_INTERNO_ID" msprop:Generator_ColumnPropNameInRow="PERITO_INTERNO_ID" msprop:Generator_ColumnPropNameInTable="PERITO_INTERNO_IDColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_NUM_ENTREGAS_PERS_NOMBRE" msprop:Generator_UserTableName="DT_NUM_ENTREGAS_PERS_NOMBRE" msprop:Generator_RowDeletedName="DT_NUM_ENTREGAS_PERS_NOMBRERowDeleted" msprop:Generator_RowChangedName="DT_NUM_ENTREGAS_PERS_NOMBRERowChanged" msprop:Generator_RowClassName="DT_NUM_ENTREGAS_PERS_NOMBRERow" msprop:Generator_RowChangingName="DT_NUM_ENTREGAS_PERS_NOMBRERowChanging" msprop:Generator_RowEvArgName="DT_NUM_ENTREGAS_PERS_NOMBRERowChangeEvent" msprop:Generator_RowEvHandlerName="DT_NUM_ENTREGAS_PERS_NOMBRERowChangeEventHandler" msprop:Generator_TableClassName="DT_NUM_ENTREGAS_PERS_NOMBREDataTable" msprop:Generator_TableVarName="tableDT_NUM_ENTREGAS_PERS_NOMBRE" msprop:Generator_RowDeletingName="DT_NUM_ENTREGAS_PERS_NOMBRERowDeleting" msprop:Generator_TablePropName="DT_NUM_ENTREGAS_PERS_NOMBRE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PERITO_INTERNO_ID" msprop:Generator_UserColumnName="PERITO_INTERNO_ID" msprop:Generator_ColumnVarNameInTable="columnPERITO_INTERNO_ID" msprop:Generator_ColumnPropNameInRow="PERITO_INTERNO_ID" msprop:Generator_ColumnPropNameInTable="PERITO_INTERNO_IDColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_NUM_ENTREGAS_PERS_TER" msprop:Generator_UserTableName="DT_NUM_ENTREGAS_PERS_TER" msprop:Generator_RowDeletedName="DT_NUM_ENTREGAS_PERS_TERRowDeleted" msprop:Generator_RowChangedName="DT_NUM_ENTREGAS_PERS_TERRowChanged" msprop:Generator_RowClassName="DT_NUM_ENTREGAS_PERS_TERRow" msprop:Generator_RowChangingName="DT_NUM_ENTREGAS_PERS_TERRowChanging" msprop:Generator_RowEvArgName="DT_NUM_ENTREGAS_PERS_TERRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_NUM_ENTREGAS_PERS_TERRowChangeEventHandler" msprop:Generator_TableClassName="DT_NUM_ENTREGAS_PERS_TERDataTable" msprop:Generator_TableVarName="tableDT_NUM_ENTREGAS_PERS_TER" msprop:Generator_RowDeletingName="DT_NUM_ENTREGAS_PERS_TERRowDeleting" msprop:Generator_TablePropName="DT_NUM_ENTREGAS_PERS_TER">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CUOTA" msprop:Generator_UserColumnName="CUOTA" msprop:Generator_ColumnVarNameInTable="columnCUOTA" msprop:Generator_ColumnPropNameInRow="CUOTA" msprop:Generator_ColumnPropNameInTable="CUOTAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="TOTALES_ENTREGADOS" msprop:Generator_UserColumnName="TOTALES_ENTREGADOS" msprop:Generator_ColumnVarNameInTable="columnTOTALES_ENTREGADOS" msprop:Generator_ColumnPropNameInRow="TOTALES_ENTREGADOS" msprop:Generator_ColumnPropNameInTable="TOTALES_ENTREGADOSColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DIFERENCIA" msprop:Generator_UserColumnName="DIFERENCIA" msprop:Generator_ColumnVarNameInTable="columnDIFERENCIA" msprop:Generator_ColumnPropNameInRow="DIFERENCIA" msprop:Generator_ColumnPropNameInTable="DIFERENCIAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PERITO_INTERNO_ID" msprop:Generator_UserColumnName="PERITO_INTERNO_ID" msprop:Generator_ColumnVarNameInTable="columnPERITO_INTERNO_ID" msprop:Generator_ColumnPropNameInRow="PERITO_INTERNO_ID" msprop:Generator_ColumnPropNameInTable="PERITO_INTERNO_IDColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_NUM_ENTREGAS_PERS_CUA" msprop:Generator_UserTableName="DT_NUM_ENTREGAS_PERS_CUA" msprop:Generator_RowDeletedName="DT_NUM_ENTREGAS_PERS_CUARowDeleted" msprop:Generator_RowChangedName="DT_NUM_ENTREGAS_PERS_CUARowChanged" msprop:Generator_RowClassName="DT_NUM_ENTREGAS_PERS_CUARow" msprop:Generator_RowChangingName="DT_NUM_ENTREGAS_PERS_CUARowChanging" msprop:Generator_RowEvArgName="DT_NUM_ENTREGAS_PERS_CUARowChangeEvent" msprop:Generator_RowEvHandlerName="DT_NUM_ENTREGAS_PERS_CUARowChangeEventHandler" msprop:Generator_TableClassName="DT_NUM_ENTREGAS_PERS_CUADataTable" msprop:Generator_TableVarName="tableDT_NUM_ENTREGAS_PERS_CUA" msprop:Generator_RowDeletingName="DT_NUM_ENTREGAS_PERS_CUARowDeleting" msprop:Generator_TablePropName="DT_NUM_ENTREGAS_PERS_CUA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CUOTA" msprop:Generator_UserColumnName="CUOTA" msprop:Generator_ColumnVarNameInTable="columnCUOTA" msprop:Generator_ColumnPropNameInRow="CUOTA" msprop:Generator_ColumnPropNameInTable="CUOTAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="TOTALES_ENTREGADOS" msprop:Generator_UserColumnName="TOTALES_ENTREGADOS" msprop:Generator_ColumnVarNameInTable="columnTOTALES_ENTREGADOS" msprop:Generator_ColumnPropNameInRow="TOTALES_ENTREGADOS" msprop:Generator_ColumnPropNameInTable="TOTALES_ENTREGADOSColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DIFERENCIA" msprop:Generator_UserColumnName="DIFERENCIA" msprop:Generator_ColumnVarNameInTable="columnDIFERENCIA" msprop:Generator_ColumnPropNameInRow="DIFERENCIA" msprop:Generator_ColumnPropNameInTable="DIFERENCIAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PERITO_INTERNO_ID" msprop:Generator_UserColumnName="PERITO_INTERNO_ID" msprop:Generator_ColumnVarNameInTable="columnPERITO_INTERNO_ID" msprop:Generator_ColumnPropNameInRow="PERITO_INTERNO_ID" msprop:Generator_ColumnPropNameInTable="PERITO_INTERNO_IDColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_NUM_ENTREGAS_PERS_QUIN" msprop:Generator_UserTableName="DT_NUM_ENTREGAS_PERS_QUIN" msprop:Generator_RowDeletedName="DT_NUM_ENTREGAS_PERS_QUINRowDeleted" msprop:Generator_RowChangedName="DT_NUM_ENTREGAS_PERS_QUINRowChanged" msprop:Generator_RowClassName="DT_NUM_ENTREGAS_PERS_QUINRow" msprop:Generator_RowChangingName="DT_NUM_ENTREGAS_PERS_QUINRowChanging" msprop:Generator_RowEvArgName="DT_NUM_ENTREGAS_PERS_QUINRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_NUM_ENTREGAS_PERS_QUINRowChangeEventHandler" msprop:Generator_TableClassName="DT_NUM_ENTREGAS_PERS_QUINDataTable" msprop:Generator_TableVarName="tableDT_NUM_ENTREGAS_PERS_QUIN" msprop:Generator_RowDeletingName="DT_NUM_ENTREGAS_PERS_QUINRowDeleting" msprop:Generator_TablePropName="DT_NUM_ENTREGAS_PERS_QUIN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CUOTA" msprop:Generator_UserColumnName="CUOTA" msprop:Generator_ColumnVarNameInTable="columnCUOTA" msprop:Generator_ColumnPropNameInRow="CUOTA" msprop:Generator_ColumnPropNameInTable="CUOTAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="TOTALES_ENTREGADOS" msprop:Generator_UserColumnName="TOTALES_ENTREGADOS" msprop:Generator_ColumnVarNameInTable="columnTOTALES_ENTREGADOS" msprop:Generator_ColumnPropNameInRow="TOTALES_ENTREGADOS" msprop:Generator_ColumnPropNameInTable="TOTALES_ENTREGADOSColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DIFERENCIA" msprop:Generator_UserColumnName="DIFERENCIA" msprop:Generator_ColumnVarNameInTable="columnDIFERENCIA" msprop:Generator_ColumnPropNameInRow="DIFERENCIA" msprop:Generator_ColumnPropNameInTable="DIFERENCIAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PERITO_INTERNO_ID" msprop:Generator_UserColumnName="PERITO_INTERNO_ID" msprop:Generator_ColumnVarNameInTable="columnPERITO_INTERNO_ID" msprop:Generator_ColumnPropNameInRow="PERITO_INTERNO_ID" msprop:Generator_ColumnPropNameInTable="PERITO_INTERNO_IDColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_NUM_ENTREGAS_PERS_SEXT" msprop:Generator_UserTableName="DT_NUM_ENTREGAS_PERS_SEXT" msprop:Generator_RowDeletedName="DT_NUM_ENTREGAS_PERS_SEXTRowDeleted" msprop:Generator_RowChangedName="DT_NUM_ENTREGAS_PERS_SEXTRowChanged" msprop:Generator_RowClassName="DT_NUM_ENTREGAS_PERS_SEXTRow" msprop:Generator_RowChangingName="DT_NUM_ENTREGAS_PERS_SEXTRowChanging" msprop:Generator_RowEvArgName="DT_NUM_ENTREGAS_PERS_SEXTRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_NUM_ENTREGAS_PERS_SEXTRowChangeEventHandler" msprop:Generator_TableClassName="DT_NUM_ENTREGAS_PERS_SEXTDataTable" msprop:Generator_TableVarName="tableDT_NUM_ENTREGAS_PERS_SEXT" msprop:Generator_RowDeletingName="DT_NUM_ENTREGAS_PERS_SEXTRowDeleting" msprop:Generator_TablePropName="DT_NUM_ENTREGAS_PERS_SEXT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CUOTA" msprop:Generator_UserColumnName="CUOTA" msprop:Generator_ColumnVarNameInTable="columnCUOTA" msprop:Generator_ColumnPropNameInRow="CUOTA" msprop:Generator_ColumnPropNameInTable="CUOTAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="TOTALES_ENTREGADOS" msprop:Generator_UserColumnName="TOTALES_ENTREGADOS" msprop:Generator_ColumnVarNameInTable="columnTOTALES_ENTREGADOS" msprop:Generator_ColumnPropNameInRow="TOTALES_ENTREGADOS" msprop:Generator_ColumnPropNameInTable="TOTALES_ENTREGADOSColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DIFERENCIA" msprop:Generator_UserColumnName="DIFERENCIA" msprop:Generator_ColumnVarNameInTable="columnDIFERENCIA" msprop:Generator_ColumnPropNameInRow="DIFERENCIA" msprop:Generator_ColumnPropNameInTable="DIFERENCIAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PERITO_INTERNO_ID" msprop:Generator_UserColumnName="PERITO_INTERNO_ID" msprop:Generator_ColumnVarNameInTable="columnPERITO_INTERNO_ID" msprop:Generator_ColumnPropNameInRow="PERITO_INTERNO_ID" msprop:Generator_ColumnPropNameInTable="PERITO_INTERNO_IDColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_NUM_ENTREGAS_PERS_SEPT" msprop:Generator_UserTableName="DT_NUM_ENTREGAS_PERS_SEPT" msprop:Generator_RowDeletedName="DT_NUM_ENTREGAS_PERS_SEPTRowDeleted" msprop:Generator_RowChangedName="DT_NUM_ENTREGAS_PERS_SEPTRowChanged" msprop:Generator_RowClassName="DT_NUM_ENTREGAS_PERS_SEPTRow" msprop:Generator_RowChangingName="DT_NUM_ENTREGAS_PERS_SEPTRowChanging" msprop:Generator_RowEvArgName="DT_NUM_ENTREGAS_PERS_SEPTRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_NUM_ENTREGAS_PERS_SEPTRowChangeEventHandler" msprop:Generator_TableClassName="DT_NUM_ENTREGAS_PERS_SEPTDataTable" msprop:Generator_TableVarName="tableDT_NUM_ENTREGAS_PERS_SEPT" msprop:Generator_RowDeletingName="DT_NUM_ENTREGAS_PERS_SEPTRowDeleting" msprop:Generator_TablePropName="DT_NUM_ENTREGAS_PERS_SEPT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CUOTA" msprop:Generator_UserColumnName="CUOTA" msprop:Generator_ColumnVarNameInTable="columnCUOTA" msprop:Generator_ColumnPropNameInRow="CUOTA" msprop:Generator_ColumnPropNameInTable="CUOTAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="TOTALES_ENTREGADOS" msprop:Generator_UserColumnName="TOTALES_ENTREGADOS" msprop:Generator_ColumnVarNameInTable="columnTOTALES_ENTREGADOS" msprop:Generator_ColumnPropNameInRow="TOTALES_ENTREGADOS" msprop:Generator_ColumnPropNameInTable="TOTALES_ENTREGADOSColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DIFERENCIA" msprop:Generator_UserColumnName="DIFERENCIA" msprop:Generator_ColumnVarNameInTable="columnDIFERENCIA" msprop:Generator_ColumnPropNameInRow="DIFERENCIA" msprop:Generator_ColumnPropNameInTable="DIFERENCIAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PERITO_INTERNO_ID" msprop:Generator_UserColumnName="PERITO_INTERNO_ID" msprop:Generator_ColumnVarNameInTable="columnPERITO_INTERNO_ID" msprop:Generator_ColumnPropNameInRow="PERITO_INTERNO_ID" msprop:Generator_ColumnPropNameInTable="PERITO_INTERNO_IDColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

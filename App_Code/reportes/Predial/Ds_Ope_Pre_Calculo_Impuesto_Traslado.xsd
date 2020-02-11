@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Ope_Pre_Calculo_Impuesto_Traslado" targetNamespace="http://tempuri.org/Ds_Ope_Pre_Calculo_Impuesto_Traslado.xsd" xmlns:mstns="http://tempuri.org/Ds_Ope_Pre_Calculo_Impuesto_Traslado.xsd" xmlns="http://tempuri.org/Ds_Ope_Pre_Calculo_Impuesto_Traslado.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Ope_Pre_Calculo_Impuesto_Traslado" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Ope_Pre_Calculo_Impuesto_Traslado" msprop:Generator_DataSetName="Ds_Ope_Pre_Calculo_Impuesto_Traslado">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dt_Calculo_Imp_Traslado" msprop:Generator_UserTableName="Dt_Calculo_Imp_Traslado" msprop:Generator_RowDeletedName="Dt_Calculo_Imp_TrasladoRowDeleted" msprop:Generator_RowChangedName="Dt_Calculo_Imp_TrasladoRowChanged" msprop:Generator_RowClassName="Dt_Calculo_Imp_TrasladoRow" msprop:Generator_RowChangingName="Dt_Calculo_Imp_TrasladoRowChanging" msprop:Generator_RowEvArgName="Dt_Calculo_Imp_TrasladoRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Calculo_Imp_TrasladoRowChangeEventHandler" msprop:Generator_TableClassName="Dt_Calculo_Imp_TrasladoDataTable" msprop:Generator_TableVarName="tableDt_Calculo_Imp_Traslado" msprop:Generator_RowDeletingName="Dt_Calculo_Imp_TrasladoRowDeleting" msprop:Generator_TablePropName="Dt_Calculo_Imp_Traslado">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NO_CALCULO" msprop:Generator_UserColumnName="NO_CALCULO" msprop:Generator_ColumnPropNameInRow="NO_CALCULO" msprop:Generator_ColumnVarNameInTable="columnNO_CALCULO" msprop:Generator_ColumnPropNameInTable="NO_CALCULOColumn" type="xs:string" />
+              <xs:element name="BASE_IMPUESTO" msprop:Generator_UserColumnName="BASE_IMPUESTO" msprop:Generator_ColumnPropNameInRow="BASE_IMPUESTO" msprop:Generator_ColumnVarNameInTable="columnBASE_IMPUESTO" msprop:Generator_ColumnPropNameInTable="BASE_IMPUESTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MINIMO_ELEVADO_ANIO" msprop:Generator_UserColumnName="MINIMO_ELEVADO_ANIO" msprop:Generator_ColumnPropNameInRow="MINIMO_ELEVADO_ANIO" msprop:Generator_ColumnVarNameInTable="columnMINIMO_ELEVADO_ANIO" msprop:Generator_ColumnPropNameInTable="MINIMO_ELEVADO_ANIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BASE_GRAVABLE_TRASLADO" msprop:Generator_UserColumnName="BASE_GRAVABLE_TRASLADO" msprop:Generator_ColumnPropNameInRow="BASE_GRAVABLE_TRASLADO" msprop:Generator_ColumnVarNameInTable="columnBASE_GRAVABLE_TRASLADO" msprop:Generator_ColumnPropNameInTable="BASE_GRAVABLE_TRASLADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BASE_GRAVABLE_DIVISION" msprop:Generator_UserColumnName="BASE_GRAVABLE_DIVISION" msprop:Generator_ColumnPropNameInRow="BASE_GRAVABLE_DIVISION" msprop:Generator_ColumnVarNameInTable="columnBASE_GRAVABLE_DIVISION" msprop:Generator_ColumnPropNameInTable="BASE_GRAVABLE_DIVISIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TASA_TRASLADO" msprop:Generator_UserColumnName="TASA_TRASLADO" msprop:Generator_ColumnPropNameInRow="TASA_TRASLADO" msprop:Generator_ColumnVarNameInTable="columnTASA_TRASLADO" msprop:Generator_ColumnPropNameInTable="TASA_TRASLADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TASA_DIVISION" msprop:Generator_UserColumnName="TASA_DIVISION" msprop:Generator_ColumnPropNameInRow="TASA_DIVISION" msprop:Generator_ColumnVarNameInTable="columnTASA_DIVISION" msprop:Generator_ColumnPropNameInTable="TASA_DIVISIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IMPUESTO_TRASLADO" msprop:Generator_UserColumnName="IMPUESTO_TRASLADO" msprop:Generator_ColumnPropNameInRow="IMPUESTO_TRASLADO" msprop:Generator_ColumnVarNameInTable="columnIMPUESTO_TRASLADO" msprop:Generator_ColumnPropNameInTable="IMPUESTO_TRASLADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IMPUESTO_DIVISION" msprop:Generator_UserColumnName="IMPUESTO_DIVISION" msprop:Generator_ColumnPropNameInRow="IMPUESTO_DIVISION" msprop:Generator_ColumnVarNameInTable="columnIMPUESTO_DIVISION" msprop:Generator_ColumnPropNameInTable="IMPUESTO_DIVISIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CONSTANCIA" msprop:Generator_UserColumnName="CONSTANCIA" msprop:Generator_ColumnPropNameInRow="CONSTANCIA" msprop:Generator_ColumnVarNameInTable="columnCONSTANCIA" msprop:Generator_ColumnPropNameInTable="CONSTANCIAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RECARGOS" msprop:Generator_UserColumnName="RECARGOS" msprop:Generator_ColumnPropNameInRow="RECARGOS" msprop:Generator_ColumnVarNameInTable="columnRECARGOS" msprop:Generator_ColumnPropNameInTable="RECARGOSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MULTAS" msprop:Generator_UserColumnName="MULTAS" msprop:Generator_ColumnPropNameInRow="MULTAS" msprop:Generator_ColumnVarNameInTable="columnMULTAS" msprop:Generator_ColumnPropNameInTable="MULTASColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TOTAL" msprop:Generator_UserColumnName="TOTAL" msprop:Generator_ColumnPropNameInRow="TOTAL" msprop:Generator_ColumnVarNameInTable="columnTOTAL" msprop:Generator_ColumnPropNameInTable="TOTALColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TIPO" msprop:Generator_UserColumnName="TIPO" msprop:Generator_ColumnPropNameInRow="TIPO" msprop:Generator_ColumnVarNameInTable="columnTIPO" msprop:Generator_ColumnPropNameInTable="TIPOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CUENTA_PREDIAL" msprop:Generator_UserColumnName="CUENTA_PREDIAL" msprop:Generator_ColumnPropNameInRow="CUENTA_PREDIAL" msprop:Generator_ColumnVarNameInTable="columnCUENTA_PREDIAL" msprop:Generator_ColumnPropNameInTable="CUENTA_PREDIALColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_ORDEN_VARIACION" msprop:Generator_UserColumnName="NO_ORDEN_VARIACION" msprop:Generator_ColumnPropNameInRow="NO_ORDEN_VARIACION" msprop:Generator_ColumnVarNameInTable="columnNO_ORDEN_VARIACION" msprop:Generator_ColumnPropNameInTable="NO_ORDEN_VARIACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TANTOS_SALARIO" msprop:Generator_UserColumnName="TANTOS_SALARIO" msprop:Generator_ColumnVarNameInTable="columnTANTOS_SALARIO" msprop:Generator_ColumnPropNameInRow="TANTOS_SALARIO" msprop:Generator_ColumnPropNameInTable="TANTOS_SALARIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="REALIZO_CALCULO" msprop:Generator_UserColumnName="REALIZO_CALCULO" msprop:Generator_ColumnPropNameInRow="REALIZO_CALCULO" msprop:Generator_ColumnVarNameInTable="columnREALIZO_CALCULO" msprop:Generator_ColumnPropNameInTable="REALIZO_CALCULOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FUNDAMENTO" msprop:Generator_UserColumnName="FUNDAMENTO" msprop:Generator_ColumnVarNameInTable="columnFUNDAMENTO" msprop:Generator_ColumnPropNameInRow="FUNDAMENTO" msprop:Generator_ColumnPropNameInTable="FUNDAMENTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="OBSERVACIONES" msprop:Generator_UserColumnName="OBSERVACIONES" msprop:Generator_ColumnPropNameInRow="OBSERVACIONES" msprop:Generator_ColumnVarNameInTable="columnOBSERVACIONES" msprop:Generator_ColumnPropNameInTable="OBSERVACIONESColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dt_Orden_Variacion" msprop:Generator_UserTableName="Dt_Orden_Variacion" msprop:Generator_RowDeletedName="Dt_Orden_VariacionRowDeleted" msprop:Generator_RowChangedName="Dt_Orden_VariacionRowChanged" msprop:Generator_RowClassName="Dt_Orden_VariacionRow" msprop:Generator_RowChangingName="Dt_Orden_VariacionRowChanging" msprop:Generator_RowEvArgName="Dt_Orden_VariacionRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Orden_VariacionRowChangeEventHandler" msprop:Generator_TableClassName="Dt_Orden_VariacionDataTable" msprop:Generator_TableVarName="tableDt_Orden_Variacion" msprop:Generator_RowDeletingName="Dt_Orden_VariacionRowDeleting" msprop:Generator_TablePropName="Dt_Orden_Variacion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NO_ORDEN_VARIACION" msprop:Generator_UserColumnName="NO_ORDEN_VARIACION" msprop:Generator_ColumnPropNameInRow="NO_ORDEN_VARIACION" msprop:Generator_ColumnVarNameInTable="columnNO_ORDEN_VARIACION" msprop:Generator_ColumnPropNameInTable="NO_ORDEN_VARIACIONColumn" type="xs:string" />
+              <xs:element name="FOLIO_ORDEN" msprop:Generator_UserColumnName="FOLIO_ORDEN" msprop:Generator_ColumnPropNameInRow="FOLIO_ORDEN" msprop:Generator_ColumnVarNameInTable="columnFOLIO_ORDEN" msprop:Generator_ColumnPropNameInTable="FOLIO_ORDENColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CONTRARECIBO" msprop:Generator_UserColumnName="CONTRARECIBO" msprop:Generator_ColumnPropNameInRow="CONTRARECIBO" msprop:Generator_ColumnVarNameInTable="columnCONTRARECIBO" msprop:Generator_ColumnPropNameInTable="CONTRARECIBOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PROPIETARIO" msprop:Generator_UserColumnName="PROPIETARIO" msprop:Generator_ColumnVarNameInTable="columnPROPIETARIO" msprop:Generator_ColumnPropNameInRow="PROPIETARIO" msprop:Generator_ColumnPropNameInTable="PROPIETARIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="UBICACION" msprop:Generator_UserColumnName="UBICACION" msprop:Generator_ColumnVarNameInTable="columnUBICACION" msprop:Generator_ColumnPropNameInRow="UBICACION" msprop:Generator_ColumnPropNameInTable="UBICACIONColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dt_Calculo_Imp_Traslado_Dup" msprop:Generator_UserTableName="Dt_Calculo_Imp_Traslado_Dup" msprop:Generator_RowDeletedName="Dt_Calculo_Imp_Traslado_DupRowDeleted" msprop:Generator_RowChangedName="Dt_Calculo_Imp_Traslado_DupRowChanged" msprop:Generator_RowClassName="Dt_Calculo_Imp_Traslado_DupRow" msprop:Generator_RowChangingName="Dt_Calculo_Imp_Traslado_DupRowChanging" msprop:Generator_RowEvArgName="Dt_Calculo_Imp_Traslado_DupRowChangeEvent" msprop:Generator_RowEvHandlerName="Dt_Calculo_Imp_Traslado_DupRowChangeEventHandler" msprop:Generator_TableClassName="Dt_Calculo_Imp_Traslado_DupDataTable" msprop:Generator_TableVarName="tableDt_Calculo_Imp_Traslado_Dup" msprop:Generator_RowDeletingName="Dt_Calculo_Imp_Traslado_DupRowDeleting" msprop:Generator_TablePropName="Dt_Calculo_Imp_Traslado_Dup">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NO_CALCULO" msprop:Generator_UserColumnName="NO_CALCULO" msprop:Generator_ColumnPropNameInRow="NO_CALCULO" msprop:Generator_ColumnVarNameInTable="columnNO_CALCULO" msprop:Generator_ColumnPropNameInTable="NO_CALCULOColumn" type="xs:string" />
+              <xs:element name="BASE_IMPUESTO" msprop:Generator_UserColumnName="BASE_IMPUESTO" msprop:Generator_ColumnPropNameInRow="BASE_IMPUESTO" msprop:Generator_ColumnVarNameInTable="columnBASE_IMPUESTO" msprop:Generator_ColumnPropNameInTable="BASE_IMPUESTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MINIMO_ELEVADO_ANIO" msprop:Generator_UserColumnName="MINIMO_ELEVADO_ANIO" msprop:Generator_ColumnPropNameInRow="MINIMO_ELEVADO_ANIO" msprop:Generator_ColumnVarNameInTable="columnMINIMO_ELEVADO_ANIO" msprop:Generator_ColumnPropNameInTable="MINIMO_ELEVADO_ANIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BASE_GRAVABLE_TRASLADO" msprop:Generator_UserColumnName="BASE_GRAVABLE_TRASLADO" msprop:Generator_ColumnPropNameInRow="BASE_GRAVABLE_TRASLADO" msprop:Generator_ColumnVarNameInTable="columnBASE_GRAVABLE_TRASLADO" msprop:Generator_ColumnPropNameInTable="BASE_GRAVABLE_TRASLADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BASE_GRAVABLE_DIVISION" msprop:Generator_UserColumnName="BASE_GRAVABLE_DIVISION" msprop:Generator_ColumnPropNameInRow="BASE_GRAVABLE_DIVISION" msprop:Generator_ColumnVarNameInTable="columnBASE_GRAVABLE_DIVISION" msprop:Generator_ColumnPropNameInTable="BASE_GRAVABLE_DIVISIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TASA_TRASLADO" msprop:Generator_UserColumnName="TASA_TRASLADO" msprop:Generator_ColumnPropNameInRow="TASA_TRASLADO" msprop:Generator_ColumnVarNameInTable="columnTASA_TRASLADO" msprop:Generator_ColumnPropNameInTable="TASA_TRASLADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TASA_DIVISION" msprop:Generator_UserColumnName="TASA_DIVISION" msprop:Generator_ColumnPropNameInRow="TASA_DIVISION" msprop:Generator_ColumnVarNameInTable="columnTASA_DIVISION" msprop:Generator_ColumnPropNameInTable="TASA_DIVISIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IMPUESTO_TRASLADO" msprop:Generator_UserColumnName="IMPUESTO_TRASLADO" msprop:Generator_ColumnPropNameInRow="IMPUESTO_TRASLADO" msprop:Generator_ColumnVarNameInTable="columnIMPUESTO_TRASLADO" msprop:Generator_ColumnPropNameInTable="IMPUESTO_TRASLADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IMPUESTO_DIVISION" msprop:Generator_UserColumnName="IMPUESTO_DIVISION" msprop:Generator_ColumnPropNameInRow="IMPUESTO_DIVISION" msprop:Generator_ColumnVarNameInTable="columnIMPUESTO_DIVISION" msprop:Generator_ColumnPropNameInTable="IMPUESTO_DIVISIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CONSTANCIA" msprop:Generator_UserColumnName="CONSTANCIA" msprop:Generator_ColumnPropNameInRow="CONSTANCIA" msprop:Generator_ColumnVarNameInTable="columnCONSTANCIA" msprop:Generator_ColumnPropNameInTable="CONSTANCIAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RECARGOS" msprop:Generator_UserColumnName="RECARGOS" msprop:Generator_ColumnPropNameInRow="RECARGOS" msprop:Generator_ColumnVarNameInTable="columnRECARGOS" msprop:Generator_ColumnPropNameInTable="RECARGOSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MULTAS" msprop:Generator_UserColumnName="MULTAS" msprop:Generator_ColumnPropNameInRow="MULTAS" msprop:Generator_ColumnVarNameInTable="columnMULTAS" msprop:Generator_ColumnPropNameInTable="MULTASColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TOTAL" msprop:Generator_UserColumnName="TOTAL" msprop:Generator_ColumnPropNameInRow="TOTAL" msprop:Generator_ColumnVarNameInTable="columnTOTAL" msprop:Generator_ColumnPropNameInTable="TOTALColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TIPO" msprop:Generator_UserColumnName="TIPO" msprop:Generator_ColumnPropNameInRow="TIPO" msprop:Generator_ColumnVarNameInTable="columnTIPO" msprop:Generator_ColumnPropNameInTable="TIPOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CUENTA_PREDIAL" msprop:Generator_UserColumnName="CUENTA_PREDIAL" msprop:Generator_ColumnPropNameInRow="CUENTA_PREDIAL" msprop:Generator_ColumnVarNameInTable="columnCUENTA_PREDIAL" msprop:Generator_ColumnPropNameInTable="CUENTA_PREDIALColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_ORDEN_VARIACION" msprop:Generator_UserColumnName="NO_ORDEN_VARIACION" msprop:Generator_ColumnPropNameInRow="NO_ORDEN_VARIACION" msprop:Generator_ColumnVarNameInTable="columnNO_ORDEN_VARIACION" msprop:Generator_ColumnPropNameInTable="NO_ORDEN_VARIACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TANTOS_SALARIO" msprop:Generator_UserColumnName="TANTOS_SALARIO" msprop:Generator_ColumnPropNameInRow="TANTOS_SALARIO" msprop:Generator_ColumnVarNameInTable="columnTANTOS_SALARIO" msprop:Generator_ColumnPropNameInTable="TANTOS_SALARIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="REALIZO_CALCULO" msprop:Generator_UserColumnName="REALIZO_CALCULO" msprop:Generator_ColumnPropNameInRow="REALIZO_CALCULO" msprop:Generator_ColumnVarNameInTable="columnREALIZO_CALCULO" msprop:Generator_ColumnPropNameInTable="REALIZO_CALCULOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FUNDAMENTO" msprop:Generator_UserColumnName="FUNDAMENTO" msprop:Generator_ColumnPropNameInRow="FUNDAMENTO" msprop:Generator_ColumnVarNameInTable="columnFUNDAMENTO" msprop:Generator_ColumnPropNameInTable="FUNDAMENTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="OBSERVACIONES" msprop:Generator_UserColumnName="OBSERVACIONES" msprop:Generator_ColumnPropNameInRow="OBSERVACIONES" msprop:Generator_ColumnVarNameInTable="columnOBSERVACIONES" msprop:Generator_ColumnPropNameInTable="OBSERVACIONESColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Dt_Calculo_Imp_TrasladoKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Dt_Calculo_Imp_Traslado" />
+      <xs:field xpath="mstns:NO_CALCULO" />
+    </xs:unique>
+    <xs:unique name="Dt_Orden_VariacionKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Dt_Orden_Variacion" />
+      <xs:field xpath="mstns:NO_ORDEN_VARIACION" />
+    </xs:unique>
+    <xs:unique name="Dt_Calculo_Imp_Traslado_Dup_Dt_Calculo_Imp_TrasladoKey1" msdata:ConstraintName="Dt_Calculo_Imp_TrasladoKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Dt_Calculo_Imp_Traslado_Dup" />
+      <xs:field xpath="mstns:NO_CALCULO" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Dt_Orden_Variacion_Dt_Calculo_Imp_Traslado" msdata:parent="Dt_Orden_Variacion" msdata:child="Dt_Calculo_Imp_Traslado" msdata:parentkey="NO_ORDEN_VARIACION" msdata:childkey="NO_ORDEN_VARIACION" msprop:Generator_UserRelationName="Dt_Orden_Variacion_Dt_Calculo_Imp_Traslado" msprop:Generator_RelationVarName="relationDt_Orden_Variacion_Dt_Calculo_Imp_Traslado" msprop:Generator_UserChildTable="Dt_Calculo_Imp_Traslado" msprop:Generator_UserParentTable="Dt_Orden_Variacion" msprop:Generator_ParentPropName="Dt_Orden_VariacionRow" msprop:Generator_ChildPropName="GetDt_Calculo_Imp_TrasladoRows" />
+      <msdata:Relationship name="Dt_Orden_Variacion_Dt_Calculo_Imp_Traslado_Dup" msdata:parent="Dt_Orden_Variacion" msdata:child="Dt_Calculo_Imp_Traslado_Dup" msdata:parentkey="NO_ORDEN_VARIACION" msdata:childkey="NO_CALCULO" msprop:Generator_UserRelationName="Dt_Orden_Variacion_Dt_Calculo_Imp_Traslado_Dup" msprop:Generator_RelationVarName="relationDt_Orden_Variacion_Dt_Calculo_Imp_Traslado_Dup" msprop:Generator_UserChildTable="Dt_Calculo_Imp_Traslado_Dup" msprop:Generator_UserParentTable="Dt_Orden_Variacion" msprop:Generator_ParentPropName="Dt_Orden_VariacionRow" msprop:Generator_ChildPropName="GetDt_Calculo_Imp_Traslado_DupRows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

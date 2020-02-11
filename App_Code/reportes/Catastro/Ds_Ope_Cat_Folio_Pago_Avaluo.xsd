@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Ope_Cat_Folio_Pago_Avaluo" targetNamespace="http://tempuri.org/Ds_Ope_Cat_Folio_Pago_Avaluo.xsd" xmlns:mstns="http://tempuri.org/Ds_Ope_Cat_Folio_Pago_Avaluo.xsd" xmlns="http://tempuri.org/Ds_Ope_Cat_Folio_Pago_Avaluo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Ope_Cat_Folio_Pago_Avaluo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Ope_Cat_Folio_Pago_Avaluo" msprop:Generator_DataSetName="Ds_Ope_Cat_Folio_Pago_Avaluo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_PAGO_AVALUO" msprop:Generator_UserTableName="DT_PAGO_AVALUO" msprop:Generator_RowDeletedName="DT_PAGO_AVALUORowDeleted" msprop:Generator_TableClassName="DT_PAGO_AVALUODataTable" msprop:Generator_RowChangedName="DT_PAGO_AVALUORowChanged" msprop:Generator_RowDeletingName="DT_PAGO_AVALUORowDeleting" msprop:Generator_RowChangingName="DT_PAGO_AVALUORowChanging" msprop:Generator_RowEvArgName="DT_PAGO_AVALUORowChangeEvent" msprop:Generator_RowClassName="DT_PAGO_AVALUORow" msprop:Generator_RowEvHandlerName="DT_PAGO_AVALUORowChangeEventHandler" msprop:Generator_TablePropName="DT_PAGO_AVALUO" msprop:Generator_TableVarName="tableDT_PAGO_AVALUO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RFC" msprop:Generator_UserColumnName="RFC" msprop:Generator_ColumnPropNameInRow="RFC" msprop:Generator_ColumnVarNameInTable="columnRFC" msprop:Generator_ColumnPropNameInTable="RFCColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NUMERO_PERITO" msprop:Generator_UserColumnName="NUMERO_PERITO" msprop:Generator_ColumnPropNameInRow="NUMERO_PERITO" msprop:Generator_ColumnVarNameInTable="columnNUMERO_PERITO" msprop:Generator_ColumnPropNameInTable="NUMERO_PERITOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NUMERO_AVALUO" msprop:Generator_UserColumnName="NUMERO_AVALUO" msprop:Generator_ColumnPropNameInRow="NUMERO_AVALUO" msprop:Generator_ColumnVarNameInTable="columnNUMERO_AVALUO" msprop:Generator_ColumnPropNameInTable="NUMERO_AVALUOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PAGO_PRESIDENCIA" msprop:Generator_UserColumnName="PAGO_PRESIDENCIA" msprop:Generator_ColumnPropNameInRow="PAGO_PRESIDENCIA" msprop:Generator_ColumnVarNameInTable="columnPAGO_PRESIDENCIA" msprop:Generator_ColumnPropNameInTable="PAGO_PRESIDENCIAColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="DIRECCION" msprop:Generator_UserColumnName="DIRECCION" msprop:Generator_ColumnPropNameInRow="DIRECCION" msprop:Generator_ColumnVarNameInTable="columnDIRECCION" msprop:Generator_ColumnPropNameInTable="DIRECCIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CUENTA_PREDIAL" msprop:Generator_UserColumnName="CUENTA_PREDIAL" msprop:Generator_ColumnPropNameInRow="CUENTA_PREDIAL" msprop:Generator_ColumnVarNameInTable="columnCUENTA_PREDIAL" msprop:Generator_ColumnPropNameInTable="CUENTA_PREDIALColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IMPORTE_AVALUO_LETRAS" msprop:Generator_UserColumnName="IMPORTE_AVALUO_LETRAS" msprop:Generator_ColumnPropNameInRow="IMPORTE_AVALUO_LETRAS" msprop:Generator_ColumnVarNameInTable="columnIMPORTE_AVALUO_LETRAS" msprop:Generator_ColumnPropNameInTable="IMPORTE_AVALUO_LETRASColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IMPORTE_AVALUO" msprop:Generator_UserColumnName="IMPORTE_AVALUO" msprop:Generator_ColumnPropNameInRow="IMPORTE_AVALUO" msprop:Generator_ColumnVarNameInTable="columnIMPORTE_AVALUO" msprop:Generator_ColumnPropNameInTable="IMPORTE_AVALUOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="FOLIO_PAGO" msprop:Generator_UserColumnName="FOLIO_PAGO" msprop:Generator_ColumnPropNameInRow="FOLIO_PAGO" msprop:Generator_ColumnVarNameInTable="columnFOLIO_PAGO" msprop:Generator_ColumnPropNameInTable="FOLIO_PAGOColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,491 @@
+﻿
+@media screen, print 
+{
+	body  
+	{
+		font-size:6.5pt;
+	    font-family:Courier;
+	    letter-spacing:.25em;
+	    word-spacing:.3em;
+	    
+	}
+	.Div_Recibo
+	{
+		width:21.3cm;
+		height:11cm;
+		left:1cm;
+		right:1cm;
+	}
+	.Div_Encabezados
+	{
+		width:20.3cm;
+		height:0.4cm;
+		left:1cm;
+		right:1cm;
+	}
+		
+	/*ESTILOS DEL CONTENIDO DE ENCABEZADO DE NO DE EMPLEADO Y NO DE RECIBO*/
+	.Div_Encabezado_Empl_Recibo
+	{
+		width:20.3cm;
+		height:0.4cm;
+		left:1cm;
+		right:1cm;
+		top:1cm;
+		margin:0 0 0 0;
+		padding:0 0 0 0;
+	}
+	.Div_Encabezado_No_Empl_Recibo
+	{
+		width:20.3cm;
+		height:0.4cm;
+		left:1cm;
+		right:1cm;
+		margin:0 0 0 0;
+		padding:0 0 0 0;
+	}
+	.Div_Encabezado_No_Empl_Recibo .Div_No_Empl_Recibo 
+	{
+		width:6.5cm;
+		height:0.4cm;
+		float:right;
+		vertical-align:middle;
+		margin:0 0 0 0;
+		padding:0 0 0 0;
+	}
+	.Div_Encabezado_No_Empl_Recibo .Div_No_Empl_Recibo .Div_No_Empl
+	{
+		width:3.3cm;
+		float:left;
+		text-align:center;
+		margin:0.05cm 0 0 0;
+		padding:0.05cm 0 0 0;
+	}
+	.Div_Encabezado_No_Empl_Recibo .Div_No_Empl_Recibo .Div_No_Recibo
+	{
+		width:3.2cm;
+		float:right;
+		text-align:center;
+		margin:0.05cm 0 0 0;
+		padding:0.05cm 0 0 0;
+	}
+	
+	/*ESTILOS DEL CONTENIDO DE ENCABEZADO DE RFC, NOMBRE DEL EMPLEADO, PERIODO, CATEGORIA*/
+	.Div_Encabezado_RFC_Nom_Per_Cat
+	{
+		width:20.3cm;
+		height:0.7cm;
+		left:0.8cm;
+		right:1cm;
+		margin:0 0 0 0;
+		padding:0 0 0 0;
+	}
+	.Div_Encabezado_RFC_Nom_Per_Cat .Div_RFC_Nom
+	{
+		width:11cm;
+		height:0.7cm;
+		float:left;
+		margin:0 0 0 0;
+		padding:0 0 0 0;
+	}
+	.Div_Encabezado_RFC_Nom_Per_Cat .Div_Per_Cat
+	{
+		width:9.1cm;
+		height:0.7cm;
+		float:right;
+		margin:0 0 0 0;
+		padding:0 0 0 0;
+	}
+	.Div_Encabezado_RFC_Nom_Per_Cat .Div_RFC_Nom .Div_RFC
+	{
+		width:3.5cm;
+		float:left;
+		text-align:center;
+		margin:0.05cm 0 0 0;
+		padding:0.05cm 0 0 0;
+	}
+	.Div_Encabezado_RFC_Nom_Per_Cat .Div_RFC_Nom .Div_Nom
+	{
+		width:7.5cm;
+		float:right;
+		text-align:center;
+		margin:0.05cm 0 0 0;
+		padding:0.05cm 0 0 0;
+	}
+	.Div_Encabezado_RFC_Nom_Per_Cat .Div_Per_Cat .Div_Per
+	{
+		width:2.5cm;
+		float:left;
+		text-align:center;
+		margin:0.05cm 0 0 0;
+		padding:0.05cm 0 0 0;
+	}
+	.Div_Encabezado_RFC_Nom_Per_Cat .Div_Per_Cat .Div_Cat
+	{
+		width:6.6cm;
+		float:right;
+		text-align:center;
+		margin:0.05cm 0 0 0;
+		padding:0.05cm 0 0 0;
+	}
+	
+	/*ESTILOS DEL CONTENIDO DE ENCABEZADO DE CURP, departamento, No Afiliacion, Codigo programatico y dias trabajados*/
+	.Div_Encabezado_CURP_Dep_Afi_Cod_Dias
+	{
+		width:20.3cm;
+		height:0.6cm;
+		left:1cm;
+		right:1cm;
+		margin:0 0 0 0;
+		padding:0 0 0 0;
+	}
+	.Div_Encabezado_CURP_Dep_Afi_Cod_Dias .Div_CURP_Dep
+	{
+		width:11cm;
+		height:0.6cm;
+		float:left;
+		margin:0 0 0 0;
+		padding:0 0 0 0;
+	}
+	.Div_Encabezado_CURP_Dep_Afi_Cod_Dias .Div_CURP_Dep .Div_CURP
+	{
+		width:3.5cm;
+		float:left;
+		vertical-align:middle!important;
+		text-align:center;
+		margin:0.05cm 0 0 0;
+		padding:0.05cm 0 0 0;
+		font-size:6.4pt;
+	}
+	.Div_Encabezado_CURP_Dep_Afi_Cod_Dias .Div_CURP_Dep .Div_Dep
+	{
+		width:7.5cm;
+		float:right;
+		vertical-align:middle!important;
+		text-align:center;
+		margin:0.05cm 0 0 0;
+		padding:0.05cm 0 0 0;
+	}
+	.Div_Encabezado_CURP_Dep_Afi_Cod_Dias .Div_Afi_Cod_Dias
+	{
+		width:9.1cm;
+		height:0.6cm;
+		float:right;
+		margin:0 0 0 0;
+		padding:0 0 0 0;
+	}
+	.Div_Encabezado_CURP_Dep_Afi_Cod_Dias .Div_Afi_Cod_Dias .Div_Afi
+	{
+		width:3cm;
+		float:left;
+		vertical-align:middle!important;
+		text-align:center;
+		margin:0.05cm 0 0 0;
+		padding:0.05cm 0 0 0;
+	}
+	.Div_Encabezado_CURP_Dep_Afi_Cod_Dias .Div_Afi_Cod_Dias .Div_Cod_Dias
+	{
+		width:6.1cm;
+		height:0.6cm;
+		float:right;
+		margin:0 0 0 0;
+		padding:0 0 0 0;
+	}
+	.Div_Encabezado_CURP_Dep_Afi_Cod_Dias .Div_Afi_Cod_Dias .Div_Cod_Dias .Div_Cod
+	{
+		width:5cm;
+		float:left;
+		vertical-align:middle!important;
+		font-size:6pt!important;
+		margin:0.05cm 0 0 0;
+		padding:0.05cm 0 0 0;
+	}
+	.Div_Encabezado_CURP_Dep_Afi_Cod_Dias .Div_Afi_Cod_Dias .Div_Cod_Dias .Div_Dias
+	{
+		width:1.1cm;
+		float:right;
+		vertical-align:middle!important;
+		text-align:center;
+		margin:0.05cm 0 0 0;
+		padding:0.05cm 0 0 0;
+	}
+	
+	/*ESTILOS DEL CONTENIDO DE  LOS DETALLES*/
+	.Div_Encabezado_Detalles
+	{
+		width:20.3cm;
+		height:0.2cm;
+		left:1cm;
+		right:1cm;
+	}
+	.Div_Detalles
+     {
+            width:20.3cm;
+            height:3.6cm;
+            margin:0 0 0 0;
+            padding:0 0 0 0;
+            font-size:5.5pt;
+    }
+
+	.Div_Detalles .Div_Percepciones
+	{
+		width:11cm;
+		float:left;
+		margin:0 0 0 0;
+		padding:0 0 0 0;
+	}
+	.Div_Detalles .Div_Deducciones
+	{
+		width:9.1cm;
+		float:right;
+		margin:0 0 0 0;
+		padding:0 0 0 0;
+	}
+	.Div_Detalles .Div_Percepciones .Div_ClavePer_ConPer
+	{
+		width:7.3cm;
+		float:left;
+		margin:0 0 0 0;
+		padding:0 0 0 0;
+	}
+	.Div_Detalles .Div_Percepciones .Div_ImpPer_ClaveDed
+	{
+		width:3.7cm;
+		float:right;
+		margin:0 0 0 0;
+		padding:0 0 0 0;
+	}
+	.Div_Detalles .Div_Percepciones .Div_ClavePer_ConPer .Div_ClavePer
+	{
+		width:1cm;
+		float:left;
+		text-align:center;
+		margin:0.03cm 0 0 0;
+		padding:0.03cm 0 0 0;
+	}
+	.Div_Detalles .Div_Percepciones .Div_ClavePer_ConPer .Div_ConPer
+	{
+		width:6.3cm;
+		float:right;
+		margin:0.03cm 0 0 0;
+		padding:0.03cm 0 0 0;
+	}
+	.Div_Detalles .Div_Percepciones .Div_ImpPer_ClaveDed .Div_ImpPer
+	{
+		width:2.6cm;
+		float:left;
+		text-align:right!important;
+		margin:0.03cm 0 0 0;
+		padding:0.03cm 0 0 0;
+	}
+	.Div_Detalles .Div_Percepciones .Div_ImpPer_ClaveDed .Div_ClaveDed
+	{
+		width:1.1cm;
+		float:right;
+		text-align:center;
+		margin:0.03cm 0 0 0;
+		padding:0.03cm 0 0 0;
+	}
+	.Div_Detalles .Div_Deducciones .Div_ConDed
+	{
+		width:6.2cm;
+		float:left;
+		margin:0.03cm 0 0 0;
+		padding:0.03cm 0 0 0;
+	}
+	.Div_Detalles .Div_Deducciones .Div_ImpDed
+	{
+		width:2.9cm;
+		float:right;
+		text-align:right!important;
+		margin:0.03cm 0 0 0;
+		padding:0.03cm 0 0 0;
+	}
+	
+	/*ESTILOS DEL CONTENIDO DE LOS TOTALES*/
+	.Div_Totales
+	{
+		width:20.3cm;
+		height:0.7cm;
+		left:1cm;
+		right:1cm;
+		clear:both;
+		margin:0 0 0 0;
+		padding:0 0 0 0;
+	}
+	.Div_Totales .Div_Tot_Percepciones
+	{
+		width:10cm;
+		height:0.7cm;
+		float:left;
+		margin:0 0 0 0;
+		padding:0 0 0 0;
+	}
+	.Div_Totales .Div_Tot_Deducciones
+	{
+		width:10.1cm;
+		height:0.7cm;
+		float:right;
+		margin:0 0 0 0;
+		padding:0 0 0 0;
+	}
+	.Div_Totales .Div_Tot_Percepciones .Div_TotPer
+	{
+		width:2.7cm;
+		float:right;
+		text-align:right!important;
+		margin:0.05cm 0 0 0;
+		padding:0.05cm 0 0 0;
+	}
+	.Div_Totales .Div_Tot_Deducciones .Div_TotDed
+	{
+		width:2.9cm;
+		float:right;
+		text-align:right!important;
+		margin:0.05cm 0 0 0;
+		padding:0.05cm 0 0 0;
+	}
+	
+	/*ESTILOS DEL CONTENIDO DEL TOTAL NETO*/
+	.Div_Total_Neto
+	{
+		width:20.3cm;
+		height:0.6cm;
+		left:1cm;
+		right:1cm;
+		clear:both;
+		margin:0 0 0 0;
+		padding:0 0 0 0;
+	}
+	.Div_Total_Neto .Div_Total
+	{
+		width:2.9cm;
+		float:right;
+		text-align:right!important;
+		margin:0.05cm 0 0 0;
+		padding:0.05cm 0 0 0;
+	}
+	
+	/*ESTILOS DEL RECIBO DE TIPO DE NOMINA DE ASIMILABLES*/
+	.Div_Recibo_Asimilable
+	{
+		text-align:justify;
+		padding: 1cm 1cm 0 1cm;
+		clear:both;
+	}
+	.Div_Recibo_Asimilable .Div_Espaciador
+	{
+		height:1.5cm;
+		clear:both;
+	}
+	.Div_Recibo_Asimilable .Div_Fecha
+	{
+		clear:both;
+		text-align:right;
+	}
+	.Div_Recibo_Asimilable .Div_Texto 
+	{
+		line-height:2.5em;
+		height:4cm;
+		clear:both;
+		text-align:justify!important;
+	}
+	.Div_Recibo_Asimilable .Div_Percepcion_Deduccion
+	{
+		width:19cm;
+		height:6cm;
+		clear:both;
+	}
+	.Div_Recibo_Asimilable .Div_Percepcion_Deduccion .Lbl_Percepcion
+	{
+		width:9.5cm;
+		float:left;
+		letter-spacing:1em;
+		text-align:center;
+	}
+	.Div_Recibo_Asimilable .Div_Percepcion_Deduccion .Lbl_Deduccion
+	{
+		width:9.5cm;
+		float:right;
+		letter-spacing:1em;
+		text-align:center;
+	}
+	.Div_Recibo_Asimilable .Div_Percepcion_Deduccion .Div_Percepciones
+	{
+		width:9.5cm;
+		float:left;
+	}
+	.Div_Recibo_Asimilable .Div_Percepcion_Deduccion .Div_Deducciones
+	{
+		width:9.1cm;
+		float:right;
+	}
+	.Div_Recibo_Asimilable .Div_Percepcion_Deduccion .Div_Percepciones .Div_ClavePer_ConPer
+	{
+		width:6.2cm;
+		float:left;
+	}
+	.Div_Recibo_Asimilable .Div_Percepcion_Deduccion .Div_Percepciones .Div_ImpPer_ClaveDed
+	{
+		width:3.3cm;
+		float:right;
+	}
+	.Div_Recibo_Asimilable .Div_Percepcion_Deduccion .Div_Percepciones .Div_ClavePer_ConPer .Div_ClavePer
+	{
+		width:1cm;
+		float:left;
+	}
+	.Div_Recibo_Asimilable .Div_Percepcion_Deduccion .Div_Percepciones .Div_ClavePer_ConPer .Div_ConPer
+	{
+		width:5.2cm;
+		float:right;
+		text-align:left!important;
+	}
+	.Div_Recibo_Asimilable .Div_Percepcion_Deduccion .Div_Percepciones .Div_ImpPer_ClaveDed .Div_ImpPer
+	{
+		width:2.3cm;
+		float:left;
+		text-align:right!important;
+		
+	}
+	.Div_Recibo_Asimilable .Div_Percepcion_Deduccion .Div_Percepciones .Div_ImpPer_ClaveDed .Div_ImpPer .Lbl_Importe_Percepcion
+	{
+		text-align:right!important;
+	}
+	.Div_Recibo_Asimilable .Div_Percepcion_Deduccion .Div_Percepciones .Div_ImpPer_ClaveDed .Div_ClaveDed
+	{
+		width:1cm;
+		float:right;
+		text-align:right!important;
+	}
+	.Div_Recibo_Asimilable .Div_Percepcion_Deduccion .Div_Deducciones .Div_ConDed
+	{
+		width:6.2cm;
+		float:left;
+		text-align:left!important;
+	}
+	.Div_Recibo_Asimilable .Div_Percepcion_Deduccion .Div_Deducciones .Div_ConDed .Lbl_Neto
+	{
+		text-align:right!important;
+	}
+	.Div_Recibo_Asimilable .Div_Percepcion_Deduccion .Div_Deducciones .Div_ImpDed 
+	{
+		width:2.9cm;
+		float:right;
+		text-align:right!important;
+	}
+
+	.Div_Recibo_Asimilable .Div_Percepcion_Deduccion .Div_Deducciones .Div_ImpDed .Lbl_Importe_Deduccion
+	{
+		text-align:right!important;
+	}
+	.Div_Recibo_Asimilable .Div_Pie_Pagina
+	{
+		text-align:center;
+		clear:both;
+	}
+	.Salto_Pagina
+	{
+		page-break-after:always;
+	}
+}

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Con_Tipos_Polizas" targetNamespace="http://tempuri.org/Ds_Rpt_Con_Tipos_Polizas.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Con_Tipos_Polizas.xsd" xmlns="http://tempuri.org/Ds_Rpt_Con_Tipos_Polizas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Con_Tipos_Polizas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Con_Tipos_Polizas" msprop:Generator_DataSetName="Ds_Rpt_Con_Tipos_Polizas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Ope_Polizas" msprop:Generator_UserTableName="Ope_Polizas" msprop:Generator_RowDeletedName="Ope_PolizasRowDeleted" msprop:Generator_RowChangedName="Ope_PolizasRowChanged" msprop:Generator_RowClassName="Ope_PolizasRow" msprop:Generator_RowChangingName="Ope_PolizasRowChanging" msprop:Generator_RowEvArgName="Ope_PolizasRowChangeEvent" msprop:Generator_RowEvHandlerName="Ope_PolizasRowChangeEventHandler" msprop:Generator_TableClassName="Ope_PolizasDataTable" msprop:Generator_TableVarName="tableOpe_Polizas" msprop:Generator_RowDeletingName="Ope_PolizasRowDeleting" msprop:Generator_TablePropName="Ope_Polizas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="No_Poliza" msprop:Generator_UserColumnName="No_Poliza" msprop:Generator_ColumnVarNameInTable="columnNo_Poliza" msprop:Generator_ColumnPropNameInRow="No_Poliza" msprop:Generator_ColumnPropNameInTable="No_PolizaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Tipo_Poliza_ID" msprop:Generator_UserColumnName="Tipo_Poliza_ID" msprop:Generator_ColumnVarNameInTable="columnTipo_Poliza_ID" msprop:Generator_ColumnPropNameInRow="Tipo_Poliza_ID" msprop:Generator_ColumnPropNameInTable="Tipo_Poliza_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Mes_Ano" msprop:Generator_UserColumnName="Mes_Ano" msprop:Generator_ColumnVarNameInTable="columnMes_Ano" msprop:Generator_ColumnPropNameInRow="Mes_Ano" msprop:Generator_ColumnPropNameInTable="Mes_AnoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Fecha_Poliza" msprop:Generator_UserColumnName="Fecha_Poliza" msprop:Generator_ColumnVarNameInTable="columnFecha_Poliza" msprop:Generator_ColumnPropNameInRow="Fecha_Poliza" msprop:Generator_ColumnPropNameInTable="Fecha_PolizaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Concepto_Poliza" msprop:Generator_UserColumnName="Concepto_Poliza" msprop:Generator_ColumnVarNameInTable="columnConcepto_Poliza" msprop:Generator_ColumnPropNameInRow="Concepto_Poliza" msprop:Generator_ColumnPropNameInTable="Concepto_PolizaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Cuenta_Contable" msprop:Generator_UserColumnName="Cuenta_Contable" msprop:Generator_ColumnVarNameInTable="columnCuenta_Contable" msprop:Generator_ColumnPropNameInRow="Cuenta_Contable" msprop:Generator_ColumnPropNameInTable="Cuenta_ContableColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Concepto_Partida" msprop:Generator_UserColumnName="Concepto_Partida" msprop:Generator_ColumnVarNameInTable="columnConcepto_Partida" msprop:Generator_ColumnPropNameInRow="Concepto_Partida" msprop:Generator_ColumnPropNameInTable="Concepto_PartidaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Debe" msprop:Generator_UserColumnName="Debe" msprop:Generator_ColumnVarNameInTable="columnDebe" msprop:Generator_ColumnPropNameInRow="Debe" msprop:Generator_ColumnPropNameInTable="DebeColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Haber" msprop:Generator_UserColumnName="Haber" msprop:Generator_ColumnVarNameInTable="columnHaber" msprop:Generator_ColumnPropNameInRow="Haber" msprop:Generator_ColumnPropNameInTable="HaberColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Saldo" msprop:Generator_UserColumnName="Saldo" msprop:Generator_ColumnVarNameInTable="columnSaldo" msprop:Generator_ColumnPropNameInRow="Saldo" msprop:Generator_ColumnPropNameInTable="SaldoColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Fecha_Partida" msprop:Generator_UserColumnName="Fecha_Partida" msprop:Generator_ColumnVarNameInTable="columnFecha_Partida" msprop:Generator_ColumnPropNameInRow="Fecha_Partida" msprop:Generator_ColumnPropNameInTable="Fecha_PartidaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Tipo_Poliza" msprop:Generator_UserColumnName="Tipo_Poliza" msprop:Generator_ColumnVarNameInTable="columnTipo_Poliza" msprop:Generator_ColumnPropNameInRow="Tipo_Poliza" msprop:Generator_ColumnPropNameInTable="Tipo_PolizaColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

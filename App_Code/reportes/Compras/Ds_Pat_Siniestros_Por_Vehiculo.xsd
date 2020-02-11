@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Pat_Siniestros_Por_Vehiculo" targetNamespace="http://tempuri.org/Ds_Pat_Siniestros_Por_Vehiculo.xsd" xmlns:mstns="http://tempuri.org/Ds_Pat_Siniestros_Por_Vehiculo.xsd" xmlns="http://tempuri.org/Ds_Pat_Siniestros_Por_Vehiculo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Pat_Siniestros_Por_Vehiculo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Pat_Siniestros_Por_Vehiculo" msprop:Generator_DataSetName="Ds_Pat_Siniestros_Por_Vehiculo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PRINCIPAL" msprop:Generator_UserTableName="PRINCIPAL" msprop:Generator_RowDeletedName="PRINCIPALRowDeleted" msprop:Generator_RowChangedName="PRINCIPALRowChanged" msprop:Generator_RowClassName="PRINCIPALRow" msprop:Generator_RowChangingName="PRINCIPALRowChanging" msprop:Generator_RowEvArgName="PRINCIPALRowChangeEvent" msprop:Generator_RowEvHandlerName="PRINCIPALRowChangeEventHandler" msprop:Generator_TableClassName="PRINCIPALDataTable" msprop:Generator_TableVarName="tablePRINCIPAL" msprop:Generator_RowDeletingName="PRINCIPALRowDeleting" msprop:Generator_TablePropName="PRINCIPAL">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FOLIO" msprop:Generator_UserColumnName="FOLIO" msprop:Generator_ColumnVarNameInTable="columnFOLIO" msprop:Generator_ColumnPropNameInRow="FOLIO" msprop:Generator_ColumnPropNameInTable="FOLIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TIPO_SINIESTRO" msprop:Generator_UserColumnName="TIPO_SINIESTRO" msprop:Generator_ColumnVarNameInTable="columnTIPO_SINIESTRO" msprop:Generator_ColumnPropNameInRow="TIPO_SINIESTRO" msprop:Generator_ColumnPropNameInTable="TIPO_SINIESTROColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="VEHICULO" msprop:Generator_UserColumnName="VEHICULO" msprop:Generator_ColumnVarNameInTable="columnVEHICULO" msprop:Generator_ColumnPropNameInRow="VEHICULO" msprop:Generator_ColumnPropNameInTable="VEHICULOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ASEGURADORA" msprop:Generator_UserColumnName="ASEGURADORA" msprop:Generator_ColumnVarNameInTable="columnASEGURADORA" msprop:Generator_ColumnPropNameInRow="ASEGURADORA" msprop:Generator_ColumnPropNameInTable="ASEGURADORAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA" msprop:Generator_UserColumnName="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ESTATUS" msprop:Generator_UserColumnName="ESTATUS" msprop:Generator_ColumnVarNameInTable="columnESTATUS" msprop:Generator_ColumnPropNameInRow="ESTATUS" msprop:Generator_ColumnPropNameInTable="ESTATUSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MUNICIPIO_RESPONSABLE" msprop:Generator_UserColumnName="MUNICIPIO_RESPONSABLE" msprop:Generator_ColumnVarNameInTable="columnMUNICIPIO_RESPONSABLE" msprop:Generator_ColumnPropNameInRow="MUNICIPIO_RESPONSABLE" msprop:Generator_ColumnPropNameInTable="MUNICIPIO_RESPONSABLEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CONSIGNADO" msprop:Generator_UserColumnName="CONSIGNADO" msprop:Generator_ColumnVarNameInTable="columnCONSIGNADO" msprop:Generator_ColumnPropNameInRow="CONSIGNADO" msprop:Generator_ColumnPropNameInTable="CONSIGNADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PAGO_SINDICOS" msprop:Generator_UserColumnName="PAGO_SINDICOS" msprop:Generator_ColumnVarNameInTable="columnPAGO_SINDICOS" msprop:Generator_ColumnPropNameInRow="PAGO_SINDICOS" msprop:Generator_ColumnPropNameInTable="PAGO_SINDICOSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_AVERIGUACION" msprop:Generator_UserColumnName="NO_AVERIGUACION" msprop:Generator_ColumnVarNameInTable="columnNO_AVERIGUACION" msprop:Generator_ColumnPropNameInRow="NO_AVERIGUACION" msprop:Generator_ColumnPropNameInTable="NO_AVERIGUACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="REPARACION" msprop:Generator_UserColumnName="REPARACION" msprop:Generator_ColumnVarNameInTable="columnREPARACION" msprop:Generator_ColumnPropNameInRow="REPARACION" msprop:Generator_ColumnPropNameInTable="REPARACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_REPORTE" msprop:Generator_UserColumnName="NO_REPORTE" msprop:Generator_ColumnVarNameInTable="columnNO_REPORTE" msprop:Generator_ColumnPropNameInRow="NO_REPORTE" msprop:Generator_ColumnPropNameInTable="NO_REPORTEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OBSERVACIONES" msprop:Generator_UserTableName="OBSERVACIONES" msprop:Generator_RowDeletedName="OBSERVACIONESRowDeleted" msprop:Generator_RowChangedName="OBSERVACIONESRowChanged" msprop:Generator_RowClassName="OBSERVACIONESRow" msprop:Generator_RowChangingName="OBSERVACIONESRowChanging" msprop:Generator_RowEvArgName="OBSERVACIONESRowChangeEvent" msprop:Generator_RowEvHandlerName="OBSERVACIONESRowChangeEventHandler" msprop:Generator_TableClassName="OBSERVACIONESDataTable" msprop:Generator_TableVarName="tableOBSERVACIONES" msprop:Generator_RowDeletingName="OBSERVACIONESRowDeleting" msprop:Generator_TablePropName="OBSERVACIONES">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FECHA" msprop:Generator_UserColumnName="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OBSERVACION" msprop:Generator_UserColumnName="OBSERVACION" msprop:Generator_ColumnVarNameInTable="columnOBSERVACION" msprop:Generator_ColumnPropNameInRow="OBSERVACION" msprop:Generator_ColumnPropNameInTable="OBSERVACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FOLIO" msprop:Generator_UserColumnName="FOLIO" msprop:Generator_ColumnVarNameInTable="columnFOLIO" msprop:Generator_ColumnPropNameInRow="FOLIO" msprop:Generator_ColumnPropNameInTable="FOLIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AUTOR" msprop:Generator_UserColumnName="AUTOR" msprop:Generator_ColumnVarNameInTable="columnAUTOR" msprop:Generator_ColumnPropNameInRow="AUTOR" msprop:Generator_ColumnPropNameInTable="AUTORColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FILTROS" msprop:Generator_UserTableName="FILTROS" msprop:Generator_RowDeletedName="FILTROSRowDeleted" msprop:Generator_TableClassName="FILTROSDataTable" msprop:Generator_RowChangedName="FILTROSRowChanged" msprop:Generator_RowClassName="FILTROSRow" msprop:Generator_RowChangingName="FILTROSRowChanging" msprop:Generator_RowEvArgName="FILTROSRowChangeEvent" msprop:Generator_RowEvHandlerName="FILTROSRowChangeEventHandler" msprop:Generator_TablePropName="FILTROS" msprop:Generator_TableVarName="tableFILTROS" msprop:Generator_RowDeletingName="FILTROSRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Filtro" msprop:Generator_UserColumnName="Filtro" msprop:Generator_ColumnPropNameInRow="Filtro" msprop:Generator_ColumnVarNameInTable="columnFiltro" msprop:Generator_ColumnPropNameInTable="FiltroColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Valor" msprop:Generator_UserColumnName="Valor" msprop:Generator_ColumnPropNameInRow="Valor" msprop:Generator_ColumnVarNameInTable="columnValor" msprop:Generator_ColumnPropNameInTable="ValorColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="PRINCIPAL_OBSERVACIONES" msdata:parent="PRINCIPAL" msdata:child="OBSERVACIONES" msdata:parentkey="FOLIO" msdata:childkey="FOLIO" msprop:Generator_UserRelationName="PRINCIPAL_OBSERVACIONES" msprop:Generator_RelationVarName="relationPRINCIPAL_OBSERVACIONES" msprop:Generator_UserChildTable="OBSERVACIONES" msprop:Generator_UserParentTable="PRINCIPAL" msprop:Generator_ParentPropName="PRINCIPALRow" msprop:Generator_ChildPropName="GetOBSERVACIONESRows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

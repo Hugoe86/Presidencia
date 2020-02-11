@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Nom_PSM" targetNamespace="http://tempuri.org/Ds_Rpt_Nom_PSM.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Nom_PSM.xsd" xmlns="http://tempuri.org/Ds_Rpt_Nom_PSM.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Nom_PSM" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Nom_PSM" msprop:Generator_DataSetName="Ds_Rpt_Nom_PSM">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PSM" msprop:Generator_UserTableName="PSM" msprop:Generator_RowDeletedName="PSMRowDeleted" msprop:Generator_RowChangedName="PSMRowChanged" msprop:Generator_RowClassName="PSMRow" msprop:Generator_RowChangingName="PSMRowChanging" msprop:Generator_RowEvArgName="PSMRowChangeEvent" msprop:Generator_RowEvHandlerName="PSMRowChangeEventHandler" msprop:Generator_TableClassName="PSMDataTable" msprop:Generator_TableVarName="tablePSM" msprop:Generator_RowDeletingName="PSMRowDeleting" msprop:Generator_TablePropName="PSM">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPO_NOMINA_ID" msprop:Generator_UserColumnName="TIPO_NOMINA_ID" msprop:Generator_ColumnVarNameInTable="columnTIPO_NOMINA_ID" msprop:Generator_ColumnPropNameInRow="TIPO_NOMINA_ID" msprop:Generator_ColumnPropNameInTable="TIPO_NOMINA_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMINA" msprop:Generator_UserColumnName="NOMINA" msprop:Generator_ColumnVarNameInTable="columnNOMINA" msprop:Generator_ColumnPropNameInRow="NOMINA" msprop:Generator_ColumnPropNameInTable="NOMINAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="UR" msprop:Generator_UserColumnName="UR" msprop:Generator_ColumnVarNameInTable="columnUR" msprop:Generator_ColumnPropNameInRow="UR" msprop:Generator_ColumnPropNameInTable="URColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="EMPLEADO" msprop:Generator_UserColumnName="EMPLEADO" msprop:Generator_ColumnVarNameInTable="columnEMPLEADO" msprop:Generator_ColumnPropNameInRow="EMPLEADO" msprop:Generator_ColumnPropNameInTable="EMPLEADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SUELDO" msprop:Generator_UserColumnName="SUELDO" msprop:Generator_ColumnVarNameInTable="columnSUELDO" msprop:Generator_ColumnPropNameInRow="SUELDO" msprop:Generator_ColumnPropNameInTable="SUELDOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="PSM" msprop:Generator_UserColumnName="PSM" msprop:Generator_ColumnVarNameInTable="columnPSM" msprop:Generator_ColumnPropNameInRow="PSM" msprop:Generator_ColumnPropNameInTable="PSMColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="NO_EMPLEADO" msprop:Generator_UserColumnName="NO_EMPLEADO" msprop:Generator_ColumnVarNameInTable="columnNO_EMPLEADO" msprop:Generator_ColumnPropNameInRow="NO_EMPLEADO" msprop:Generator_ColumnPropNameInTable="NO_EMPLEADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RFC" msprop:Generator_UserColumnName="RFC" msprop:Generator_ColumnVarNameInTable="columnRFC" msprop:Generator_ColumnPropNameInRow="RFC" msprop:Generator_ColumnPropNameInTable="RFCColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PUESTO" msprop:Generator_UserColumnName="PUESTO" msprop:Generator_ColumnPropNameInRow="PUESTO" msprop:Generator_ColumnVarNameInTable="columnPUESTO" msprop:Generator_ColumnPropNameInTable="PUESTOColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_GENERALES_REPORTE" msprop:Generator_UserTableName="DT_GENERALES_REPORTE" msprop:Generator_RowDeletedName="DT_GENERALES_REPORTERowDeleted" msprop:Generator_RowChangedName="DT_GENERALES_REPORTERowChanged" msprop:Generator_RowClassName="DT_GENERALES_REPORTERow" msprop:Generator_RowChangingName="DT_GENERALES_REPORTERowChanging" msprop:Generator_RowEvArgName="DT_GENERALES_REPORTERowChangeEvent" msprop:Generator_RowEvHandlerName="DT_GENERALES_REPORTERowChangeEventHandler" msprop:Generator_TableClassName="DT_GENERALES_REPORTEDataTable" msprop:Generator_TableVarName="tableDT_GENERALES_REPORTE" msprop:Generator_RowDeletingName="DT_GENERALES_REPORTERowDeleting" msprop:Generator_TablePropName="DT_GENERALES_REPORTE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ELABORO" msprop:Generator_UserColumnName="ELABORO" msprop:Generator_ColumnVarNameInTable="columnELABORO" msprop:Generator_ColumnPropNameInRow="ELABORO" msprop:Generator_ColumnPropNameInTable="ELABOROColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMBRE_REPORTE" msprop:Generator_UserColumnName="NOMBRE_REPORTE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_REPORTE" msprop:Generator_ColumnPropNameInRow="NOMBRE_REPORTE" msprop:Generator_ColumnPropNameInTable="NOMBRE_REPORTEColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

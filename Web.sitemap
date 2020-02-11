@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="paginas/Paginas_Generales/Frm_Apl_Principal.aspx" title="Inicio"  description="SIAS">
+    <!--Atención Ciudadana-->
+    <siteMapNode url="paginas/Atencion_Ciudadana/Frm_Apl_Principal_Atencion.aspx" title="Módulo de Atención Ciudadana"  description="SIAS" >
+		  <siteMapNode url="paginas/Atencion_Ciudadana/Frm_Cat_Ate_Asuntos.aspx" title="Asuntos"  description="SIAS" />
+		  <siteMapNode url="paginas/Atencion_Ciudadana/Frm_Apl_Bitacora.aspx" title="Bitacora"  description="SIAS" />
+		  <siteMapNode url="paginas/Atencion_Ciudadana/Frm_Estadisticas.aspx" title="Estadisticas"  description="SIAS" />
+		  <siteMapNode url="paginas/Atencion_Ciudadana/Frm_Reportes.aspx" title="Reportes"  description="SIAS" />    
+		  <siteMapNode url="paginas/Atencion_Ciudadana/Frm_Ope_Consulta_Peticiones.aspx" title="Consulta Peticiones"  description="SIAS" />
+		  <siteMapNode url="paginas/Atencion_Ciudadana/Frm_Ope_Registro_Peticion.aspx" title="Registrar Petición"  description="SIAS" />
+      <siteMapNode url="paginas/Atencion_Ciudadana/Frm_Bandeja_Entrada.aspx" title="Bandeja de Entrada"  description="SIAS" />
+      <siteMapNode url="paginas/Atencion_Ciudadana/Frm_Cat_Ate_Colonias.aspx" title="Catálogo de Colonias"  description="SIAS" />
+      <siteMapNode url="paginas/Atencion_Ciudadana/Frm_Cat_Ate_Localidades.aspx" title="Catálogo de Localidades"  description="SIAS" />
+      <siteMapNode url="paginas/Atencion_Ciudadana/Frm_Ope_Ate_Solicitudes.aspx" title="Seguimiento de Peticiones"  description="SIAS" >
+		    <siteMapNode url="paginas/Atencion_Ciudadana/Frm_Ope_Ate_Respuesta_Solicitudes.aspx" title="Solución a Peticiones"  description="SIAS" />
+		  </siteMapNode>
+    </siteMapNode>
+    <!--Fin de Atención Ciudadana-->
+    <!--Tramites-->
+    <siteMapNode url="paginas/Tramites/Frm_Apl_Principal_Tramites.aspx" title="Módulo de Trámites"  description="SIAS" >
+      <siteMapNode url="paginas/Tramites/Frm_Cat_Documentos.aspx" title="Documentos para requisitos"  description="SIAS" />
+      <siteMapNode url="paginas/Tramites/Frm_Cat_Perfiles.aspx" title="Perfiles"  description="SIAS" />
+      <siteMapNode url="paginas/Tramites/Frm_Cat_Tra_Plantillas.aspx" title="Plantillas"  description="SIAS" />
+      <siteMapNode url="paginas/Tramites/Frm_Cat_Tramites.aspx" title="Tramites"  description="SIAS" />
+      <siteMapNode url="paginas/Tramites/Frm_Ope_Bandeja_Tramites.aspx" title="Bandeja de Tramites"  description="SIAS" />
+      <siteMapNode url="paginas/Tramites/Frm_Ope_Tra_Reportes.aspx" title="Reportes de Tramites"  description="SIAS" />
+      <siteMapNode url="paginas/Tramites/Frm_Tra_Estadisticas.aspx" title="Estadisticas de Tramites"  description="SIAS" />
+      <siteMapNode url="paginas/Tramites/Frm_Ope_Tra_Solicitud_Tramite.aspx" title="Solicitud de Tramite en Oficina"  description="SIAS" />
+      <siteMapNode url="paginas/Tramites/Frm_Ope_Tra_Solicitud.aspx" title="Solicitud de Tramite por Internet"  description="SIAS" />
+    </siteMapNode>
+      <!--Fin de Tramites-->
+    <!--Paginas Generales-->
+		<siteMapNode url="paginas/Paginas_Generales/Frm_Apl_Cat_Menus.aspx" title="Catálogo de Menú" description="SIAS" />
+		<siteMapNode url="paginas/Paginas_Generales/Frm_Apl_Cat_Roles.aspx" title="Catálogo de Roles" description="SIAS" />
+    <siteMapNode url="paginas/Paginas_Generales/Frm_Apl_Cat_Parametros.aspx" title="Catálogo de Parametros" description="SIAS" />
+    <siteMapNode url="paginas/Paginas_Generales/Frm_Cat_Com_Partidas.aspx" title="Catálogo de Partidas" description="SIAS" />
+    <siteMapNode url="paginas/Paginas_Generales/Frm_Cat_SAP_Area_Funcional.aspx" title="SAP Áreas Funcionales" description="SIAS" />
+    <siteMapNode url="paginas/Paginas_Generales/Frm_Cat_SAP_Capitulos.aspx" title="Catálogo de SAP Capítulos " description="SIAS" />
+    <siteMapNode url="paginas/Paginas_Generales/Frm_Cat_SAP_Conceptos.aspx" title="Catálogo de SAP Conceptos " description="SIAS" />
+    <siteMapNode url="paginas/Paginas_Generales/Frm_Cat_SAP_Fuente_Financiamiento.aspx" title="Catálogo de SAP Fuente de Financiamiento" description="SIAS" />
+    <siteMapNode url="paginas/Paginas_Generales/Frm_Cat_Sap_Partida_Generica.aspx" title="SAP Partidas Genericas" description="SIAS" />
+    <siteMapNode url="paginas/Paginas_Generales/Frm_Ope_Asignar_Presupuesto_Programas.aspx" title="Asignar Presupuesto a Programas" description="SIAS" />
+    <siteMapNode url="paginas/Paginas_Generales/Frm_Ope_Asignar_Presupuestos_Dependencias.aspx" title="Asignar Presupuesto a Dependencias" description="SIAS" />   
+    <!--Fin Paginas Generales-->
+    <!--Nomina-->
+		<siteMapNode url="paginas/Nomina/Frm_Cat_Areas.aspx" title="Catálogo de Áreas" description="SIAS" />
+		<siteMapNode url="paginas/Nomina/Frm_Cat_Dependencias.aspx" title="Catálogo de Dependencias" description="SIAS" />
+		<siteMapNode url="paginas/Nomina/Frm_Cat_Empleados.aspx" title="Catálogo de Empleados" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Cat_Nom_Antiguedad_Sindicatos.aspx" title="Antigüedad Sindicato" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Cat_Nom_Bancos.aspx" title="Catálogo de Bancos" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Cat_Nom_Calendario_Nominas.aspx" title="Catálogo de Calendario de Nominas" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Cat_Nom_Escolaridad.aspx" title="Catálogo de Escolaridad" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Cat_Nom_Parametros_Nomina.aspx" title="Catálogo de Parámetros de la Nomina" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Cat_Nom_Percepciones_Deducciones.aspx" title="Catálogo de Percepciones y Deducciones" description="SIAS" />
+		<siteMapNode url="paginas/Nomina/Frm_Cat_Nom_Programas.aspx" title="Catálogo de Programas" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Cat_Nom_Proveedores.aspx" title="Catálogo de Proveedores" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Cat_Nom_Requisitos_Empleado.aspx" title="Catálogo de Requisitos Empleado" description="SIAS" />
+		<siteMapNode url="paginas/Nomina/Frm_Cat_Nom_Sindicatos.aspx" title="Catálogo de Sindicatos" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Cat_Nom_Terceros.aspx" title="Catálogo de Terceros" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Cat_Nom_Tipo_Trabajador.aspx" title="Catálogo de Tipos de Trabajadores" description="SIAS" />
+		<siteMapNode url="paginas/Nomina/Frm_Cat_Nom_Tipos_Contratos.aspx" title="Catálogo de Tipos de Contratos" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Cat_Nom_Tipos_Nominas.aspx" title="Catálogo de Tipos de Nóminas" description="SIAS" />
+		<siteMapNode url="paginas/Nomina/Frm_Cat_Nom_Zona_Economica.aspx" title="Catálogo de Zonas Económicas" description="SIAS" />
+		<siteMapNode url="paginas/Nomina/Frm_Cat_Puestos.aspx" title="Catálogo de Puestos" description="SIAS" />
+		<siteMapNode url="paginas/Nomina/Frm_Cat_Turnos.aspx" title="Catálogo de Turnos" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Ope_Nom_Ajuste_ISR.aspx" title="Ajuste de ISR" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Ope_Nom_Autorizacion_Prestamos.aspx" title="Autorización de Solicitudes de Prestamos" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Ope_Nom_Deducciones_Variables.aspx" title="Deducciones Variables" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Ope_Nom_Dias_Festivos.aspx" title="Días Festivos" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Ope_Nom_Domingos_Empleados.aspx" title="Domingos Trabajados" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Ope_Nom_Faltas_Empleados.aspx" title="Faltas de Empleados" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Ope_Nom_Generacion_Finiquitos.aspx" title="Generación de Finiquitos" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Ope_Nom_Generar_Nomina.aspx" title="Generar Nomina" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Ope_Nom_Percepciones_Variables.aspx" title="Percepciones Variables" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Ope_Nom_Seguimiento_Deduc_Var.aspx" title="Autorización Deducciones Variables" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Ope_Nom_Seguimiento_Dias_Festivos.aspx" title="Autorización Día Festivo" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Ope_Nom_Seguimiento_Perc_Var.aspx" title="Autorización Percepciones Variables" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Ope_Nom_Solicitud_Prestamos.aspx" title="Solicitud de Prestamos" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Ope_Nom_Vacaciones_Dependencia.aspx" title="Dependencia Seguimiento Vacaciones" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Ope_Nom_Vacaciones_Empleados.aspx" title="Empleado Solicitud de Vacaciones" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Ope_Nom_Vacaciones_Recursos_Humanos.aspx" title="Recursos Humanos Seguimiento Vacaciones" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Ope_Seguimiento_Tiempo_Extra.aspx" title="Tiempo Horas Extras" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Ope_Tiempo_Extra_Empleados.aspx" title="Tiempo Extra" description="SIAS" />
+    <siteMapNode url="paginas/Nomina/Frm_Tab_Nom_Dias_Festivos.aspx" title="Tabla de Días Festivos" description="SIAS" />
+		<siteMapNode url="paginas/Nomina/Frm_Tab_Nom_IMSS.aspx" title="Tabla de IMSS" description="SIAS" />
+		<siteMapNode url="paginas/Nomina/Frm_Tab_Nom_INFONAVIT.aspx" title="Tabla de INFONAVIT" description="SIAS" />
+		<siteMapNode url="paginas/Nomina/Frm_Tab_Nom_ISR.aspx" title="Tabla de ISR" description="SIAS" />
+		<siteMapNode url="paginas/Nomina/Frm_Tab_Nom_Subsidio.aspx" title="Tabla de Subsidio" description="SIAS" />
+		<siteMapNode url="paginas/Nomina/Frm_Tab_Nom_Vacaciones.aspx" title="Tabla de Vacaciones" description="SIAS" />
+    <!--Fin de Nomina-->
+    <!--Compras-->
+    <siteMapNode url="paginas/Compras/Frm_Alm_Com_Orden_Salida.aspx" title="Orden de Salida" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Alm_Com_Recepcion_Material.aspx" title="Recepción de Material del Proveedor" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Alm_Com_Recibos.aspx" title="Recibos" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Alm_Com_Resguardos.aspx" title="Resguardos" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Alm_Orden_Salida.aspx" title="Orden de Salida" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Com_Cotizadores.aspx" title="Catálogo de Cotizadores" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Com_Dep_Presupuesto.aspx" title="Catálogo de Presupuestos" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Com_Documentos.aspx" title="Catálogo de Documentos" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Com_Det_Cotizadores.aspx" title="Catálogo Detalle de Cotizadores" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Com_Emp_Cotizadores.aspx" title="Catálogo de Cotizadores" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Com_Familias.aspx" title="Catálogo de Familias" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Com_Giros.aspx" title="Catálogo de Giros" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Com_Impuestos.aspx" title="Catálogo de Impuestos" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Com_Marcas.aspx" title="Catálogo de Marcas" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Com_Modelos.aspx" title="Catálogo de Modelos" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Com_Monto_Proceso_Compra.aspx" title="Montos para proceso de compra " description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Com_Parametros.aspx" title="Catálogo de Parametros" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Com_Partidas.aspx" title="Catálogo de Partidas" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Com_Presupuesto_Dependencias.aspx" title="Catálogo de Presupuestos de Dependencias" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Com_Productos.aspx" title="Catálogo de Productos" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Com_Proveedores.aspx" title="Catálogo de Proveedores" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Com_Proyectos_Programas.aspx" title="Catálogo de Proyectos y Programas" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Com_Servicios.aspx" title="Catálogo de Servicios" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Com_Subfamilias.aspx" title="Catálogo de Sub Familias" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Com_Tipos_Ent_Sal.aspx" title="Catálogo de Tipos Entradas-Salidas" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Com_Unidades.aspx" title="Catálogo de Unidades" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Pat_Com_Aseguradoras.aspx" title="Catálogo de Aseguradoras" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Pat_Com_Clasificaciones.aspx" title="Catálogo de Clasificaciones" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Pat_Com_Colores.aspx" title="Catálogo de Colores" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Pat_Com_Donadores.aspx" title="Catálogo de Donadores" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Pat_Com_Funciones.aspx" title="Catálogo de Funciones" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Pat_Com_Materiales.aspx" title="Catálogo de Materiales" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Pat_Com_Razas.aspx" title="Catálogo de Razas" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Pat_Com_Tipos_Adiestramiento.aspx" title="Catálogo de Tipos de Adiestramiento" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Pat_Com_Tipos_Alimentacion.aspx" title="Catálogo de Tipos de Alimentación" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Pat_Com_Tipos_Ascendencia.aspx" title="Catálogo de Tipos de Ascendencia" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Pat_Com_Tipos_Bajas.aspx" title="Catálogo de Tipos de Bajas" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Pat_Com_Tipos_Cemovientes.aspx" title="Catálogo de Tipos de Cemovientes" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Pat_Com_Tipos_Combustible.aspx" title="Catálogo de Tipos de Combustibles" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Pat_Com_Tipos_Siniestros.aspx" title="Catálogo de Tipos de Siniestros" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Pat_Com_Tipos_Vehiculo.aspx" title="Catálogo de Tipos de Vehiculos" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Pat_Com_Vacunas.aspx" title="Catálogo de Vacunas" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Pat_Com_Veterinarios.aspx" title="Catálogo de Veterinarios" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Cat_Pat_Com_Zonas.aspx" title="Catálogo de Zonas" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Alm_Com_Administrar_Listado.aspx" title="Autorizar Listado de Almacén" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Com_Administrar_Requisiciones.aspx" title="Autorizar Requisiciones" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Com_Asignar_Cotizadores.aspx" title="Asignar Cotizadores" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Com_Autorizar_Orden_Compra.aspx" title=" Autorizar Órden de Compra" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Com_Comite_Compras.aspx" title="Comité de Compras" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Com_Comite_Compras_Proveedores.aspx" title="Asignar Proveedores Comité de Compras" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Com_Compras_Directas.aspx" title="Compras Directas" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Com_Consolidar_Requisicion.aspx" title="Consolidar Requisiciones" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Com_Cotizaciones.aspx" title="Cotizaciones" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Com_Cotizaciones_Proveedores.aspx" title="Asignar Proveedores Cotizaciones" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Com_Facturas_Proveedores.aspx" title="Facturas de Proveedores" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Com_Licitacion_Proveedores.aspx" title="Asignar Proveedores a Licitaciones" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Com_Licitaciones.aspx" title="Licitaciones" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Com_Listado.aspx" title="Listado de Almacén" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Com_Listado_Consolidaciones.aspx" title="Listado de Consolidaciones" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Com_Ordenes_Compra.aspx" title="Elaborar Órden de Compra" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Com_Requisiciones_Pendientes.aspx" title="Requisiciones Pendientes" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Elaborar_Requisicion.aspx" title="Elaborar Requisiciones" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Pat_Com_Actualizacion_Bienes_Caja_Chica.aspx" title="Actualización de Bienes Caja Chica" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Pat_Com_Actualizacion_Bienes_Muebles.aspx" title="Actualización de Bienes Muebles" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Pat_Com_Actualizacion_Cemovientes.aspx" title="Actualización de Cemovientes" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Pat_Com_Alta_Bienes_Caja_Chica.aspx" title="Caja Chica" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Pat_Com_Alta_Bienes_Muebles.aspx" title="Asignación de Bienes Muebles" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Pat_Com_Alta_Cemovientes.aspx" title="Asignación de Animales" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Pat_Com_Alta_Vehiculos.aspx" title="Asignación de Vehículos" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Pat_Com_Listado_Bienes.aspx" title="Listado de Bienes" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Pat_Com_Seguimiento_Siniestros.aspx" title="Seguimiento de Siniestros" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Ope_Pat_Com_Siniestros.aspx" title="Siniestros" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Frm_Rpt_Pat_Com_Licencias_Vencidas.aspx" title="Licencias Vencidas" description="SIAS" />
+    <siteMapNode url="paginas/Compras/Ope_Pat_Partes_Vehiculos.aspx" title="Partes de Vehiculos" description="SIAS" />
+    <!--Fin de Compras-->
+    <!--Almacén-->
+    <siteMapNode url="paginas/Almacen/Frm_Ope_Alm_Orden_Salida.aspx" title="Productos Entregados" description="SIAS" />
+    <siteMapNode url="paginas/Almacen/Frm_Ope_Com_Alm_Aplicar_Inventario_Stock.aspx" title="Aplicar Inventario" description="SIAS" />
+    <siteMapNode url="paginas/Almacen/Frm_Ope_Com_Alm_Capturar_Inventario_Stock.aspx" title="Captutar Inventario" description="SIAS" />
+    <siteMapNode url="paginas/Almacen/Frm_Ope_Com_Alm_Generar_Inventario_Stock.aspx" title="Generar Inventario" description="SIAS" />
+    <siteMapNode url="paginas/Almacen/Frm_Ope_Com_Alm_Mostrar_Productos_Inv_Stock.aspx" title="Mostrar Productos de Inventario Stock" description="SIAS" />
+    <!--Fin de Almacén-->
+    <!--Predial-->
+    <siteMapNode url="paginas/Predial/Frm_Cat_Pre_Bloqueo_Cuentas_Predial.aspx" title="Catálogo de Bloqueo Cuentas Predial" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Cat_Pre_Calles.aspx" title="Catálogo de Calles" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Cat_Pre_Casos_Especiales.aspx" title="Catálogo de Casos Especiales" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Cat_Pre_Conceptos.aspx" title="Catálogo de Conceptos" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Cat_Pre_Contribuyentes.aspx" title="Catálogo de Contribuyentes" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Cat_Pre_Cuotas_Minimas.aspx" title="Catálogo de Cuotas Minimas" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Cat_Pre_Derechos_Supervision.aspx" title="Catálogo de Derechos de Supervisión" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Cat_Pre_Descuentos_Predial.aspx" title="Catálogo Descuentos Predial" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Cat_Pre_Descuentos_Recargos.aspx" title="Catálogo Descuentos Recargos" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Cat_Pre_Diferencias.aspx" title="Catálogo de Diferencias" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Cat_Pre_Divisiones.aspx" title="Catálogo de Divisiones" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Cat_Pre_Estados_Predio.aspx" title="Catálogo de Estados Predio" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Cat_Pre_Fraccionamientos.aspx" title="Catálogo de Fraccionamientos" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Cat_Pre_Gastos_Ejecucion.aspx" title="Catálogo de Gastos de Ejecución" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Cat_Pre_Movimientos.aspx" title="Catálogo de Movimientos" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Cat_Pre_Multas.aspx" title="Catálogo de Multas" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Cat_Pre_Notarios.aspx" title="Catálogo de Notarios" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Cat_Pre_Rangos_Identificadores_Colonias.aspx" title="Catálogo de Rangos Identificadores de Colonias" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Cat_Pre_Recargos.aspx" title="Catálogo de Recargos" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Cat_Pre_Sectores.aspx" title="Catálogo de Sectores" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Cat_Pre_Tipos_Colonias.aspx" title="Catálogo de Tipos de Colonias" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Cat_Pre_Tipos_Predio.aspx" title="Catálogo de Tipos Predio" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Cat_Pre_Uso_Suelo.aspx" title="Catálogo de Uso de Suelo" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Ope_Pre_Calculo_Impuestos.aspx" title="Cálculo Impuestos" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Ope_Pre_Ordenes_Variacion.aspx" title="Orden de Variación" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Ope_Pre_Recepcion_Documentos.aspx" title="Recepción de Documentos" description="SIAS" />
+    <siteMapNode url="paginas/Predial/Frm_Ope_Pre_Traslado.aspx" title="Traslado" description="SIAS" />
+    <!--Fin de Predial-->
+  </siteMapNode>
+</siteMap>

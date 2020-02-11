@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Caj_Recibo_Cobro" targetNamespace="http://tempuri.org/Ds_Rpt_Caj_Recibo_Cobro.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Caj_Recibo_Cobro.xsd" xmlns="http://tempuri.org/Ds_Rpt_Caj_Recibo_Cobro.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Caj_Recibo_Cobro" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Caj_Recibo_Cobro" msprop:Generator_DataSetName="Ds_Rpt_Caj_Recibo_Cobro">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Recibo_Cobro" msprop:Generator_UserTableName="Recibo_Cobro" msprop:Generator_RowDeletedName="Recibo_CobroRowDeleted" msprop:Generator_RowChangedName="Recibo_CobroRowChanged" msprop:Generator_RowClassName="Recibo_CobroRow" msprop:Generator_RowChangingName="Recibo_CobroRowChanging" msprop:Generator_RowEvArgName="Recibo_CobroRowChangeEvent" msprop:Generator_RowEvHandlerName="Recibo_CobroRowChangeEventHandler" msprop:Generator_TableClassName="Recibo_CobroDataTable" msprop:Generator_TableVarName="tableRecibo_Cobro" msprop:Generator_RowDeletingName="Recibo_CobroRowDeleting" msprop:Generator_TablePropName="Recibo_Cobro">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Recargos" msprop:Generator_UserColumnName="Recargos" msprop:Generator_ColumnPropNameInRow="Recargos" msprop:Generator_ColumnVarNameInTable="columnRecargos" msprop:Generator_ColumnPropNameInTable="RecargosColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Total_Pagar" msprop:Generator_UserColumnName="Total_Pagar" msprop:Generator_ColumnPropNameInRow="Total_Pagar" msprop:Generator_ColumnVarNameInTable="columnTotal_Pagar" msprop:Generator_ColumnPropNameInTable="Total_PagarColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Fecha_Pago" msprop:Generator_UserColumnName="Fecha_Pago" msprop:Generator_ColumnPropNameInRow="Fecha_Pago" msprop:Generator_ColumnVarNameInTable="columnFecha_Pago" msprop:Generator_ColumnPropNameInTable="Fecha_PagoColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Nota_Pie" msprop:Generator_UserColumnName="Nota_Pie" msprop:Generator_ColumnPropNameInRow="Nota_Pie" msprop:Generator_ColumnVarNameInTable="columnNota_Pie" msprop:Generator_ColumnPropNameInTable="Nota_PieColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Detalles_Recibo" msprop:Generator_UserTableName="Detalles_Recibo" msprop:Generator_RowDeletedName="Detalles_ReciboRowDeleted" msprop:Generator_RowChangedName="Detalles_ReciboRowChanged" msprop:Generator_RowClassName="Detalles_ReciboRow" msprop:Generator_RowChangingName="Detalles_ReciboRowChanging" msprop:Generator_RowEvArgName="Detalles_ReciboRowChangeEvent" msprop:Generator_RowEvHandlerName="Detalles_ReciboRowChangeEventHandler" msprop:Generator_TableClassName="Detalles_ReciboDataTable" msprop:Generator_TableVarName="tableDetalles_Recibo" msprop:Generator_RowDeletingName="Detalles_ReciboRowDeleting" msprop:Generator_TablePropName="Detalles_Recibo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Ingreso" msprop:Generator_UserColumnName="Ingresos" msprop:Generator_ColumnPropNameInRow="Ingresos" msprop:Generator_ColumnVarNameInTable="columnIngresos" msprop:Generator_ColumnPropNameInTable="IngresosColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Descripcion" msprop:Generator_UserColumnName="Descripcion" msprop:Generator_ColumnPropNameInRow="Descripcion" msprop:Generator_ColumnVarNameInTable="columnDescripcion" msprop:Generator_ColumnPropNameInTable="DescripcionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Importe" msprop:Generator_UserColumnName="Importe" msprop:Generator_ColumnPropNameInRow="Importe" msprop:Generator_ColumnVarNameInTable="columnImporte" msprop:Generator_ColumnPropNameInTable="ImporteColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

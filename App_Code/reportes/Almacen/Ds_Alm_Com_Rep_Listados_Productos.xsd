@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Alm_Com_Rep_Listados_Productos" targetNamespace="http://tempuri.org/Ds_Alm_Com_Rep_Listados_Productos.xsd" xmlns:mstns="http://tempuri.org/Ds_Alm_Com_Rep_Listados_Productos.xsd" xmlns="http://tempuri.org/Ds_Alm_Com_Rep_Listados_Productos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Alm_Com_Rep_Listados_Productos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Alm_Com_Rep_Listados_Productos" msprop:Generator_DataSetName="Ds_Alm_Com_Rep_Listados_Productos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Detalles" msprop:Generator_UserTableName="Detalles" msprop:Generator_RowDeletedName="DetallesRowDeleted" msprop:Generator_RowChangedName="DetallesRowChanged" msprop:Generator_RowClassName="DetallesRow" msprop:Generator_RowChangingName="DetallesRowChanging" msprop:Generator_RowEvArgName="DetallesRowChangeEvent" msprop:Generator_RowEvHandlerName="DetallesRowChangeEventHandler" msprop:Generator_TableClassName="DetallesDataTable" msprop:Generator_TableVarName="tableDetalles" msprop:Generator_RowDeletingName="DetallesRowDeleting" msprop:Generator_TablePropName="Detalles">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FOLIO" msprop:Generator_UserColumnName="FOLIO" msprop:Generator_ColumnVarNameInTable="columnFOLIO" msprop:Generator_ColumnPropNameInRow="FOLIO" msprop:Generator_ColumnPropNameInTable="FOLIOColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="TIPO" msprop:Generator_UserColumnName="TIPO" msprop:Generator_ColumnVarNameInTable="columnTIPO" msprop:Generator_ColumnPropNameInRow="TIPO" msprop:Generator_ColumnPropNameInTable="TIPOColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="ESTATUS" msprop:Generator_UserColumnName="ESTATUS" msprop:Generator_ColumnVarNameInTable="columnESTATUS" msprop:Generator_ColumnPropNameInRow="ESTATUS" msprop:Generator_ColumnPropNameInTable="ESTATUSColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="COMENTARIOS" msprop:Generator_UserColumnName="COMENTARIOS" msprop:Generator_ColumnVarNameInTable="columnCOMENTARIOS" msprop:Generator_ColumnPropNameInRow="COMENTARIOS" msprop:Generator_ColumnPropNameInTable="COMENTARIOSColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="EMPLEADO_CONSTRUCCION" msprop:Generator_UserColumnName="EMPLEADO_CONSTRUCCION" msprop:Generator_ColumnPropNameInRow="EMPLEADO_CONSTRUCCION" msprop:Generator_ColumnVarNameInTable="columnEMPLEADO_CONSTRUCCION" msprop:Generator_ColumnPropNameInTable="EMPLEADO_CONSTRUCCIONColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="FECHA_CONSTRUCCION" msprop:Generator_UserColumnName="FECHA_CONSTRUCCION" msprop:Generator_ColumnVarNameInTable="columnFECHA_CONSTRUCCION" msprop:Generator_ColumnPropNameInRow="FECHA_CONSTRUCCION" msprop:Generator_ColumnPropNameInTable="FECHA_CONSTRUCCIONColumn" type="xs:date" minOccurs="0" />
+              <xs:element name="NO_REQUISICION" msprop:Generator_UserColumnName="NO_REQUISICION" msprop:Generator_ColumnVarNameInTable="columnNO_REQUISICION" msprop:Generator_ColumnPropNameInRow="NO_REQUISICION" msprop:Generator_ColumnPropNameInTable="NO_REQUISICIONColumn" type="xs:integer" minOccurs="0" />
+              <xs:element name="TOTAL_PRODUCTOS" msprop:Generator_UserColumnName="TOTAL_PRODUCTOS" msprop:Generator_ColumnVarNameInTable="columnTOTAL_PRODUCTOS" msprop:Generator_ColumnPropNameInRow="TOTAL_PRODUCTOS" msprop:Generator_ColumnPropNameInTable="TOTAL_PRODUCTOSColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="PERSONA_IMPRIMIO" msprop:Generator_UserColumnName="PERSONA_IMPRIMIO" msprop:Generator_ColumnPropNameInRow="PERSONA_IMPRIMIO" msprop:Generator_ColumnVarNameInTable="columnPERSONA_IMPRIMIO" msprop:Generator_ColumnPropNameInTable="PERSONA_IMPRIMIOColumn" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>  
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

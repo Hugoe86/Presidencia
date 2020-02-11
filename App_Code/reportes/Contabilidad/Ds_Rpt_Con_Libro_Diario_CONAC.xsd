@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Rpt_Con_Libro_Diario_CONAC" targetNamespace="http://tempuri.org/Ds_Rpt_Con_Libro_Diario_CONAC.xsd" xmlns:mstns="http://tempuri.org/Ds_Rpt_Con_Libro_Diario_CONAC.xsd" xmlns="http://tempuri.org/Ds_Rpt_Con_Libro_Diario_CONAC.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Rpt_Con_Libro_Diario_CONAC" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Rpt_Con_Libro_Diario_CONAC" msprop:Generator_DataSetName="Ds_Rpt_Con_Libro_Diario_CONAC">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Ds_Libro_Diario_CONAC" msprop:Generator_UserTableName="Ds_Libro_Diario_CONAC" msprop:Generator_RowDeletedName="Ds_Libro_Diario_CONACRowDeleted" msprop:Generator_TableClassName="Ds_Libro_Diario_CONACDataTable" msprop:Generator_RowChangedName="Ds_Libro_Diario_CONACRowChanged" msprop:Generator_RowClassName="Ds_Libro_Diario_CONACRow" msprop:Generator_RowChangingName="Ds_Libro_Diario_CONACRowChanging" msprop:Generator_RowEvArgName="Ds_Libro_Diario_CONACRowChangeEvent" msprop:Generator_RowEvHandlerName="Ds_Libro_Diario_CONACRowChangeEventHandler" msprop:Generator_TablePropName="Ds_Libro_Diario_CONAC" msprop:Generator_TableVarName="tableDs_Libro_Diario_CONAC" msprop:Generator_RowDeletingName="Ds_Libro_Diario_CONACRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="No_Poliza" msprop:Generator_UserColumnName="No_Poliza" msprop:Generator_ColumnPropNameInRow="No_Poliza" msprop:Generator_ColumnVarNameInTable="columnNo_Poliza" msprop:Generator_ColumnPropNameInTable="No_PolizaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Documento_Fuente" msprop:Generator_UserColumnName="Documento_Fuente" msprop:Generator_ColumnPropNameInRow="Documento_Fuente" msprop:Generator_ColumnVarNameInTable="columnDocumento_Fuente" msprop:Generator_ColumnPropNameInTable="Documento_FuenteColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="No_Asiento" msprop:Generator_UserColumnName="No_Asiento" msprop:Generator_ColumnPropNameInRow="No_Asiento" msprop:Generator_ColumnVarNameInTable="columnNo_Asiento" msprop:Generator_ColumnPropNameInTable="No_AsientoColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Concepto_Detalle_Poliza" msprop:Generator_UserColumnName="Concepto_Detalle_Poliza" msprop:Generator_ColumnPropNameInRow="Concepto_Detalle_Poliza" msprop:Generator_ColumnVarNameInTable="columnConcepto_Detalle_Poliza" msprop:Generator_ColumnPropNameInTable="Concepto_Detalle_PolizaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Debe" msprop:Generator_UserColumnName="Debe" msprop:Generator_ColumnPropNameInRow="Debe" msprop:Generator_ColumnVarNameInTable="columnDebe" msprop:Generator_ColumnPropNameInTable="DebeColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Haber" msprop:Generator_UserColumnName="Haber" msprop:Generator_ColumnPropNameInRow="Haber" msprop:Generator_ColumnVarNameInTable="columnHaber" msprop:Generator_ColumnPropNameInTable="HaberColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Cuenta_Contable" msprop:Generator_UserColumnName="Cuenta_Contable" msprop:Generator_ColumnPropNameInRow="Cuenta_Contable" msprop:Generator_ColumnVarNameInTable="columnCuenta_Contable" msprop:Generator_ColumnPropNameInTable="Cuenta_ContableColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Concepto_Cuenta_Contable" msprop:Generator_UserColumnName="Concepto_Cuenta_Contable" msprop:Generator_ColumnPropNameInRow="Concepto_Cuenta_Contable" msprop:Generator_ColumnVarNameInTable="columnConcepto_Cuenta_Contable" msprop:Generator_ColumnPropNameInTable="Concepto_Cuenta_ContableColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Cuenta_Presupuestal" msprop:Generator_UserColumnName="Cuenta_Presupuestal" msprop:Generator_ColumnPropNameInRow="Cuenta_Presupuestal" msprop:Generator_ColumnVarNameInTable="columnCuenta_Presupuestal" msprop:Generator_ColumnPropNameInTable="Cuenta_PresupuestalColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Concepto_Cuenta_Presupuestal" msprop:Generator_UserColumnName="Concepto_Cuenta_Presupuestal" msprop:Generator_ColumnPropNameInRow="Concepto_Cuenta_Presupuestal" msprop:Generator_ColumnVarNameInTable="columnConcepto_Cuenta_Presupuestal" msprop:Generator_ColumnPropNameInTable="Concepto_Cuenta_PresupuestalColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Pat_Listado_Bienes_Inmuebles" targetNamespace="http://tempuri.org/Ds_Pat_Listado_Bienes_Inmuebles.xsd" xmlns:mstns="http://tempuri.org/Ds_Pat_Listado_Bienes_Inmuebles.xsd" xmlns="http://tempuri.org/Ds_Pat_Listado_Bienes_Inmuebles.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Pat_Listado_Bienes_Inmuebles" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Pat_Listado_Bienes_Inmuebles" msprop:Generator_DataSetName="Ds_Pat_Listado_Bienes_Inmuebles">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_LISTADO_BIENES" msprop:Generator_UserTableName="DT_LISTADO_BIENES" msprop:Generator_RowDeletedName="DT_LISTADO_BIENESRowDeleted" msprop:Generator_TableClassName="DT_LISTADO_BIENESDataTable" msprop:Generator_RowChangedName="DT_LISTADO_BIENESRowChanged" msprop:Generator_RowClassName="DT_LISTADO_BIENESRow" msprop:Generator_RowChangingName="DT_LISTADO_BIENESRowChanging" msprop:Generator_RowEvArgName="DT_LISTADO_BIENESRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_LISTADO_BIENESRowChangeEventHandler" msprop:Generator_TablePropName="DT_LISTADO_BIENES" msprop:Generator_TableVarName="tableDT_LISTADO_BIENES" msprop:Generator_RowDeletingName="DT_LISTADO_BIENESRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BIEN_INMUEBLE_ID" msprop:Generator_UserColumnName="BIEN_INMUEBLE_ID" msprop:Generator_ColumnPropNameInRow="BIEN_INMUEBLE_ID" msprop:Generator_ColumnVarNameInTable="columnBIEN_INMUEBLE_ID" msprop:Generator_ColumnPropNameInTable="BIEN_INMUEBLE_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CALLE" msprop:Generator_UserColumnName="CALLE" msprop:Generator_ColumnPropNameInRow="CALLE" msprop:Generator_ColumnVarNameInTable="columnCALLE" msprop:Generator_ColumnPropNameInTable="CALLEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NUMERO_EXTERIOR" msprop:Generator_UserColumnName="NUMERO_EXTERIOR" msprop:Generator_ColumnPropNameInRow="NUMERO_EXTERIOR" msprop:Generator_ColumnVarNameInTable="columnNUMERO_EXTERIOR" msprop:Generator_ColumnPropNameInTable="NUMERO_EXTERIORColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NUMERO_INTERIOR" msprop:Generator_UserColumnName="NUMERO_INTERIOR" msprop:Generator_ColumnPropNameInRow="NUMERO_INTERIOR" msprop:Generator_ColumnVarNameInTable="columnNUMERO_INTERIOR" msprop:Generator_ColumnPropNameInTable="NUMERO_INTERIORColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="COLONIA" msprop:Generator_UserColumnName="COLONIA" msprop:Generator_ColumnPropNameInRow="COLONIA" msprop:Generator_ColumnVarNameInTable="columnCOLONIA" msprop:Generator_ColumnPropNameInTable="COLONIAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CUENTA_PREDIAL" msprop:Generator_UserColumnName="CUENTA_PREDIAL" msprop:Generator_ColumnPropNameInRow="CUENTA_PREDIAL" msprop:Generator_ColumnVarNameInTable="columnCUENTA_PREDIAL" msprop:Generator_ColumnPropNameInTable="CUENTA_PREDIALColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MANZANA" msprop:Generator_UserColumnName="MANZANA" msprop:Generator_ColumnPropNameInRow="MANZANA" msprop:Generator_ColumnVarNameInTable="columnMANZANA" msprop:Generator_ColumnPropNameInTable="MANZANAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LOTE" msprop:Generator_UserColumnName="LOTE" msprop:Generator_ColumnPropNameInRow="LOTE" msprop:Generator_ColumnVarNameInTable="columnLOTE" msprop:Generator_ColumnPropNameInTable="LOTEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SUPERFICIE" msprop:Generator_UserColumnName="SUPERFICIE" msprop:Generator_ColumnPropNameInRow="SUPERFICIE" msprop:Generator_ColumnVarNameInTable="columnSUPERFICIE" msprop:Generator_ColumnPropNameInTable="SUPERFICIEColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="VALOR_FISCAL" msprop:Generator_UserColumnName="VALOR_FISCAL" msprop:Generator_ColumnPropNameInRow="VALOR_FISCAL" msprop:Generator_ColumnVarNameInTable="columnVALOR_FISCAL" msprop:Generator_ColumnPropNameInTable="VALOR_FISCALColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="VALOR_COMERCIAL" msprop:Generator_UserColumnName="VALOR_COMERCIAL" msprop:Generator_ColumnPropNameInRow="VALOR_COMERCIAL" msprop:Generator_ColumnVarNameInTable="columnVALOR_COMERCIAL" msprop:Generator_ColumnPropNameInTable="VALOR_COMERCIALColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="USO_INMUEBLE" msprop:Generator_UserColumnName="USO_INMUEBLE" msprop:Generator_ColumnPropNameInRow="USO_INMUEBLE" msprop:Generator_ColumnVarNameInTable="columnUSO_INMUEBLE" msprop:Generator_ColumnPropNameInTable="USO_INMUEBLEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AREA_DONACION_ID" msprop:Generator_UserColumnName="AREA_DONACION_ID" msprop:Generator_ColumnPropNameInRow="AREA_DONACION_ID" msprop:Generator_ColumnVarNameInTable="columnAREA_DONACION_ID" msprop:Generator_ColumnPropNameInTable="AREA_DONACION_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AREA_DONACION" msprop:Generator_UserColumnName="AREA_DONACION" msprop:Generator_ColumnPropNameInRow="AREA_DONACION" msprop:Generator_ColumnVarNameInTable="columnAREA_DONACION" msprop:Generator_ColumnPropNameInTable="AREA_DONACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ESTADO" msprop:Generator_UserColumnName="ESTADO" msprop:Generator_ColumnPropNameInRow="ESTADO" msprop:Generator_ColumnVarNameInTable="columnESTADO" msprop:Generator_ColumnPropNameInTable="ESTADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ESTATUS" msprop:Generator_UserColumnName="ESTATUS" msprop:Generator_ColumnPropNameInRow="ESTATUS" msprop:Generator_ColumnVarNameInTable="columnESTATUS" msprop:Generator_ColumnPropNameInTable="ESTATUSColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

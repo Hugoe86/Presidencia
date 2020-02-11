@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_Pat_Siniestro_Detalles" targetNamespace="http://tempuri.org/Ds_Pat_Siniestro_Detalles.xsd" xmlns:mstns="http://tempuri.org/Ds_Pat_Siniestro_Detalles.xsd" xmlns="http://tempuri.org/Ds_Pat_Siniestro_Detalles.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_Pat_Siniestro_Detalles" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Ds_Pat_Siniestro_Detalles" msprop:Generator_DataSetName="Ds_Pat_Siniestro_Detalles">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_GENERALES" msprop:Generator_UserTableName="DT_GENERALES" msprop:Generator_RowDeletedName="DT_GENERALESRowDeleted" msprop:Generator_RowChangedName="DT_GENERALESRowChanged" msprop:Generator_RowClassName="DT_GENERALESRow" msprop:Generator_RowChangingName="DT_GENERALESRowChanging" msprop:Generator_RowEvArgName="DT_GENERALESRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_GENERALESRowChangeEventHandler" msprop:Generator_TableClassName="DT_GENERALESDataTable" msprop:Generator_TableVarName="tableDT_GENERALES" msprop:Generator_RowDeletingName="DT_GENERALESRowDeleting" msprop:Generator_TablePropName="DT_GENERALES">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SINIESTRO_ID" msprop:Generator_UserColumnName="SINIESTRO_ID" msprop:Generator_ColumnVarNameInTable="columnSINIESTRO_ID" msprop:Generator_ColumnPropNameInRow="SINIESTRO_ID" msprop:Generator_ColumnPropNameInTable="SINIESTRO_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TIPO_SINIESTRO" msprop:Generator_UserColumnName="TIPO_SINIESTRO" msprop:Generator_ColumnVarNameInTable="columnTIPO_SINIESTRO" msprop:Generator_ColumnPropNameInRow="TIPO_SINIESTRO" msprop:Generator_ColumnPropNameInTable="TIPO_SINIESTROColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="VEHICULO" msprop:Generator_UserColumnName="VEHICULO" msprop:Generator_ColumnVarNameInTable="columnVEHICULO" msprop:Generator_ColumnPropNameInRow="VEHICULO" msprop:Generator_ColumnPropNameInTable="VEHICULOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ASEGURADORA" msprop:Generator_UserColumnName="ASEGURADORA" msprop:Generator_ColumnVarNameInTable="columnASEGURADORA" msprop:Generator_ColumnPropNameInRow="ASEGURADORA" msprop:Generator_ColumnPropNameInTable="ASEGURADORAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA_SINIESTRO" msprop:Generator_UserColumnName="FECHA_SINIESTRO" msprop:Generator_ColumnVarNameInTable="columnFECHA_SINIESTRO" msprop:Generator_ColumnPropNameInRow="FECHA_SINIESTRO" msprop:Generator_ColumnPropNameInTable="FECHA_SINIESTROColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ESTATUS" msprop:Generator_UserColumnName="ESTATUS" msprop:Generator_ColumnVarNameInTable="columnESTATUS" msprop:Generator_ColumnPropNameInRow="ESTATUS" msprop:Generator_ColumnPropNameInTable="ESTATUSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_AVERIGUACION" msprop:Generator_UserColumnName="NO_AVERIGUACION" msprop:Generator_ColumnVarNameInTable="columnNO_AVERIGUACION" msprop:Generator_ColumnPropNameInRow="NO_AVERIGUACION" msprop:Generator_ColumnPropNameInTable="NO_AVERIGUACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="REPARACION" msprop:Generator_UserColumnName="REPARACION" msprop:Generator_ColumnVarNameInTable="columnREPARACION" msprop:Generator_ColumnPropNameInRow="REPARACION" msprop:Generator_ColumnPropNameInTable="REPARACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RESPONSABLE_MPIO" msprop:Generator_UserColumnName="RESPONSABLE_MPIO" msprop:Generator_ColumnVarNameInTable="columnRESPONSABLE_MPIO" msprop:Generator_ColumnPropNameInRow="RESPONSABLE_MPIO" msprop:Generator_ColumnPropNameInTable="RESPONSABLE_MPIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NUMERO_REPORTE" msprop:Generator_UserColumnName="NUMERO_REPORTE" msprop:Generator_ColumnVarNameInTable="columnNUMERO_REPORTE" msprop:Generator_ColumnPropNameInRow="NUMERO_REPORTE" msprop:Generator_ColumnPropNameInTable="NUMERO_REPORTEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CONSIGNADO" msprop:Generator_UserColumnName="CONSIGNADO" msprop:Generator_ColumnPropNameInRow="CONSIGNADO" msprop:Generator_ColumnVarNameInTable="columnCONSIGNADO" msprop:Generator_ColumnPropNameInTable="CONSIGNADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PAGO_SINDICOS" msprop:Generator_UserColumnName="PAGO_SINDICOS" msprop:Generator_ColumnPropNameInRow="PAGO_SINDICOS" msprop:Generator_ColumnVarNameInTable="columnPAGO_SINDICOS" msprop:Generator_ColumnPropNameInTable="PAGO_SINDICOSColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_OBSERVACIONES" msprop:Generator_UserTableName="DT_OBSERVACIONES" msprop:Generator_RowDeletedName="DT_OBSERVACIONESRowDeleted" msprop:Generator_RowChangedName="DT_OBSERVACIONESRowChanged" msprop:Generator_RowClassName="DT_OBSERVACIONESRow" msprop:Generator_RowChangingName="DT_OBSERVACIONESRowChanging" msprop:Generator_RowEvArgName="DT_OBSERVACIONESRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_OBSERVACIONESRowChangeEventHandler" msprop:Generator_TableClassName="DT_OBSERVACIONESDataTable" msprop:Generator_TableVarName="tableDT_OBSERVACIONES" msprop:Generator_RowDeletingName="DT_OBSERVACIONESRowDeleting" msprop:Generator_TablePropName="DT_OBSERVACIONES">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FECHA_OBSERVACION" msprop:Generator_UserColumnName="FECHA_OBSERVACION" msprop:Generator_ColumnVarNameInTable="columnFECHA_OBSERVACION" msprop:Generator_ColumnPropNameInRow="FECHA_OBSERVACION" msprop:Generator_ColumnPropNameInTable="FECHA_OBSERVACIONColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OBSERVACION" msprop:Generator_UserColumnName="OBSERVACION" msprop:Generator_ColumnVarNameInTable="columnOBSERVACION" msprop:Generator_ColumnPropNameInRow="OBSERVACION" msprop:Generator_ColumnPropNameInTable="OBSERVACIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AUTOR_OBSERVACION" msprop:Generator_UserColumnName="AUTOR_OBSERVACION" msprop:Generator_ColumnVarNameInTable="columnAUTOR_OBSERVACION" msprop:Generator_ColumnPropNameInRow="AUTOR_OBSERVACION" msprop:Generator_ColumnPropNameInTable="AUTOR_OBSERVACIONColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

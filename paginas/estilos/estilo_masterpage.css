@@ -1,0 +1,21 @@
+﻿/*Formato general*/
+body 
+{
+    background-image:url("../imagenes/master/fondoprincipal.png");
+}
+*
+{
+	font-family:Arial;
+	font-size:small;
+}
+/*Para la etiqueta de inicio de session*/
+.table_paginacion
+{
+    width:98%;
+    height:60px;
+}
+.table_td_1
+{
+    text-align:right;
+    width:150px;
+    }

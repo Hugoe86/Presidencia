@@ -1,0 +1,75 @@
+///********************************************************************************************************
+///NOMBRE DE LA FUNCIÓN : LLenar_Grid_Periodos_Vacacionales
+///DESCRIPCIÓN          : Funcion para llenar el grid de con los filtros de la busqueda
+///PROPIEDADES          :
+///CREO                 : Juan Alberto Hernandez Negrete
+///FECHA_CREO           : Noviembre/2011 
+///MODIFICO             :
+///FECHA_MODIFICO       :
+///CAUSA_MODIFICACIÓN...:
+///*********************************************************************************************************
+ function LLenar_Grid_Periodos_Vacacionales(No_Empleado){
+    var Parametros = new StringBuilder();
+    
+    Parametros.append('no_empleado=');
+    Parametros.append(No_Empleado);
+    Parametros.append('&tabla=');
+    Parametros.append("rows");
+    Parametros.append('&opcion=');
+    Parametros.append('consutar_periodos_vacacionales');
+ 
+ //inicializamos el grid
+    $('#Tbl_Documentos_Empleados').datagrid({
+        title:'Documentos',
+        iconCls:'icon-save',
+        width:830,
+        height:400,
+        collapsible:true,
+        url:'Frm_Rpt_Ver_Documentos_Empl_Ctrl.aspx?' + Parametros.toString(),
+        frozenColumns:[[
+            {field:'EMPLEADO', title: 'Empleado', width:380, sortable:true , resizable:true,
+                formatter:function(value){
+                	return '<span style="font-size:x-small">' + value + '</span>';
+                }
+            },   
+            {field:'ANIO', title: 'Año', width:75, sortable: true , resizable:true,
+                formatter:function(value){
+                	return '<span style="font-size:x-small">' + value + '</span>';
+                }
+            }          
+        ]],
+        columns:
+        [[
+            {field:'PERIODO_VACACIONAL', title: 'Periodo', width:75, sortable: true , resizable:true,
+                formatter:function(value){
+                	return '<span style="font-size:x-small">' + value + '</span>';
+                }
+            },
+            {field:'DIAS_DISPONIBLES', title: 'Días Disponibles', width:150, sortable: true , resizable:true,
+                formatter:function(value){
+                	return '<span style="font-size:x-small">' + value + '</span>';
+                }
+            },
+            {field:'DIAS_TOMADOS', title: 'Dias Tomados', width:150, sortable: true , resizable:true,
+                formatter:function(value){
+                	return '<span style="font-size:x-small">' + value + '</span>';
+                }
+            }
+        ]],
+        pagination: true,
+        rownumbers: false,
+        idField: 'EMPLEADO',
+        sortOrder: 'asc',
+        remoteSort: false,
+        singleSelect: false,
+        loadMsg: "Cargando, espere ...",
+        pageNumber: 1,
+        pageSize: 20,
+        fitColumns: false,
+        striped: true,
+        nowrap: false,
+        pageList: [10, 20, 50, 100],
+        remoteSort: false,
+        showFooter: true
+    });
+}
