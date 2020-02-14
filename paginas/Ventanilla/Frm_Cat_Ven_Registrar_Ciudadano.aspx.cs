@@ -920,7 +920,7 @@ public partial class paginas_Ventanilla_Frm_Cat_Ven_Registrar_Ciudadano : System
                 }
                 else
                 {
-                    Inicializar_Controles(); //Habilita los controles para la siguiente operación del usuario en el catálogo
+                    Response.Redirect("../Ventanilla/Frm_Apl_Login_Ventanilla.aspx");
                 }
             }
             catch (Exception ex)

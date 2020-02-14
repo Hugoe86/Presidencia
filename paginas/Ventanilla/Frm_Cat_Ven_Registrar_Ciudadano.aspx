@@ -6,7 +6,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Cph_Area_Trabajo2" runat="Server">
 
-    <script src="../jquery/jquery-1.5.js" type="text/javascript"></script>
+    
 
     <script type="text/javascript" language="javascript">
         //Abrir una ventana modal

@@ -11,7 +11,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Cph_Area_Trabajo2" runat="Server">
 
-    <script src="../../jquery/jquery-1.5.js" type="text/javascript"></script>
+    <%--<script src="../../jquery/jquery-1.5.js" type="text/javascript"></script>--%>
 
     <script type="text/javascript" language="javascript">
           //Abrir una ventana modal
@@ -28,10 +28,9 @@
 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Cph_Area_Trabajo1" runat="Server">
-    <asp:ScriptManager ID="ScriptManager_Reportes" runat="server" EnableScriptGlobalization="true"
-        EnableScriptLocalization="True" />
+    <asp:ScriptManager ID="ScriptManager1" runat="server"  />
     <div style="width: 100%;">
-        <asp:UpdatePanel ID="Upd_Panel" runat="server" UpdateMode="Always">
+        <asp:UpdatePanel ID="Upd_Panel" runat="server">
             <ContentTemplate>
                 <asp:UpdateProgress ID="Upgrade" runat="server" AssociatedUpdatePanelID="Upd_Panel"
                     DisplayAfter="0">
@@ -62,11 +61,12 @@
                         </tr>
                         <tr class="barra_busqueda" align="right">
                             <td align="left" style="width: 80%">
+                                
                                 <asp:ImageButton ID="Btn_Nuevo" runat="server" ToolTip="Nuevo" CssClass="Img_Button"
-                                    ImageUrl="~/paginas/imagenes/paginas/icono_nuevo.png" OnClientClick="return confirm('¿Esta seguro que desea realizar el registro de la solicitud?');"
-                                    OnClick="Btn_Nuevo_Click" />
+                                    ImageUrl="~/paginas/imagenes/paginas/icono_nuevo.png" OnClick="Btn_Nuevo_Click" CausesValidation="False"/>
+
                                 <asp:ImageButton ID="Btn_Salir" runat="server" CssClass="Img_Button" ToolTip="Salir"
-                                    ImageUrl="~/paginas/imagenes/paginas/icono_salir.png" OnClick="Btn_Salir_Click" />
+                                    ImageUrl="~/paginas/imagenes/paginas/icono_salir.png" OnClick="Btn_Salir_Click"  />
                                 <asp:UpdatePanel ID="Upnl_Export_PDF" runat="server" UpdateMode="Conditional" RenderMode="Inline">
                                     <ContentTemplate>
                                         <asp:ImageButton ID="Btn_Generar_Reporte" runat="server" ImageUrl="~/paginas/imagenes/paginas/icono_rep_pdf.png"
@@ -88,7 +88,7 @@
                         </tr>
                     </table>--%>
                   
-                    <asp:Panel ID="Pnl_Datos_Solicitud" runat="server" GroupingText="Datos del tramite">
+                    <div ID="Pnl_Datos_Solicitud" runat="server">
                           <table width="100%">
                         <tr>
                             <td style="width: 15%">
@@ -176,11 +176,11 @@
                                 </td>
                             </tr>
                         </table>
-                    </asp:Panel>
+                    </div>
                     <%-- *********************** Fin para los campos ocultos *********************** --%>
                     
                    
-                    <asp:Panel ID="Pnl_Datos_Solicitante" runat="server" GroupingText="Datos del Solicitante"   style="">
+                    <div ID="Pnl_Datos_Solicitante" runat="server"   style="">
                         <table width="100%">
                             <tr>
                                 <td style="width: 15%" align="left">
@@ -202,8 +202,8 @@
                                 </td>
                             </tr>
                         </table>
-                    </asp:Panel>
-                    <asp:Panel ID="Pnl_Cuenta_Predial" runat="server" GroupingText="Datos del inmueble" Visible="false" style="margin-top:8px;">
+                    </div>
+                    <div ID="Pnl_Cuenta_Predial" runat="server" Visible="false" style="margin-top:8px;">
                         <table width="100%">
                             <tr>
                                 <td style="width: 15%">
@@ -320,7 +320,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </asp:Panel>
+                    </div>
                    
                     <table width="100%">
                         <tr>
